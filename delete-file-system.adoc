@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: delete-file-system.html 
+keywords: file system, delete file system, file system deletion 
+summary: Per eliminare un file system, occorre prima eliminare qualsiasi volume, VM di storage o relazione di replica associata al file system. 
+---
+= Eliminare un file system
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per eliminare un file system, occorre prima eliminare qualsiasi volume, VM di storage o relazione di replica associata al file system.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system FSX per ONTAP che si desidera eliminare.
+. Selezionare *Gestisci*.
+. Nella scheda *Panoramica*, fare clic sul menu dei tre punti.
+. Fare clic su *Delete* (Elimina).
+. Nella finestra di dialogo Elimina file system FSX per ONTAP, immettere il nome del file system FSX per ONTAP da eliminare.
+. Fare clic su *Delete* (Elimina).
+

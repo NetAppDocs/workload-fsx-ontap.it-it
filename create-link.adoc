@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: create-link.html 
+keywords: links, add, add links, add link, create link 
+summary: È possibile creare e gestire i collegamenti per fornire una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. 
+---
+= Creare un collegamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare e gestire i collegamenti per fornire una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. In questo modo puoi monitorare e gestire determinate funzionalità direttamente dal file system FSX per ONTAP che non sono disponibili tramite l'API AWS FSX per ONTAP.
+
+link:links-overview.html["Ulteriori informazioni sui collegamenti"].
+
+.A proposito di questa attività
+I link sfruttano AWS Lambda per eseguire codice in risposta a eventi e gestire automaticamente le risorse di calcolo richieste da tale codice. I link creati fanno parte del tuo account NetApp e sono associati a un account AWS.
+
+È possibile creare un collegamento nell'account quando si definisce un file system FSX per ONTAP. Tale collegamento verrà utilizzato per il file system e da altri file system FSX per ONTAP.
+
+Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account AWS.
+
+.Prima di iniziare
+* Devi disporre delle credenziali per accedere al tuo account AWS.
+* Quando si aggiunge un collegamento utilizzando uno stack CloudFormation, è necessario disporre delle seguenti autorizzazioni nell'account AWS:
++
+[%collapsible]
+====
+[source, json]
+----
+"cloudformation:GetTemplateSummary",
+"cloudformation:CreateStack",
+"cloudformation:DeleteStack",
+"cloudformation:DescribeStacks",
+"cloudformation:ListStacks",
+"cloudformation:DescribeStackEvents",
+"cloudformation:ListStackResources",
+"ec2:DescribeSubnets",
+"ec2:DescribeSecurityGroups",
+"ec2:DescribeVpcs",
+"iam:ListRoles",
+"iam:GetRolePolicy",
+"iam:GetRole",
+"iam:DeleteRolePolicy",
+"iam:CreateRole",
+"iam:DetachRolePolicy",
+"iam:PassRole",
+"iam:PutRolePolicy",
+"iam:DeleteRole",
+"iam:AttachRolePolicy",
+"lambda:AddPermission",
+"lambda:RemovePermission",
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:CreateFunction",
+"lambda:DeleteFunction",
+"lambda:TagResource",
+"codestar-connections:GetSyncConfiguration",
+"ecr:BatchGetImage",
+"ecr:GetDownloadUrlForLayer"
+----
+====
+
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare *Associa collegamento*.
+. Nella finestra di dialogo Associa collegamento, selezionare *Crea un nuovo collegamento* e selezionare *continua*.
+. Nella pagina Crea collegamento, fornire quanto segue:
++
+.. *Nome collegamento*: Immettere il nome che si desidera utilizzare per questo collegamento. Il nome deve essere univoco all'interno dell'account.
+.. *Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.
++
+L'account AWS e le informazioni aggiuntive per account, posizione e gruppo sicurezza vengono recuperate automaticamente in base al file system FSX per ONTAP.
+
+
+
+. Selezionare *Redirect to CloudFormation*.
++
+Viene visualizzata una finestra di dialogo che spiega come creare il collegamento dal servizio AWS CloudFormation.
+
+. Seleziona *continua* per aprire la console di gestione AWS, quindi accedi all'account AWS per questo file system FSX per ONTAP.
+. Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May create IAM resources* (riconosco che AWS CloudFormation potrebbe creare risorse IAM*).
++
+Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia il modello CloudFormation. Workload Factory utilizza queste autorizzazioni quando utilizza i collegamenti.
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
+. Selezionare *Crea pila*, quindi selezionare *continua*.
++
+È possibile monitorare lo stato di creazione del collegamento dalla pagina Eventi. Questa operazione non dovrebbe richiedere più di 5 minuti.
+
+. Torna all'interfaccia workload Factory e vedrai che il link è associato al file system FSX per ONTAP.
+
+
+.Risultato
+Il collegamento creato è associato al file system FSX per ONTAP.

@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: configure-active-directory.html 
+keywords: configure AD, configure active directory, update ad, edit active directory 
+summary:  
+---
+= Configurazione e aggiornamento di Active Directory per una macchina virtuale di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configurare e aggiornare Active Directory per una VM di storage in un file system FSX per ONTAP.
+
+.A proposito di questa attività
+La stessa procedura si applica alla configurazione e all'aggiornamento di Active Directory per una VM di storage.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con la VM di archiviazione da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda Storage VM, selezionare il menu a tre punti della VM di storage per cui configurare Active Directory.
+. Selezionare *Gestisci configurazione ad*.
+. Nella pagina Gestione configurazione ad, specificare quanto segue:
++
+.. *Dominio Active Directory a cui collegarsi*: Immettere il nome di dominio completo (FQDN) di Active Directory.
+.. *Indirizzi IP DNS*: Immettere un massimo di tre indirizzi IP separati da virgole.
+.. *SMB server NetBIOS name*: Immettere il nome NetBIOS del server SMB dell'oggetto computer Active Directory da creare per la macchina virtuale di storage. Nome della SVM in Active Directory.
+.. *Nome utente*: Immettere il nome utente dell'account del servizio nell'Active Directory esistente.
++
+Non includere un prefisso o un suffisso di dominio. Per `EXAMPLE\ADMIN`, utilizzare `ADMIN`.
+
+.. *Password*: Immettere la password per l'account del servizio.
+.. *Unità organizzativa (OU)*: Immettere l'unità organizzativa.
++
+L'unità organizzativa è il nome del percorso distinto dell'unità organizzativa a cui si desidera unire il file system.
+
+.. *Gruppo di amministratori delegati*: Se si desidera, immettere il gruppo di amministratori del file system delegato.
++
+Il gruppo di amministratori eliminato è il nome del gruppo in Active Directory che può amministrare il file system.
+
++
+Se utilizzi ad Microsoft gestito da AWS, devi specificare un gruppo come ad esempio gli amministratori FSX delegati di AWS, gli amministratori delegati di AWS o un gruppo personalizzato con autorizzazioni delegate all'unità organizzativa.
+
++
+Se si sta effettuando l'accesso a un ad autogestito, utilizzare il nome del gruppo nell'ad. Il gruppo predefinito è `Domain Admins`.
+
+
+
+. Fare clic su *Apply* (Applica).
+

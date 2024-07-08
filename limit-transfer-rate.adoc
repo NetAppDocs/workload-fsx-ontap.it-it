@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: limit-transfer-rate.html 
+keywords: limit max transfer rate, limit transfer rate 
+summary: Limitare la velocità di trasferimento massima di una relazione di replica. Una velocità di trasferimento illimitata potrebbe influire negativamente sulle prestazioni di altre applicazioni e della rete. 
+---
+= Limitare la velocità di trasferimento massima di una relazione di replica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Limitare la velocità di trasferimento massima di una relazione di replica. Una velocità di trasferimento illimitata potrebbe influire negativamente sulle prestazioni di altre applicazioni e della rete.
+
+.A proposito di questa attività
+La limitazione della velocità di trasferimento massima è facoltativa ma consigliata. Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire.
+
+In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+
+.Prima di iniziare
+Considerare la larghezza di banda da allocare per la replica.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replica, fare clic sul menu dei tre punti della relazione di replica per limitare la velocità di trasferimento massima per.
+. Selezionare *Modifica velocità di trasferimento massima*.
+. Nella finestra di dialogo Modifica velocità di trasferimento massima, selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s.
++
+In alternativa, selezionare *illimitato*.
+
+. Fare clic su *Apply* (Applica).
+

@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: performance-reference.html 
+keywords: performance, FSx for ONTAP performance 
+summary: Performance di FSX per ONTAP. 
+---
+= Performance di FSX per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per una panoramica delle prestazioni, fare riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["Performance di Amazon FSX per NetApp ONTAP"^] documentazione.

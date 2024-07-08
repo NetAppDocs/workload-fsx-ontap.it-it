@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: create-storage-vm.html 
+keywords: create storage VM, create svm 
+summary: 'Puoi creare un FSX per ONTAP storage VM (SVM) per fornire servizi dati e storage per i carichi di lavoro in workload Factory.' 
+---
+= Crea una macchina virtuale di storage per un file system FSX per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crea una Storage VM (SVM) per un file system FSX per ONTAP per accedere ai servizi dati e storage virtualmente per i workload in workload Factory.
+
+.A proposito di questa attività
+Le macchine virtuali storage sono file server isolati che è possibile utilizzare per accedere ai dati da ogni workload in workload Factory Storage. Ciascuna SVM dispone delle proprie credenziali amministrative e dei propri endpoint per l'amministrazione e l'accesso ai dati.
+
+Grazie alle SVM, quando accedi ai dati in FSX per ONTAP, client e workstation montano un volume, una CIFS/SMB share o una LUN iSCSI ospitata da una SVM utilizzando l'endpoint (indirizzo IP) della SVM.
+
+.Prima di iniziare
+Verifica del numero supportato di VM storage per file system. Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestione di FSX per ONTAP Storage Virtual Machine"^] nella documentazione AWS per il numero massimo di SVM per file system.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda FSX per ONTAP, fare clic sul menu a tre punti del file system per creare una VM di archiviazione per e selezionare *Gestisci*.
+. Dalla panoramica del file system, selezionare *Crea una VM di archiviazione*.
+. Nella pagina Storage VM, in Storage VM Configuration (Configurazione Storage VM), fornire quanto segue:
++
+.. *Nome*: Immettere un nome per la VM di archiviazione.
+.. *Credenziali VM di archiviazione*: Fornire una password per l'utente di questa VM di archiviazione o utilizzare le credenziali utente del `vsadmin` file system `fsxadmin` .
+.. *Stile di protezione del volume root*: Selezionare lo stile di protezione del volume root a seconda del tipo di client che accedono ai dati: UNIX (client Linux), NTFS (client Windows) o Mixed.
+.. *Tags*: Opzionalmente, è possibile aggiungere fino a 50 tag.
+
+
+. Fare clic su *Create* (Crea).
+

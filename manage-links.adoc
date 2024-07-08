@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: manage-links.html 
+keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
+summary: È possibile creare e gestire i collegamenti per fornire una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. In questo modo puoi monitorare e gestire determinate funzionalità direttamente dal file system ONTAP che non sono disponibili tramite le API AWS FSX per ONTAP. 
+---
+= Gestisci collegamenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestisci i collegamenti associati al tuo account workload Factory.
+
+link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:create-link.html["creare un collegamento"].
+
+
+
+== Visualizzare i collegamenti associati all'account
+
+È possibile visualizzare i collegamenti attualmente associati al proprio account.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Dal menu account, selezionare *Collegamenti*.
++
+image:screenshot-links-button.png["Una schermata che mostra come aprire la pagina dei collegamenti."]
+
+. Se sono presenti collegamenti, la pagina di panoramica fornisce le informazioni.
+. Per visualizzare i file system FSX per ONTAP associati a un collegamento, selezionare il pulsante *Visualizza* nella sezione risorse associate.
++
+image:screenshot-view-link-details.png["Una schermata che mostra i file system FSX per ONTAP che utilizzano un collegamento specifico."]
+
+. Se per il collegamento è necessario Amazon Resource Name (ARN), è possibile selezionare l'icona _copy_ accanto al campo ARN.
+
+
+
+
+== Associare un collegamento a un file system FSX per ONTAP
+
+Dopo aver creato un collegamento, è possibile associarlo ai file system FSX per ONTAP. Ogni file system può essere associato a un solo collegamento in un singolo account NetApp, ma un collegamento può essere associato a molti file system.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare *Associa collegamento*.
+. Nella pagina di collegamento Associa, selezionare *Associa un collegamento esistente*, selezionare il collegamento e selezionare *Applica*.
+
+
+.Risultato
+Il link è associato al file system FSX per ONTAP ed è possibile eseguire operazioni ONTAP avanzate.
+
+
+
+== Modificare un collegamento
+
+Non è possibile modificare un collegamento dall'interfaccia workload Factory. Se è necessario apportare una modifica a un collegamento, è necessario creare un nuovo collegamento e quindi associarlo al file system.
+
+
+NOTE: È possibile modificare la configurazione di rete Lambda (ad esempio VPC, subnet e gruppi di sicurezza) utilizzando la console AWS e le modifiche verranno riflesse nell'interfaccia utente di gestione dei collegamenti; tuttavia, queste modifiche possono causare problemi di connettività tra Lambda e ONTAP e non sono consigliate.
+
+
+
+== Rimuovere un tirante
+
+Puoi rimuovere un collegamento che non utilizzi più nel tuo ambiente. Qualsiasi file system FSX per ONTAP o altre risorse che utilizzavano il collegamento non potranno utilizzare determinate funzionalità dopo la rimozione del collegamento.
+
+Il link viene eliminato solo da workload Factory e non dall'ambiente AWS. Devi eliminare la funzione Lambda dal tuo account AWS dopo aver rimosso il link in workload Factory.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Dal menu account, selezionare *Collegamenti*.
+. Nella pagina Collegamenti, selezionare il pulsante menu e selezionare *Rimuovi*.
++
+image:screenshot-remove-link.png["Screenshot che mostra come rimuovere un collegamento da workload Factory."]
+
+. In caso affermativo, selezionare nuovamente *Rimuovi*.
+
+
+Fare riferimento alla documentazione AWS a link:https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function["Eliminare la funzione Lambda"].

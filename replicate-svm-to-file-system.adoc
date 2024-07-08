@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: replicate-svm-to-file-system.html 
+keywords:  
+summary: La replica di una VM di storage su un altro file system FSX per ONTAP fornisce un livello di protezione di accesso ai dati in caso di perdita di dati. 
+---
+= Replica di una macchina virtuale di storage in un altro file system FSX per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La replica di una VM di storage su un altro file system FSX per ONTAP fornisce un livello di protezione di accesso ai dati in caso di perdita di dati. Questa operazione replica tutti i volumi di una macchina virtuale di storage in un altro file system FSX per ONTAP.
+
+.Prima di iniziare
+Per replicare una macchina virtuale di storage in un altro file system FSX per ONTAP, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, fare clic su *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con la VM di archiviazione da replicare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda Storage VM, seleziona il menu con tre punti della VM storage per cui replicare una SVM.
+. Selezionare *Replica VM di archiviazione*.
+. Nella pagina Crea replica, in destinazione replica, specificare quanto segue:
++
+.. *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.
+.. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa.
+.. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`.
+.. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione.
++
+_Auto_ è la policy di tiering predefinita quando si crea un volume utilizzando l'interfaccia utente workload Factory FSX per ONTAP. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^]nella documentazione di AWS FSX per NetApp ONTAP.
+
+.. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s. In alternativa, selezionare *illimitato*.
++
+Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+
+
+
+. In Impostazioni di replica, specificare quanto segue:
++
+.. *Intervallo di replica*: Consente di selezionare la frequenza di trasferimento degli snapshot dal volume di origine al volume di destinazione.
+.. *Conservazione a lungo termine*: Facoltativamente, abilitare gli snapshot per la conservazione a lungo termine.
++
+Se si attiva la conservazione a lungo termine, selezionare un criterio esistente o creare un nuovo criterio per definire gli snapshot da replicare e il numero da conservare.
+
++
+... Per *scegliere un criterio esistente*, selezionare un criterio esistente dal menu a discesa.
+... Per *Crea un nuovo criterio*, specificare quanto segue:
++
+.... *Policy name*: Inserire un nome di policy.
+.... *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
+
+
+
+
+
+
+. Fare clic su *Create* (Crea).
+
+
+.Risultato
+Tutti i volumi della macchina virtuale di storage vengono replicati sul file system di destinazione.

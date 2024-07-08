@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: update-snapshot-replication.html 
+keywords: update snapshot data, replication 
+summary: Aggiorna manualmente i dati dello snapshot trasferiti tra i volumi di origine e di destinazione in una relazione di replica in qualsiasi momento. 
+---
+= Aggiornare i dati dello snapshot in una relazione di replica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una relazione di replica dispone di una pianificazione della replica impostata, ma è possibile aggiornare manualmente i dati snapshot trasferiti tra volumi di origine e di destinazione, se necessario.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replica, fare clic sul menu dei tre punti della relazione di replica da aggiornare.
+. Selezionare *Aggiorna ora*.
+. Nella finestra di dialogo Aggiorna, fare clic su *Aggiorna ora*.
+

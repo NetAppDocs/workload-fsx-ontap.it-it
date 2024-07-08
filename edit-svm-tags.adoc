@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-svm-tags.html 
+keywords: edit storage vm tags, vm tags, svm tags 
+summary: Aggiunta, aggiornamento o rimozione dei tag delle macchine virtuali di storage per una macchina virtuale di storage in qualsiasi momento. 
+---
+= Modificare i tag della VM di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+I tag possono aiutarti a categorizzare le risorse. Puoi aggiungere, modificare e rimuovere i tag di una macchina virtuale storage in qualsiasi momento.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con la VM di archiviazione da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda Storage VM, selezionare il menu a tre punti della VM di storage per cui modificare i tag.
+. Selezionare *Modifica tag VM di archiviazione*.
+. Nella pagina Modifica tag VM di archiviazione, aggiungere, modificare o rimuovere tag.
++
+Il numero massimo di tag che puoi applicare a una macchina virtuale di storage è 50.
+
+. Fare clic su *Apply* (Applica).
+

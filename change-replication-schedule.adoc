@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: change-replication-schedule.html 
+keywords: change replication schedule, update replication schedule, edit replication schedule 
+summary: Modificare la pianificazione della replica del volume di origine in una relazione di replica. 
+---
+= Consente di modificare la pianificazione della replica di un volume di origine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Modificare la pianificazione della replica del volume di origine in una relazione di replica.
+
+Scegli la frequenza con cui le snapshot dal volume di origine vengono trasferite al volume replicato per soddisfare i tuoi RPO (Point Objective) richiesti.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replica, fare clic sul menu a tre punti della pianificazione delle relazioni di replica da modificare.
+. Selezionare *Modifica intervallo di replica*.
+. Nella finestra di dialogo Modifica intervallo di replica, selezionare la frequenza di trasferimento dello snapshot dal volume di origine. È possibile scegliere tra le seguenti frequenze:
++
+** Ogni 5 minuti
+** Ogni ora
+** Ogni 8 ore
+** Ogni giorno
+** Settimanale
+
+
+. Fare clic su *Apply* (Applica).
+

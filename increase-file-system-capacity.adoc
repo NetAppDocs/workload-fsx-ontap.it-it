@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: increase-file-system-capacity.html 
+keywords: increase capacity, increase file system capacity, increase FSx capacity 
+summary: 'Aumentare manualmente la capacità di storage SSD di un file system FSX per ONTAP quando la quantità di capacità di storage SSD utilizzata supera una soglia specificata dall"utente.' 
+---
+= Aumentare la capacità del file system
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aumentare manualmente la capacità di storage SSD di un file system FSX per ONTAP quando la quantità di capacità di storage SSD utilizzata supera una soglia specificata dall'utente.
+
+In alternativa, puoi link:enable-auto-capacity-management.html["attivare la funzione di gestione automatica della capacità"] fare in modo che workload Factory gestisca al tuo posto la capacità del file system.
+
+.A proposito di questa attività
+L'aumento della capacità dei file system influisce sugli IOPS per il file system FSX for ONTAP.
+
+Se si sceglie automaticamente link:provision-iops.html["Provisioning degli IOPS"] per un file system, gli IOPS aumentano di 3 volte ogni aumento di 1 GiB nella capacità degli SSD. Ad esempio, eseguendo il provisioning di 100 TiB (102.400 GiB) di capacità SSD, gli IOPS aumenteranno di 300 TiB (307.200 GiB).
+
+Quando link:provision-iops.html["Provisioning degli IOPS"] manualmente, potrebbe essere necessario aumentare l'allocazione degli IOPS per supportare l'aumentata capacità del file system.
+
+Per i limiti della capacità di storage degli SSD, fai riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quote"^] documentazione di AWS FSX per NetApp ONTAP.
+
+.Prima di iniziare
+Per aumentare la capacità di un file system, è necessario innanzitutto link:enable-auto-capacity-management.html["disattivare la gestione automatica della capacità"].
+
+.Fasi
+. Accedere alla console workload Factory.
+. In archiviazione, fare clic su *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu a tre punti del file system per aumentare la capacità di.
+. Selezionare *Gestisci*.
+. Nella sezione informazioni, fare clic sull'icona a forma di matita accanto a *distribuzione della capacità*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *distribuzione della capacità*.
+. Nella finestra di dialogo dimensioni memoria SSD, immettere un numero per *capacità fornita*.
+. Seleziona l'unità per la capacità sottoposta a provisioning.
+. Fare clic su *Apply* (Applica).
+

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: edit-volume-autogrow.html 
+keywords: volume autogrow, increase volume capacity, enable autogrow 
+summary: 'Abilita l"espansione automatica dei volumi per permettere a workload Factory di gestire la capacità dei volumi in base alle tue esigenze. È possibile disattivarla in qualsiasi momento.' 
+---
+= Attiva la crescita automatica del volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Abilita l'espansione automatica dei volumi per permettere a workload Factory di gestire la capacità dei volumi in base alle tue esigenze. È possibile disattivarla in qualsiasi momento.
+
+In alternativa, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzando link:increase-volume-capacity.html["funzione di aumento della capacità del volume"].
+
+
+NOTE: L'espansione automatica dei volumi non è supportata per i volumi iSCSI.
+
+.Prima di iniziare
+Per attivare la crescita automatica del volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, fare clic su *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda FSX per ONTAP, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Nella scheda volumi, selezionare il menu a tre punti per il volume che si desidera modificare.
+. Selezionare *azioni di base*, quindi *Modifica crescita automatica volume*.
+. Nella finestra di dialogo Modifica crescita automatica, attivare l'espansione automatica del volume.
+. Fare clic su *Apply* (Applica).
+

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: change-snapshot-policy.html 
+keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
+summary: Consente di aggiornare il criterio di snapshot di un volume in qualsiasi momento. 
+---
+= Consente di modificare il criterio di snapshot di un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Consente di aggiornare il criterio di snapshot di un volume in qualsiasi momento.
+
+.A proposito di questa attività
+Questa operazione aggiorna la frequenza degli snapshot acquisiti per un volume o disattiva gli snapshot automatici.
+
+.Prima di iniziare
+È necessario un collegamento per visualizzare i criteri di snapshot esistenti. Per associare un collegamento, fare clic su *Associa collegamento* in *Nome account*. Quindi tornare a questa operazione.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Selezionare la scheda *volumi*.
+. Nella scheda *volumi*, selezionare il menu a tre punti del volume per cui modificare il criterio snapshot.
+. Selezionare *azioni protezione dati*, *istantanee*, quindi *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di istantanea, selezionare *Modifica di un criterio di istantanea esistente*.
+. Nel campo *Nome criterio snapshot*, selezionare un criterio snapshot diverso per questo volume.
++
+Per disattivare le istantanee automatiche, selezionare `none`.
+
++
+Se non esistono altri criteri di snapshot, link:create-snapshot-policy.html["creare un nuovo criterio snapshot per questo volume"].
+
+. Fare clic su *Apply* (Applica).
+

@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: enable-snapshots-long-term.html 
+keywords: snapshot long-term retention, enable long-term retention 
+summary: Modificare la pianificazione della replica del volume di origine in una relazione di replica. 
+---
+= Abilita e modifica le snapshot per la conservazione a lungo termine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Abilita le snapshot per la conservazione a lungo termine per replicare snapshot specifiche per il disaster recovery a lungo termine.
+
+La conservazione a lungo termine permette ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria.
+
+La stessa procedura si applica per abilitare e modificare le istantanee per la conservazione a lungo termine.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replica, fare clic sul menu a tre punti della pianificazione delle relazioni di replica da modificare.
+. Selezionare *Modifica conservazione a lungo termine*.
+. Nella finestra di dialogo Modifica conservazione a lungo termine, attivare o disattivare gli snapshot per la conservazione a lungo termine.
+. Se si sceglie di disattivare gli snapshot per la conservazione a lungo termine, fare clic su *Applica* per completare questa operazione.
+. Se si sceglie di abilitare le snapshot per la conservazione a lungo termine, scegliere tra la selezione di una policy esistente o la creazione di una nuova policy.
++
+.. Per un criterio esistente, selezionare un criterio esistente dal menu a discesa.
+.. Per creare un nuovo criterio, specificare quanto segue:
++
+... *Policy name*: Inserire un nome di policy.
+... *Snapshot policies*: Selezionare uno o più criteri snapshot.
+... *Copie da conservare*: Immettere il numero di copie snapshot da conservare nel file system di destinazione.
+
+
+
+
+. Fare clic su *Apply* (Applica).
+

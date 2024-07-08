@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: delete-svm.html 
+keywords: delete storage vm, delete svm, remove svm 
+summary: 'Elimina una Storage VM (SVM) che non ti serve più in una configurazione di file system FSX per ONTAP.' 
+---
+= Eliminare una VM di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Elimina una Storage VM (SVM) che non ti serve più in una configurazione di file system FSX per ONTAP.
+
+.Prima di iniziare
+Prima di eliminare una macchina virtuale di storage, rivedere quanto segue:
+
+* Verifica che nessuna applicazione stia accedendo ai dati nella SVM.
+* Elimina tutti i volumi non root collegati alla SVM.
+
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Nella scheda Storage VM, selezionare il menu a tre punti della VM di storage per cui configurare Active Directory.
+. Selezionare *Elimina VM di archiviazione*.
+. Nella finestra di dialogo Delete storage VM, digitare "delete" per eliminare la VM di storage.
+. Fare clic su *Delete* (Elimina).
+

@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: learn-fsx-ontap.html 
+keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
+summary: 'Amazon FSX per NetApp ONTAP è un servizio completamente gestito che consente ai clienti di avviare ed eseguire i file system come back-end di storage per i carichi di lavoro all"interno di workload Factory.' 
+---
+= Scopri workload Factory per Amazon FSX per NetApp ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon FSX per NetApp ONTAP è un servizio di storage dei dati basato sul cloud e completamente gestito che offre capacità di gestione dei dati avanzate e performance altamente scalabili. FSX per ONTAP ti permette di creare e gestire i file system come back-end dello storage per tutti i tuoi workload in BlueXP workload Factory.
+
+FSX per ONTAP offre le stesse funzionalità, performance e funzionalità amministrative che i clienti NetApp utilizzano on-premise oggi, con la semplicità, l'agilità, la sicurezza e la scalabilità di un servizio AWS nativo.
+
+FSX per ONTAP è il componente _storage_ in workload Factory.
+
+
+
+== Caratteristiche
+
+FSX per ONTAP offre le seguenti caratteristiche:
+
+* *Servizio completamente gestito*: Fornisce un servizio completamente gestito integrato con la console workload Factory.
+* *Alta disponibilità*: Offre un'elevata disponibilità per ogni file system FSX per ONTAP, supportando implementazioni di zone di disponibilità singole e multiple.
+* *Istantanee automatizzate*: Protegge i dati con istantanee efficienti e automatizzate, ovvero copie di sola lettura point-in-time, quasi istantanee ed efficienti in termini di spazio, del file system o dei volumi.
+* *Volume Replication*: Offre funzioni di disaster recovery con replica tra più aree su Amazon Web Services.
+* *Backup efficienti*: Fornisce un ulteriore ulteriore ulteriore livello di protezione con una copia dei dati in un'altra regione. Ciò fornisce un ulteriore livello di protezione in caso di emergenza.
+* *Clonazione rapida*: Accelera lo sviluppo di applicazioni grazie alla clonazione rapida.
+* *Supporto multiprotocollo*: Supporta i protocolli NFS (Network file System), SMB (Server message Block) e iSCSI (Internet Small computer Systems Interface).
+* *Throughput elevato*: Offre prestazioni con throughput elevato per garantire latenze basse per i carichi di lavoro in esecuzione su file system FSX per ONTAP.
+* *Cache in memoria e cache NVMe*: Incorpora una cache in-memory univoca e una cache NVMe, che migliora ulteriormente le performance dei dati ad accesso frequente.
+* *Centinaia di migliaia di IOPS*: Fornisce centinaia di migliaia di IOPS con dischi SSD, garantendo che storage e carichi di lavoro ricevano risultati tempestivi.
+* *Thin Provisioning*: Consente il provisioning della capacità in anticipo, risparmiando sui costi fino a quando non è necessaria una maggiore capacità.
+* *Deduplicazione e compressione dei dati*: Elimina i blocchi di dati duplicati e comprime i blocchi di dati per ridurre la quantità di storage fisico necessaria per FSX per i file system ONTAP, con conseguenti risparmi sui costi.
+* *Data tiering*: Consente di ridurre i costi di storage spostando i dati a cui si accede meno frequentemente dal livello di storage SSD primario e ad alte prestazioni al livello di storage del pool di capacità secondario.
+
+
+
+
+== Funzioni aggiuntive in workload Factory
+
+* *Calcolatore di confronto dei costi di storage*: Confronta i costi di storage di Amazon Elastic Block Store (EBS), Elastic file System (EFS) e FSX per Windows file Server con FSX per ONTAP. Dal calcolatore, puoi visualizzare come le configurazioni storage di FSX per ONTAP offrono potenziali risparmi e pianificare il passaggio allo storage FSX per ONTAP.
+* *Interfaccia utente di workload Factory*: Fornisce le opzioni di modalità di distribuzione _Quick create_ e _Advanced create_. La creazione rapida include AWS, NetApp e Best practice standard di settore per le tue configurazioni storage.
+* *Codebox*: Fornisce agli sviluppatori un visualizzatore di codice per le operazioni FSX for ONTAP, modelli di codice per la copia e il download e un catalogo di automazione per il riutilizzo del codice.
+
+
+
+
+== Costo
+
+Il tuo account FSX per ONTAP è gestito da AWS e non da workload Factory. Fare riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Prezzi di Amazon FSX per NetApp ONTAP"^].
+
+
+
+== Regioni supportate
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
+
+
+
+== Assistenza
+
+Amazon FSX per NetApp ONTAP è una soluzione AWS first-party. Per domande o problemi di supporto tecnico associati al file system, all'infrastruttura o alla soluzione FSX per ONTAP che utilizza questo servizio, utilizza il Support Center nella console di gestione AWS per aprire un caso di supporto con AWS. Selezionare il servizio "FSX per ONTAP" e la categoria appropriata. Fornire le informazioni rimanenti necessarie per creare il caso di supporto AWS.
+
+Per domande generali sulle applicazioni e i servizi workload Factory o workload Factory, fare riferimento a link:get-help.html["Scopri FSX per ONTAP per workload Factory"].

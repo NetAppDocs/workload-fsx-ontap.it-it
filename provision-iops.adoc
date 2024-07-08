@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: provision-iops.html 
+keywords: iops, SSD, provision, allocate 
+summary: Esegui il provisioning automatico o manuale degli IOPS SSD per un file system FSX per ONTAP. 
+---
+= Esegui il provisioning di IOPS SSD per un file system FSX per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Esegui il provisioning automatico o manuale degli IOPS SSD per un file system FSX per ONTAP.
+
+.A proposito di questa attività
+Puoi abilitare il provisioning IOPS automatico per un file system FSX oppure eseguire il provisioning manuale degli IOPS.
+
+Gli IOPS con provisioning automatico vengono calcolati come 3 IOPS per GiB.
+
+Se si esegue il provisioning manuale degli IOPS, potrebbe essere necessario aumentare le IOPS prima di poter link:increase-file-system-capacity.html["aumentare la capacità del file system"].
+
+Per i limiti di IOPS, fai riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quote"^] documentazione di AWS FSX per NetApp ONTAP.
+
+.Fasi
+. Accedere alla console workload Factory.
+. In archiviazione, fare clic su *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system per il provisioning degli IOPS e selezionare *Gestisci*.
+. Nella sezione informazioni, fare clic sull'icona a forma di matita accanto a *allocazione IOPS*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *allocazione IOPS*.
+. Nella finestra di dialogo IOPS forniti, selezionare *automatico* o *fornito dall'utente*.
+. Se si seleziona *provisioning utente*, immettere il valore *IOPS*.
+. Fare clic su *Apply* (Applica).
+

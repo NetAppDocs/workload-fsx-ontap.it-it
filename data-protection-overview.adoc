@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: data-protection-overview.html 
+keywords: overview 
+summary:  
+---
+= Panoramica sulla protezione dei dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+FSX per ONTAP supporta gli snapshot per creare immagini point-in-time e di sola lettura di un volume, backup di volumi per creare backup offline con lunga conservazione dei volumi e replica dei volumi per creare mirror asincroni del volume in aree diverse.
+
+
+
+== Tipi di protezione dei dati
+
+La data Protection per i tuoi carichi di lavoro ti aiuta a garantire un ripristino da qualsiasi perdita di dati in qualsiasi momento. Informatevi sui tipi di protezione dei dati prima di selezionare le funzioni da utilizzare.
+
+.Snapshot
+Uno snapshot crea un'immagine point-in-time di sola lettura di un volume all'interno del volume di origine come copia snapshot. È possibile utilizzare la copia snapshot per recuperare singoli file o per ripristinare l'intero contenuto di un volume. Le snapshot sono la base di tutti i metodi di backup. La copia snapshot creata sul volume viene utilizzata per mantenere il volume replicato e il file di backup sincronizzati con le modifiche apportate al volume di origine.
+
+.Backup
+Puoi creare backup dei tuoi dati nel cloud per la protezione e la conservazione a lungo termine. Se necessario, è possibile ripristinare un volume, una cartella o singoli file dal backup nello stesso file system di lavoro o in un altro file system.
+
+.Replica
+La replica crea una copia secondaria dei dati su un altro file system FSX per ONTAP e aggiorna continuamente i dati secondari. I dati restano aggiornati e disponibili in qualsiasi momento, ad esempio per il disaster recovery.
+
+Puoi scegliere di creare sia volumi replicati in un altro file system FSX per ONTAP e file di backup nel cloud. In alternativa, puoi scegliere di creare volumi replicati o file di backup.
+
+
+
+== Best practice per la protezione dei dati dei carichi di lavoro
+
+FSX per ONTAP offre diverse opzioni di protezione dei dati, che possono essere combinate insieme per raggiungere i recovery point objective e time objective selezionati. Per una protezione ottimale, si consiglia di utilizzare sia gli snapshot dei volumi che i backup dei volumi.
+
+Un recovery point objective (RPO) descrive la frequenza di esecuzione delle copie dei dati più recenti, che dipende dalla frequenza di esecuzione delle copie. Un recovery time objective (RTO) definisce il tempo necessario per il ripristino dei dati.
+
+
+
+== Proteggi i dati dei carichi di lavoro con le snapshot
+
+Gli Snapshot sono versioni virtuali point-in-time di un volume acquisite su base pianificata. È possibile accedere alle snapshot utilizzando comandi standard del file system. Gli snapshot offrono un RPO di appena un'ora. L'RTO dipende dalla quantità di dati da ripristinare ed è limitato principalmente dal limite di throughput del volume. Le snapshot consentono inoltre agli utenti di ripristinare specifici file e directory, diminuendo ulteriormente l'RTO. Le copie Snapshot consumano ulteriore spazio per i volumi solo in caso di modifiche apportate.
+
+
+
+== Proteggi i dati dei tuoi carichi di lavoro con i backup
+
+I backup dei volumi offrono copie point-in-time indipendenti del tuo volume. Possono essere utilizzati per archiviare vecchi backup e fornire la seconda copia dei dati necessaria. Le pianificazioni di backup giornaliere, settimanali e mensili consentono RPO a partire da un giorno. I backup di volumi possono essere ripristinati solo nel loro complesso. La creazione di un volume da un backup (RTO) può richiedere da ore a molti giorni, a seconda delle dimensioni del backup.
+
+
+
+== Proteggi i dati dei tuoi carichi di lavoro con la replica dei volumi
+
+La replica di un volume crea una copia dei dati più recenti di un volume, inclusi tutti i relativi snapshot in un'area diversa. Se non puoi permetterti RTO di più ore di un'operazione di ripristino di un volume completo da un backup di un volume, prendi in considerazione l'esecuzione di una replica di un volume. Mentre la replica del volume garantisce che i dati recenti siano disponibili in un'area diversa, è necessario regolare i client per utilizzare il volume nell'altra area.
+
+
+
+== Consigli per la protezione dei dati dei carichi di lavoro
+
+Prendi in considerazione i seguenti consigli per proteggere i dati del tuo carico di lavoro.
+
+* Utilizzare i backup di volume insieme alle istantanee: L'utilizzo congiunto delle due funzioni garantisce la possibilità di ripristinare i file dalle istantanee ed eseguire ripristini completi in caso di perdita di volume utilizzando i backup.
+* Definire una policy di backup dei volumi: Accertarsi che la policy di backup soddisfi i requisiti aziendali in termini di durata e frequenza dei backup. Si consiglia di conservare un minimo di due backup giornalieri per ogni volume.
+* Definire una pianificazione snapshot: È meno probabile che vengano utilizzate le snapshot meno recenti per ripristinare i dati. Consigliamo di definire una pianificazione delle snapshot che tenga conto dei rendimenti in diminuzione dovuti al mantenimento delle snapshot più vecchie rispetto al costo di capacità delle snapshot aggiuntiva.
+

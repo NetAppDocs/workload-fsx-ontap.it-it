@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: create-snapshot-policy.html 
+keywords: create 
+summary: Crea una policy di Snapshot per FSX per ONTAP Volumes. Una policy di snapshot definisce il modo in cui il sistema crea snapshot per un volume. 
+---
+= Crea una policy di Snapshot per FSX per ONTAP Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crea una policy di snapshot personalizzata per FSX per ONTAP Volumes. Una policy di snapshot definisce il modo in cui il sistema crea snapshot per un volume.
+
+.A proposito di questa attività
+È possibile creare un criterio di snapshot personalizzato diverso da quello delle tre policy integrate per FSX for ONTAP:
+
+* `default`
+* `default-1weekly`
+* `none`
+
+
+Per impostazione predefinita, ogni volume è associato al criterio di snapshot del file system `default` . Consigliamo di utilizzare questa policy per la maggior parte dei carichi di lavoro.
+
+La personalizzazione di un criterio consente di specificare quando creare le snapshot, il numero di copie da conservare e il nome delle stesse.
+
+.Prima di iniziare
+* Prima di utilizzare le snapshot, occorre valutare quanto segue:
++
+** Per la maggior parte dei set di dati, è sufficiente una capacità aggiuntiva del 20% per conservare le snapshot per un massimo di quattro settimane. Man mano che i dati diventano più datati, il loro utilizzo per i ripristini diventa meno probabile.
+** La sovrascrittura di tutti i dati di uno snapshot consuma una notevole capacità del volume, fattore che influisce sul provisioning della capacità del volume.
+
+
+* Per creare un criterio snapshot personalizzato, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, fare clic su *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+
+
+.Fasi
+. Accedere alla console workload Factory.
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere con le istantanee pianificate.
+. Selezionare *azioni protezione dati*, *istantanee*, quindi *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di istantanea, selezionare *Crea un nuovo criterio di snapshot*.
+. Nel campo *Snapshot policy name* (Nome criterio istantanea), immettere un nome per il criterio snapshot.
+. Facoltativo: Nel campo *Descrizione*, immettere una descrizione per il criterio di snapshot.
+. In *Pianificazione*, selezionare quando creare istantanee. Ad esempio, ogni minuto o ogni ora.
++
+È possibile selezionare più di una frequenza.
+
+. In *numero di copie*, immettere il numero di copie da conservare.
++
+Il numero massimo di copie è 1.023.
+
+. Facoltativo: In *convenzione di denominazione*, immettere un *prefisso* per la policy.
+. *Etichetta di conservazione* viene compilata automaticamente.
++
+Questa etichetta fa riferimento all'etichetta SnapMirror, o etichetta di replica, utilizzata per selezionare solo gli snapshot specificati per la replica dall'origine al file system di destinazione.
+
+. Fare clic su *Apply* (Applica).
+

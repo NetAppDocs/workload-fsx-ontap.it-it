@@ -1,0 +1,31 @@
+---
+indexpage:
+  title: Documentazione di Amazon FSX per NetApp ONTAP
+  lead: Amazon FSX per NetApp ONTAP offre le funzionalità complete di ONTAP a un servizio
+    gestito AWS nativo, offrendo un'esperienza di cloud ibrido coerente. Questa documentazione
+    descrive come gestire FSX per ONTAP utilizzando BlueXP workload Factory.
+  tiles:
+  - title: Inizia subito
+    links:
+    - title: Note di rilascio
+      url: "/whats-new.html"
+    - title: Scopri di più su Amazon FSX per NetApp ONTAP
+      url: "/learn-fsx-ontap.html"
+    - title: Avvio rapido
+      url: "/quick-start.html"
+  - title: USA FSX per ONTAP
+    links:
+    - title: Scopri i risparmi
+      url: "/explore-savings.html"
+    - title: Crea un file system FSX per ONTAP
+      url: "/create-file-system.html"
+    - title: Crea un volume FSX per ONTAP
+      url: "/create-volume.html"
+    - title: Proteggi i tuoi dati
+      url: "/data-protection-overview.html"
+  - title: Conoscenza e supporto
+    links:
+    - title: Registrati per ricevere assistenza
+      url: "/support-registration.html"
+    - title: Richiedi assistenza
+      url: "/get-help.html"

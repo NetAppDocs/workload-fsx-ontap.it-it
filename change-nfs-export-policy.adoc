@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: change-nfs-export-policy.html 
+keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
+summary: Modifica della policy di esportazione NFS per un volume che utilizza tipi di protocollo NFSv3 o NFSv4,1. 
+---
+= Modificare la policy di esportazione NFS per un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Modifica della policy di esportazione NFS per un volume che utilizza tipi di protocollo NFSv3 o NFSv4,1.
+
+.A proposito di questa attività
+La modifica della policy di esportazione di un volume comporta l'aggiunta di regole per le policy di esportazione che descrivono in dettaglio le specifiche dei client, il controllo dell'accesso, l'accesso dei super utenti e la versione NFS. È possibile aggiungere più criteri di esportazione e assegnarne la priorità.
+
+.Prima di iniziare
+Determinare le specifiche del client per le regole dei criteri di esportazione. I valori validi per la specifica client sono i seguenti:
+
+* Indirizzi IP
+* Indirizzi IP con subnet mask
+* Indirizzi IP con una maschera di rete
+* Un nome di netgroup preceduto dal carattere "@"
+* Un nome di dominio preceduto da un punto "."
+* Nomi host
+
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda volumi, fare clic sul menu dei tre punti per il volume per cui modificare la policy di esportazione NFS.
+. Selezionare *azioni avanzate*, quindi *Modifica criterio di esportazione NFS*.
+. Nella pagina Modifica criterio di esportazione NFS, fornire quanto segue:
++
+.. *Controllo accesso*: Selezionare *criterio di esportazione personalizzato* o *criterio di esportazione esistente*.
++
+In alternativa, è possibile selezionare *Nessun accesso al volume*.
+
+.. *Nome criterio di esportazione*: Se si desidera, immettere un nome per il criterio di esportazione.
+.. *Aggiungi regola dei criteri di esportazione*: Fornire i seguenti dettagli e classificare i criteri che iniziano con #1 come regola di priorità:
++
+... *Specifica del client*: Separare più valori con virgole.
+... *Controllo accesso*: Selezionare *lettura/scrittura*, *sola lettura* o *Nessun accesso* dal menu a discesa.
+... *Accesso super utente*: Selezionare *Sì* o *No*.
+... *NFS version*: Selezionare *all*, *NFSv3* o *NFSv4*.
+
+
+
+
+. Fare clic su *Apply* (Applica).
+

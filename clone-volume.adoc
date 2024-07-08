@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: clone-volume.html 
+keywords: clone volume 
+summary: Clonare un volume per creare un volume di lettura/scrittura del volume originale per il test. 
+---
+= Clonare un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Clonare un volume per creare un volume di lettura/scrittura del volume originale per il test.
+
+Il clone riflette lo stato corrente dei dati point-in-time. È inoltre possibile utilizzare i cloni per fornire agli utenti aggiuntivi l'accesso ai dati senza fornire loro l'accesso ai dati di produzione.
+
+.A proposito di questa attività
+Il cloning dei volumi è supportato solo per i volumi FlexClone.
+
+Quando viene clonato un volume, viene creato un volume scrivibile con riferimenti agli snapshot dal volume principale. La creazione dei cloni avviene in pochi secondi. I dati clonati non risiedono nel clone del volume, ma risiedono invece nel volume principale. Tutti i nuovi dati scritti sul volume dopo la creazione del clone risiedono sul clone.
+
+Perché un volume clonato contenga tutti i dati del volume principale ed eventuali nuovi dati aggiunti al clone dopo la creazione, sarà necessario link:split-cloned-volume.html["dividere il clone"] farlo dal volume principale. Inoltre, non puoi eliminare un volume principale se ha un clone. Prima di eliminare un volume principale, è necessario dividere un clone.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Selezionare la scheda *volumi*.
+. Nella scheda volumi, selezionare il menu a tre punti del volume da clonare.
+. Selezionare *azioni protezione dati*, quindi *Clona volume*.
+. Nella finestra di dialogo Clone volume (Clona volume), immettere un nome per il clone del volume.
+. Fare clic su *Clone*.
+

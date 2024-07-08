@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: change-tiering-policy.html 
+keywords:  
+summary: Modificare la policy di tiering per riallocare i dati dal Tier dello storage primario ad alte prestazioni al Tier di storage del pool di capacità secondario. 
+---
+= Modificare la policy di tiering di un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Modificare la policy di tiering per riallocare automaticamente i dati dal Tier dello storage primario ad alte prestazioni al Tier di storage del pool di capacità secondario.
+
+.A proposito di questa attività
+È possibile modificare in qualsiasi momento la policy di tiering di un volume. La policy di tiering viene definita per volume.
+
+Decidere dove archiviare i dati ha implicazioni per i risparmi sui costi.
+
+FSX per ONTAP dispone di due Tier per la memorizzazione dei dati dei volumi:
+
+* *Tier di storage SSD*: Questo Tier di storage primario è per i dati a cui si accede più frequentemente, noti anche come dati _hot_. La memorizzazione dei dati nel Tier di storage primario è più costosa rispetto a quella del Tier di storage secondario.
+* *Tier di storage del pool di capacità*: Questo Tier di storage secondario è destinato ai dati archiviati o ai dati a cui si accede raramente, noti anche come dati _cold_.
+
+
+Per ulteriori informazioni sui Tier di storage, fai riferimento link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Gestione della capacità di storage"^] alla documentazione in AWS for FSX for NetApp ONTAP.
+
+.Prima di iniziare
+Prima di modificare le policy di tiering, rivedere le quattro policy disponibili.
+
+* *Auto*: Esegue il tiering di tutti i dati cold che includono i dati utente e le istantanee al Tier di storage del pool di capacità per un periodo di tempo specifico.
+* *Solo Snapshot*: Esegue il tiering solo dei dati snapshot nel Tier di storage del pool di capacità.
+* *Nessuno*: Mantiene tutti i dati del volume nel Tier di storage primario.
+* *All*: Contrassegna tutti i dati utente e i dati snapshot come cold e li memorizza nel Tier di storage del pool di capacità.
+
+
+Tenere presente che alcune policy di tiering dispongono di un periodo di raffreddamento minimo associato che imposta il tempo, o _giorni di raffreddamento_, che i dati dell'utente in un volume devono rimanere inattivi per essere considerati "cold" e spostati nel Tier di storage del pool di capacità. Il periodo di raffreddamento inizia quando i dati vengono scritti sul disco.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda volumi, fare clic sul menu dei tre punti del volume per cui modificare il criterio di tiering.
+. Selezionare *azioni avanzate*, quindi *Modifica criterio di tiering*.
+. Nella pagina Modifica criteri di tiering, selezionare uno dei seguenti criteri di tiering:
++
+** *Auto*: Immettere il numero di giorni di raffreddamento.
+** *Solo istantanea*: Immettere il numero di giorni di raffreddamento.
+** *Nessuno*
+** *Tutti*
+
+
+. Fare clic su *Apply* (Applica).
+

@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: restore-from-backup.html 
+keywords: restore backup, new volume, volume restoration, backup 
+summary: Ripristina un volume da un backup in qualsiasi file system FSX per ONTAP nel tuo account AWS. 
+---
+= Ripristinare un volume da un backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ripristina un volume da un backup in qualsiasi file system FSX per ONTAP nel tuo account AWS.
+
+.Fasi
+. Accedere alla console workload Factory.
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda *volumi*, fare clic sul menu dei tre punti per il volume da ripristinare da un backup.
+. Selezionare *azioni protezione dati*, *FSX per il backup ONTAP*, quindi *Ripristina da un backup*.
+. Nella finestra di dialogo Ripristina da un backup, specificare quanto segue:
++
+.. *File system di destinazione*: Selezionare il file system di destinazione dal menu a discesa.
+.. *VM di archiviazione di destinazione*: Selezionare la VM di archiviazione di destinazione dal menu a discesa.
+.. *Nome backup*: Selezionare il nome del backup dal menu a discesa.
+.. *Nome volume ripristinato*: Immettere il nome del volume ripristinato.
+
+
+. Fare clic su *Restore* (Ripristina).
+

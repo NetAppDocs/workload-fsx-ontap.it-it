@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: links-overview.html 
+keywords: links, accounts, lambda 
+summary: Un collegamento workload Factory crea una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. In questo modo puoi monitorare e gestire determinate funzionalità del file system direttamente dalle API REST ONTAP non disponibili tramite le API Amazon FSX per ONTAP. 
+---
+= Scopri i link a workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un collegamento workload Factory crea una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. In questo modo puoi monitorare e gestire determinate funzionalità del file system direttamente dalle chiamate delle API REST di ONTAP non disponibili tramite l'API Amazon FSX per ONTAP.
+
+Non è necessario un collegamento per iniziare con workload Factory, ma in alcuni casi è necessario creare un collegamento per sbloccare tutte le funzionalità di workload Factory e workload.
+
+
+
+== Come funzionano i collegamenti
+
+I link sfruttano AWS Lambda. Lambda esegue il codice in risposta agli eventi e gestisce automaticamente le risorse di elaborazione richieste da tale codice. I link creati fanno parte del tuo account NetApp e sono associati a un account AWS.
+
+Dopo aver creato un collegamento, è possibile associarlo a uno o più file system FSX per ONTAP. Ogni file system può essere associato a un solo collegamento nello stesso account NetApp. Se si dispone di più account NetApp, è possibile associare un singolo file system a collegamenti aggiuntivi in diversi account NetApp.
+
+Vengono creati collegamenti dalle pagine del file system FSX per ONTAP in workload Factory. link:create-link.html["Informazioni su come creare collegamenti"] per ulteriori informazioni.
+
+
+
+== Costi
+
+Ogni transazione eseguita da Lambda comporta un addebito. Poiché Lambda agisce come proxy tra i due sistemi, quando Lambda invia una richiesta all'API REST ONTAP su un file system e quando invia una risposta a workload Factory viene addebitato un costo.
+
+link:https://aws.amazon.com/lambda/pricing/["Scopri di più sui costi legati all'utilizzo di AWS Lambda"^]
+
+
+
+== Quando è necessario un collegamento
+
+Workload Factory richiede un collegamento per visualizzare alcune informazioni ed eseguire alcune attività. Se si tenta di eseguire un'operazione che richiede un collegamento e non è stato associato un collegamento al file system FSX per ONTAP, viene visualizzato un messaggio che informa che l'operazione richiede un collegamento. È possibile aggiungere un nuovo collegamento o associare il file system FSX per ONTAP a un collegamento esistente in quel momento, in modo da poter eseguire l'operazione.
+
+Le funzioni che richiedono un collegamento includono:
+
+* Visualizza la versione di ONTAP installata su un file system FSX per ONTAP
+* Gestire i volumi iSCSI sul sistema
+* Attiva e disattiva la funzione di crescita automatica dei volumi
+* Creare e gestire le policy di snapshot
+* Configura relazioni di replica e replica i volumi tra file system
+* Configura relazioni di backup ed esegui il backup dei dati dei volumi nel cloud storage
+* Clona i volumi all'interno di un file system
+* Visualizzare metriche aggiuntive direttamente da ONTAP (le metriche predefinite vengono raccolte da Amazon CloudWatch)
+* Gestione delle policy di esportazione NFS
+
