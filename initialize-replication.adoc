@@ -20,7 +20,7 @@ L'inizializzazione esegue un trasferimento _baseline_: Crea uno snapshot del vol
 Considerare quando si sceglie di completare questa operazione. L'inizializzazione può richiedere molto tempo. Si consiglia di eseguire il trasferimento di riferimento in ore non di punta.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.

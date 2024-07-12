@@ -22,7 +22,7 @@ I backup di FSX per ONTAP sono incrementali e questo significa che solo i dati s
 Per eseguire il backup dei volumi, sia il volume che il file system devono disporre di una capacità di storage SSD sufficiente per archiviare lo snapshot di backup. Quando si crea una snapshot di backup, la capacità di storage aggiuntiva consumata dalla snapshot non può far sì che il volume superi il 98% di utilizzo dello storage SSD. In questo caso, il backup non viene eseguito correttamente.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system con il volume, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.

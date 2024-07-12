@@ -24,7 +24,7 @@ Prima di creare un volume da uno snapshot, prendere in considerazione le seguent
 
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system con lo snapshot del volume, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.

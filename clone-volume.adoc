@@ -23,7 +23,7 @@ Quando viene clonato un volume, viene creato un volume scrivibile con riferiment
 Perché un volume clonato contenga tutti i dati del volume principale ed eventuali nuovi dati aggiunti al clone dopo la creazione, sarà necessario link:split-cloned-volume.html["dividere il clone"] farlo dal volume principale. Inoltre, non puoi eliminare un volume principale se ha un clone. Prima di eliminare un volume principale, è necessario dividere un clone.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Selezionare la scheda *volumi*.
 . Nella scheda volumi, selezionare il menu a tre punti del volume da clonare.

@@ -20,7 +20,7 @@ Questa operazione aggiorna la frequenza degli snapshot acquisiti per un volume o
 È necessario un collegamento per visualizzare i criteri di snapshot esistenti. Per associare un collegamento, fare clic su *Associa collegamento* in *Nome account*. Quindi tornare a questa operazione.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Selezionare la scheda *volumi*.
 . Nella scheda *volumi*, selezionare il menu a tre punti del volume per cui modificare il criterio snapshot.

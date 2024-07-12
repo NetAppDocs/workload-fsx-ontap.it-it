@@ -22,7 +22,7 @@ NOTE: L'espansione automatica dei volumi non è supportata per i volumi iSCSI.
 Per attivare la crescita automatica del volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, fare clic su *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda FSX per ONTAP, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.

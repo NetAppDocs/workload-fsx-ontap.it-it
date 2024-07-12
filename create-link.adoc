@@ -65,7 +65,7 @@ Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account A
 
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare *Associa collegamento*.

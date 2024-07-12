@@ -34,7 +34,7 @@ Completare i seguenti passaggi per replicare un singolo volume o tutti i volumi 
 .Replica di un singolo volume
 --
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume da replicare, quindi selezionare *Gestisci*.
 . Dalla scheda volumi, selezionare il menu a tre punti del volume da replicare.
@@ -80,7 +80,7 @@ Se si attiva la conservazione a lungo termine, selezionare un criterio esistente
 .Replica di tutti i volumi in un file system
 --
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda FSX per ONTAP, fare clic sul menu dei tre punti del file system con i volumi, quindi selezionare *Gestisci*.
 . Dalla panoramica del file system, selezionare *Crea replica*.

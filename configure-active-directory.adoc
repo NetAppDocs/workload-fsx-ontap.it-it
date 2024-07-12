@@ -17,7 +17,7 @@ Configurare e aggiornare Active Directory per una VM di storage in un file syste
 La stessa procedura si applica alla configurazione e all'aggiornamento di Active Directory per una VM di storage.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con la VM di archiviazione da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.

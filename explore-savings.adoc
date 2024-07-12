@@ -50,7 +50,7 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 .Amazon Elastic Block Store (EBS)
 --
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . In Storage, seleziona *Explore Savings*, quindi *Amazon Elastic Block Store (EBS)*.
 . Nel calcolatore del risparmio dello storage, fornisci i seguenti dettagli:
 +
@@ -71,7 +71,7 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 .Amazon FSX per Windows file Server
 --
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . In archiviazione, selezionare *Esplora risparmi*, quindi *Amazon FSX per Windows file Server*.
 . Nel calcolatore del risparmio dello storage, fornisci i seguenti dettagli:
 +
@@ -93,7 +93,7 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 .Amazon Elastic file System (EFS)
 --
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nell'archiviazione, selezionare *Esplora risparmi*, quindi *Amazon Elastic file System (EFS)*.
 . Nel calcolatore del risparmio dello storage, fornisci i seguenti dettagli:
 +

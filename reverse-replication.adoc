@@ -25,7 +25,7 @@ NOTE: Tutti i dati scritti nel volume di origine tra l'ultima replica dei dati e
 Assicurarsi di conoscere i ruoli attuali e futuri dei volumi di origine e di destinazione, poiché le modifiche apportate al nuovo volume di destinazione vengono sovrascritte con il nuovo volume di origine. Se utilizzato in modo errato, è possibile che si verifichi una perdita involontaria dei dati.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.

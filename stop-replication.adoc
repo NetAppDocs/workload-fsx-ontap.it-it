@@ -14,7 +14,7 @@ summary: Interruzione di una relazione di replica tra i volumi di origine e di d
 Quando si interrompe una replica, vengono pianificati gli aggiornamenti della replica dal volume di origine alla pausa del volume di destinazione. Il volume di destinazione passa da sola lettura a lettura-scrittura.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.

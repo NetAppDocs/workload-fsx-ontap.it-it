@@ -14,7 +14,7 @@ summary: Aggiunta, aggiornamento o rimozione dei tag delle macchine virtuali di 
 I tag possono aiutarti a categorizzare le risorse. Puoi aggiungere, modificare e rimuovere i tag di una macchina virtuale storage in qualsiasi momento.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con la VM di archiviazione da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.

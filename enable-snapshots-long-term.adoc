@@ -18,7 +18,7 @@ La conservazione a lungo termine permette ai servizi di business di continuare a
 La stessa procedura si applica per abilitare e modificare le istantanee per la conservazione a lungo termine.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.

@@ -22,7 +22,7 @@ Questa operazione ripristina i dati da uno snapshot a un nuovo volume.
 Assicurarsi di disporre di capacità sufficiente per completare questa operazione.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system con il volume, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.

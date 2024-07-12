@@ -22,7 +22,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Prima di iniziare</block>
   <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">Determinare gli utenti o i gruppi a cui concedere l'accesso e il tipo di accesso a cui concedere l'accesso.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Fasi</block>
-  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">Accedere alla console workload Factory.</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.</block>
   <block id="80ad238f0c32ccf7b3f91d0b7b0ea76b" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">Nella panoramica del file system, selezionare la scheda *volumi*.</block>
@@ -640,7 +639,6 @@
   <block id="e916aa8237833ef72c75def81e289920" category="paragraph">In alternativa, puoi <block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> fare in modo che workload Factory gestisca al tuo posto la capacità del file system.</block>
   <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">L'aumento della capacità dei file system influisce sugli IOPS per il file system FSX for ONTAP.</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">Provisioning degli IOPS</block>
-  <block id="b677ee098503d5853f180332f5658aa6" category="paragraph">Se si sceglie automaticamente <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> per un file system, gli IOPS aumentano di 3 volte ogni aumento di 1 GiB nella capacità degli SSD. Ad esempio, eseguendo il provisioning di 100 TiB (102.400 GiB) di capacità SSD, gli IOPS aumenteranno di 300 TiB (307.200 GiB).</block>
   <block id="e7317a971e575aecebe43b18f10a7503" category="paragraph">Quando <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> manualmente, potrebbe essere necessario aumentare l'allocazione degli IOPS per supportare l'aumentata capacità del file system.</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">Per i limiti della capacità di storage degli SSD, fai riferimento alla <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> documentazione di AWS FSX per NetApp ONTAP.</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">disattivare la gestione automatica della capacità</block>
@@ -1090,4 +1088,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">Provisioning degli IOPS per un file system</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Riferimento</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Risoluzione dei problemi</block>
+  <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">Accedere a. <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
+  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">Se si sceglie automaticamente <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> per un file system, gli IOPS aumentano di 3 volte ogni aumento di 1 GiB nella capacità degli SSD.</block>
 </blocks>

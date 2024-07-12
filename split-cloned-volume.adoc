@@ -35,7 +35,7 @@ Prima di dividere un volume clonato, prendere in considerazione quanto segue:
 
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Selezionare la scheda *volumi*.
 . Nella scheda volumi, selezionare il menu a tre punti del volume con il volume clonato da dividere.

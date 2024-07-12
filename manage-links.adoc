@@ -22,7 +22,7 @@ link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:creat
 È possibile visualizzare i collegamenti attualmente associati al proprio account.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Dal menu account, selezionare *Collegamenti*.
 +
@@ -43,7 +43,7 @@ image:screenshot-view-link-details.png["Una schermata che mostra i file system F
 Dopo aver creato un collegamento, è possibile associarlo ai file system FSX per ONTAP. Ogni file system può essere associato a un solo collegamento in un singolo account NetApp, ma un collegamento può essere associato a molti file system.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare *Associa collegamento*.
@@ -71,7 +71,7 @@ Puoi rimuovere un collegamento che non utilizzi più nel tuo ambiente. Qualsiasi
 Il link viene eliminato solo da workload Factory e non dall'ambiente AWS. Devi eliminare la funzione Lambda dal tuo account AWS dopo aver rimosso il link in workload Factory.
 
 .Fasi
-. Accedere alla console workload Factory.
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Dal menu account, selezionare *Collegamenti*.
 . Nella pagina Collegamenti, selezionare il pulsante menu e selezionare *Rimuovi*.
