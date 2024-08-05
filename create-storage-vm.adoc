@@ -21,6 +21,15 @@ Grazie alle SVM, quando accedi ai dati in FSX per ONTAP, client e workstation mo
 .Prima di iniziare
 Verifica del numero supportato di VM storage per file system. Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestione di FSX per ONTAP Storage Virtual Machine"^] nella documentazione AWS per il numero massimo di SVM per file system.
 
+
+
+== Creare una VM di storage
+
+È possibile creare una macchina virtuale di storage dalla console workload Factory. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
+
+
+NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice.
+
 .Fasi
 . Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.

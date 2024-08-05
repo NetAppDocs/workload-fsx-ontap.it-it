@@ -15,12 +15,6 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 
 
-== Modalità operative
-
-La modalità _Read_ non è attualmente disponibile.
-
-
-
 == Collegamento
 
 È necessario un collegamento per completare alcune operazioni, come la replica nell'interfaccia utente di workload Factory.

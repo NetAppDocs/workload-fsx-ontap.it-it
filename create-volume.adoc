@@ -133,7 +133,7 @@ NOTE: Gli orari degli snapshot si basano sul fuso orario del file system, che pe
 
 .. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume.
 +
-Auto è la policy di tiering predefinita quando si crea un volume usando l'interfaccia utente workload Factory FSX per ONTAP. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSX per NetApp ONTAP.
+Auto è la policy di tiering predefinita quando si crea un volume usando l'interfaccia utente. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSX per NetApp ONTAP.
 
 
 
@@ -146,3 +146,6 @@ Auto è la policy di tiering predefinita quando si crea un volume usando l'inter
 
 . Fare clic su *Create* (Crea).
 
+
+.Risultato
+Viene avviata la creazione del volume. Una volta creato, il nuovo volume viene visualizzato nella scheda Volumes (volumi).

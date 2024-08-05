@@ -30,6 +30,10 @@ La replica crea una copia secondaria dei dati su un altro file system FSX per ON
 
 Puoi scegliere di creare sia volumi replicati in un altro file system FSX per ONTAP e file di backup nel cloud. In alternativa, puoi scegliere di creare volumi replicati o file di backup.
 
+Il diagramma seguente mostra una rappresentazione visiva della data Protection per lo storage FSX per ONTAP utilizzando snapshot, replica tra aree e backup in storage a oggetti.
+
+image:diagram-fsx-data-protection.png["Screenshot mostra la data Protection per lo storage FSX per ONTAP che utilizza le snapshot, replica tra aree e backup nello storage a oggetti."]
+
 
 
 == Best practice per la protezione dei dati dei carichi di lavoro
