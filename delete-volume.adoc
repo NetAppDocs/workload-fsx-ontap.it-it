@@ -28,6 +28,15 @@ Prima di eliminare un volume, prendere in considerazione quanto segue:
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda volumi, selezionare il menu a tre punti del volume da eliminare.
 . Selezionare *azioni di base*, quindi *Elimina volume*.
-. Nella finestra di dialogo Elimina volume, digitare "elimina" per eliminare il volume.
-. Fare clic su *Delete* (Elimina).
+. Nella finestra di dialogo Elimina volume, effettuare le seguenti operazioni:
++
+.. In alternativa, fare clic su *Backup del volume* per eseguire il backup del volume prima dell'eliminazione.
++
+Il backup rimane nel file system finché non viene eliminato manualmente.
+
+.. Fare clic su *continua*.
+.. Digitare "delete" per eliminare il volume.
+.. Fare clic su *Delete* (Elimina).
+
+
 
