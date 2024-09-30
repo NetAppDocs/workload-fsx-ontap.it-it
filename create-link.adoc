@@ -22,7 +22,14 @@ I link sfruttano AWS Lambda per eseguire codice in risposta a eventi e gestire a
 
 Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account AWS.
 
+Sono disponibili due opzioni per la creazione dei collegamenti, automatica o manuale.
+
+* Automaticamente: Crea un link con la registrazione automatica tramite workload Factory. Un collegamento creato automaticamente richiede token per l'automazione di workload Factory e il codice CloudFormation ha una durata breve. Può essere utilizzato solo per un massimo di 6 ore.
+* Manualmente: Crea un collegamento con la registrazione manuale. Il codice CloudFormation persiste e consente di completare l'operazione con più tempo. Ciò è utile quando si lavora con diversi team, come Security e DevOps, che prima devono concedere le autorizzazioni necessarie per completare la creazione del collegamento.
+
+
 .Prima di iniziare
+* Si consiglia di considerare quale opzione di creazione del collegamento si utilizzerà.
 * Devi disporre delle credenziali per accedere al tuo account AWS.
 * Quando si aggiunge un collegamento utilizzando uno stack CloudFormation, è necessario disporre delle seguenti autorizzazioni nell'account AWS:
 +
@@ -64,6 +71,12 @@ Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account A
 ====
 
 
+[role="tabbed-block"]
+====
+.Crea automaticamente
+--
+Utilizzare CloudFormation per creare e registrare automaticamente il collegamento in workload Factory.
+
 .Fasi
 . Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
@@ -79,9 +92,9 @@ L'account AWS e le informazioni aggiuntive per account, posizione e gruppo sicur
 
 
 
-. Selezionare *Redirect to CloudFormation*.
+. Fare clic su *Create* (Crea).
 +
-Viene visualizzata una finestra di dialogo che spiega come creare il collegamento dal servizio AWS CloudFormation.
+Viene visualizzata la finestra di dialogo Redirect to CloudFormation (Reindirizza a CloudFormation) che spiega come creare il collegamento dal servizio AWS CloudFormation.
 
 . Seleziona *continua* per aprire la console di gestione AWS, quindi accedi all'account AWS per questo file system FSX per ONTAP.
 . Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May create IAM resources* (riconosco che AWS CloudFormation potrebbe creare risorse IAM*).
@@ -102,5 +115,46 @@ Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia
 . Torna all'interfaccia workload Factory e vedrai che il link è associato al file system FSX per ONTAP.
 
 
+--
+.Crea manualmente
+--
+Con questa opzione, estrai l'ARN per il link da AWS CloudFormation e riportalo qui. Workload Factory registra manualmente il collegamento.
+
+.Fasi
+. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare *Associa collegamento*.
+. Nella finestra di dialogo Associa collegamento, selezionare *Crea un nuovo collegamento* e selezionare *continua*.
+. Nella pagina Crea collegamento, fornire quanto segue:
++
+.. *Nome collegamento*: Immettere il nome che si desidera utilizzare per questo collegamento. Il nome deve essere univoco all'interno dell'account.
+.. *Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.
+.. *Registrazione link*: Fai clic sulla freccia del menu a discesa per espandere le istruzioni su come registrare il link dal servizio AWS CloudFormation. Seguire le istruzioni.
++
+Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia il modello CloudFormation. Workload Factory utilizza queste autorizzazioni quando utilizza i collegamenti.
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
++
+Dopo aver creato correttamente lo stack, incollare l'ARN lambda nella casella di testo.
+
+.. L'account AWS e le informazioni aggiuntive per account, posizione e gruppo sicurezza vengono recuperate automaticamente in base al file system FSX per ONTAP.
+
+
+. Fare clic su *Create* (Crea).
++
+È possibile monitorare lo stato di creazione del collegamento dalla pagina Eventi. Questa operazione non dovrebbe richiedere più di 5 minuti.
+
+. Torna all'interfaccia workload Factory e vedrai che il link è associato al file system FSX per ONTAP.
+
+
+--
+====
 .Risultato
 Il collegamento creato è associato al file system FSX per ONTAP.

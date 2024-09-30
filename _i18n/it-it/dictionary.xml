@@ -130,7 +130,6 @@
   <block id="e9198457278be1c95b85e05535cb9f65" category="list-text">*Unità organizzativa (OU)*: Immettere l'unità organizzativa.</block>
   <block id="7a2e6aa7ec8c0baa05c10c56e0f96e77" category="paragraph">L'unità organizzativa è il nome del percorso distinto dell'unità organizzativa a cui si desidera unire il file system.</block>
   <block id="ef13ae21eedaa1ecccd02fb7ddd30bb1" category="list-text">*Gruppo di amministratori delegati*: Se si desidera, immettere il gruppo di amministratori del file system delegato.</block>
-  <block id="e78e0461224b8a8fb358504cea15161d" category="paragraph">Il gruppo di amministratori eliminato è il nome del gruppo in Active Directory che può amministrare il file system.</block>
   <block id="85912990c5413ea32362225e50fc2629" category="paragraph">Se utilizzi ad Microsoft gestito da AWS, devi specificare un gruppo come ad esempio gli amministratori FSX delegati di AWS, gli amministratori delegati di AWS o un gruppo personalizzato con autorizzazioni delegate all'unità organizzativa.</block>
   <block id="3fd21f2222285241b7bbfebc4759ab56" category="paragraph">Se si sta effettuando l'accesso a un ad autogestito, utilizzare il nome del gruppo nell'ad. Il gruppo predefinito è<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>.</block>
   <block id="feee2b77515a5dc7c8021b28aff315e8" category="summary">Creare un backup manuale di un volume al di fuori dei backup pianificati regolarmente.</block>
@@ -224,8 +223,6 @@
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">*Nome collegamento*: Immettere il nome che si desidera utilizzare per questo collegamento. Il nome deve essere univoco all'interno dell'account.</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">*Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.</block>
   <block id="c54e90f3916f294bec1f9be7d938fba1" category="paragraph">L'account AWS e le informazioni aggiuntive per account, posizione e gruppo sicurezza vengono recuperate automaticamente in base al file system FSX per ONTAP.</block>
-  <block id="96e4942093191178179c76019581eee0" category="list-text">Selezionare *Redirect to CloudFormation*.</block>
-  <block id="d1b173de03b05ec6a5b1a04a0c72d5d0" category="paragraph">Viene visualizzata una finestra di dialogo che spiega come creare il collegamento dal servizio AWS CloudFormation.</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">Seleziona *continua* per aprire la console di gestione AWS, quindi accedi all'account AWS per questo file system FSX per ONTAP.</block>
   <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May create IAM resources* (riconosco che AWS CloudFormation potrebbe creare risorse IAM*).</block>
   <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia il modello CloudFormation. Workload Factory utilizza queste autorizzazioni quando utilizza i collegamenti.</block>
@@ -1121,8 +1118,6 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 agosto 2024</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">7 luglio 2024</block>
   <block id="b18d7ec0ad964d10af97254ea8b0612d" category="doc">Release iniziale di workload Factory per Amazon FSX per NetApp ONTAP</block>
-  <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
-  <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSX per NetApp ONTAP è ora generalmente disponibile in workload Factory.</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">Ora puoi utilizzare Terraform di Codebox per implementare file system e macchine virtuali di storage.</block>
   <block id="f0881d896f399a09e86122a09c00b74d" category="doc">Supporto della modalità di lettura per la gestione dello storage</block>
@@ -1138,4 +1133,28 @@
   <block id="26983a904e0717c520032a2178795368" category="list-text">Fare clic su *continua*.</block>
   <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">Digitare "delete" per eliminare il volume.</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 settembre 2024</block>
+  <block id="a384088a79fca35da6b697720f2ddd66" category="list-text"><block ref="a384088a79fca35da6b697720f2ddd66" category="inline-link-macro-rx"></block></block>
+  <block id="a9803c91b8fa40d3fdc106b005fdb16c" category="list-text"><block ref="a9803c91b8fa40d3fdc106b005fdb16c" category="inline-link-macro-rx"></block></block>
+  <block id="cd1df627bd8e5b96916530ffbf4664f6" category="doc">Aggiornamenti per la creazione del collegamento</block>
+  <block id="15f127e6d8c5111ce85f47eff68232a7" category="list-text">Visualizzatore Codebox: La codebox è ora integrata nel processo di creazione del collegamento. Prima di reindirizzare ad AWS per eseguire l'operazione, è possibile visualizzare e copiare il modello CloudFormation da Codebox in workload Factory.</block>
+  <block id="8efc4e00ac03374d3e1dc5d19c40016b" category="list-text">Autorizzazioni richieste: Le autorizzazioni necessarie per eseguire la creazione del collegamento in AWS CloudFormation sono ora disponibili per la visualizzazione e la copia dalla procedura guidata Create link in workload Factory.</block>
+  <block id="3721bd571f4111dad2c363436de34c51" category="list-text">Supporto per la creazione manuale dei link: Questa funzione consente la creazione standalone in AWS CloudFormation con registrazione manuale del link ARN. È utile quando un team di sicurezza o DevOps assiste nel processo di creazione dei collegamenti.</block>
+  <block id="27f80dd01569e18971f783f257cc7294" category="paragraph"><block ref="27f80dd01569e18971f783f257cc7294" category="inline-link-macro-rx"></block></block>
+  <block id="652227e30bf6d77e12a5c024de7bc6d6" category="list-text">Nella scheda *FSX per ONTAP*, fare clic sul menu a tre punti del file system con la VM di archiviazione da aggiornare, quindi selezionare *Gestisci*.</block>
+  <block id="37bb8b5cad0754acdd2d9ed1e9d36928" category="paragraph">Il gruppo di amministratori delegati è il nome del gruppo in Active Directory che può amministrare il file system.</block>
+  <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">Se si sta effettuando la connessione a un ad gestito autonomamente, utilizzare il nome del gruppo nell'ad. Il gruppo predefinito è<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>.</block>
+  <block id="e359c45e41079948637e3625aa645ee6" category="paragraph">Sono disponibili due opzioni per la creazione dei collegamenti, automatica o manuale.</block>
+  <block id="5f430c8ea369f8788a9d32bc5ddef4f4" category="list-text">Automaticamente: Crea un link con la registrazione automatica tramite workload Factory. Un collegamento creato automaticamente richiede token per l'automazione di workload Factory e il codice CloudFormation ha una durata breve. Può essere utilizzato solo per un massimo di 6 ore.</block>
+  <block id="f35d0bfc59b397e2ee196c7e6b0d33d7" category="list-text">Manualmente: Crea un collegamento con la registrazione manuale. Il codice CloudFormation persiste e consente di completare l'operazione con più tempo. Ciò è utile quando si lavora con diversi team, come Security e DevOps, che prima devono concedere le autorizzazioni necessarie per completare la creazione del collegamento.</block>
+  <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">Si consiglia di considerare quale opzione di creazione del collegamento si utilizzerà.</block>
+  <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">Crea automaticamente</block>
+  <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">Utilizzare CloudFormation per creare e registrare automaticamente il collegamento in workload Factory.</block>
+  <block id="6a97c44fefe95ac9ca6fe05e50d1729f" category="paragraph">Viene visualizzata la finestra di dialogo Redirect to CloudFormation (Reindirizza a CloudFormation) che spiega come creare il collegamento dal servizio AWS CloudFormation.</block>
+  <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">Crea manualmente</block>
+  <block id="6f19769f7ee87f4c55c249bc3849c48a" category="paragraph">Con questa opzione, estrai l'ARN per il link da AWS CloudFormation e riportalo qui. Workload Factory registra manualmente il collegamento.</block>
+  <block id="9f7d5c71d756492e276c5460cc778424" category="list-text">*Registrazione link*: Fai clic sulla freccia del menu a discesa per espandere le istruzioni su come registrare il link dal servizio AWS CloudFormation. Seguire le istruzioni.</block>
+  <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">Dopo aver creato correttamente lo stack, incollare l'ARN lambda nella casella di testo.</block>
+  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">Accedere alla console workload Factory.</block>
+  <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">Dividere un FlexVol volume clonato dal volume principale per rendere il clone un normale FlexVol volume in lettura e scrittura.</block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 settembre 2024</block>
 </blocks>

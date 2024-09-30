@@ -11,7 +11,7 @@ summary: Dividere un volume FlexVol clone dal volume principale per rendere il c
 
 
 [role="lead"]
-Dividere un volume FlexVol clone dal volume principale per rendere il clone un normale volume FlexVol in lettura e scrittura.
+Dividere un FlexVol volume clonato dal volume principale per rendere il clone un normale FlexVol volume in lettura e scrittura.
 
 I dati sono accessibili sul clone e sull'immagine principale durante la divisione. Il processo di suddivisione aggiorna solo i metadati e richiede un io minimo. Non vengono copiati blocchi di dati.
 
