@@ -63,7 +63,7 @@ Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managi
 == Supporto del protocollo iSCSI
 
 * Il protocollo iSCSI è supportato solo per implementazioni con scalabilità verticale. ^1^
-* Il protocollo iSCSI è disponibile solo per i volumi FlexGroup. ^1^
+* Il protocollo iSCSI è disponibile solo per i volumi FlexVol. ^1^
 * Per ogni volume è possibile configurare una sola LUN.
 
 
