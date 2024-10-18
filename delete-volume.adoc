@@ -16,9 +16,9 @@ Puoi eliminare un volume nel file system FSX per ONTAP in qualsiasi momento. Que
 .Prima di iniziare
 Prima di eliminare un volume, prendere in considerazione quanto segue:
 
+* Relazioni di replica: È necessario link:delete-replication.html["eliminare tutte le relazioni di replica esistenti"] per questo volume prima di eliminare il volume in modo che non rimangano relazioni interrotte.
 * Snapshot locali: Tutti gli snapshot associati a questo file system FSX per ONTAP verranno eliminati in modo permanente.
 * Backup FSX per ONTAP: Le copie di backup di FSX per ONTAP rimarranno e potrai comunque utilizzarli.
-* Relazioni di replica: Si consiglia link:delete-replication.html["eliminare eventuali relazioni di replica esistenti"] di utilizzare questo volume prima di eliminare il volume in modo che non rimangano relazioni interrotte.
 
 
 .Fasi
