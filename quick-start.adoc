@@ -23,13 +23,13 @@ Sarà necessario link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Aggiungere credenziali e autorizzazioni
 [role="quick-margin-para"]
-Scegli tra _Basic_ e _Automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modalità operative"^]
+Scegli tra _Basic_, _Read_ e _Automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modalità operative"^]
 
 [role="quick-margin-para"]
 Se scegliete di operare in modalità _Basic_, non dovete andare oltre. È possibile iniziare utilizzando workload Factory per FSX for ONTAP per copiare gli esempi di codice parzialmente completati.
 
 [role="quick-margin-para"]
-Se operate in modalità _automatizza_, dovrete link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["aggiungere manualmente le credenziali a un account"^] includere la selezione delle capacità del carico di lavoro, come database e ai, e la creazione dei criteri IAM per assicurarvi di disporre delle autorizzazioni corrette per operare in modalità _automatizza_.
+Se operate in modalità _Read_ o _Automate_, avrete bisogno di link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["aggiungere manualmente le credenziali a un account"^] quale include la selezione delle capacità del carico di lavoro, come database e ai, e la creazione delle policy IAM per assicurarvi di disporre delle autorizzazioni corrette per operare in modalità _Read_ o _Automate_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Creare un file system
 [role="quick-margin-para"]
