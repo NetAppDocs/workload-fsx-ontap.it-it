@@ -36,8 +36,9 @@ Prima di dividere un volume clonato, prendere in considerazione quanto segue:
 
 .Fasi
 . Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Selezionare la scheda *volumi*.
+. Da archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system FSX per ONTAP che contiene il volume clonato da dividere, quindi selezionare *Gestisci*.
+. Dalla scheda Panoramica del file system, selezionare la scheda *volumi*.
 . Nella scheda volumi, selezionare il menu a tre punti del volume con il volume clonato da dividere.
 . Selezionare *azioni protezione dati*, quindi *Dividi volume clonato*.
 . Nella finestra di dialogo Dividi volume, fare clic su *Elimina*.

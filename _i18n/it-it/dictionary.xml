@@ -68,7 +68,6 @@
   <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="list-text">Settimanale</block>
   <block id="d8977131f7da0505ccdd8e33f901bb75" category="summary">Consente di aggiornare il criterio di snapshot di un volume in qualsiasi momento.</block>
   <block id="340f8dee912ac16b4fb008726d3ee88f" category="doc">Consente di modificare il criterio di snapshot di un volume</block>
-  <block id="98a71d4244a8d2bc70cdcddc5cb64af6" category="paragraph">Questa operazione aggiorna la frequenza degli snapshot acquisiti per un volume o disattiva gli snapshot automatici.</block>
   <block id="53e6e67988f9acb9f1aab8ccad2c0340" category="paragraph">È necessario un collegamento per visualizzare i criteri di snapshot esistenti. Per associare un collegamento, fare clic su *Associa collegamento* in *Nome account*. Quindi tornare a questa operazione.</block>
   <block id="6e1473c0de5b054e5e9236bbe796cc32" category="list-text">Selezionare la scheda *volumi*.</block>
   <block id="b7896e81066533818c46cd2b875eb7bf" category="list-text">Nella scheda *volumi*, selezionare il menu a tre punti del volume per cui modificare il criterio snapshot.</block>
@@ -844,7 +843,6 @@
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">Nella finestra di dialogo Reimposta password fsxadmin, immettere una nuova password fsxadmin e reimmetterla per confermare.</block>
   <block id="279e520d9175d8e5591ed2ca3fc5acab" category="summary">Se necessario, reimpostare la password della VM di archiviazione.</block>
   <block id="217c9f6fe263e655130a845fd58ccebe" category="doc">Reimpostare la password per una VM di archiviazione</block>
-  <block id="eda74f1b1bef1d5fd22f162e31e3f4c5" category="list-text">Selezionare la scheda *Storage VM*.</block>
   <block id="a22a424f6f09fb9aab17350b24d152ce" category="list-text">Nella scheda Storage VM, selezionare il menu a tre punti della VM di archiviazione per cui reimpostare la password.</block>
   <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">Selezionare *Ripristina password*.</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">Nella finestra di dialogo Reimposta password, specificare quanto segue:</block>
@@ -1091,7 +1089,6 @@
   <block id="c0c6f43c72d4131a3142969ee1f93961" category="paragraph">Per passare a FSX per ONTAP, seguire le istruzioni riportate in <block ref="d4d3e2c1446af85f31cda9e1ddaf30d7" category="inline-xref-macro-rx"></block>.</block>
   <block id="b531032648e600a642b682616d2a0bdd" category="section-title">Esplora i risparmi per gli ambienti di storage rilevati</block>
   <block id="cb10bf47866edd2ac9fb6586867bd1f6" category="admonition">Questa opzione di calcolo non supporta i calcoli per gli snapshot EBS e le copie shadow di FSX per Windows file Server. Quando si esplorano i risparmi tramite la personalizzazione, è possibile fornire dettagli sugli snapshot EBS ed FSX per Windows file Server.</block>
-  <block id="9f9100c91adcf9dad4883f822e09cda9" category="list-text">Nell'inventario dello storage, selezionare la scheda *Elastic Block Store (EBS)*.</block>
   <block id="4e6bb917970bfdc851c5092e11272217" category="list-text">Seleziona le istanze da confrontare con FSX per ONTAP e fai clic su *Esplora risparmi*.</block>
   <block id="f59ef66ff04b00cacb36ef4c77c51958" category="list-text">Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base alle istanze selezionate:</block>
   <block id="bca9e850c916e20118ab9da7a15e1ab7" category="list-text">*Caso d'utilizzo*: Il caso d'utilizzo per la configurazione. Se necessario, è possibile modificare il caso di utilizzo.</block>
@@ -1099,13 +1096,11 @@
   <block id="6c52ebf14450d045b355a868931e1164" category="list-text">*Quantità di storage totale (TiB)*: La quantità di storage per volume in TiB</block>
   <block id="304b6d4108ca48d891db9c471488358b" category="list-text">*IOPS totali con provisioning*: Per volumi GP3, io1 e IO2</block>
   <block id="8f5e9660dd3425492cf59bc6e12606d8" category="list-text">*Throughput totale (MIB/s)*: Solo per volumi GP3</block>
-  <block id="2da38d4eab31e419f29bebc00eb3d264" category="list-text">Nell'inventario archiviazione, selezionare la scheda *FSX per Windows file Server*.</block>
   <block id="15fc70bd68494b595c2e5441312916e5" category="list-text">Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base al tipo di implementazione delle istanze selezionate:</block>
   <block id="a32ffe6360aa9a89cb9696c19f828d91" category="list-text">*File system selezionati</block>
   <block id="148f511d9c35e6ff4cb92ebc25a1c9cf" category="list-text">*Quantità totale di storage (TiB)*</block>
   <block id="9dbb3393e470b57796b7ec491b66bdea" category="list-text">*IOPS SSD con provisioning*</block>
   <block id="22706a4c75c6b61679dc073e45ec6e08" category="list-text">*Throughput (MIB/s)*</block>
-  <block id="ff878267bfd97975ad2ec503878325c1" category="list-text">Nell'inventario archiviazione, selezionare la scheda *EFS (Elastic file System)*.</block>
   <block id="a765aa8369baa37d4241f37483d8954c" category="list-text">*Totale file system*</block>
   <block id="9285022230e927d788a11d636f2a52c4" category="list-text">*Throughput totale fornito (MIB/s)*</block>
   <block id="6aae74300e54ee6bdcfadde9a88345f6" category="list-text">*Throughput elastico totale - lettura (GiB)*</block>
@@ -1157,4 +1152,21 @@
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">Relazioni di replica: È necessario <block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block> per questo volume prima di eliminare il volume in modo che non rimangano relazioni interrotte.</block>
   <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">Scegli tra _Basic_, _Read_ e _Automate_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">Se operate in modalità _Read_ o _Automate_, avrete bisogno di <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> quale include la selezione delle capacità del carico di lavoro, come database e ai, e la creazione delle policy IAM per assicurarvi di disporre delle autorizzazioni corrette per operare in modalità _Read_ o _Automate_.</block>
+  <block id="31139fb3d548620b7d82f880e4660606" category="doc">Viste a schede nell'inventario dello storage</block>
+  <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">L'inventario dello storage è stato aggiornato con una vista a due schede:</block>
+  <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">Scheda FSX per ONTAP: Visualizza i file system FSX per ONTAP attualmente disponibili.</block>
+  <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">Scheda Esplora i risparmi: Visualizza i sistemi di storage Elastic Block Store, FSX per Windows file Server e Elastic file Systems. A questo punto, puoi esplorare i risparmi per questi sistemi confrontandoli con FSX per ONTAP.</block>
+  <block id="62cf721f97d39a9aaf1ac7786071551c" category="paragraph">Consente di aggiornare la frequenza degli snapshot acquisiti per un volume o di disabilitare gli snapshot automatici in qualsiasi momento.</block>
+  <block id="110f1585246a580402f0c6b34d42e65a" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system FSX per ONTAP che contiene il volume con il criterio snapshot da aggiornare, quindi selezionare *Gestisci*.</block>
+  <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">Dalla scheda Panoramica del file system, selezionare la scheda *volumi*.</block>
+  <block id="74e854d4ac135e193bafa7dfdf343efe" category="list-text">Da archiviazione, selezionare *Vai all'inventario di archiviazione*.</block>
+  <block id="9df0f8cc7fbb70153a71c3d1657c3d81" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system FSX per ONTAP che contiene il volume da clonare, quindi selezionare *Gestisci*.</block>
+  <block id="80ad1fda17ca981880509b63f91591c9" category="list-text">Nell'inventario di archiviazione, selezionare la scheda *Esplora risparmio*.</block>
+  <block id="a1e5470290e2e47a8295d8ae0b1e78af" category="list-text">Nella scheda *Elastic Block Store (EBS)*, selezionare le istanze da confrontare con FSX per ONTAP e fare clic su *Esplora risparmio*.</block>
+  <block id="69664318bb60fdf05cfe25fa2b5a7242" category="list-text">Selezionare la scheda *FSX per Windows file Server*.</block>
+  <block id="5e172a101429002f6723f0f156cbd608" category="list-text">Selezionare la scheda * Elastic file System (EFS)*.</block>
+  <block id="78745d22af85f4409daf48ce5059c4c0" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system FSX per ONTAP con la VM di archiviazione da aggiornare, quindi selezionare *Gestisci*.</block>
+  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">Dalla scheda Panoramica del file system, selezionare la scheda *Storage VM*.</block>
+  <block id="ca677da26b1ef83b53f1decf3bf448d0" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system FSX per ONTAP che contiene il volume clonato da dividere, quindi selezionare *Gestisci*.</block>
+  <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 novembre 2024</block>
 </blocks>

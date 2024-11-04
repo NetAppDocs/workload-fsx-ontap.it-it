@@ -15,6 +15,20 @@ Scopri le novità di Amazon FSX per NetApp ONTAP.
 
 
 
+== 3 novembre 2024
+
+
+
+=== Viste a schede nell'inventario dello storage
+
+L'inventario dello storage è stato aggiornato con una vista a due schede:
+
+* Scheda FSX per ONTAP: Visualizza i file system FSX per ONTAP attualmente disponibili.
+* Scheda Esplora i risparmi: Visualizza i sistemi di storage Elastic Block Store, FSX per Windows file Server e Elastic file Systems. A questo punto, puoi esplorare i risparmi per questi sistemi confrontandoli con FSX per ONTAP.
+
+
+
+
 == 29 settembre 2024
 
 

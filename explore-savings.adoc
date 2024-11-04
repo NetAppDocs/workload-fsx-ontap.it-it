@@ -122,9 +122,9 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nell'inventario dello storage, selezionare la scheda *Elastic Block Store (EBS)*.
-. Seleziona le istanze da confrontare con FSX per ONTAP e fai clic su *Esplora risparmi*.
+. Da archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nell'inventario di archiviazione, selezionare la scheda *Esplora risparmio*.
+. Nella scheda *Elastic Block Store (EBS)*, selezionare le istanze da confrontare con FSX per ONTAP e fare clic su *Esplora risparmio*.
 . Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base alle istanze selezionate:
 +
 .. *Caso d'utilizzo*: Il caso d'utilizzo per la configurazione. Se necessario, è possibile modificare il caso di utilizzo.
@@ -141,8 +141,9 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nell'inventario archiviazione, selezionare la scheda *FSX per Windows file Server*.
+. Da archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nell'inventario di archiviazione, selezionare la scheda *Esplora risparmio*.
+. Selezionare la scheda *FSX per Windows file Server*.
 . Seleziona le istanze da confrontare con FSX per ONTAP e fai clic su *Esplora risparmi*.
 . Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base al tipo di implementazione delle istanze selezionate:
 +
@@ -160,8 +161,9 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nell'inventario archiviazione, selezionare la scheda *EFS (Elastic file System)*.
+. Da archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nell'inventario di archiviazione, selezionare la scheda *Esplora risparmio*.
+. Selezionare la scheda * Elastic file System (EFS)*.
 . Seleziona le istanze da confrontare con FSX per ONTAP e fai clic su *Esplora risparmi*.
 . Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base alle istanze selezionate:
 +
