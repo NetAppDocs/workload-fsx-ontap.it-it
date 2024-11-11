@@ -4,14 +4,14 @@ permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication 
 summary: Inizializzare una relazione di replica tra i volumi di origine e di destinazione. 
 ---
-= Inizializzare una relazione di replica
+= Inizializzare una relazione di replica in fabbrica del carico di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Inizializzare una relazione di replica tra i volumi di origine e di destinazione.
+Inizializzare una relazione di replica tra i volumi di origine e di destinazione in una fabbrica di workload BlueXP .
 
 .A proposito di questa attività
 L'inizializzazione esegue un trasferimento _baseline_: Crea uno snapshot del volume di origine, quindi trasferisce lo snapshot e tutti i blocchi di dati che fa riferimento al volume di destinazione.
@@ -20,11 +20,11 @@ L'inizializzazione esegue un trasferimento _baseline_: Crea uno snapshot del vol
 Considerare quando si sceglie di completare questa operazione. L'inizializzazione può richiedere molto tempo. Si consiglia di eseguire il trasferimento di riferimento in ore non di punta.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, fare clic sul menu dei tre punti della relazione di replica da inizializzare.
+. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da inizializzare.
 . Selezionare *Inizializza*.
-. Nella finestra di dialogo Inizializza relazione, fare clic su *Inizializza*.
+. Nella finestra di dialogo Inizializza relazione, selezionare *Inizializza*.
 

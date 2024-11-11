@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: Crea una snapshot manuale di un volume FSX per ONTAP. Gli snapshot sono versioni point-in-time dei contenuti del tuo volume. 
+summary: Crea una snapshot manuale di un volume FSX per ONTAP in una workload factory BlueXP . Gli snapshot sono versioni point-in-time dei contenuti del tuo volume. 
 ---
 = Crea una snapshot manuale di un volume FSX per ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Crea una snapshot manuale di un volume FSX per ONTAP. Gli snapshot sono
 
 
 [role="lead"]
-Crea una snapshot manuale di un volume FSX per ONTAP. Gli snapshot sono versioni point-in-time dei contenuti del tuo volume.
+Crea una snapshot manuale di un volume FSX per ONTAP in una workload factory BlueXP . Gli snapshot sono versioni point-in-time dei contenuti del tuo volume.
 
 Gli snapshot sono risorse di volumi e offrono acquisizioni istantanee dei dati che occupano spazio solo per i dati modificati. A causa del cambiamento dei dati nel tempo, le snapshot solitamente occupano più spazio man mano che diventano più datate.
 
@@ -21,15 +21,15 @@ FSX per ONTAP Volumes usa il copy-on-write just-in-time in modo che i file non m
 NOTE: Le snapshot non sono copie dei tuoi dati. Se vuoi creare copie dei tuoi dati, prendi in considerazione l'utilizzo di FSX per ONTAP o delle funzionalità di replica dei volumi.
 
 .Prima di iniziare
-È necessario link:manage-links.html["associare un collegamento"] creare un'istantanea. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, fare clic su *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+È necessario link:manage-links.html["associare un collegamento"] creare un'istantanea. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere.
 . Selezionare *azioni protezione dati*, *istantanee*, quindi *Crea volume da uno snapshot*.
 . Nella finestra di dialogo Crea volume da un'istantanea, nel campo *Nome istantanea*, immettere un nome per l'istantanea.
-. Fare clic su *Create* (Crea).
+. Selezionare *Crea*.
 

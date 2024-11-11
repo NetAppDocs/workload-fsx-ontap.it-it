@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: delete-replication.html 
 keywords: delete replication 
-summary: Eliminare una relazione di replica secondo necessità. 
+summary: Eliminazione di una relazione di replica in una fabbrica di workload BlueXP  in base alle esigenze. 
 ---
-= Eliminare una relazione di replica
+= Eliminazione di una relazione di replica in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Quando si elimina una relazione di replica, viene rimossa la relazione di replica tra il volume di origine e quello di destinazione. Una volta eliminata la relazione di replica, entrambi i volumi continuano a esistere in modo indipendente con i dati correnti contenuti.
+Eliminazione di una relazione di replica in una fabbrica di workload BlueXP . Quando si elimina una relazione di replica, viene rimossa la relazione di replica tra il volume di origine e quello di destinazione. Una volta eliminata la relazione di replica, entrambi i volumi continuano a esistere in modo indipendente con i dati correnti contenuti.
 
 Quando elimini una relazione di replica, FSX per ONTAP elimina anche gli snapshot di replica comuni del volume di origine e di destinazione.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, fare clic sul menu dei tre punti della relazione di replica da eliminare.
+. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da eliminare.
 . Selezionare *Delete* (Elimina).
-. Nella finestra di dialogo Elimina relazione, fare clic su *Elimina*.
+. Nella finestra di dialogo Elimina relazione, selezionare *Elimina*.
 

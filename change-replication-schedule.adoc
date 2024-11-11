@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: Modificare la pianificazione della replica del volume di origine in una relazione di replica. 
+summary: Modifica del piano di replica del volume di origine in una relazione di replica in una fabbrica di workload BlueXP . 
 ---
 = Consente di modificare la pianificazione della replica di un volume di origine
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: Modificare la pianificazione della replica del volume di origine in una
 
 
 [role="lead"]
-Modificare la pianificazione della replica del volume di origine in una relazione di replica.
+Modifica del piano di replica del volume di origine in una relazione di replica in una fabbrica di workload BlueXP .
 
 Scegli la frequenza con cui le snapshot dal volume di origine vengono trasferite al volume replicato per soddisfare i tuoi RPO (Point Objective) richiesti.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, fare clic sul menu a tre punti della pianificazione delle relazioni di replica da modificare.
+. Nella scheda Relazioni di replica, selezionare il menu a tre punti della pianificazione delle relazioni di replica da modificare.
 . Selezionare *Modifica intervallo di replica*.
 . Nella finestra di dialogo Modifica intervallo di replica, selezionare la frequenza di trasferimento dello snapshot dal volume di origine. È possibile scegliere tra le seguenti frequenze:
 +
@@ -31,5 +31,5 @@ Scegli la frequenza con cui le snapshot dal volume di origine vengono trasferite
 ** Settimanale
 
 
-. Fare clic su *Apply* (Applica).
+. Selezionare *Applica*.
 

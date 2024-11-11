@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: Dopo aver configurato il file system FSX per ONTAP, puoi creare FSX per ONTAP Volumes. 
+summary: Dopo aver configurato il file system FSX per ONTAP in una fabbrica di carichi di lavoro BlueXP , puoi creare FSX per ONTAP Volumes. 
 ---
-= Crea un volume FSX per ONTAP
+= Crea un volume FSX per ONTAP in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Dopo aver configurato il file system FSX per ONTAP, puoi creare FSX per ONTAP Volumes.
+Dopo aver configurato il file system FSX per ONTAP, puoi creare FSX per i volumi ONTAP in una fabbrica di workload BlueXP .
 
 .A proposito di questa attività
 FSX per ONTAP Volumes sono risorse virtuali utilizzate per raggruppare i dati, determinare il modo in cui i dati vengono memorizzati e determinare il tipo di accesso ai dati. I volumi non consumano capacità di storage del file system. I dati memorizzati in un volume consumano principalmente lo storage SSD. In base alla policy di tiering del volume, i dati potrebbero consumare anche storage pool di capacità. Al momento della creazione, è possibile impostare le dimensioni di un volume e modificarle in un secondo momento.
@@ -26,21 +26,21 @@ Per i volumi possono essere utilizzati i seguenti protocolli:
 .Prima di iniziare
 Prima di creare un volume, esaminare i seguenti prerequisiti:
 
-* Devi avere un file system FSX per ONTAP in workload Factory.
+* Devi avere un file system FSX per ONTAP in una workload factory.
 * Devi avere una macchina virtuale di storage.
 * Per l'accesso al protocollo, completare quanto segue:
 +
-** Per configurare l'accesso al volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, fare clic su *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+** Per configurare l'accesso al volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
 ** Devi configurare l'accesso per il protocollo selezionato, ovvero CIFS, NFS o iSCSI.
 
 
 
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system in cui si desidera creare un volume, quindi selezionare *Gestisci*.
-. Dalla scheda *Panoramica*, fare clic su *Crea volume*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system in cui desideri creare un volume e seleziona *Gestisci*.
+. Dalla scheda *Panoramica*, selezionare *Crea volume*.
 . Nella pagina Create volume (Crea volume), sotto General details (Dettagli generali), fornire i seguenti dettagli:
 +
 .. *Volume name*: Immettere un nome per il volume.
@@ -144,7 +144,7 @@ Auto è la policy di tiering predefinita quando si crea un volume usando l'inter
 .. *Numero di componenti*: Solo per volumi FlexGroup. Immettere il numero di componenti per aggregato. 100 GiB è richiesto per ciascun componente.
 
 
-. Fare clic su *Create* (Crea).
+. Selezionare *Crea*.
 
 
 .Risultato

@@ -2,20 +2,20 @@
 sidebar: sidebar 
 permalink: learn-fsx-ontap.html 
 keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
-summary: 'Amazon FSX per NetApp ONTAP è un servizio completamente gestito che consente ai clienti di avviare ed eseguire i file system come back-end di storage per i carichi di lavoro all"interno di workload Factory.' 
+summary: 'Amazon FSX per NetApp ONTAP è un servizio completamente gestito che consente ai clienti di avviare ed eseguire i file system come back-end di storage per i carichi di lavoro all"interno di una fabbrica di workload.' 
 ---
-= Scopri workload Factory per Amazon FSX per NetApp ONTAP
+= Scopri Amazon FSX per NetApp ONTAP in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Amazon FSX per NetApp ONTAP è un servizio di storage dei dati basato sul cloud e completamente gestito che offre capacità di gestione dei dati avanzate e performance altamente scalabili. FSX per ONTAP ti permette di creare e gestire i file system come back-end dello storage per tutti i tuoi workload in BlueXP workload Factory.
+Amazon FSX per NetApp ONTAP è un servizio di storage dei dati basato sul cloud e completamente gestito che offre capacità di gestione dei dati avanzate e performance altamente scalabili. FSX per ONTAP ti permette di creare e gestire i file system come back-end dello storage per tutti i tuoi workload all'interno di una farm di workload BlueXP .
 
 FSX per ONTAP offre le stesse funzionalità, performance e funzionalità amministrative che i clienti NetApp utilizzano on-premise oggi, con la semplicità, l'agilità, la sicurezza e la scalabilità di un servizio AWS nativo.
 
-FSX per ONTAP è il componente _storage_ in workload Factory.
+FSX per ONTAP è il componente _storage_ in una fabbrica di carichi di lavoro.
 
 
 
@@ -40,7 +40,7 @@ FSX per ONTAP offre le seguenti caratteristiche:
 
 
 
-== Funzioni aggiuntive in workload Factory
+== Funzionalità aggiuntive in workload factory
 
 * *Calcolatore di confronto dei costi di storage*: Confronta i costi di storage di Amazon Elastic Block Store (EBS), Elastic file System (EFS) e FSX per Windows file Server con FSX per ONTAP. Dal calcolatore, puoi visualizzare come le configurazioni storage di FSX per ONTAP offrono potenziali risparmi e pianificare il passaggio allo storage FSX per ONTAP.
 * *Interfaccia utente di workload Factory*: Fornisce le opzioni di modalità di distribuzione _Quick create_ e _Advanced create_. La creazione rapida include AWS, NetApp e Best practice standard di settore per le tue configurazioni storage.
@@ -49,21 +49,22 @@ FSX per ONTAP offre le seguenti caratteristiche:
 
 
 
-== Strumenti per utilizzare workload Factory
+== Strumenti per l'utilizzo di workload Factory
 
-Puoi utilizzare BlueXP workload Factory con i seguenti strumenti:
+È possibile utilizzare la farm di workload BlueXP  con i seguenti tool:
 
-* *Workload Factory console*: La console workload Factory offre un'interfaccia visiva che offre una visione olistica delle applicazioni e dei progetti
+* *Workload Factory Console*: La console workload Factory offre un'interfaccia visiva che offre una visione olistica delle applicazioni e dei progetti
+* *Console BlueXP *: La console BlueXP  offre un'interfaccia ibrida in modo da poter utilizzare la fabbrica dei workload BlueXP  insieme ad altri servizi BlueXP 
 * *API REST*: Le API REST DI workload Factory ti consentono di implementare e gestire i file system FSX per ONTAP e altre risorse AWS
-* *CloudFormation*: Il codice AWS CloudFormation consente di eseguire le azioni definite nella console workload Factory per modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.
-* *Terraform BlueXP workload Factory Provider*: Terraform consente di creare e gestire i flussi di lavoro dell'infrastruttura generati nella console di workload Factory.
+* *CloudFormation*: Il codice AWS CloudFormation consente di eseguire le azioni definite nella console del workload factory per modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS
+* *Terraform BlueXP  workload Factory Provider*: Terraform consente di creare e gestire i flussi di lavoro dell'infrastruttura generati nella console di workload Factory
 
 
 
 
 == Costo
 
-Il tuo account FSX per ONTAP è gestito da AWS e non da workload Factory. Fare riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Prezzi di Amazon FSX per NetApp ONTAP"^].
+Il tuo account FSX per ONTAP viene gestito da AWS e non dalla fabbrica di workload. Fare riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Prezzi di Amazon FSX per NetApp ONTAP"^].
 
 
 
@@ -77,4 +78,4 @@ https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services
 
 Amazon FSX per NetApp ONTAP è una soluzione AWS first-party. Per domande o problemi di supporto tecnico associati al file system, all'infrastruttura o alla soluzione FSX per ONTAP che utilizza questo servizio, utilizza il Support Center nella console di gestione AWS per aprire un caso di supporto con AWS. Selezionare il servizio "FSX per ONTAP" e la categoria appropriata. Fornire le informazioni rimanenti necessarie per creare il caso di supporto AWS.
 
-Per domande generali sulle applicazioni e i servizi workload Factory o workload Factory, fare riferimento a link:get-help.html["Scopri FSX per ONTAP per workload Factory"].
+Per domande generali sulle applicazioni e i servizi di fabbrica dei carichi di lavoro o di fabbrica dei carichi di lavoro, fare riferimento a link:get-help.html["Scopri FSX per ONTAP per la fabbrica di workload"].

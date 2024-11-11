@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords:  
-summary: Modificare la policy di tiering per riallocare i dati dal Tier dello storage primario ad alte prestazioni al Tier di storage del pool di capacità secondario. 
+summary: Modificare la policy di tiering in una fabbrica di carichi di lavoro BlueXP  per riallocare i dati dal Tier di storage primario dalle performance elevate al Tier di storage del pool di capacità secondario. 
 ---
-= Modificare la policy di tiering di un volume
+= Modifica della policy di tiering di un volume in una fabbrica di carichi di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Modificare la policy di tiering per riallocare automaticamente i dati dal Tier dello storage primario ad alte prestazioni al Tier di storage del pool di capacità secondario.
+Nella fabbrica con carichi di lavoro BlueXP , è possibile modificare la policy di tiering per riallocare automaticamente i dati dal Tier di storage primario dalle performance elevate al Tier di storage del pool di capacità secondario.
 
 .A proposito di questa attività
 È possibile modificare in qualsiasi momento la policy di tiering di un volume. La policy di tiering viene definita per volume.
@@ -38,11 +38,11 @@ Prima di modificare le policy di tiering, rivedere le quattro policy disponibili
 Tenere presente che alcune policy di tiering dispongono di un periodo di raffreddamento minimo associato che imposta il tempo, o _giorni di raffreddamento_, che i dati dell'utente in un volume devono rimanere inattivi per essere considerati "cold" e spostati nel Tier di storage del pool di capacità. Il periodo di raffreddamento inizia quando i dati vengono scritti sul disco.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda volumi, fare clic sul menu dei tre punti del volume per cui modificare il criterio di tiering.
+. Dalla scheda Volumes (volumi), seleziona il menu a tre punti del volume per cui modificare la policy di tiering.
 . Selezionare *azioni avanzate*, quindi *Modifica criterio di tiering*.
 . Nella pagina Modifica criteri di tiering, selezionare uno dei seguenti criteri di tiering:
 +
@@ -52,5 +52,5 @@ Tenere presente che alcune policy di tiering dispongono di un periodo di raffred
 ** *Tutti*
 
 
-. Fare clic su *Apply* (Applica).
+. Selezionare *Applica*.
 

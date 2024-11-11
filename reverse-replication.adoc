@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: Invertire una relazione di replica in modo che il volume di destinazione diventi il volume di origine. 
 ---
-= Invertire una relazione di replica
+= Invertire una relazione di replica nella fabbrica dei carichi di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Invertire una relazione di replica in modo che il volume di destinazione diventi il volume di origine.
+Invertire una relazione di replica nella fabbrica dei carichi di lavoro BlueXP , in modo che il volume di destinazione diventi il volume di origine.
 
 Una volta interrotta la replica e apportate modifiche al volume di destinazione, è possibile replicare tali modifiche nel volume di origine. Questo processo è comune in uno scenario di disaster recovery in cui si opera sul volume di destinazione per un po' e si desidera cambiare ruolo dei volumi.
 
@@ -25,11 +25,11 @@ NOTE: Tutti i dati scritti nel volume di origine tra l'ultima replica dei dati e
 Assicurarsi di conoscere i ruoli attuali e futuri dei volumi di origine e di destinazione, poiché le modifiche apportate al nuovo volume di destinazione vengono sovrascritte con il nuovo volume di origine. Se utilizzato in modo errato, è possibile che si verifichi una perdita involontaria dei dati.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, fare clic sul menu dei tre punti della relazione di replica da invertire.
+. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da invertire.
 . Selezionare *Inverti relazione*.
-. Nella finestra di dialogo relazione inversa, fare clic su *Inverti*.
+. Nella finestra di dialogo relazione inversa, selezionare *Inverti*.
 

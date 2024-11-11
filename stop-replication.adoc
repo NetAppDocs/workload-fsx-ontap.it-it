@@ -2,25 +2,26 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: Interruzione di una relazione di replica tra i volumi di origine e di destinazione. 
+summary: Interruzione di un rapporto di replica tra i volumi di origine e di destinazione in una workload factory BlueXP . 
 ---
-= Interruzione di una relazione di replica
+= Interruzione di un rapporto di replica in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Quando si interrompe una replica, vengono pianificati gli aggiornamenti della replica dal volume di origine alla pausa del volume di destinazione. Il volume di destinazione passa da sola lettura a lettura-scrittura.
+Interruzione di un rapporto di replica in una fabbrica di workload BlueXP . Quando si interrompe una relazione di replica, vengono pianificati gli aggiornamenti della replica dal volume di origine alla pausa del volume di destinazione. Il volume di destinazione passa da sola lettura a lettura-scrittura.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system da aggiornare, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, fare clic sul menu dei tre punti della relazione di replica da arrestare.
+. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da arrestare.
 . Selezionare *Pausa*.
 . Nella finestra di dialogo Interrompi replica, selezionare *Interrompi*.
 
 
+.Risultato
 Lo stato di replica del volume cambia in *rotto*. Il volume di destinazione diventa scrivibile.

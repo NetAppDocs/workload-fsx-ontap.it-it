@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
-summary: Con workload Factory puoi creare un file system FSX per ONTAP per aggiungere e gestire volumi e servizi dati aggiuntivi. 
+keywords: create, FSx file system, ONTAP file system, workload factory, storage 
+summary: Usando BlueXP  workload Factory puoi creare un file system FSX per ONTAP per aggiungere e gestire volumi e servizi dati aggiuntivi. 
 ---
-= Crea un file system FSX per ONTAP
+= Crea un file system FSX per ONTAP in una farm di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Con workload Factory puoi creare un file system FSX per ONTAP per aggiungere e gestire volumi e servizi dati aggiuntivi.
+Usando BlueXP  workload Factory puoi creare un file system FSX per ONTAP per aggiungere e gestire volumi e servizi dati aggiuntivi.
 
 .A proposito di questa attività
 Una VM di storage viene creata quando si crea un file system.
@@ -19,7 +19,7 @@ Una VM di storage viene creata quando si crea un file system.
 .Prima di iniziare
 Prima di creare il file system FSX per ONTAP, hai bisogno di:
 
-* L'ARN di un ruolo IAM che assegna a workload Factory le autorizzazioni necessarie per creare un file system FSX per ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni a un account AWS"^].
+* L'ARN di un ruolo IAM che fornisce a workload Factory le autorizzazioni necessarie per creare un file system FSX per ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni a un account AWS"^].
 * Le informazioni relative all'area geografica e alla VPC per la creazione dell'istanza FSX per ONTAP.
 
 
@@ -39,7 +39,7 @@ NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scari
 Creazione rapida consente di utilizzare una configurazione di Best practice consigliata. È possibile modificare la maggior parte delle impostazioni dopo aver creato un file system FSX per ONTAP.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nell'archiviazione, selezionare *Crea FSX per ONTAP*.
 . Nella pagina Crea FSX per ONTAP, selezionare *creazione rapida*.
 +
@@ -47,7 +47,7 @@ Creazione rapida consente di utilizzare una configurazione di Best practice cons
 
 . In Configurazione generale del file system, fornire quanto segue:
 +
-.. *Credenziali AWS*: Seleziona per aggiungere le credenziali AWS in workload Factory o continua senza credenziali.
+.. *Credenziali AWS*: Seleziona per aggiungere le credenziali AWS nella fabbrica dei workload oppure continua senza credenziali.
 .. *Nome file system*: Immettere un nome per il file system.
 .. *Topologia di distribuzione*: Selezionare una topologia di distribuzione.
 +
@@ -109,7 +109,7 @@ Se è stato creato il file system, è ora possibile visualizzare il file system 
 Con creazione avanzata, è possibile impostare tutte le opzioni di configurazione, inclusi disponibilità, protezione, backup e manutenzione.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nell'archiviazione, selezionare *Crea FSX per ONTAP*.
 . Nella pagina Crea FSX per ONTAP, selezionare *creazione avanzata*.
 +
@@ -117,7 +117,7 @@ Con creazione avanzata, è possibile impostare tutte le opzioni di configurazion
 
 . In Configurazione generale del file system, fornire quanto segue:
 +
-.. *Credenziali AWS*: Seleziona per aggiungere le credenziali AWS in workload Factory o continua senza credenziali.
+.. *Credenziali AWS*: Seleziona per aggiungere le credenziali AWS nella fabbrica dei workload oppure continua senza credenziali.
 .. *Nome file system*: Immettere un nome per il file system.
 .. *Topologia di distribuzione*: Selezionare una topologia di distribuzione.
 +

@@ -4,14 +4,14 @@ permalink: rebalance-volume.html
 keywords: rebalance capacity, volume capacity, redistribute capacity 
 summary: Riequilibrare la capacità di un volume per evitare squilibri che si sviluppano nel tempo. 
 ---
-= Ribilanciare la capacità di un volume
+= Ribilanciamento della capacità di un volume in una fabbrica con carichi di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Riequilibrare la capacità di un volume per evitare squilibri che si sviluppano nel tempo.
+Ribilanciare la capacità di un volume in una fabbrica di carichi di lavoro BlueXP  per evitare squilibri che si sviluppano nel tempo.
 
 .A proposito di questa attività
 Il ribilanciamento di un volume ridistribuisce la capacità quando gli squilibri si sviluppano nel tempo a causa dell'aggiunta di nuovi file e della crescita dei file. Dopo aver avviato manualmente l'operazione di riequilibrio, selezioniamo i file e li spostiamo automaticamente e senza interruzioni.
@@ -20,12 +20,12 @@ Il ribilanciamento di un volume ridistribuisce la capacità quando gli squilibri
 NOTE: Il ribilanciamento di un volume è supportato solo per i volumi FlexGroup.
 
 .Prima di iniziare
-Per riequilibrare un volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, fare clic su *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+Per riequilibrare un volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume da riequilibrare, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system che contiene il volume da riequilibrare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda volumi, selezionare il menu a tre punti del volume da riequilibrare.
 . Selezionare *azioni avanzate*, quindi *Rebalance volume*.

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: È possibile creare e gestire i collegamenti per fornire una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. In questo modo puoi monitorare e gestire determinate funzionalità direttamente dal file system ONTAP che non sono disponibili tramite le API AWS FSX per ONTAP. 
+summary: È possibile visualizzare i collegamenti associati al proprio account, associare un collegamento e rimuovere un collegamento in fabbrica carichi di lavoro BlueXP . 
 ---
-= Gestisci collegamenti
+= Gestisci i collegamenti alla fabbrica del carico di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gestisci i collegamenti associati al tuo account workload Factory.
+Gestisci i collegamenti associati al tuo account di fabbrica dei workload BlueXP .
 
 link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:create-link.html["creare un collegamento"].
 
@@ -22,11 +22,10 @@ link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:creat
 È possibile visualizzare i collegamenti attualmente associati al proprio account.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Dal menu account, selezionare *Collegamenti*.
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dalla pagina iniziale, selezionare *Collegamenti* dal menu.
 +
-image:screenshot-links-button.png["Una schermata che mostra come aprire la pagina dei collegamenti."]
+image:screenshot-menu-links.png["Una schermata che mostra come aprire la pagina dei collegamenti."]
 
 . Se sono presenti collegamenti, la pagina di panoramica fornisce le informazioni.
 . Per visualizzare i file system FSX per ONTAP associati a un collegamento, selezionare il pulsante *Visualizza* nella sezione risorse associate.
@@ -43,7 +42,7 @@ image:screenshot-view-link-details.png["Una schermata che mostra i file system F
 Dopo aver creato un collegamento, è possibile associarlo ai file system FSX per ONTAP. Ogni file system può essere associato a un solo collegamento in un singolo account NetApp, ma un collegamento può essere associato a molti file system.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare *Associa collegamento*.
@@ -57,7 +56,7 @@ Il link è associato al file system FSX per ONTAP ed è possibile eseguire opera
 
 == Modificare un collegamento
 
-Non è possibile modificare un collegamento dall'interfaccia workload Factory. Se è necessario apportare una modifica a un collegamento, è necessario creare un nuovo collegamento e quindi associarlo al file system.
+Non è possibile modificare un collegamento dall'interfaccia di fabbrica del carico di lavoro. Se è necessario apportare una modifica a un collegamento, è necessario creare un nuovo collegamento e quindi associarlo al file system.
 
 
 NOTE: È possibile modificare la configurazione di rete Lambda (ad esempio VPC, subnet e gruppi di sicurezza) utilizzando la console AWS e le modifiche verranno riflesse nell'interfaccia utente di gestione dei collegamenti; tuttavia, queste modifiche possono causare problemi di connettività tra Lambda e ONTAP e non sono consigliate.
@@ -68,15 +67,17 @@ NOTE: È possibile modificare la configurazione di rete Lambda (ad esempio VPC, 
 
 Puoi rimuovere un collegamento che non utilizzi più nel tuo ambiente. Qualsiasi file system FSX per ONTAP o altre risorse che utilizzavano il collegamento non potranno utilizzare determinate funzionalità dopo la rimozione del collegamento.
 
-Il link viene eliminato solo da workload Factory e non dall'ambiente AWS. Devi eliminare la funzione Lambda dal tuo account AWS dopo aver rimosso il link in workload Factory.
+Il link viene eliminato solo da workload Factory e non dall'ambiente AWS. Devi eliminare la funzione Lambda dal tuo account AWS dopo aver rimosso il link nella fabbrica dei carichi di lavoro.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Dal menu account, selezionare *Collegamenti*.
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dalla pagina iniziale, selezionare *Collegamenti* dal menu.
++
+image:screenshot-menu-links.png["Una schermata che mostra come aprire la pagina dei collegamenti."]
+
 . Nella pagina Collegamenti, selezionare il pulsante menu e selezionare *Rimuovi*.
 +
-image:screenshot-remove-link.png["Screenshot che mostra come rimuovere un collegamento da workload Factory."]
+image:screenshot-remove-link.png["Uno screenshot che mostra come rimuovere un collegamento dalla fabbrica del carico di lavoro."]
 
 . In caso affermativo, selezionare nuovamente *Rimuovi*.
 

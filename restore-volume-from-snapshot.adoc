@@ -4,14 +4,14 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Ripristinare un volume FSX per ONTAP da uno snapshot quando il volume contiene file eliminati o danneggiati. 
 ---
-= Ripristinare un volume da uno snapshot
+= Ripristino di un volume da uno snapshot nella fabbrica dei carichi di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Ripristinare un volume FSX per ONTAP da uno snapshot quando il volume contiene file eliminati o danneggiati.
+In una fabbrica di workload BlueXP , puoi ripristinare un volume FSX per ONTAP da uno snapshot quando il volume contiene file eliminati o corrotti.
 
 .A proposito di questa attività
 Questa operazione ripristina i dati da uno snapshot a un nuovo volume.
@@ -22,13 +22,13 @@ Questa operazione ripristina i dati da uno snapshot a un nuovo volume.
 Assicurarsi di disporre di capacità sufficiente per completare questa operazione.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da ripristinare da uno snapshot.
 . Selezionare *azioni protezione dati*, *istantanee*, quindi *Ripristina volume da uno snapshot*.
 . Nella finestra di dialogo Ripristina volume da uno snapshot, nel campo *Nome istantanea*, selezionare lo snapshot da ripristinare dal menu a discesa.
 . Nel campo *nome volume ripristinato*, immettere un nome univoco per il volume da ripristinare.
-. Fare clic su *Restore* (Ripristina).
+. Selezionare *Restore* (Ripristina).
 

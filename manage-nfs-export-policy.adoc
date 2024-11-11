@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar 
-permalink: change-nfs-export-policy.html 
+permalink: manage-nfs-export-policy.html 
 keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
-summary: Modifica della policy di esportazione NFS per un volume che utilizza tipi di protocollo NFSv3 o NFSv4,1. 
+summary: Gestire la policy di esportazione NFS per un volume che utilizza tipi di protocollo NFSv3 o NFSv4,1 in una fabbrica di workload BlueXP . 
 ---
-= Modificare la policy di esportazione NFS per un volume
+= Gestisci la policy di esportazione NFS per un volume in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Modifica della policy di esportazione NFS per un volume che utilizza tipi di protocollo NFSv3 o NFSv4,1.
+Gestire la policy di esportazione NFS per un volume che utilizza tipi di protocollo NFSv3 o NFSv4,1 in una fabbrica di workload BlueXP .
 
 .A proposito di questa attività
-La modifica della policy di esportazione di un volume comporta l'aggiunta di regole per le policy di esportazione che descrivono in dettaglio le specifiche dei client, il controllo dell'accesso, l'accesso dei super utenti e la versione NFS. È possibile aggiungere più criteri di esportazione e assegnarne la priorità.
+La gestione della policy di esportazione di un volume implica l'aggiunta di regole per le policy di esportazione che descrivono in dettaglio le specifiche dei client, il controllo dell'accesso, l'accesso dei super utenti e la versione NFS. È possibile aggiungere più criteri di esportazione e assegnarne la priorità.
 
 .Prima di iniziare
 Determinare le specifiche del client per le regole dei criteri di esportazione. I valori validi per la specifica client sono i seguenti:
@@ -28,11 +28,11 @@ Determinare le specifiche del client per le regole dei criteri di esportazione. 
 
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda volumi, fare clic sul menu dei tre punti per il volume per cui modificare la policy di esportazione NFS.
+. Nella scheda Volumes (volumi), seleziona il menu a tre punti per il volume per cui modificare la policy di esportazione NFS.
 . Selezionare *azioni avanzate*, quindi *Modifica criterio di esportazione NFS*.
 . Nella pagina Modifica criterio di esportazione NFS, fornire quanto segue:
 +
@@ -51,5 +51,5 @@ In alternativa, è possibile selezionare *Nessun accesso al volume*.
 
 
 
-. Fare clic su *Apply* (Applica).
+. Selezionare *Applica*.
 

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: Quando necessario, gestire la pianificazione di backup per un file system FSX per ONTAP in una fabbrica di workload BlueXP . 
+---
+= Gestire la pianificazione di backup per un file system FSX per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestire la pianificazione di backup per un file system FSX per ONTAP in una fabbrica di workload BlueXP .
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system per aggiornare la pianificazione di backup per, quindi selezionare *Gestisci*.
+. In informazioni, selezionare l'icona a forma di matita accanto a *FSX per il backup di ONTAP*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *FSX per il backup di ONTAP*.
+. Nella finestra di dialogo *FSX per il backup di ONTAP*, fornire quanto segue:
++
+.. *Backup automatici giornalieri*: Consente di attivare o disattivare la funzione. Se si disattiva la funzione, selezionare *Applica*. Se si attiva la funzione, completare la procedura riportata di seguito.
+.. *Periodo conservazione backup automatico*: Immettere il numero di giorni per la conservazione dei backup automatici.
+.. *Finestra di backup automatico giornaliero*: Selezionare *Nessuna preferenza* (l'ora di inizio del backup giornaliero è selezionata per l'utente) o *selezionare l'ora di inizio per i backup giornalieri* e specificare l'ora di inizio.
+.. *Finestra manutenzione settimanale*: Selezionare *Nessuna preferenza* (l'ora di inizio della finestra di manutenzione settimanale è selezionata) o *selezionare l'ora di inizio per la finestra manutenzione settimanale di 30 minuti* e specificare un'ora di inizio.
+
+
+. Selezionare *Applica*.
+

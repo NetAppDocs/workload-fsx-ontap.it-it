@@ -4,7 +4,7 @@ permalink: view-volume-details.html
 keywords: volume details, volume information 
 summary: Visualizza dettagli sui volumi, distribuzione, consumo, accesso e protezione. 
 ---
-= Visualizzare i dettagli del volume
+= Visualizza i dettagli del volume nella fabbrica dei carichi di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -16,7 +16,7 @@ Visualizza dettagli sui volumi, distribuzione, consumo, accesso e protezione.
 I dettagli del volume vengono visualizzati solo dopo la creazione di un volume in un file system.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda volumi, selezionare il menu a tre punti per il volume che si desidera modificare.
 . Selezionare *azioni di base*, quindi *Visualizza dettagli volume*.

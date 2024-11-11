@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: change-snapshot-policy.html 
 keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
-summary: Consente di aggiornare il criterio di snapshot di un volume in qualsiasi momento. 
+summary: Consente di aggiornare in qualsiasi momento la policy Snapshot di un volume in fabbrica con carichi di lavoro BlueXP . 
 ---
-= Consente di modificare il criterio di snapshot di un volume
+= Modifica della policy Snapshot di un volume in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Consente di aggiornare la frequenza degli snapshot acquisiti per un volume o di disabilitare gli snapshot automatici in qualsiasi momento.
+Aggiorna la frequenza delle snapshot acquisite per un volume o disattiva le snapshot automatiche in qualsiasi momento nella workload factory di BlueXP .
 
 .Prima di iniziare
-È necessario un collegamento per visualizzare i criteri di snapshot esistenti. Per associare un collegamento, fare clic su *Associa collegamento* in *Nome account*. Quindi tornare a questa operazione.
+Per visualizzare i criteri degli snapshot esistenti, è necessario associare un collegamento. Per associare un collegamento, selezionare *collegamento associato* in *Nome account*. Quindi tornare a questa operazione.
 
 .Fasi
-. Accedere a. link:https://console.workloads.netapp.com/["Console di workload Factory"^]
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system FSX per ONTAP che contiene il volume con il criterio snapshot da aggiornare, quindi selezionare *Gestisci*.
 . Dalla scheda Panoramica del file system, selezionare la scheda *volumi*.
@@ -32,5 +32,5 @@ Per disattivare le istantanee automatiche, selezionare `none`.
 +
 Se non esistono altri criteri di snapshot, link:create-snapshot-policy.html["creare un nuovo criterio snapshot per questo volume"].
 
-. Fare clic su *Apply* (Applica).
+. Selezionare *Applica* per salvare le modifiche.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-throughput-capacity.html 
 keywords: update throughput, change throughput, throughput capacity 
-summary: Aggiorna la capacità di throughput per un file system FSX per ONTAP in base alle esigenze. 
+summary: Aggiorna la capacità di throughput per un file system FSX per ONTAP in una farm di workload BlueXP  secondo necessità. 
 ---
 = Aggiornare la capacità di throughput per un file system
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary: Aggiorna la capacità di throughput per un file system FSX per ONTAP in
 
 
 [role="lead"]
-Aggiorna la capacità di throughput per un file system FSX per ONTAP in base alle esigenze.
+Aggiorna la capacità di throughput per un file system FSX per ONTAP in una farm di workload BlueXP  secondo necessità.
 
 Per i limiti di capacità di throughput, fai riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quote"^] documentazione di AWS FSX per NetApp ONTAP.
 
 .Fasi
-. Accedere alla console workload Factory.
-. In archiviazione, fare clic su *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, fare clic sul menu dei tre punti del file system per aggiornare la capacità di trasmissione per, quindi selezionare *Gestisci*.
-. Nella sezione informazioni, fare clic sull'icona a forma di matita accanto a *capacità di trasmissione*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *capacità di throughput*.
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system per cui aggiornare la capacità di trasmissione e quindi selezionare *Gestisci*.
+. In informazioni, selezionare l'icona a forma di matita accanto a *capacità di trasmissione*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *capacità di throughput*.
 . Nella finestra di dialogo capacità di throughput, selezionare la capacità di throughput desiderata.
-. Fare clic su *Apply* (Applica).
+. Selezionare *Applica* per salvare le modifiche.
 
