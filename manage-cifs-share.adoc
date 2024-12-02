@@ -25,9 +25,16 @@ Determinare gli utenti o i gruppi a cui concedere l'accesso e il tipo di accesso
 . Selezionare *azioni avanzate*, quindi *Modifica condivisione CIFS*.
 . Nella pagina Edit CIFS share (Modifica condivisione CIFS), specificare quanto segue:
 +
-.. *Utenti o gruppi*: Inserire utenti e gruppi validi. Separare ciascuna voce con un punto e virgola ";".
-.. *Autorizzazioni*: Selezionare *controllo completo*, *lettura/scrittura*, *lettura* o *Nessun accesso*.
+.. *Nome*: Immettere il nome della condivisione CIFS.
+.. *Autorizzazioni*: Selezionare controllo completo, lettura/scrittura, lettura o Nessun accesso, quindi immettere gli utenti o i gruppi separati da un punto e virgola ( ; ). Gli utenti o i gruppi rilevano la distinzione tra maiuscole e minuscole e il dominio dell'utente deve essere incluso nel formato "dominio\nome utente".
 
 
-. Selezionare *Applica*.
+. Selezionare Apply (Applica).
++
+Eventuali modifiche possono causare la perdita dell'accesso alla condivisione CIFS da parte di utenti o gruppi correnti.
 
+. Selezionare *continua* per salvare le modifiche.
+
+
+.Risultato
+Vengono applicate le modifiche alla condivisione CIFS.

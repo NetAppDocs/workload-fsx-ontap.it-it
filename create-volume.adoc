@@ -81,10 +81,15 @@ Se è stato selezionato un criterio di esportazione esistente, immettere un nuov
 ..... *Aggiungi regola criterio di esportazione*: In alternativa, per un criterio di esportazione personalizzato, è possibile aggiungere regole al criterio.
 
 
-.... *CIFS share*: Immettere il nome della condivisione CIFS per fornire l'accesso SMB.
+.... *CIFS share*: Fornire quanto segue:
++
+..... *Nome*: Immettere il nome della condivisione CIFS per fornire l'accesso SMB.
+..... *Autorizzazioni*: Selezionare controllo completo, lettura/scrittura, lettura o Nessun accesso, quindi immettere gli utenti o i gruppi separati da un punto e virgola ( ; ). Gli utenti o i gruppi rilevano la distinzione tra maiuscole e minuscole e il dominio dell'utente deve essere incluso nel formato "dominio\nome utente".
 
 
-*** *Block access*: Consente agli host che eseguono applicazioni aziendali critiche di accedere al volume utilizzando il protocollo iSCSI.
+
+
+*** *Block access*: Consente agli host che eseguono applicazioni aziendali critiche di accedere al volume utilizzando il protocollo iSCSI. L'accesso a blocchi è disponibile solo quando l'implementazione scale-out del file system ha 6 coppie ha o meno.
 +
 Completare i seguenti campi per impostare il blocco dell'accesso al volume.
 

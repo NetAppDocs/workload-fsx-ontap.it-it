@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: use-onprem-data.html 
+keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
+summary: Rileva e replica i dati ONTAP on-premise in una fabbrica di carichi di lavoro BlueXP , in modo che possano essere utilizzati per arricchire le knowledge base ai. 
+---
+= Utilizzo dei dati del cluster ONTAP on-premise in una fabbrica di workload BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Rileva e replica i dati ONTAP on-premise in una fabbrica di carichi di lavoro BlueXP , in modo che possano essere utilizzati per arricchire le knowledge base ai.
+
+.A proposito di questa attività
+Per utilizzare i dati da un cluster ONTAP on-premise, dovrai prima rilevare il cluster ONTAP on-premise. Dopo aver scoperto un cluster ONTAP on-premise, puoi utilizzare i dati per uno dei seguenti casi di utilizzo.
+
+Casi di utilizzo:: Si noti che il caso di utilizzo principale per il carico di lavoro GenAI è al centro di questa serie di attività.
++
+--
+* *Workload Genai*: Replica dei dati dei volumi ONTAP on-premise in un file system FSX per ONTAP in modo che i dati possano essere utilizzati in link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Arricchire le knowledge base dell'ai"^].
+* *Backup e migrazione nel cloud*: I dati dei volumi ONTAP on-premise replicati in un file system FSX per ONTAP possono essere utilizzati come backup nel cloud.
+* *Tiering dei dati*: Dopo la replica, è possibile eseguire il tiering dei dati del volume ONTAP on-premise con accesso meno frequente dal Tier di storage SSD al Tier di storage del pool di capacità.
+
+
+--
+
+
+
+
+== Scopri un cluster ONTAP on-premise
+
+Scopri un cluster ONTAP on-premise in una farm di workload BlueXP  per replicare i dati in un file system Amazon FSX per NetApp ONTAP.
+
+.Prima di iniziare
+Prima di iniziare, assicurarsi di disporre dei seguenti elementi:
+
+* Un file system FSX per ONTAP per la replica.
+* Un link connesso da associare al cluster on-premise rilevato. Se non si dispone di un collegamento, è necessario link:create-link.html["creane uno"].
+* Credenziali utente ONTAP con autorizzazioni richieste.
+* ONTAP on-premise versione 9,8 e successive.
+* Connettività come mostrato nello schema seguente.
++
+image:screenshot-on-prem-connectivity.png["Screenshot che mostra come si deve connettere un cluster ONTAP on-premise per il percorso di gestione e il percorso dei dati ad Amazon Web Services Cloud"]
+
+
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Selezionare la scheda *ONTAP on-premise*.
+. Selezionare *Discover*.
+. Esaminare i prerequisiti e selezionare *Avanti*.
+. Nella pagina Scopri ONTAP on-premise, fornire quanto segue in *Configurazione cluster*:
++
+.. *Collegamento*: Selezionare un collegamento. Il link verrà associato al cluster on-premise per creare connettività tra il cluster e la workload factory.
++
+Se non è stato creato un collegamento, seguire le istruzioni, quindi tornare a questa operazione e selezionare il collegamento.
+
+.. *Indirizzo IP del cluster*: Fornire l'indirizzo IP per il cluster ONTAP locale da replicare.
+.. *Credenziali ONTAP*: Inserisci le credenziali ONTAP per il cluster ONTAP on-premise. Assicurarsi che l'utente disponga delle autorizzazioni necessarie.
+
+
+. Selezionare *rilevamento* per avviare il processo di rilevamento.
+
+
+.Risultato
+Il cluster ONTAP on-premise viene rilevato e ora viene visualizzato nella scheda *ONTAP on-premise*.
+
+Ora puoi visualizzare i dati nel tuo cluster ONTAP on-premise e <<Replica dei dati dei volumi da un cluster ONTAP on-premise,Replicare i dati in un file system FSX per ONTAP>>.
+
+
+
+== Replica dei dati dei volumi da un cluster ONTAP on-premise
+
+Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX per ONTAP. Una volta replicati, i dati possono essere utilizzati per arricchire le knowledge base dell'ai.
+
+.Prima di iniziare
+* Devi rilevare un cluster ONTAP on-premise per replicare i dati dei suoi volumi.
+* È necessario disporre di un file system FSX disponibile per ONTAP come destinazione della replica.
+* Sia il cluster ONTAP on-premise che il file system FSX per ONTAP utilizzati per la relazione di replica devono avere un link associato. Se uno o entrambi i cluster on-premise e FSX per ONTAP non dispongono di collegamenti esistenti, link:create-link.html["creare innanzitutto un collegamento"]. In link:manage-links.html["associare un collegamento"] nei file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento nel cluster ONTAP on-premise e nel file system FSX per ONTAP, tornare a questa operazione.
+
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Selezionare la scheda *ONTAP on-premise*.
+. Per trovare i volumi per VM di archiviazione, è possibile *selezionare VM di archiviazione* dal menu a discesa.
+. Selezionare uno o più volumi da replicare, quindi selezionare *Replica*.
+. Nella pagina Crea replica, in destinazione replica, specificare quanto segue:
++
+.. *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.
+.. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa.
+.. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
+.. *Dati di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione.
++
+*** *Auto*: Il criterio di tiering predefinito quando si crea un volume utilizzando l'interfaccia utente FSX per ONTAP in fabbrica del workload. Esegue il tiering di tutti i dati cold che includono i dati dell'utente e le snapshot nel Tier di storage del pool di capacità per un periodo di tempo specifico.
+*** *Solo Snapshot*: Esegue il tiering solo dei dati snapshot nel Tier di storage del pool di capacità.
+*** *Nessuno*: Mantiene tutti i dati del volume nel Tier di storage primario.
+*** *All*: Contrassegna tutti i dati utente e i dati snapshot come cold e li memorizza nel Tier di storage del pool di capacità.
++
+Tenere presente che alcune policy di tiering dispongono di un periodo di raffreddamento minimo associato che imposta il tempo, o _giorni di raffreddamento_, che i dati dell'utente in un volume devono rimanere inattivi per essere considerati "cold" e spostati nel Tier di storage del pool di capacità. Il periodo di raffreddamento inizia quando i dati vengono scritti sul disco.
+
++
+Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^]nella documentazione di AWS FSX per NetApp ONTAP.
+
+
+
+.. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MIB/s. In alternativa, selezionare *illimitato*.
++
+Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+
+
+
+. In Impostazioni di replica, specificare quanto segue:
++
+.. *Intervallo di replica*: Consente di selezionare la frequenza di trasferimento degli snapshot dal volume di origine al volume di destinazione.
+.. *Conservazione a lungo termine*: Facoltativamente, abilitare gli snapshot per la conservazione a lungo termine.
++
+Se si attiva la conservazione a lungo termine, selezionare un criterio esistente o creare un nuovo criterio per definire gli snapshot da replicare e il numero da conservare.
+
++
+*** Per un criterio esistente, selezionare *Scegli un criterio esistente*, quindi selezionare il criterio esistente dal menu a discesa.
+*** Per un nuovo criterio, selezionare *Crea un nuovo criterio* e fornire quanto segue:
++
+**** *Policy name*: Inserire un nome di policy.
+**** *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
+
+
+
+
+
+
+. Selezionare *Crea*.
+
+
+.Risultato
+La relazione di replica viene visualizzata nella scheda *Relazioni di replica* nel file system FSX for ONTAP di destinazione.
+
+
+
+== Rimozione di un cluster ONTAP on-premise dalla farm di workload BlueXP 
+
+Rimozione di un cluster ONTAP on-premise dalla fabbrica di workload BlueXP  secondo necessità.
+
+.Prima di iniziare
+Prima di rimuovere il cluster, occorre link:delete-replication.html["eliminare tutte le relazioni di replica esistenti"]utilizzare tutti i volumi del cluster ONTAP on-premise, in modo che non rimangano relazioni interrotte.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Selezionare la scheda *ONTAP on-premise*.
+. Seleziona il cluster ONTAP on-premise da rimuovere.
+. Selezionare il menu a tre punti e selezionare *Rimuovi da fabbrica workload*.
+
+
+.Risultato
+Il cluster ONTAP on-premise viene rimosso dalla farm di workload BlueXP .

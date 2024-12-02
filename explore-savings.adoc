@@ -27,6 +27,8 @@ Esplorazione dei risparmi tramite personalizzazione: Sono state fornite le impos
 
 Scopri i risparmi per gli ambienti di storage rilevati: Collega la fabbrica del carico di lavoro ai tuoi ambienti di storage AWS esistenti ed estrae i dettagli dal calcolatore per il confronto automatico. Per utilizzare la modalità automatica, è necessario concedere autorizzazioni automatiche. È possibile modificare il caso di utilizzo, ma tutti gli altri dettagli vengono determinati automaticamente nel calcolo.
 
+Inoltre, è possibile link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aggiungi le credenziali AWS"^]migliorare l'accuratezza dell'analisi della calcolatrice. Selezionare *Calcola risparmio in base alle risorse esistenti*. Verrai reindirizzato alla pagina Aggiungi credenziali. Dopo aver aggiunto le credenziali, selezionare le risorse esistenti da confrontare con FSX per ONTAP e selezionare *Esplora risparmio*.
+
 
 
 == Esplora i risparmi tramite la personalizzazione
@@ -100,7 +102,12 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 ====
 Dopo aver fornito i dettagli per la configurazione del sistema di archiviazione, esaminare i calcoli e i consigli forniti nella pagina.
 
-Inoltre, scorri verso il basso fino in fondo alla pagina fino a *Esporta PDF* o *Visualizza i calcoli*.
+Inoltre, scorrere verso il basso fino in fondo alla pagina per visualizzare il report selezionando una delle seguenti opzioni:
+
+* *Esporta PDF*
+* *Invia tramite e-mail*
+* *Visualizzare i calcoli*
+
 
 Per passare a FSX per ONTAP, seguire le istruzioni riportate in <<Implementa FSX per i file system ONTAP,Implementa FSX per i file system ONTAP>>.
 
@@ -179,7 +186,12 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 ====
 Dopo aver fornito i dettagli per la configurazione del sistema di archiviazione, esaminare i calcoli e i consigli forniti nella pagina.
 
-Inoltre, scorri verso il basso fino in fondo alla pagina fino a *Esporta PDF* o *Visualizza i calcoli*.
+Inoltre, scorrere verso il basso fino in fondo alla pagina per visualizzare il report selezionando una delle seguenti opzioni:
+
+* *Esporta PDF*
+* *Invia tramite e-mail*
+* *Visualizzare i calcoli*
+
 
 
 

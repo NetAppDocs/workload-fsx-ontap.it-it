@@ -59,6 +59,9 @@ Creazione rapida consente di utilizzare una configurazione di Best practice cons
 +
 *** Per le implementazioni scale-up, puoi avere una sola coppia ha.
 *** Per le implementazioni scale-out è possibile avere tra due e dodici coppie ha.
++
+Per eseguire il provisioning dei volumi di blocchi iSCSI sul file system, seleziona non più di 6 coppie ha.
+
 
 
 .. *Tipo di distribuzione*: Selezionare un tipo di distribuzione.
@@ -129,6 +132,9 @@ Con creazione avanzata, è possibile impostare tutte le opzioni di configurazion
 +
 *** Per le implementazioni scale-up, puoi avere una sola coppia ha.
 *** Per le implementazioni scale-out è possibile avere tra due e dodici coppie ha.
++
+Per eseguire il provisioning dei volumi di blocchi iSCSI sul file system, seleziona non più di 6 coppie ha.
+
 
 
 .. *Tipo di distribuzione*: Selezionare un tipo di distribuzione.

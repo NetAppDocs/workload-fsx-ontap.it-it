@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: access-data.html 
-keywords: access data, mount clients, on-premises 
+keywords: access data, mount point, mount volumes, mount clients, on-premises 
 summary: Puoi accedere ai file system FSX per ONTAP da on-premise montando i volumi per i client NAS e montando le LUN iSCSI per i client SAN. 
 ---
 = Accedi ai dati del file system FSX per ONTAP
@@ -14,6 +14,24 @@ summary: Puoi accedere ai file system FSX per ONTAP da on-premise montando i vol
 Puoi accedere ai file system FSX per ONTAP da on-premise montando i volumi per i client NAS e montando le LUN iSCSI per i client SAN.
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Accesso ai dati"^] Nella documentazione di Amazon FSX per NetApp ONTAP vengono forniti argomenti su come accedere ai dati per riferimento.
+
+Si può anche ottenere il punto di montaggio per i volumi in una fabbrica di workload BlueXP .
+
+
+
+== Raggiungi il punto di montaggio per i volumi in una fabbrica di workload BlueXP 
+
+Ottenere il punto di montaggio per un volume per montare una condivisione su un client CIFS share o NFS.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Da archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda volumi, selezionare il menu a tre punti per il volume, quindi *azioni di base* e *comando di montaggio vista*.
+. Nella finestra di dialogo del comando Mount, selezionare *Copia* per copiare il comando. Immettere il comando copiato nel terminale.
+. Selezionare *Chiudi*.
+
 
 
 

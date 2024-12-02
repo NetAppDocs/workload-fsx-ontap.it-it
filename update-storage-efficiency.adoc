@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: update-storage-efficiency.html 
+keywords: storage efficiency change, update storage efficiency 
+summary: In BlueXP  workload Factory, è possibile aggiornare le impostazioni di efficienza dello storage dopo la creazione dei volumi. 
+---
+= Consente di aggiornare l'impostazione dell'efficienza dello storage di un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+In BlueXP  workload Factory, è possibile aggiornare le impostazioni di efficienza dello storage dopo la creazione dei volumi.
+
+.A proposito di questa attività
+La funzionalità di efficienza dello storage comprende deduplica, compressione dei dati e data compaction per ottenere risparmi di spazio ottimali su FlexVol volume. La deduplica elimina i blocchi di dati duplicati. La compressione dei dati comprime i blocchi di dati per ridurre la quantità di storage fisico richiesta. La compattazione dei dati memorizza più dati in meno spazio per aumentare l'efficienza dello storage.
+
+Se si è scelto di non abilitare l'efficienza dello storage quando è stato creato un volume, è possibile abilitare l'impostazione per potenziali risparmi di spazio e costi in qualsiasi momento.
+
+I volumi utilizzano il thin provisioning abilitando o disabilitando l'efficienza dello storage.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda Volumes (volumi), seleziona il menu a tre punti del volume per cui modificare la policy di tiering.
+. Selezionare *azioni avanzate*, quindi *Imposta efficienza di archiviazione*.
+. Consente di attivare o disattivare l'efficienza dello storage di volumi.
+. Selezionare *Applica* per salvare la modifica.
+

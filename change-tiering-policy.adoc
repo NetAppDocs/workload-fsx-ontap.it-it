@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
-keywords:  
+keywords: tiering policy, change tier, change tiers, tier policy update 
 summary: Modificare la policy di tiering in una fabbrica di carichi di lavoro BlueXP  per riallocare i dati dal Tier di storage primario dalle performance elevate al Tier di storage del pool di capacità secondario. 
 ---
 = Modifica della policy di tiering di un volume in una fabbrica di carichi di lavoro BlueXP 

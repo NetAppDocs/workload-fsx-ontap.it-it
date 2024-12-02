@@ -62,11 +62,11 @@ Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuir
 Se si attiva la conservazione a lungo termine, selezionare un criterio esistente o creare un nuovo criterio per definire gli snapshot da replicare e il numero da conservare.
 
 +
-... Per *scegliere un criterio esistente*, selezionare un criterio esistente dal menu a discesa.
-... Per *Crea un nuovo criterio*, specificare quanto segue:
+*** Per *scegliere un criterio esistente*, selezionare un criterio esistente dal menu a discesa.
+*** Per *Crea un nuovo criterio*, specificare quanto segue:
 +
-.... *Policy name*: Inserire un nome di policy.
-.... *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
+**** *Policy name*: Inserire un nome di policy.
+**** *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
 
 
 
@@ -93,7 +93,7 @@ Se si attiva la conservazione a lungo termine, selezionare un criterio esistente
 +
 _Auto_ è la policy di tiering predefinita quando si crea un volume utilizzando l'interfaccia utente di workload Factory FSX for ONTAP. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^]nella documentazione di AWS FSX per NetApp ONTAP.
 
-.. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s. In alternativa, selezionare *illimitato*.
+.. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MIB/s. In alternativa, selezionare *illimitato*.
 +
 Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
 
@@ -107,11 +107,11 @@ Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuir
 Se si attiva la conservazione a lungo termine, selezionare un criterio esistente o creare un nuovo criterio per definire gli snapshot da replicare e il numero da conservare.
 
 +
-... Per *scegliere un criterio esistente*, selezionare un criterio esistente dal menu a discesa.
-... Per *Crea un nuovo criterio*, specificare quanto segue:
+*** Per *scegliere un criterio esistente*, selezionare un criterio esistente dal menu a discesa.
+*** Per *Crea un nuovo criterio*, specificare quanto segue:
 +
-.... *Policy name*: Inserire un nome di policy.
-.... *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
+**** *Policy name*: Inserire un nome di policy.
+**** *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
 
 
 
@@ -124,4 +124,4 @@ Se si attiva la conservazione a lungo termine, selezionare un criterio esistente
 --
 ====
 .Risultato
-La relazione di replica viene visualizzata nella scheda *Relazioni di replica*.
+La relazione di replica viene visualizzata nella scheda *Relazioni di replica* nel file system FSX for ONTAP di destinazione.
