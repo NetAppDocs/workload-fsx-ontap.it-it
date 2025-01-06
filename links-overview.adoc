@@ -41,13 +41,16 @@ Workload Factory richiede un collegamento per visualizzare alcune informazioni e
 
 Le funzioni che richiedono un collegamento includono:
 
-* Visualizza la versione di ONTAP installata su un file system FSX per ONTAP
-* Gestire i volumi iSCSI sul sistema
-* Attiva e disattiva la funzione di crescita automatica dei volumi
-* Creare e gestire le policy di snapshot
-* Configura relazioni di replica e replica i volumi tra file system
-* Configura relazioni di backup ed esegui il backup dei dati dei volumi nel cloud storage
-* Clona i volumi all'interno di un file system
-* Visualizzare metriche aggiuntive direttamente da ONTAP (le metriche predefinite vengono raccolte da Amazon CloudWatch)
+* Visualizzazione della versione di ONTAP installata su un file system FSX per ONTAP
+* Gestione dei volumi iSCSI in un file system FSX per ONTAP
+* Funzione di crescita automatica dei volumi
+* Creazione e gestione di policy di snapshot
+* Configurazione delle relazioni di replica
+* Replica di un volume tra file system FSX per ONTAP
+* Configurazione della relazione di backup
+* Backup dei dati nel cloud storage
+* Cloni di volumi in un file system FSX per ONTAP
+* Visualizzazione di metriche aggiuntive direttamente da ONTAP (le metriche predefinite vengono raccolte da Amazon CloudWatch)
 * Gestione delle policy di esportazione NFS
+* Gestione delle condivisioni CIFS
 

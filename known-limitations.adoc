@@ -27,7 +27,7 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 === Implementazioni scale-up
 
-Le seguenti regioni supportano fino a 4 GB/s di capacità di throughput massima per le implementazioni scale-up: Regione US East (Ohio), regione US East (N. Virginia), regione US West (Oregon) ed Europa (Irlanda).
+Le configurazioni scale-up sono supportate fino a 2 GB/s in tutte le regioni. Le seguenti regioni supportano fino a 4 GB/s di capacità di throughput massima per le implementazioni scale-up: Regione US East (Ohio), regione US East (N. Virginia), regione US West (Oregon) ed Europa (Irlanda).
 
 
 
@@ -62,19 +62,11 @@ Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managi
 
 
 
-== Supporto regionale
-
-* La regione del Canada occidentale (Calgary) non è attualmente supportata.
-
-
-
-
 == Protezione dei dati
 
 * Impossibile eliminare gli snapshot.
-* È supportata solo la replica tra file system FSX per ONTAP.
 * Quando si replica un file system, tutti i volumi del file system utilizzano la stessa policy di replica.
-* Solo l'ultimo snapshot è disponibile per il ripristino.
+* Per le relazioni di replica con conservazione a lungo termine, solo l'ultimo snapshot è disponibile per il ripristino.
 
 
 
