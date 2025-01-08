@@ -11,13 +11,13 @@ summary: 'La gestione della CIFS share di un volume in una fabbrica di carichi d
 
 
 [role="lead"]
-La gestione della CIFS share di un volume nella fabbrica di carichi di lavoro BlueXP  include la creazione di CIFS share, l'individuazione di utenti e gruppi a cui consentire l'accesso e il tipo di accesso per fornirli, nonché l'eliminazione delle CIFS share.
+La gestione della CIFS share di un volume nella farm di carico di lavoro BlueXP  include la creazione di CIFS share, l'individuazione di utenti e gruppi a cui assegnare l'accesso e il livello delle autorizzazioni, nonché l'eliminazione delle CIFS share.
 
 .Prima di iniziare
 Prima di iniziare, effettuare le seguenti operazioni:
 
 * Per gestire le condivisioni CIFS, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
-* Determinare gli utenti o i gruppi a cui concedere l'accesso e il tipo di accesso a cui concedere l'accesso.
+* Determinare gli utenti o i gruppi a cui assegnare l'accesso e il livello di autorizzazioni da assegnare.
 
 
 

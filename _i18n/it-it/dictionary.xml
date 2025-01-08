@@ -17,7 +17,6 @@
   <block id="ca56f4eb8ce272724e91bdcba9289351" category="inline-link-macro">Montare un LUN iSCSI sui client Windows</block>
   <block id="5e566a13383eb6798f798ddefecee8c1" category="list-text"><block ref="5e566a13383eb6798f798ddefecee8c1" category="inline-link-macro-rx"></block></block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Prima di iniziare</block>
-  <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">Determinare gli utenti o i gruppi a cui concedere l'accesso e il tipo di accesso a cui concedere l'accesso.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Fasi</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">Nella panoramica del file system, selezionare la scheda *volumi*.</block>
@@ -1294,7 +1293,6 @@
   <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">Gestione delle policy di esportazione NFS</block>
   <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">Gestione delle condivisioni CIFS</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">La gestione della CIFS share di un volume in una fabbrica di carichi di lavoro BlueXP  include la creazione, la determinazione dell'accesso e dell'eliminazione di utenti e gruppi.</block>
-  <block id="5917a5ef86ec0bb832a8231c1ca2e1df" category="paragraph">La gestione della CIFS share di un volume nella fabbrica di carichi di lavoro BlueXP  include la creazione di CIFS share, l'individuazione di utenti e gruppi a cui consentire l'accesso e il tipo di accesso per fornirli, nonché l'eliminazione delle CIFS share.</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">Prima di iniziare, effettuare le seguenti operazioni:</block>
   <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">Per gestire le condivisioni CIFS, è necessario <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>. Se non si dispone di un collegamento esistente, <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">Creazione di una condivisione CIFS per un volume</block>
@@ -1320,4 +1318,6 @@
   <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">1 dicembre 2024</block>
   <block id="d83aca6cf65672d392d39e7c76942a11" category="sidebar">Modificare una policy di tiering</block>
   <block id="07b434b23f63ca6490df33b213599320" category="sidebar">Gestire le policy di esportazione NFS</block>
+  <block id="6026d035efbb2d0fc978d9ab5bb5b084" category="paragraph">La gestione della CIFS share di un volume nella farm di carico di lavoro BlueXP  include la creazione di CIFS share, l'individuazione di utenti e gruppi a cui assegnare l'accesso e il livello delle autorizzazioni, nonché l'eliminazione delle CIFS share.</block>
+  <block id="34e81b46b7f1e5e087ae28a3b95e81fb" category="list-text">Determinare gli utenti o i gruppi a cui assegnare l'accesso e il livello di autorizzazioni da assegnare.</block>
 </blocks>
