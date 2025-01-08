@@ -36,10 +36,27 @@ La personalizzazione di un criterio consente di specificare quando creare le sna
 
 
 .Fasi
-Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^]. . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*. . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*. . Nella panoramica del file system, selezionare la scheda *volumi*. . Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere con le istantanee pianificate. . Selezionare *azioni protezione dati*, *istantanee*, quindi *Gestisci criteri snapshot*. . Nella pagina di gestione dei criteri di istantanea, selezionare *Crea un nuovo criterio di snapshot*. . Nel campo *Snapshot policy name* (Nome criterio istantanea), immettere un nome per il criterio snapshot. . Facoltativo: Nel campo *Descrizione*, immettere una descrizione per il criterio di snapshot. . In *Pianificazione*, selezionare quando creare istantanee. Ad esempio, ogni minuto o ogni ora.
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere con le istantanee pianificate.
+. Selezionare *azioni protezione dati*, *istantanee*, quindi *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di istantanea, selezionare *Crea un nuovo criterio di snapshot*.
+. Nel campo *Snapshot policy name* (Nome criterio istantanea), immettere un nome per il criterio snapshot.
+. Facoltativo: Nel campo *Descrizione*, immettere una descrizione per il criterio di snapshot.
+. In *Pianificazione*, selezionare quando creare istantanee. Ad esempio, ogni minuto o ogni ora.
++
+È possibile selezionare più di una frequenza.
 
-+ è possibile selezionare più di una frequenza. . In *numero di copie*, immettere il numero di copie da conservare.
+. In *numero di copie*, immettere il numero di copie da conservare.
++
+Il numero massimo di copie è 1.023.
 
-+ il numero massimo di copie è 1.023. . Facoltativo: In *convenzione di denominazione*, immettere un *prefisso* per la policy. . *Etichetta di conservazione* viene compilata automaticamente.
+. Facoltativo: In *convenzione di denominazione*, immettere un *prefisso* per la policy.
+. *Etichetta di conservazione* viene compilata automaticamente.
++
+Questa etichetta fa riferimento all'etichetta SnapMirror, o etichetta di replica, utilizzata per selezionare solo gli snapshot specificati per la replica dall'origine al file system di destinazione.
 
-+ questa etichetta si riferisce alla SnapMirror, o etichetta di replica, utilizzata per selezionare solo gli snapshot specificati per la replica dal file system di origine a quello di destinazione. . Selezionare *Applica*.
+. Selezionare *Applica*.
+
