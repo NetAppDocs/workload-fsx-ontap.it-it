@@ -196,7 +196,6 @@
   <block id="4820ffe2fe615fd37fb7932b296c86f1" category="inline-link-macro">associare un collegamento</block>
   <block id="06c8b7e08cdd0ff26018bb7b51851a9f" category="paragraph">Completare i seguenti passaggi per replicare un singolo volume o tutti i volumi in un file system.</block>
   <block id="4f6c910e41c00f71304d3d06714c1c38" category="open-title">Replica di un singolo volume</block>
-  <block id="e0498c311fd63d398b51f62c2bf97e3b" category="list-text">Selezionare *azioni protezione dati*, quindi *replica dati volume*.</block>
   <block id="b9a2f47b5bc4bd7fcc8d23d6721ec4c2" category="list-text">Nella pagina Crea replica, in destinazione replica, specificare quanto segue:</block>
   <block id="837278414ab16e2a74dfc1b2102bcd54" category="list-text">*FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.</block>
   <block id="c8ad1bd40ad1f2f7011877a43d0904aa" category="list-text">*Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa.</block>
@@ -238,7 +237,6 @@
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">Grazie alle SVM, quando accedi ai dati in FSX per ONTAP, client e workstation montano un volume, una CIFS/SMB share o una LUN iSCSI ospitata da una SVM utilizzando l'endpoint (indirizzo IP) della SVM.</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">Gestione di FSX per ONTAP Storage Virtual Machine</block>
   <block id="cbddd6713cb3317df938ea4a6fd2cd84" category="paragraph">Verifica del numero supportato di VM storage per file system. Fare riferimento a <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> nella documentazione AWS per il numero massimo di SVM per file system.</block>
-  <block id="e65cbc1f8e84ec0a33192b999f9e9cc4" category="list-text">Dalla panoramica del file system, selezionare *Crea una VM di archiviazione*.</block>
   <block id="cdbc38b99c6a38c90c6623e1ac73a0fd" category="list-text">Nella pagina Storage VM, in Storage VM Configuration (Configurazione Storage VM), fornire quanto segue:</block>
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">*Nome*: Immettere un nome per la VM di archiviazione.</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">*Credenziali VM di archiviazione*: Fornire una password per l'utente di questa VM di archiviazione o utilizzare le credenziali utente del<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> file system<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> .</block>
@@ -930,8 +928,6 @@
   <block id="7607cf6a75040d1b9bf8fde1cfaecf12" category="doc">Creazione di un rapporto di replica in una fabbrica di workload BlueXP </block>
   <block id="161fc7b1d67184a50e10e19fb2489263" category="paragraph">Crea un rapporto di replica per un file system FSX per ONTAP in una fabbrica di workload BlueXP  per evitare la perdita di dati in caso di un disastro imprevisto.</block>
   <block id="cf2d4a66ab67f86354f74f9c2cd68326" category="list-text">I due file system utilizzati per la relazione di replica devono disporre di un collegamento associato. Se i file system non dispongono di collegamenti esistenti, <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>. In <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> nei file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento in entrambi i file system, tornare a questa operazione.</block>
-  <block id="d3c14843d08cf463d9ea9a6b94804262" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume da replicare, quindi selezionare *Gestisci*.</block>
-  <block id="089bd3378d1656ee1710bccf951f8421" category="list-text">Dalla scheda volumi, selezionare il menu a tre punti del volume da replicare.</block>
   <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_ è la policy di tiering predefinita quando si crea un volume utilizzando l'interfaccia utente di workload Factory FSX for ONTAP. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>nella documentazione di AWS FSX per NetApp ONTAP.</block>
   <block id="1d1c040daca4e036fc6766de8bee1a0d" category="list-text">Nella scheda FSX per ONTAP, selezionare il menu a tre punti del file system con i volumi, quindi selezionare *Gestisci*.</block>
   <block id="26aa14a56cb65f177e49de0f78d28f50" category="summary">Crea una policy Snapshot per FSX per i volumi ONTAP in una fabbrica di workload BlueXP . Una policy di snapshot definisce il modo in cui il sistema crea snapshot per un volume.</block>
@@ -944,7 +940,6 @@
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">Crea una Storage VM (SVM) per un file system FSX per ONTAP per accedere ai servizi dati e allo storage virtualmente per i tuoi carichi di lavoro in una fabbrica di workload BlueXP .</block>
   <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">Le macchine virtuali storage sono file server isolati che è possibile utilizzare per accedere ai dati da ogni workload in workload Factory Storage. Ciascuna SVM dispone delle proprie credenziali amministrative e dei propri endpoint per l'amministrazione e l'accesso ai dati.</block>
   <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">Puoi creare una macchina virtuale di storage dalla console della workload Factory. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
-  <block id="76e3f0d82963df25a63cb0c98b73397d" category="list-text">Nella scheda FSX per ONTAP, selezionare il menu a tre punti del file system per cui creare una VM di storage e selezionare *Gestisci*.</block>
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">Crea un nuovo volume FSX per ONTAP da una snapshot nella workload factory di BlueXP  per consentire il recovery point-in-time.</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con lo snapshot del volume, quindi selezionare *Gestisci*.</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">Nella scheda volumi, selezionare il menu a tre punti per il volume con lo snapshot di cui si desidera creare un volume.</block>
@@ -953,8 +948,6 @@
   <block id="70e17a61e26a90f517dba1b053b0c09e" category="paragraph">Dopo aver configurato il file system FSX per ONTAP, puoi creare FSX per i volumi ONTAP in una fabbrica di workload BlueXP .</block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">Devi avere un file system FSX per ONTAP in una workload factory.</block>
   <block id="60911d8c5f41bf949378c3bec9fe03b7" category="list-text">Per configurare l'accesso al volume, è necessario <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>. Se non si dispone di un collegamento esistente, <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.</block>
-  <block id="27403aa4066ffea03bd15fd0fd4e5e67" category="list-text">Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system in cui desideri creare un volume e seleziona *Gestisci*.</block>
-  <block id="892eff425e1d1bcf86736ccfc7447322" category="list-text">Dalla scheda *Panoramica*, selezionare *Crea volume*.</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">FSX per ONTAP supporta snapshot, backup di volumi e replica dei volumi in una fabbrica di workload BlueXP .</block>
   <block id="d041ab32e01d968ecc286a807158f8b3" category="doc">Data Protection in fabbrica per i carichi di lavoro BlueXP </block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">Per eliminare un file system in una fabbrica di carichi di lavoro BlueXP , devi prima eliminare qualsiasi volume, VM di storage o relazione di replica associata al file system.</block>
@@ -1327,4 +1320,131 @@
   <block id="b6576df8ae387ace84c72b1d00479bc0" category="list-text">Facoltativo: In *convenzione di denominazione*, immettere un *prefisso* per la policy.</block>
   <block id="78c10834148d83801a4f716235d19c09" category="list-text">*Etichetta di conservazione* viene compilata automaticamente.</block>
   <block id="8a2e9f9173bc33c79f9448e05bf8e7c0" category="paragraph">Questa etichetta fa riferimento all'etichetta SnapMirror, o etichetta di replica, utilizzata per selezionare solo gli snapshot specificati per la replica dall'origine al file system di destinazione.</block>
+  <block id="ed2a329d6f9bf2181ff23014cff23ba5" category="doc">CloudShell in console per workload factory di BlueXP </block>
+  <block id="5eaddd0f57f7eaddd8610d939876ec8d" category="paragraph">CloudShell è una funzionalità CLI integrata disponibile all'interno della fabbrica di workload BlueXP  per lo storage. Puoi utilizzare CloudShell per creare, condividere ed eseguire comandi CLI ONTAP o AWS da più sessioni in un ambiente simile a una shell dall'interno della console della workload factory.</block>
+  <block id="09a780ee2763ed81ce7dcd3480b57fe4" category="inline-link-macro">Scopri di più su CloudShell nella fabbrica di workload BlueXP </block>
+  <block id="feff74472562237513e0ca0c55cd4e38" category="paragraph"><block ref="feff74472562237513e0ca0c55cd4e38" category="inline-link-macro-rx"></block></block>
+  <block id="9be163b55bb1cb61b0ccee4ea40ae6ee" category="section-title">Download dei dati di inventario</block>
+  <block id="e61fb273c97526db97c128ce9bfc04a9" category="paragraph">Ora puoi scaricare i dati di inventario di FSX per ONTAP in un file Microsoft Excel o CSV dallo storage in una farm di workload BlueXP .</block>
+  <block id="1d242bf1e7b71fd8602570478aa1bdc8" category="inline-image-macro">Uno screenshot della Storage in BlueXP  workload Factory che mostra il nuovo pulsante di download per scaricare i dati di inventario del file system FSX per ONTAP.</block>
+  <block id="b8040f0b8b5eff64bb15c9fc0fbc96d6" category="paragraph"><block ref="b8040f0b8b5eff64bb15c9fc0fbc96d6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eae91301e6256990d5311778eafea0e5" category="section-title">Opzioni di menu aggiuntive del file system FSX per ONTAP</block>
+  <block id="0ad83f6b2d6e8bf103be3683c0c87ef9" category="paragraph">Abbiamo semplificato le seguenti operazioni per un file system FSX per ONTAP dalla scheda FSX per ONTAP in archiviazione.</block>
+  <block id="8221d5fcbb1b8ef8a3fa535553679b44" category="list-text">Replica dei dati dei volumi</block>
+  <block id="bb8210b8fea9fd35bf14070e9b9f7cf9" category="inline-image-macro">Uno screenshot della scheda FSX per ONTAP nello storage che mostra le nuove opzioni di menu per creare una VM di storage, creare un volume e replicare i dati dei volumi.</block>
+  <block id="2a10a5b76871c42edb3807a0dec574ae" category="paragraph"><block ref="2a10a5b76871c42edb3807a0dec574ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f72c2c06d295d3f5420254934ac77b1" category="section-title">Supporto terraform per la creazione di volumi</block>
+  <block id="7f28d622584eb6b05ee5ce1609e2de38" category="paragraph">È ora possibile utilizzare Terraform dalla Codebox per creare volumi.</block>
+  <block id="d3156376048c94102c97709d5ff05e75" category="paragraph"><block ref="d3156376048c94102c97709d5ff05e75" category="inline-link-macro-rx"></block></block>
+  <block id="eb139dd9cb815e502d04047858e7c930" category="section-title">Blocco dei file con la funzione file immutabili</block>
+  <block id="849a110e76510a6394e4b27714d0bc20" category="paragraph">Ora puoi bloccare i file usando la funzione file immutabili quando crei un volume per un file system FSX per ONTAP. Il blocco dei file aiuta l'utente e gli altri a prevenire l'eliminazione accidentale o intenzionale dei file per un determinato periodo di tempo.</block>
+  <block id="ea3d4df6f8aff21b2dfe549c5ecf9775" category="section-title">Tracker disponibile per il monitoraggio e il monitoraggio delle operazioni</block>
+  <block id="c016252819aa3f6ede2b315b76b5c5b2" category="paragraph">Tracker, una nuova funzionalità di monitoring è disponibile nello storage. È possibile utilizzare Tracker per monitorare e monitorare l'avanzamento e lo stato delle credenziali, le operazioni di archiviazione e collegamento, esaminare i dettagli delle attività operative e delle sottoattività, diagnosticare eventuali problemi o errori, modificare i parametri per le operazioni non riuscite e riprovare le operazioni non riuscite.</block>
+  <block id="7512718e82771ab0f98e51652a2e97c6" category="inline-link-macro">Scopri come monitorare e monitorare le operazioni con Tracker</block>
+  <block id="30babb51ab17a107228fe65a4e65418b" category="paragraph"><block ref="30babb51ab17a107228fe65a4e65418b" category="inline-link-macro-rx"></block></block>
+  <block id="c1c23b72df9b53434f3c5ef6963cd2c1" category="section-title">Supporto di Amazon FSX per i file system NetApp ONTAP di seconda generazione</block>
+  <block id="327da4942931ea47a06f556d15726878" category="paragraph">Ora puoi usare Amazon FSX per i file system di seconda generazione di NetApp ONTAP in una fabbrica di workload BlueXP . FSX per ONTAP i file system single-AZ di seconda generazione si basano su un massimo di 12 coppie ha che possono offrire fino a 72 Gbps di capacità di throughput e 2.400.000 IOPS SSD. FSX per ONTAP i file system Multi-AZ di seconda generazione si basano su una coppia ha e offrono 6 Gbps di capacità di throughput e 200.000 SSD IOPS.</block>
+  <block id="a22d0116b85624117006e75d98d659db" category="inline-link-macro">Aggiunta di coppie ad alta disponibilità</block>
+  <block id="8a34eb45ca4cf03ce0d5e71fbfafb73a" category="list-text"><block ref="8a34eb45ca4cf03ce0d5e71fbfafb73a" category="inline-link-macro-rx"></block></block>
+  <block id="eeb5242f698ac9fda34591a326f4c0a3" category="inline-link-macro">Quote e limiti di Amazon FSX per NetApp ONTAP</block>
+  <block id="94f917accd36ed25f8a73175e8d4cdfb" category="list-text"><block ref="94f917accd36ed25f8a73175e8d4cdfb" category="inline-link-macro-rx"></block></block>
+  <block id="872fb30847d0e2ca8bac3e52054013c7" category="summary">Aggiungi coppie ad alta disponibilità a un file system in una fabbrica di workload BlueXP  per scalare in orizzontale il file system.</block>
+  <block id="310011ba5387c43c841355394cd8cb9a" category="doc">Aggiunta di coppie ha a un file system in una fabbrica di workload BlueXP </block>
+  <block id="304724e8759230c609bf9c333dfd2870" category="paragraph">Aggiungi coppie ha (high Availability) per scalare in orizzontale un file system FSX per ONTAP di seconda generazione con una singola AZ nella farm di workload BlueXP  per aumentare performance e capacità. Questa espansione ti offre più scalabilità delle performance e flessibilità rispetto ai file system di prima generazione.</block>
+  <block id="a9a9a7c9ee5a38cb1e35ca4b8cce7276" category="paragraph">Le nuove coppie ha vengono aggiunte utilizzando la stessa SKU e la stessa capacità per coppia ha.</block>
+  <block id="c34a6e94bb77f8d46f8d1f9ca5d1c2b9" category="paragraph">L'aggiunta di coppie ha non è supportata per quanto segue:</block>
+  <block id="78d560615a8adc2f32fa3ecd80e33fd1" category="list-text">Implementazioni ha Multi-AZ o file system FSX per ONTAP di prima generazione</block>
+  <block id="d1360a44b7e5113c71c2bccc4ade5ce8" category="list-text">FSX per i file system ONTAP con oltre 5 macchine virtuali storage</block>
+  <block id="943393d8598620d656ed3221b72683cf" category="list-text">File system FSX per ONTAP con LUN iSCSI</block>
+  <block id="7d37b0d4d8c2c037db887ba2ef4befd8" category="list-text">Configurazioni con capacità massima o vicina al massimo degli SSD o che hanno raggiunto i limiti di allocazione io</block>
+  <block id="d87c9129ec2537bcf3c1a19ef369663c" category="paragraph">Prendi in considerazione quanto segue per l'aggiunta di coppie ha:</block>
+  <block id="bee7f2516cfc11bd1d783c9a0abddcfc" category="list-text">Rimozione coppia HA: Le coppie HA non possono essere rimosse una volta aggiunte al file system.</block>
+  <block id="3bb5813303893f4fbd1a3c16e489c6b2" category="list-text">Tempo operativo e limitazioni: L'aggiunta di coppie ha può richiedere circa 30 minuti. Considerare l'aggiunta di coppie ha durante una finestra di manutenzione o durante i periodi di bassa attività. Inoltre, l'aggiunta di coppie ha limita altre operazioni come l'aggiunta di coppie ha, il provisioning degli IOPS, l'aumento della capacità SSD e l'aggiornamento della capacità del throughput.</block>
+  <block id="ea59a490db5f0dbf4a08a12fc8ad506b" category="list-text">Allocazione io: L'allocazione io automatica dipende dalla capacità di storage totale. L'allocazione i/o configurata dall'utente viene moltiplicata per il numero di coppie ha aggiunte.</block>
+  <block id="7e1da5f0b87a5f6fa454d36b488af717" category="list-text">Cache NVMe: Quando si aggiungono coppie ha, la cache NVME è abilitata per impostazione predefinita. Consigliamo di disattivare la cache NVMe per i carichi di lavoro pesanti.</block>
+  <block id="ad8dcf096cb2afb4a235df61b29f9698" category="list-text">Numero di coppie ha: Consigliamo di espandere il file system fino a un numero pari di coppie ha per una distribuzione di dati bilanciata nelle coppie ha.</block>
+  <block id="a918312e36a786ad734780ce0938389b" category="list-text">Creazione di LUN: La creazione di LUN è possibile su un file system di seconda generazione Single-AZ solo se i LUN non sono già presenti nel file system quando si aggiungono coppie ha. La creazione di LUN è supportata solo in un file system con 6 coppie ha o meno.</block>
+  <block id="df909e03d10a14950b92a8e5633d9123" category="paragraph">Prima di aggiungere coppie ha a un file system, esegui le seguenti operazioni:</block>
+  <block id="4173fb9932d53246098b25db51af2252" category="list-text">Rimuovi tutte le LUN iSCSI per fare scale-out del file system.</block>
+  <block id="fefe421f31fcb913ee3602de627b2aad" category="list-text">Verifica che il file system non contenga più di 5 macchine virtuali di storage.</block>
+  <block id="f4f11e4d478a467a240d18f498921150" category="list-text">Nella scheda *FSX per ONTAP*, in *informazioni*, seleziona l'icona a forma di matita accanto a *ha Pairs*.</block>
+  <block id="9d8f80ba2bc026694d1d454d46507e1a" category="list-text">Nella finestra di dialogo *Aggiungi coppie ha*, selezionare il numero di coppie ha da aggiungere al file system.</block>
+  <block id="03d260b6edf74eab2f53976254758a17" category="list-text">Selezionare *Aggiungi* per confermare l'aggiunta delle coppie ha.</block>
+  <block id="379ea21065ee4862014742fa5a258e93" category="paragraph">In fabbrica, viene avviato il processo di aggiunta delle coppie ha al file system. Il file system non è disponibile per altre operazioni, ad esempio la creazione di volumi, finché non vengono aggiunte le coppie ha. È possibile monitorare l'avanzamento dell'operazione nella scheda *Tracker*.</block>
+  <block id="d290c400d30f537f28b8084fbc091982" category="list-text">Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume da replicare, quindi selezionare *replicare i dati del volume*.</block>
+  <block id="9c02b82df4be281c41318d376be29cf9" category="list-text">Nella scheda FSX per ONTAP, seleziona il menu a tre punti del file system per cui creare una VM di storage e seleziona *Crea una VM di storage*.</block>
+  <block id="70975b8c8f6b12169d193367442b573d" category="paragraph">È possibile creare un volume utilizzando i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
+  <block id="7bedae719019136090a7c4c373312767" category="list-text">Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system in cui desideri creare un volume e seleziona *Crea volume*.</block>
+  <block id="5cc952f284466929d6b64c6a769f954d" category="inline-link-macro">Come funziona SnapLock</block>
+  <block id="4f607bc8b085931c8b1fac489fd24290" category="list-text">*File immutabili*: Questa funzione, nota anche come SnapLock, è disattivata per impostazione predefinita. L'attivazione dei file immutabili impedisce l'eliminazione o la sovrascrittura dei dati per un periodo di tempo specificato. L'attivazione di questa funzione è possibile solo durante la creazione del volume. Una volta attivata, questa funzione non può essere disattivata. Si tratta di una funzione premium di FSX per ONTAP con un costo aggiuntivo. Per ulteriori informazioni, consulta la <block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>documentazione di Amazon FSX per NetApp ONTAP.</block>
+  <block id="f348514dc345ce9c1d9ad82ae7129779" category="paragraph">L'attivazione della funzione file immutabili assegna in modo permanente i file in questo volume a uno stato WORM (write-once-Read-many) immutabile.</block>
+  <block id="d1004c5cd3614165a3675cc9bcefd0ff" category="list-text">Modalità di conservazione</block>
+  <block id="bf037d2be2988cb003e5473abb7458ad" category="list-text">È possibile scegliere tra due modalità di conservazione: _Enterprise_ o _Compliance_.</block>
+  <block id="2c7186fdcb22214f6a80f0c4bf830b01" category="list-text">In modalità _Enterprise_, un file immutabile, o SnapLock, può essere eliminato dall'amministratore durante il periodo di conservazione.</block>
+  <block id="056049eeec9d03d44ee8b82656eddd56" category="list-text">In modalità _Compliance_, un file WORM non può essere eliminato prima della scadenza del periodo di conservazione. Analogamente, il volume immutabile non può essere eliminato fino alla scadenza dei periodi di conservazione di tutti i file all'interno del volume.</block>
+  <block id="2dee9b3212ded01b0c388d81a6f5aec3" category="list-text">Periodo di conservazione</block>
+  <block id="103d1ff0c19e1c2f05d0e9237137a1dd" category="list-text">Il periodo di conservazione ha due impostazioni: _Retention policy_ e _retention period_. Il _Retention policy_ definisce per quanto tempo conservare i file in uno stato WORM immutabile. È possibile specificare un criterio di conservazione personalizzato o utilizzare il criterio di conservazione predefinito (non specificato) che è di 30 anni. I periodi di conservazione minimo e massimo definiscono l'intervallo di tempo consentito per il blocco dei file.</block>
+  <block id="10de4bc81f754b19b0d27246a0589c05" category="list-text">NOTA</block>
+  <block id="1e6fe3169d6df99dc6e4d89c3f0ca701" category="list-text">Anche dopo la scadenza del periodo di conservazione, non è possibile modificare un file WORM. È possibile solo eliminarlo o impostare un nuovo periodo di conservazione per riattivare la protezione WORM.</block>
+  <block id="00c161f0779702fcc736833a90e1c117" category="list-text">Commit automatico</block>
+  <block id="0710e9c5903cc398ef1a22a38cbb4666" category="list-text">È possibile attivare la funzione di autocommit. La funzionalità di autocommit assegna un file allo stato WORM su un volume SnapLock se il file non viene modificato per la durata del periodo di autocommit. La funzione di invio automatico è disattivata per impostazione predefinita. I file che si desidera assegnare automaticamente devono risiedere in un volume SnapLock.</block>
+  <block id="f84002cfa8aafdd6963aef9819f03cbe" category="list-text">Modalità di aggiunta volume</block>
+  <block id="73085bf5d4b4c2626026794741768c09" category="inline-link-macro">Ulteriori informazioni sulla modalità di aggiunta di un volume</block>
+  <block id="f70318a7f623a49e77262fc2b382b062" category="list-text">Non è possibile modificare i dati esistenti in un file protetto da WORM. Tuttavia, i file immutabili consentono di mantenere la protezione per i dati esistenti utilizzando file che possono essere allegati WORM. Ad esempio, è possibile generare file di registro o conservare i dati in streaming audio o video durante la scrittura incrementale dei dati. <block ref="d363aab3c17dd7b08ef55d9ecb5c0afa" category="inline-link-macro-rx"></block> Nella documentazione di Amazon FSX per NetApp ONTAP.</block>
+  <block id="dfb689231a842f04569410625d60363d" category="list-title">Procedura per i file immutabili</block>
+  <block id="44ba7526f1340d677cb6220be4b1b823" category="list-text">Selezionare per attivare *file immutabili basati su SnapLock*.</block>
+  <block id="4f7680fa283bf52aaa8ee2edfd564db8" category="list-text">Fare clic sulla casella per accettare e procedere.</block>
+  <block id="909d8cdc7c100d1834d4de10094f43ca" category="list-text">Fare clic su *Enable* (attiva).</block>
+  <block id="088bb2d18ad8fbec398c29306e127221" category="list-text">*Modalità di conservazione*: Selezionare la modalità *Enterprise* o *Compliance*.</block>
+  <block id="77b42ba4805daabc49114b9ab89a4177" category="list-text">*Periodo di conservazione*:</block>
+  <block id="f35564204209083a652f147df603888c" category="list-text">Selezionare il criterio di conservazione:</block>
+  <block id="504152708cd9de44bb9cb86c2f924f58" category="list-text">*Non specificato*: Imposta il criterio di conservazione su 30 anni.</block>
+  <block id="d52522aeac6c98a12810dc096d055647" category="list-text">*Specifica periodo*: Immettere il numero di secondi, minuti, ore, giorni, mesi o anni per impostare un criterio di conservazione personalizzato.</block>
+  <block id="6c174e94dd8ddcd5d81962e78326f53a" category="list-text">Selezionare i periodi di conservazione minimo e massimo:</block>
+  <block id="16358ae23c4e09a6d211bde0bb1d5944" category="list-text">*Minimo*: Immettere il numero di secondi, minuti, ore, giorni, mesi o anni per impostare il periodo di conservazione minimo.</block>
+  <block id="0e5cb121a1c7b4c59daf6285123d8e75" category="list-text">*Massimo*: Immettere il numero di secondi, minuti, ore, giorni, mesi o anni per impostare il periodo di conservazione massimo.</block>
+  <block id="9ddc08dbc82d9bea34f1dc4c5b59e6e7" category="list-text">*Autocommit*: Consente di disabilitare o abilitare l'autocommit. Se si attiva l'autocommit, impostare il periodo di autocommit.</block>
+  <block id="f8688d8b01dc38763ec2b1f2b373aacc" category="list-text">*Modalità di aggiunta volume*: Consente di disattivare o attivare. Consente di aggiungere nuovi contenuti ai file WORM.</block>
+  <block id="4d039a03e23e55926708d85c8977d521" category="list-text">File immutabili: I volumi contenenti file immutabili di SnapLock non possono essere eliminati fino alla scadenza del periodo di conservazione.</block>
+  <block id="d39be15ae050d8e613043b0ac15e302b" category="section-title">Aggiunta delle limitazioni di coppie ha</block>
+  <block id="5efa36685932e62e6fc20327cd980750" category="list-text">Questa operazione può richiedere circa 30 minuti.</block>
+  <block id="a51a5c7e9ccc4724703a6ad204303926" category="list-text">L'aggiunta di coppie ha limita le seguenti operazioni: Aggiunta di altre coppie ha, provisioning di IOPS, aumento della capacità SSD e aggiornamento della capacità di throughput.</block>
+  <block id="0499cc2d877c04e04bec267579a95697" category="summary">Tieni traccia di FSX per ONTAP, delle credenziali e delle operazioni di collegamento e monitora l'avanzamento dei lavori con Tracker in BlueXP  workload Factory per lo storage.</block>
+  <block id="dc58214807820bc923ac22555f97fd7a" category="doc">Monitora le operazioni di storage con Tracker in BlueXP  workload factory</block>
+  <block id="a1351d61b85cd866d5c412c6e3220b98" category="paragraph">Monitora e monitora l'esecuzione di FSX per ONTAP, le credenziali e le operazioni di collegamento e monitora l'avanzamento dei task con Tracker in BlueXP  workload Factory.</block>
+  <block id="d57581d19f1047da33c24e46abd88cd4" category="paragraph">Workload Factory offre Tracker, una funzionalità di monitoraggio che consente di monitorare e monitorare lo stato e l'avanzamento di FSX per ONTAP, le credenziali e le operazioni di collegamento, rivedere i dettagli relativi alle attività operative e alle sottoattività, diagnosticare eventuali problemi o errori, modificare i parametri per le operazioni non riuscite e riprovare le operazioni non riuscite. È possibile filtrare i lavori per tipo e stato, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori.</block>
+  <block id="5cc85b66adf3d2a6e3eb745a827cf4e0" category="paragraph">Tracker supporta fino a tre livelli di monitoraggio a seconda del funzionamento. Ogni attività, come la distribuzione del file system, visualizza la descrizione dell'attività, lo stato, l'ora di inizio, la durata dell'attività, l'utente, la regione, la risorsa proxy, l'ID attività e tutte le attività secondarie correlate.</block>
+  <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">Tracker i livelli di attività con esempi</block>
+  <block id="6db8f73f40a9c238922a375a008fda96" category="list-text">Livello 1 (processo principale): Tiene traccia di una distribuzione del file system.</block>
+  <block id="4848a390cc9141e051b33cd55dc40d06" category="list-text">Livello 2 (processo secondario): Tiene traccia dei processi secondari correlati alla distribuzione del file system.</block>
+  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">Livello 3 (attività): Elenca la sequenza delle azioni eseguite su ciascuna risorsa.</block>
+  <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">Stato del funzionamento</block>
+  <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">Lo stato dell'operazione in Tracker è il seguente _in Progress_, _Success_ e _FAILED_.</block>
+  <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">Frequenza di funzionamento</block>
+  <block id="a9853b6069302c4152781f48222c3541" category="list-text">La frequenza operativa si basa sul tipo di lavoro e sulla pianificazione del lavoro.</block>
+  <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">Conservazione degli eventi</block>
+  <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">Gli eventi vengono conservati nell'interfaccia utente per 30 giorni.</block>
+  <block id="cfd98e00a6e308c04ab9f76a854b6989" category="section-title">Monitoraggio e monitoraggio delle operazioni</block>
+  <block id="c82c26735f08b789c8bf574ab4962fcc" category="paragraph">Monitoraggio e monitoraggio delle operazioni in BlueXP  con Tracker.</block>
+  <block id="48acd3e9d69adfbf7f5941961e95f6de" category="list-text">Dall'inventario di archiviazione, selezionare il menu Impostazioni account, quindi selezionare *Tracker*.</block>
+  <block id="1c575ed3e5dce0a1d77706830609b278" category="inline-image-macro">Una schermata del menu delle impostazioni dell'account con l'opzione Tracker evidenziata.</block>
+  <block id="7478b5abe2869b21138fe88cbd4d66da" category="paragraph"><block ref="7478b5abe2869b21138fe88cbd4d66da" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e443a93c9da9763cd15656814a7e0c2e" category="list-text">Nella scheda Tracker, utilizzare i filtri o cercare per restringere i risultati dei lavori. È anche possibile scaricare un rapporto lavori.</block>
+  <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">Visualizza richiesta API</block>
+  <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">Visualizzare la richiesta API nella Codebox per un'attività in Tracker.</block>
+  <block id="968877018213bf42962084001c210472" category="list-text">In Tracker, selezionare un'attività.</block>
+  <block id="2e6179b36329b65c38a5ca113ba0c81c" category="list-text">Selezionare il menu a tre punti, quindi selezionare *Visualizza richiesta API*.</block>
+  <block id="1448fba076a066622a9f93a25ab170a2" category="section-title">Riprovare un'operazione non riuscita</block>
+  <block id="89f1070b2ef1ba678a8cb4823fa74cb2" category="paragraph">Riprovare un'operazione non riuscita in Tracker. È anche possibile copiare il messaggio di errore di un'operazione non riuscita.</block>
+  <block id="2d7556f00012ad460e93441b51cce6ea" category="admonition">Solo x numero di tentativi consentiti per un'operazione non riuscita.</block>
+  <block id="b866b632b7f32ded2a0a0907100641bf" category="list-text">In Tracker, selezionare un'operazione non riuscita.</block>
+  <block id="5d0eaa0ad00baabb57cbc22969070918" category="list-text">Selezionare il menu a tre punti, quindi selezionare *Riprova*.</block>
+  <block id="121145d60db2324903b129ae74d6c0a9" category="paragraph">L'operazione viene riavviata.</block>
+  <block id="bde5076ae2a993de9042a7e1dd4dc445" category="section-title">Modificare e riprovare un'operazione non riuscita</block>
+  <block id="2ae5a8ae85adca2aebf16aa81130c9c5" category="paragraph">Modificare i parametri dell'operazione non riuscita e riprovare l'operazione al di fuori del Tracker.</block>
+  <block id="524ab960a72817bd7f9f107dc357d1bd" category="list-text">Selezionare il menu a tre punti, quindi selezionare *Modifica e riprovare*.</block>
+  <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">Si viene reindirizzati alla pagina delle operazioni in cui è possibile modificare i parametri e riprovare l'operazione.</block>
+  <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">L'operazione viene riavviata. Andare su Tracker per visualizzare lo stato dell'operazione.</block>
+  <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">02 febbraio 2025</block>
+  <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">Monitoraggio delle operazioni con Tracker</block>
 </blocks>

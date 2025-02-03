@@ -36,9 +36,7 @@ Completare i seguenti passaggi per replicare un singolo volume o tutti i volumi 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume da replicare, quindi selezionare *Gestisci*.
-. Dalla scheda volumi, selezionare il menu a tre punti del volume da replicare.
-. Selezionare *azioni protezione dati*, quindi *replica dati volume*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume da replicare, quindi selezionare *replicare i dati del volume*.
 . Nella pagina Crea replica, in destinazione replica, specificare quanto segue:
 +
 .. *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.

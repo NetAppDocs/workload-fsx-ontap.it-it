@@ -21,6 +21,14 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 
 
+== Aggiunta delle limitazioni di coppie ha
+
+* Questa operazione può richiedere circa 30 minuti.
+* L'aggiunta di coppie ha limita le seguenti operazioni: Aggiunta di altre coppie ha, provisioning di IOPS, aumento della capacità SSD e aggiornamento della capacità di throughput.
+
+
+
+
 == Supporto regione di capacità di throughput
 
 

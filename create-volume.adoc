@@ -36,11 +36,19 @@ Prima di creare un volume, esaminare i seguenti prerequisiti:
 
 
 
+
+
+== Creare un volume
+
+È possibile creare un volume utilizzando i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
+
+
+NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice.
+
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system in cui desideri creare un volume e seleziona *Gestisci*.
-. Dalla scheda *Panoramica*, selezionare *Crea volume*.
+. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system in cui desideri creare un volume e seleziona *Crea volume*.
 . Nella pagina Create volume (Crea volume), sotto General details (Dettagli generali), fornire i seguenti dettagli:
 +
 .. *Volume name*: Immettere un nome per il volume.
@@ -113,6 +121,58 @@ Completare i seguenti campi per impostare il blocco dell'accesso al volume.
 .. *Efficienza dello storage*: Consente di disattivare o attivare l'efficienza dello storage.
 +
 L'efficienza dello storage si ottiene utilizzando le funzionalità di deduplica e compressione di ONTAP. La deduplica elimina i blocchi di dati duplicati. La compressione dei dati comprime i blocchi di dati per ridurre la quantità di storage fisico richiesta.
+
+.. *File immutabili*: Questa funzione, nota anche come SnapLock, è disattivata per impostazione predefinita. L'attivazione dei file immutabili impedisce l'eliminazione o la sovrascrittura dei dati per un periodo di tempo specificato. L'attivazione di questa funzione è possibile solo durante la creazione del volume. Una volta attivata, questa funzione non può essere disattivata. Si tratta di una funzione premium di FSX per ONTAP con un costo aggiuntivo. Per ulteriori informazioni, consulta la link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Come funziona SnapLock"^]documentazione di Amazon FSX per NetApp ONTAP.
++
+L'attivazione della funzione file immutabili assegna in modo permanente i file in questo volume a uno stato WORM (write-once-Read-many) immutabile.
+
++
+Modalità di conservazione:: È possibile scegliere tra due modalità di conservazione: _Enterprise_ o _Compliance_.
++
+--
+*** In modalità _Enterprise_, un file immutabile, o SnapLock, può essere eliminato dall'amministratore durante il periodo di conservazione.
+*** In modalità _Compliance_, un file WORM non può essere eliminato prima della scadenza del periodo di conservazione. Analogamente, il volume immutabile non può essere eliminato fino alla scadenza dei periodi di conservazione di tutti i file all'interno del volume.
+
+
+--
+Periodo di conservazione:: Il periodo di conservazione ha due impostazioni: _Retention policy_ e _retention period_. Il _Retention policy_ definisce per quanto tempo conservare i file in uno stato WORM immutabile. È possibile specificare un criterio di conservazione personalizzato o utilizzare il criterio di conservazione predefinito (non specificato) che è di 30 anni. I periodi di conservazione minimo e massimo definiscono l'intervallo di tempo consentito per il blocco dei file.
++
+--
+NOTA:: Anche dopo la scadenza del periodo di conservazione, non è possibile modificare un file WORM. È possibile solo eliminarlo o impostare un nuovo periodo di conservazione per riattivare la protezione WORM.
+
+
+--
+Commit automatico:: È possibile attivare la funzione di autocommit. La funzionalità di autocommit assegna un file allo stato WORM su un volume SnapLock se il file non viene modificato per la durata del periodo di autocommit. La funzione di invio automatico è disattivata per impostazione predefinita. I file che si desidera assegnare automaticamente devono risiedere in un volume SnapLock.
+Modalità di aggiunta volume:: Non è possibile modificare i dati esistenti in un file protetto da WORM. Tuttavia, i file immutabili consentono di mantenere la protezione per i dati esistenti utilizzando file che possono essere allegati WORM. Ad esempio, è possibile generare file di registro o conservare i dati in streaming audio o video durante la scrittura incrementale dei dati. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Ulteriori informazioni sulla modalità di aggiunta di un volume"^] Nella documentazione di Amazon FSX per NetApp ONTAP.
++
+--
+.Procedura per i file immutabili
+... Selezionare per attivare *file immutabili basati su SnapLock*.
+... Fare clic sulla casella per accettare e procedere.
+... Fare clic su *Enable* (attiva).
+... *Modalità di conservazione*: Selezionare la modalità *Enterprise* o *Compliance*.
+... *Periodo di conservazione*:
++
+**** Selezionare il criterio di conservazione:
++
+***** *Non specificato*: Imposta il criterio di conservazione su 30 anni.
+***** *Specifica periodo*: Immettere il numero di secondi, minuti, ore, giorni, mesi o anni per impostare un criterio di conservazione personalizzato.
+
+
+**** Selezionare i periodi di conservazione minimo e massimo:
++
+***** *Minimo*: Immettere il numero di secondi, minuti, ore, giorni, mesi o anni per impostare il periodo di conservazione minimo.
+***** *Massimo*: Immettere il numero di secondi, minuti, ore, giorni, mesi o anni per impostare il periodo di conservazione massimo.
+
+
+
+
+... *Autocommit*: Consente di disabilitare o abilitare l'autocommit. Se si attiva l'autocommit, impostare il periodo di autocommit.
+... *Modalità di aggiunta volume*: Consente di disattivare o attivare. Consente di aggiungere nuovi contenuti ai file WORM.
+
+
+--
+
 
 .. *Criterio snapshot*: Selezionare il criterio snapshot per specificare la frequenza e la conservazione degli snapshot.
 +
