@@ -11,7 +11,7 @@ summary: È possibile visualizzare i collegamenti associati al proprio account, 
 
 
 [role="lead"]
-Gestisci i collegamenti associati al tuo account di fabbrica dei workload BlueXP .
+Gestisci i collegamenti associati al tuo account di fabbrica dei workload BlueXP . È possibile visualizzare i collegamenti associati a un file system FSX per ONTAP, associare un collegamento a un file system FSX per ONTAP, modificare un collegamento e rimuovere un collegamento.
 
 link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:create-link.html["creare un collegamento"].
 
