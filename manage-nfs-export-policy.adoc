@@ -14,7 +14,7 @@ summary: Gestire la policy di esportazione NFS per un volume che utilizza tipi d
 Gestire la policy di esportazione NFS per un volume che utilizza tipi di protocollo NFSv3 o NFSv4,1 in una fabbrica di workload BlueXP .
 
 .A proposito di questa attività
-La gestione della policy di esportazione di un volume implica l'aggiunta di regole per le policy di esportazione che descrivono in dettaglio le specifiche dei client, il controllo dell'accesso, l'accesso dei super utenti e la versione NFS. È possibile aggiungere più criteri di esportazione e assegnarne la priorità.
+La gestione della policy di esportazione di un volume comporta l'aggiunta di regole di policy di esportazione che descrivono in dettaglio le specifiche dei client, il controllo dell'accesso, l'accesso dei super utenti e la versione NFS. È possibile aggiungere più criteri di esportazione e assegnarne la priorità.
 
 .Prima di iniziare
 Determinare le specifiche del client per le regole dei criteri di esportazione. I valori validi per la specifica client sono i seguenti:

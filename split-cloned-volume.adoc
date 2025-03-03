@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: split-cloned-volume.html 
 keywords: split clone volume, FlexVol volume 
-summary: Dividere un volume FlexVol clone dal volume principale per rendere il clone un normale volume FlexVol in lettura e scrittura. 
+summary: Dividere un FlexVol volume clone dal volume principale per rendere il clone un normale FlexVol volume in lettura/scrittura. 
 ---
 = Suddivisione di un volume clonato in una fabbrica di workload BlueXP 
 :allow-uri-read: 
@@ -28,7 +28,7 @@ L'operazione di suddivisione dei cloni comporta quanto segue:
 .Prima di iniziare
 Prima di dividere un volume clonato, prendere in considerazione quanto segue:
 
-* Per suddividere un volume clonato, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+* Per suddividere un volume clonato, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
 * Devi essere un amministratore del cluster.
 * Il volume FlexClone deve essere online all'inizio dell'operazione di divisione.
 * Il volume principale deve essere online perché la divisione abbia successo.

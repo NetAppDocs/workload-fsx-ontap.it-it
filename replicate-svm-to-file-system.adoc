@@ -14,7 +14,7 @@ summary: La replica di una VM di storage su un altro file system FSX per ONTAP f
 La replica di una VM di storage su un altro file system FSX per ONTAP in una workload Factory di BlueXP  fornisce un layer di protezione per l'accesso ai dati in caso di perdita di dati. Questa operazione replica tutti i volumi di una macchina virtuale di storage in un altro file system FSX per ONTAP.
 
 .Prima di iniziare
-Per replicare una macchina virtuale di storage in un altro file system FSX per ONTAP, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+Per replicare una macchina virtuale di storage in un altro file system FSX per ONTAP, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -34,7 +34,7 @@ _Auto_ è la policy di tiering predefinita quando si crea un volume utilizzando 
 
 .. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s. In alternativa, selezionare *illimitato*.
 +
-Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+Senza un limite, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
 
 
 

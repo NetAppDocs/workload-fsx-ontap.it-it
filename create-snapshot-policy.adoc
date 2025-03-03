@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Crea una policy Snapshot per FSX per i volumi ONTAP in una fabbrica di workload BlueXP . Una policy di snapshot definisce il modo in cui il sistema crea snapshot per un volume. 
+summary: Creazione di una policy Snapshot personalizzata per una VM di storage in una fabbrica di workload BlueXP . 
 ---
-= Crea una policy di Snapshot per FSX per ONTAP Volumes
+= Creazione di una policy Snapshot per le VM di storage in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crea una policy di snapshot personalizzata per FSX per i volumi ONTAP in una workload factory BlueXP . Una policy di snapshot definisce il modo in cui il sistema crea snapshot per un volume.
+Creazione di una policy di snapshot personalizzata per le macchine virtuali storage in una fabbrica di workload BlueXP . Una policy di snapshot definisce il modo in cui il sistema crea snapshot per una VM di storage. Puoi creare una policy di Snapshot per una VM di storage in un file system FSX per ONTAP. È anche possibile condividere la policy su più macchine virtuali storage.
 
 .A proposito di questa attività
 È possibile creare un criterio di snapshot personalizzato diverso da quello delle tre policy integrate per FSX for ONTAP:
@@ -39,13 +39,12 @@ La personalizzazione di un criterio consente di specificare quando creare le sna
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere con le istantanee pianificate.
-. Selezionare *azioni protezione dati*, *istantanee*, quindi *Gestisci criteri snapshot*.
-. Nella pagina di gestione dei criteri di istantanea, selezionare *Crea un nuovo criterio di snapshot*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda *Storage VM*, selezionare il menu a tre punti per il volume da proteggere con gli snapshot pianificati, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di snapshot, selezionare *Crea criterio di snapshot*.
 . Nel campo *Snapshot policy name* (Nome criterio istantanea), immettere un nome per il criterio snapshot.
-. Facoltativo: Nel campo *Descrizione*, immettere una descrizione per il criterio di snapshot.
-. In *Pianificazione*, selezionare quando creare istantanee. Ad esempio, ogni minuto o ogni ora.
+. Facoltativamente, immettere una descrizione per il criterio snapshot.
+. In *Policy Schedule and Copies*, selezionare quando creare snapshot. Ad esempio, ogni minuto o ogni ora.
 +
 È possibile selezionare più di una frequenza.
 
@@ -56,7 +55,15 @@ Il numero massimo di copie è 1.023.
 . Facoltativo: In *convenzione di denominazione*, immettere un *prefisso* per la policy.
 . *Etichetta di conservazione* viene compilata automaticamente.
 +
-Questa etichetta fa riferimento all'etichetta SnapMirror, o etichetta di replica, utilizzata per selezionare solo gli snapshot specificati per la replica dall'origine al file system di destinazione.
+Questa etichetta si riferisce all'etichetta SnapMirror o di replica utilizzata per selezionare solo gli snapshot specificati per la replica dal file system di origine a quello di destinazione.
 
-. Selezionare *Applica*.
+. Facoltativo: Abilitare *istantanee immutabili* per qualsiasi pianificazione necessaria, impostare il *periodo di conservazione* per ogni pianificazione e accettare l'istruzione per continuare.
++
+L'attivazione degli snapshot immutabili blocca tutti gli snapshot in questa policy per impedire l'eliminazione degli snapshot durante il periodo di conservazione.
 
+. *Condivisione tra VM di archiviazione*: Abilitata per impostazione predefinita. Quando abilitata, la policy di snapshot viene condivisa tra tutte le macchine virtuali storage nel file system. Disattiva per creare una policy di snapshot per una singola macchina virtuale di storage.
+. Selezionare *Crea*.
+
+
+.Risultato
+Viene creato il criterio snapshot.

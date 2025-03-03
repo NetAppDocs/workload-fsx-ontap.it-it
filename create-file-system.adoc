@@ -60,13 +60,13 @@ Creazione rapida consente di utilizzare una configurazione di Best practice cons
 *** Per le implementazioni scale-up, puoi avere una sola coppia ha.
 *** Per le implementazioni scale-out è possibile avere tra due e dodici coppie ha.
 +
-Per eseguire il provisioning dei volumi di blocchi iSCSI sul file system, seleziona non più di 6 coppie ha.
+Per eseguire il provisioning dei volumi di blocchi iSCSI sul file system, seleziona non più di sei coppie ha.
 
 
 
 .. *Tipo di distribuzione*: Selezionare un tipo di distribuzione.
 +
-*** Implementazione con zona di disponibilità singola (Single-AZ): Garantisce la disponibilità monitorando gli errori dell'hardware e sostituendo automaticamente i componenti dell'infrastruttura in caso di guasti. Ottiene una durata elevata replicando automaticamente i dati all'interno di una zona di disponibilità per proteggerli dai guasti dei componenti.
+*** Implementazione con zona di disponibilità singola (Single-AZ): Garantisce la disponibilità monitorando gli errori dell'hardware e sostituendo automaticamente i componenti dell'infrastruttura in caso di guasto. Ottiene una durata elevata replicando automaticamente i dati all'interno di una zona di disponibilità per proteggerli dai guasti dei componenti.
 *** Implementazione di diverse zone di disponibilità (Multi-AZ): Fornisce disponibilità continua ai dati anche quando una zona di disponibilità non è disponibile. I file system multi-AZ supportano tutte le funzionalità di disponibilità e durata dei file system Single-AZ. Un file system Multi-AZ è progettato per carichi di lavoro di produzione business-critical che richiedono alta disponibilità per i dati dei file ONTAP condivisi e uno storage necessario con replica integrata tra zone di disponibilità.
 
 
@@ -139,7 +139,7 @@ Per eseguire il provisioning dei volumi di blocchi iSCSI sul file system, selezi
 
 .. *Tipo di distribuzione*: Selezionare un tipo di distribuzione.
 +
-*** Implementazione con zona di disponibilità singola (Single-AZ): Garantisce la disponibilità monitorando gli errori dell'hardware e sostituendo automaticamente i componenti dell'infrastruttura in caso di guasti. Ottiene una durata elevata replicando automaticamente i dati all'interno di una zona di disponibilità per proteggerli dai guasti dei componenti.
+*** Implementazione con zona di disponibilità singola (Single-AZ): Garantisce la disponibilità monitorando gli errori dell'hardware e sostituendo automaticamente i componenti dell'infrastruttura in caso di guasto. Ottiene una durata elevata replicando automaticamente i dati all'interno di una zona di disponibilità per proteggerli dai guasti dei componenti.
 *** Implementazione di diverse zone di disponibilità (Multi-AZ): Fornisce disponibilità continua ai dati anche quando una zona di disponibilità non è disponibile. I file system multi-AZ supportano tutte le funzionalità di disponibilità e durata dei file system Single-AZ. Un file system Multi-AZ è progettato per carichi di lavoro di produzione business-critical che richiedono alta disponibilità per i dati dei file ONTAP condivisi e uno storage necessario con replica integrata tra zone di disponibilità.
 
 

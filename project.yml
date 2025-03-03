@@ -90,6 +90,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Aumentare la capacità del volume
         url: "/increase-volume-capacity.html"
+      - title: Gestire i file immutabili
+        url: "/manage-immutable-files.html"
       - title: Gestire i tag di volume
         url: "/manage-volume-tags.html"
       - title: Riequilibrare la capacità di un volume
@@ -131,25 +133,36 @@ sidebar:
         url: "/delete-svm.html"
     - title: Amministrazione della protezione dei dati
       entries:
-      - title: Consente di modificare il criterio di snapshot di un volume
-        url: "/change-snapshot-policy.html"
-      - title: Gestire la pianificazione del backup di FSX per ONTAP
-        url: "/manage-backup-schedule.html"
-      - title: Abilita e modifica le snapshot per la conservazione a lungo termine
-        url: "/enable-snapshots-long-term.html"
-      - title: Invertire una relazione di replica
-        url: "/reverse-replication.html"
-      - title: Consente di modificare la pianificazione della replica di un volume
-          di origine
-        url: "/change-replication-schedule.html"
-      - title: Limitare la velocità di trasferimento massima di una relazione di replica
-        url: "/limit-transfer-rate.html"
-      - title: Aggiornamento manuale dei dati snapshot in una relazione di replica
-        url: "/update-snapshot-replication.html"
-      - title: Interruzione di una relazione di replica
-        url: "/stop-replication.html"
-      - title: Eliminare una relazione di replica
-        url: "/delete-replication.html"
+      - title: Snapshot
+        entries:
+        - title: Gestire le policy delle snapshot
+          url: "/manage-snapshot-policy.html"
+        - title: Abilita e modifica le snapshot per la conservazione a lungo termine
+          url: "/enable-snapshots-long-term.html"
+      - title: Backup
+        entries:
+        - title: Gestire la pianificazione del backup di FSX per ONTAP
+          url: "/manage-backup-schedule.html"
+      - title: Replica
+        entries:
+        - title: Invertire una relazione di replica
+          url: "/reverse-replication.html"
+        - title: Consente di modificare la pianificazione della replica di un volume
+            di origine
+          url: "/change-replication-schedule.html"
+        - title: Limitare la velocità di trasferimento massima di una relazione di
+            replica
+          url: "/limit-transfer-rate.html"
+        - title: Aggiornamento manuale dei dati snapshot in una relazione di replica
+          url: "/update-snapshot-replication.html"
+        - title: Replica di un volume di data Protection
+          url: "/cascade-replication.html"
+        - title: Sospendere e riprendere una relazione di replica
+          url: "/pause-resume-replication.html"
+        - title: Interruzione di una relazione di replica
+          url: "/stop-replication.html"
+        - title: Eliminare una relazione di replica
+          url: "/delete-replication.html"
     - title: Amministrazione delle prestazioni
       entries:
       - title: Provisioning degli IOPS per un file system

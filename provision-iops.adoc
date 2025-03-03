@@ -16,7 +16,7 @@ Esegui il provisioning o manuale del provisioning degli IOPS SSD per un file sys
 .A proposito di questa attività
 Puoi abilitare il provisioning IOPS automatico per un file system FSX oppure eseguire il provisioning manuale degli IOPS.
 
-Gli IOPS con provisioning automatico vengono calcolati come 3 IOPS per GiB.
+Gli IOPS con provisioning automatico vengono calcolati come tre IOPS per GiB.
 
 Se si esegue il provisioning manuale degli IOPS, potrebbe essere necessario aumentare gli IOPS prima di link:increase-file-system-capacity.html["aumento della capacità del file system"].
 

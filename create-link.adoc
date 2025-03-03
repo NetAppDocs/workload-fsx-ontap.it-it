@@ -24,8 +24,8 @@ Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account A
 
 Sono disponibili due opzioni per la creazione dei collegamenti, automatica o manuale.
 
-* Automaticamente: Crea un collegamento con la registrazione automatica tramite workload Factory. Un collegamento creato automaticamente richiede token per l'automazione della fabbrica del carico di lavoro e il codice CloudFormation ha una durata breve. Può essere utilizzato solo per un massimo di 6 ore.
-* Manualmente: Crea un collegamento con la registrazione manuale. Il codice CloudFormation persiste e consente di completare l'operazione con più tempo. Ciò è utile quando si lavora con diversi team, come Security e DevOps, che prima devono concedere le autorizzazioni necessarie per completare la creazione del collegamento.
+* Automaticamente: Crea un collegamento con la registrazione automatica tramite workload Factory. Un collegamento creato automaticamente richiede token per l'automazione della fabbrica del carico di lavoro e il codice CloudFormation ha una durata breve. Può essere utilizzato solo per un massimo di sei ore.
+* Manualmente: Crea un collegamento con la registrazione manuale. Il codice CloudFormation persiste e consente di completare l'operazione con più tempo. Ciò è utile quando si lavora con team diversi come Security e DevOps, che potrebbero prima dover concedere le autorizzazioni necessarie per completare la creazione del collegamento.
 
 
 .Prima di iniziare

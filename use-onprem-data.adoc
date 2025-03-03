@@ -74,7 +74,7 @@ Ora puoi visualizzare i dati nel tuo cluster ONTAP on-premise e <<Replica dei da
 
 == Replica dei dati dei volumi da un cluster ONTAP on-premise
 
-Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX per ONTAP. Una volta replicati, i dati possono essere utilizzati per arricchire le knowledge base dell'ai.
+Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX per ONTAP. Dopo la replica, i dati possono essere utilizzati per arricchire le knowledge base ai.
 
 .Prima di iniziare
 * Devi rilevare un cluster ONTAP on-premise per replicare i dati dei suoi volumi.
@@ -109,7 +109,7 @@ Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento 
 
 .. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MIB/s. In alternativa, selezionare *illimitato*.
 +
-Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+Senza un limite, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
 
 
 

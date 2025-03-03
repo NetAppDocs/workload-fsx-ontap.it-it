@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: manage-immutable-files.html 
+keywords: enable immutable files, disable immutable files, lock files, unlock files 
+summary: È possibile aggiornare alcune impostazioni dei file immutabili quando la funzione è attivata. 
+---
+= Gestire file immutabili per un volume in una fabbrica di carichi di lavoro BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile aggiornare determinate impostazioni di file immutabili per un volume quando la funzionalità è attivata, ad esempio i criteri e i periodi di conservazione, il periodo di autocommit e la modalità di aggiunta del volume.
+
+Si noti che l'abilitazione dei file immutabili è possibile solo durante link:create-volume.html["creazione di volumi"].
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Selezionare la scheda *volumi*.
+. Nella scheda volumi, selezionare il menu a tre punti del volume da clonare.
+. Selezionare *azioni protezione dati*, quindi *Gestisci file immutabili*.
+. Nella pagina Gestisci file immutabili, è possibile aggiornare quanto segue:
++
+** *Periodo di conservazione*: Selezionare *non specificato* o *specifica periodo*.
++
+*** *Non specificato*: Il periodo minimo predefinito è "0" anni e il periodo massimo predefinito è "30 anni".
+*** *Specifica periodo*: Opzione per definire il criterio di conservazione, i periodi minimo e massimo, la funzione di autocommit e la modalità di aggiunta del volume. Fornire i seguenti dettagli:
++
+**** *Criterio di conservazione*: Questo periodo deve essere maggiore o uguale al periodo di conservazione minimo e minore o uguale al periodo di conservazione massimo.
+**** *Periodi minimo e massimo*: Impostare i periodi minimo e massimo per assegnare i file in questo volume a uno stato WORM immutabile.
+
+
+
+
+** *Autocommit*: Abilita o disabilita la funzione per assegnare automaticamente i file al WORM che non sono stati modificati durante il periodo di autocommit.
+** *Modalità di aggiunta volume*: Consente di attivare o disattivare la funzione. Abilitando la modalità di aggiunta di volumi è possibile aggiungere nuovi contenuti ai file WORM.
+
+
+. Fare clic su *Apply* (Applica).
+
+
+.Risultato
+Gli aggiornamenti vengono ora applicati al volume.

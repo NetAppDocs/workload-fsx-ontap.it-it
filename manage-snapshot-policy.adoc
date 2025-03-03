@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshot-policy.html 
+keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
+summary: Gestisci le policy Snapshot di FSX per i volumi ONTAP in una workload factory BlueXP . Una policy di snapshot definisce il modo in cui il sistema crea snapshot per un volume. 
+---
+= Gestire le policy delle snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestisci le policy Snapshot di FSX per i volumi ONTAP in una workload factory BlueXP . Una policy di snapshot definisce il modo in cui il sistema crea snapshot per un volume.
+
+.A proposito di questa attività
+Le operazioni di gestione di Snapshot, come l'assegnazione, la modifica e l'eliminazione delle policy di Snapshot per i volumi in un file system FSX per ONTAP, vengono gestite a livello di VM di storage. Le policy di Snapshot possono essere condivise con una singola macchina virtuale storage o con tutte le macchine virtuali storage.
+
+Alcune attività di gestione richiedono l'esecuzione link:manage-links.html["associare un collegamento"]del file system FSX per ONTAP. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"].
+
+Per impostazione predefinita, ogni volume è associato al criterio di snapshot del file system `default` . Consigliamo di utilizzare questa policy per la maggior parte dei carichi di lavoro.
+
+
+
+== Modificare una policy di snapshot
+
+È possibile modificare il nome del criterio snapshot, la pianificazione e il numero di copie da conservare e attivare o disattivare gli snapshot immutabili. Non è possibile attivare o disattivare la condivisione dei criteri tra le VM di storage. Questa opzione è disponibile solo durante la creazione dei criteri di snapshot.
+
+.Prima di iniziare
+Per visualizzare i criteri degli snapshot esistenti, è necessario associare un collegamento. Per associare un collegamento, selezionare *collegamento associato* in *Nome account*. Quindi tornare a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system e quindi *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda *Storage VM*, selezionare il menu a tre punti per la VM di archiviazione contenente il volume da proteggere con gli snapshot pianificati, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di istantanea, selezionare il menu a tre punti per il criterio di istantanea da modificare, quindi selezionare *Modifica*.
+. Nella finestra di dialogo Modifica criterio snapshot, apportare le modifiche necessarie al criterio snapshot.
+. Selezionare *Applica*.
+
+
+.Risultato
+Il criterio snapshot viene aggiornato.
+
+
+
+== Assegnare un criterio snapshot a un volume
+
+È possibile assegnare una policy di snapshot a un singolo volume per creare snapshot pianificate per il volume.
+
+.Prima di iniziare
+È necessario link:manage-links.html["associare un collegamento"]assegnare un criterio snapshot. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume a cui assegnare un criterio snapshot, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda *Storage VM*, selezionare il menu a tre punti per la VM di archiviazione contenente il volume da proteggere con gli snapshot pianificati, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di snapshot, selezionare il menu a tre punti del criterio di snapshot, quindi selezionare *Assegna criterio al volume*.
+. Nella finestra di dialogo Assegna criterio snapshot, selezionare un criterio snapshot da assegnare al volume ed esaminare la pianificazione dei criteri.
++
+Se il criterio contiene istantanee immutabili e si desidera utilizzarlo, accettare l'istruzione.
+
+. Selezionare *Assegna*.
+
+
+.Risultato
+Il criterio snapshot viene assegnato al volume.
+
+
+
+== Attiva gli snapshot immutabili
+
+Bloccare gli snapshot per impedirne l'eliminazione durante il periodo di conservazione.
+
+.Prima di iniziare
+È necessario link:manage-links.html["associare un collegamento"]attivare gli snapshot immutabili. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume per cui bloccare gli snapshot, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere.
+. Selezionare *azioni protezione dati*, *istantanee*, quindi *Rendi immutabile uno snapshot*.
+. Nella finestra di dialogo Rendi un'istantanea immutabile, effettuare le seguenti operazioni:
++
+.. *Nome istantanea*: Selezionare l'istantanea da bloccare.
+.. Impostare *periodo di conservazione* in numero di ore, giorni, mesi o anni.
+.. Accettare la dichiarazione.
+
+
+. Selezionare *Applica*.
+
+
+.Risultato
+Lo snapshot del volume è ora bloccato.
+
+
+
+== Eliminazione di una policy di snapshot
+
+Elimina una policy di snapshot quando non è più necessaria.
+
+Non è possibile eliminare un criterio di snapshot assegnato a più volumi.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda *Storage VM*, selezionare il menu a tre punti della VM di archiviazione con il criterio snapshot da eliminare, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di istantanea, selezionare il menu a tre punti per il criterio di snapshot da eliminare, quindi selezionare *Elimina*.
+. Nella finestra di dialogo Elimina, selezionare *Elimina* per eliminare il criterio.
+
+
+.Risultato
+La policy dello snapshot viene eliminata.

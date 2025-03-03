@@ -11,7 +11,7 @@ summary: Interruzione di un rapporto di replica tra i volumi di origine e di des
 
 
 [role="lead"]
-Interruzione di un rapporto di replica in una fabbrica di workload BlueXP . Quando si interrompe una relazione di replica, vengono pianificati gli aggiornamenti della replica dal volume di origine alla pausa del volume di destinazione. Il volume di destinazione passa da sola lettura a lettura-scrittura.
+Interruzione di un rapporto di replica in una fabbrica di workload BlueXP . Quando si interrompe una relazione di replica, vengono pianificati gli aggiornamenti della replica dal volume di origine alla pausa del volume di destinazione. Il volume di destinazione passa da sola lettura a lettura/scrittura.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

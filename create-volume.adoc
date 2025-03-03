@@ -16,7 +16,7 @@ Dopo aver configurato il file system FSX per ONTAP, crea FSX per i volumi ONTAP 
 .A proposito di questa attività
 FSX per ONTAP Volumes sono risorse virtuali utilizzate per raggruppare i dati, determinare il modo in cui i dati vengono memorizzati e determinare il tipo di accesso ai dati. I volumi non consumano capacità di storage del file system. I dati memorizzati in un volume consumano principalmente lo storage SSD. In base alla policy di tiering del volume, i dati potrebbero consumare anche storage pool di capacità. Al momento della creazione, è possibile impostare le dimensioni di un volume e modificarle in un secondo momento.
 
-Per i volumi possono essere utilizzati i seguenti protocolli:
+Per i volumi in uso possono essere utilizzati i seguenti protocolli:
 
 * CIFS: Protocollo di file storage per sistemi operativi Windows
 * NFS: Protocollo di file storage per sistemi operativi Unix
@@ -30,7 +30,7 @@ Prima di creare un volume, esaminare i seguenti prerequisiti:
 * Devi avere una macchina virtuale di storage.
 * Per l'accesso al protocollo, completare quanto segue:
 +
-** Per configurare l'accesso al volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+** Per configurare l'accesso al volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
 ** Devi configurare l'accesso per il protocollo selezionato, ovvero CIFS, NFS o iSCSI.
 
 
@@ -97,7 +97,7 @@ Se è stato selezionato un criterio di esportazione esistente, immettere un nuov
 
 
 
-*** *Block access*: Consente agli host che eseguono applicazioni aziendali critiche di accedere al volume utilizzando il protocollo iSCSI. L'accesso a blocchi è disponibile solo quando l'implementazione scale-out del file system ha 6 coppie ha o meno.
+*** *Block access*: Consente agli host che eseguono applicazioni aziendali critiche di accedere al volume utilizzando il protocollo iSCSI. L'accesso a blocchi è disponibile solo quando le implementazioni scale-out del file system hanno sei coppie ha o meno.
 +
 Completare i seguenti campi per impostare il blocco dell'accesso al volume.
 
@@ -122,7 +122,7 @@ Completare i seguenti campi per impostare il blocco dell'accesso al volume.
 +
 L'efficienza dello storage si ottiene utilizzando le funzionalità di deduplica e compressione di ONTAP. La deduplica elimina i blocchi di dati duplicati. La compressione dei dati comprime i blocchi di dati per ridurre la quantità di storage fisico richiesta.
 
-.. *File immutabili*: Questa funzione, nota anche come SnapLock, è disattivata per impostazione predefinita. L'attivazione dei file immutabili impedisce l'eliminazione o la sovrascrittura dei dati per un periodo di tempo specificato. L'attivazione di questa funzione è possibile solo durante la creazione del volume. Una volta attivata, questa funzione non può essere disattivata. Si tratta di una funzione premium di FSX per ONTAP con un costo aggiuntivo. Per ulteriori informazioni, consulta la link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Come funziona SnapLock"^]documentazione di Amazon FSX per NetApp ONTAP.
+.. *File immutabili*: Questa funzione, nota anche come SnapLock, è disattivata per impostazione predefinita. L'attivazione dei file immutabili impedisce l'eliminazione o la sovrascrittura dei dati per un periodo di tempo specificato. L'attivazione di questa funzione è possibile solo durante la creazione del volume. Una volta attivata, la funzione non può essere disattivata. Si tratta di una funzione premium di FSX per ONTAP con un costo aggiuntivo. Per ulteriori informazioni, consulta la link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Come funziona SnapLock"^]documentazione di Amazon FSX per NetApp ONTAP.
 +
 L'attivazione della funzione file immutabili assegna in modo permanente i file in questo volume a uno stato WORM (write-once-Read-many) immutabile.
 
@@ -135,7 +135,7 @@ Modalità di conservazione:: È possibile scegliere tra due modalità di conserv
 
 
 --
-Periodo di conservazione:: Il periodo di conservazione ha due impostazioni: _Retention policy_ e _retention period_. Il _Retention policy_ definisce per quanto tempo conservare i file in uno stato WORM immutabile. È possibile specificare un criterio di conservazione personalizzato o utilizzare il criterio di conservazione predefinito (non specificato) che è di 30 anni. I periodi di conservazione minimo e massimo definiscono l'intervallo di tempo consentito per il blocco dei file.
+Periodo di conservazione:: Il periodo di conservazione ha due impostazioni: _Retention policy_ e _retention period_. Il _Retention policy_ definisce per quanto tempo conservare i file in uno stato WORM immutabile. È possibile specificare un criterio di conservazione personalizzato o utilizzare il criterio di conservazione predefinito (non specificato), ossia 30 anni. I periodi di conservazione minimo e massimo definiscono l'intervallo di tempo consentito per il blocco dei file.
 +
 --
 NOTA:: Anche dopo la scadenza del periodo di conservazione, non è possibile modificare un file WORM. È possibile solo eliminarlo o impostare un nuovo periodo di conservazione per riattivare la protezione WORM.
@@ -148,8 +148,8 @@ Modalità di aggiunta volume:: Non è possibile modificare i dati esistenti in u
 --
 .Procedura per i file immutabili
 ... Selezionare per attivare *file immutabili basati su SnapLock*.
-... Fare clic sulla casella per accettare e procedere.
-... Fare clic su *Enable* (attiva).
+... Selezionare la casella per accettare e procedere.
+... Selezionare *Abilita*.
 ... *Modalità di conservazione*: Selezionare la modalità *Enterprise* o *Compliance*.
 ... *Periodo di conservazione*:
 +

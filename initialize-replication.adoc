@@ -11,7 +11,7 @@ summary: Inizializzare una relazione di replica tra i volumi di origine e di des
 
 
 [role="lead"]
-Inizializzare una relazione di replica tra i volumi di origine e di destinazione in una fabbrica di workload BlueXP .
+Inizializzare una relazione di replica tra volumi di origine e di destinazione per trasferire la snapshot e tutti i blocchi di dati in una workload factory BlueXP .
 
 .A proposito di questa attività
 L'inizializzazione esegue un trasferimento _baseline_: Crea uno snapshot del volume di origine, quindi trasferisce lo snapshot e tutti i blocchi di dati che fa riferimento al volume di destinazione.

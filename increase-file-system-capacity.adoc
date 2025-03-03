@@ -20,7 +20,7 @@ L'aumento della capacità dei file system influisce sugli IOPS per il file syste
 
 Se si sceglie automaticamente link:provision-iops.html["Provisioning degli IOPS"] per un file system, gli IOPS aumentano di 3 volte ogni aumento di 1 GiB nella capacità degli SSD.
 
-Quando link:provision-iops.html["Provisioning degli IOPS"] manualmente, potrebbe essere necessario aumentare l'allocazione degli IOPS per supportare l'aumentata capacità del file system.
+link:provision-iops.html["Provisioning degli IOPS"]Manualmente, potrebbe essere necessario aumentare l'allocazione degli IOPS per supportare l'aumentata capacità del file system.
 
 Per i limiti della capacità di storage degli SSD, fai riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quote"^] documentazione di AWS FSX per NetApp ONTAP.
 

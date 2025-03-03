@@ -29,7 +29,7 @@ Vengono creati collegamenti dalle pagine del file system FSX per ONTAP in worklo
 
 == Costi
 
-Ogni transazione eseguita da Lambda comporta un addebito. Poiché Lambda agisce come proxy tra i due sistemi, quando Lambda invia una richiesta all'API REST ONTAP su un file system e quando invia la risposta alla fabbrica dei carichi di lavoro viene addebitato un costo.
+Ogni transazione eseguita da Lambda comporta un addebito. Poiché Lambda agisce come proxy tra i due sistemi, quando Lambda invia una richiesta all'API REST ONTAP su un file system e quando invia la risposta a una fabbrica dei carichi di lavoro viene addebitato un costo.
 
 link:https://aws.amazon.com/lambda/pricing/["Scopri di più sui costi legati all'utilizzo di AWS Lambda"^]
 

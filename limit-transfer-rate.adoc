@@ -14,7 +14,7 @@ summary: Limite della velocità di trasferimento massima di una relazione di rep
 Limite della velocità di trasferimento massima di una relazione di replica in una fabbrica di carichi di lavoro BlueXP . Una velocità di trasferimento illimitata potrebbe influire negativamente sulle prestazioni di altre applicazioni e della rete.
 
 .A proposito di questa attività
-La limitazione della velocità di trasferimento massima è facoltativa ma consigliata. Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire.
+La limitazione della velocità di trasferimento massima è facoltativa ma consigliata. Senza un limite, le prestazioni della rete e delle applicazioni potrebbero diminuire.
 
 In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
 

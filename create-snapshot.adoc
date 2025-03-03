@@ -26,10 +26,20 @@ NOTE: Le snapshot non sono copie dei tuoi dati. Se vuoi creare copie dei tuoi da
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume per cui creare uno snapshot, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere.
-. Selezionare *azioni protezione dati*, *istantanee*, quindi *Crea volume da uno snapshot*.
-. Nella finestra di dialogo Crea volume da un'istantanea, nel campo *Nome istantanea*, immettere un nome per l'istantanea.
+. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere con le istantanee.
+. Selezionare *azioni protezione dati*, *istantanee*, quindi *Crea un'istantanea*.
+. Nella finestra di dialogo Crea un'istantanea, immettere il nome di un'istantanea nel campo *Nome istantanea*.
+. Facoltativo: Rendere immutabile lo snapshot per evitare che venga eliminato durante il periodo di conservazione.
++
+.. Attiva *istantanee immutabili*.
+.. Impostare *periodo di conservazione* come numero di ore, giorni, mesi o anni.
+.. Accettare la dichiarazione relativa agli snapshot immutabili.
+
+
 . Selezionare *Crea*.
 
+
+.Risultato
+Il volume dispone di una copia snapshot.
