@@ -155,8 +155,6 @@ sidebar:
           url: "/limit-transfer-rate.html"
         - title: Aggiornamento manuale dei dati snapshot in una relazione di replica
           url: "/update-snapshot-replication.html"
-        - title: Replica di un volume di data Protection
-          url: "/cascade-replication.html"
         - title: Sospendere e riprendere una relazione di replica
           url: "/pause-resume-replication.html"
         - title: Interruzione di una relazione di replica
