@@ -21,9 +21,8 @@ Tracker supporta fino a tre livelli di monitoraggio a seconda del funzionamento.
 Tracker i livelli di attività con esempi::
 +
 --
-* Livello 1 (processo principale): Tiene traccia di una distribuzione del file system.
-* Livello 2 (processo secondario): Tiene traccia dei processi secondari correlati alla distribuzione del file system.
-* Livello 3 (attività): Elenca la sequenza delle azioni eseguite su ciascuna risorsa.
+* Livello 1 (attività): Tiene traccia della distribuzione del file system.
+* Livello 2 (attività secondaria): Tiene traccia delle attività secondarie relative alla distribuzione del file system.
 
 
 --
