@@ -26,6 +26,7 @@ Per impostazione predefinita, ogni volume è associato al criterio di snapshot d
 La personalizzazione di un criterio consente di specificare quando creare le snapshot, il numero di copie da conservare e il nome delle stesse.
 
 .Prima di iniziare
+* Una volta creato un criterio snapshot, la sua associazione con le VM di storage non può essere modificata, ma è sempre possibile aggiungere o rimuovere il criterio dai volumi.
 * Prima di utilizzare le snapshot, occorre valutare quanto segue:
 +
 ** Per la maggior parte dei set di dati, è sufficiente una capacità aggiuntiva del 20% per conservare le snapshot per un massimo di quattro settimane. Man mano che i dati diventano più datati, il loro utilizzo per i ripristini diventa meno probabile.

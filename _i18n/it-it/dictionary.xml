@@ -1502,7 +1502,6 @@
   <block id="ac01830d09cb9d4a6364700c03ac9a48" category="paragraph">Lo snapshot del volume è ora bloccato.</block>
   <block id="07d4b0619f50f6f95ed7b83a046239a5" category="section-title">Eliminazione di una policy di snapshot</block>
   <block id="696434880f5851290eaa4b1ba9f80d85" category="paragraph">Elimina una policy di snapshot quando non è più necessaria.</block>
-  <block id="122929b907900af2bcf3e5bace6a2385" category="paragraph">Non è possibile eliminare un criterio di snapshot assegnato a più volumi.</block>
   <block id="df5ac48f314a037eb80499fa07b659ad" category="list-text">Dalla scheda *Storage VM*, selezionare il menu a tre punti della VM di archiviazione con il criterio snapshot da eliminare, quindi *azioni avanzate* e *Gestisci criteri snapshot*.</block>
   <block id="a406d236bad23526e469ee1e5b111d14" category="list-text">Nella pagina di gestione dei criteri di istantanea, selezionare il menu a tre punti per il criterio di snapshot da eliminare, quindi selezionare *Elimina*.</block>
   <block id="6a89139e7be9bba144081cf61352e3c2" category="list-text">Nella finestra di dialogo Elimina, selezionare *Elimina* per eliminare il criterio.</block>
@@ -1567,4 +1566,23 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">Blog BlueXP</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
+  <block id="bf453f792f281dc877c5d1e809edc5dc" category="list-text">Una volta creato un criterio snapshot, la sua associazione con le VM di storage non può essere modificata, ma è sempre possibile aggiungere o rimuovere il criterio dai volumi.</block>
+  <block id="5ba1bedcea9a8eb833a1e739064fb440" category="list-text">Le seguenti funzioni non sono supportate con gli snapshot immutabili:</block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="list-text">Gruppi di coerenza</block>
+  <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
+  <block id="098a9352bab68d0361bda3b31e3eaf76" category="list-text">Volumi FlexCache</block>
+  <block id="699d8f5d3b7e2d1c55958f4a396e8a2e" category="list-text">SMtape</block>
+  <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">Sincronizzazione attiva di SnapMirror</block>
+  <block id="1e769eb49609f668beaad20993434cae" category="list-text">Regole dei criteri SnapMirror che utilizzano il parametro -Schedule</block>
+  <block id="403490259ca485564378615496f0d12e" category="list-text">SnapMirror sincrono</block>
+  <block id="2846fa2cc87d39181cb096c418a258e9" category="list-text">Mobilità dei dati delle SVM (utilizzata per la migrazione o il trasferimento di una SVM da un cluster di origine a un cluster di destinazione)</block>
+  <block id="19b8f390095f155d76eaa34c5d8f5d20" category="section-title">Rimozione di un criterio di snapshot da un volume</block>
+  <block id="29708169ed62ce48a3c9b4614e316be4" category="inline-xref">eliminazione di una policy di snapshot</block>
+  <block id="fce714b45eae0b2db843a127811c7dfa" category="paragraph">Rimozione di una policy di snapshot da un volume perché non si desidera più creare snapshot del volume o perché si desidera eliminare una policy di snapshot assegnata a più volumi. A <block ref="fe803bef0fbadbb3c4f9d940b9fdfdb7" category="inline-xref-macro-rx"></block> questo viene assegnato più di un volume, è necessario rimuoverlo manualmente da tutti i volumi.</block>
+  <block id="41a5b9bb16fef0a6d96c008d7a310dc7" category="paragraph">È necessario <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>rimuovere un criterio snapshot. Se non si dispone di un collegamento esistente, <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
+  <block id="5b37f5e2e1d22ef188736327699e7d83" category="list-text">Nella finestra di dialogo Assegna criterio snapshot, selezionare *Nessuno* per rimuovere il criterio snapshot.</block>
+  <block id="a7f4573e8d9f9cb2323d7ca62fa2b33e" category="paragraph">Il criterio di snapshot viene rimosso dal volume.</block>
+  <block id="c767b489e8017a2255cc2520d048debc" category="inline-xref">rimuoverlo</block>
+  <block id="8a56213a87eaeeacb994e03d5159956f" category="inline-xref">assegnare un criterio di snapshot diverso</block>
+  <block id="3b3794d46a127b883871123c6319af47" category="paragraph">Quando un criterio snapshot viene assegnato a più volumi, è necessario eliminarlo manualmente <block ref="65129050bfb27f4fbe34192e54c5d427" category="inline-xref-macro-rx"></block> da tutti i volumi. In alternativa, è possibile <block ref="bcabdc7ed5212cdefb2de947daf28c6a" category="inline-xref-macro-rx"></block> accedere ai volumi.</block>
 </blocks>

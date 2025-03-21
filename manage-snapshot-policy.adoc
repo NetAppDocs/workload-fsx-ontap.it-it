@@ -45,32 +45,6 @@ Il criterio snapshot viene aggiornato.
 
 
 
-== Assegnare un criterio snapshot a un volume
-
-È possibile assegnare una policy di snapshot a un singolo volume per creare snapshot pianificate per il volume.
-
-.Prima di iniziare
-È necessario link:manage-links.html["associare un collegamento"]assegnare un criterio snapshot. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
-
-.Fasi
-. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume a cui assegnare un criterio snapshot, quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *Storage VM*.
-. Dalla scheda *Storage VM*, selezionare il menu a tre punti per la VM di archiviazione contenente il volume da proteggere con gli snapshot pianificati, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
-. Nella pagina di gestione dei criteri di snapshot, selezionare il menu a tre punti del criterio di snapshot, quindi selezionare *Assegna criterio al volume*.
-. Nella finestra di dialogo Assegna criterio snapshot, selezionare un criterio snapshot da assegnare al volume ed esaminare la pianificazione dei criteri.
-+
-Se il criterio contiene istantanee immutabili e si desidera utilizzarlo, accettare l'istruzione.
-
-. Selezionare *Assegna*.
-
-
-.Risultato
-Il criterio snapshot viene assegnato al volume.
-
-
-
 == Attiva gli snapshot immutabili
 
 Bloccare gli snapshot per impedirne l'eliminazione durante il periodo di conservazione.
@@ -100,11 +74,60 @@ Lo snapshot del volume è ora bloccato.
 
 
 
+== Assegnare un criterio snapshot a un volume
+
+È possibile assegnare una policy di snapshot a un singolo volume per creare snapshot pianificate per il volume.
+
+.Prima di iniziare
+È necessario link:manage-links.html["associare un collegamento"]assegnare un criterio snapshot. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume a cui assegnare un criterio snapshot, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda *Storage VM*, selezionare il menu a tre punti per la VM di archiviazione contenente il volume da proteggere con gli snapshot pianificati, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di snapshot, selezionare il menu a tre punti del criterio di snapshot, quindi selezionare *Assegna criterio al volume*.
+. Nella finestra di dialogo Assegna criterio snapshot, selezionare un criterio snapshot da assegnare al volume ed esaminare la pianificazione dei criteri.
++
+Se il criterio contiene istantanee immutabili e si desidera utilizzarlo, accettare l'istruzione.
+
+. Selezionare *Assegna*.
+
+
+.Risultato
+Il criterio snapshot viene assegnato al volume.
+
+
+
+== Rimozione di un criterio di snapshot da un volume
+
+Rimozione di una policy di snapshot da un volume perché non si desidera più creare snapshot del volume o perché si desidera eliminare una policy di snapshot assegnata a più volumi. A <<Eliminazione di una policy di snapshot,eliminazione di una policy di snapshot>> questo viene assegnato più di un volume, è necessario rimuoverlo manualmente da tutti i volumi.
+
+.Prima di iniziare
+È necessario link:manage-links.html["associare un collegamento"]rimuovere un criterio snapshot. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume a cui assegnare un criterio snapshot, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Storage VM*.
+. Dalla scheda *Storage VM*, selezionare il menu a tre punti per la VM di archiviazione contenente il volume da proteggere con gli snapshot pianificati, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
+. Nella pagina di gestione dei criteri di snapshot, selezionare il menu a tre punti del criterio di snapshot, quindi selezionare *Assegna criterio al volume*.
+. Nella finestra di dialogo Assegna criterio snapshot, selezionare *Nessuno* per rimuovere il criterio snapshot.
+. Selezionare *Assegna*.
+
+
+.Risultato
+Il criterio di snapshot viene rimosso dal volume.
+
+
+
 == Eliminazione di una policy di snapshot
 
 Elimina una policy di snapshot quando non è più necessaria.
 
-Non è possibile eliminare un criterio di snapshot assegnato a più volumi.
+Quando un criterio snapshot viene assegnato a più volumi, è necessario eliminarlo manualmente <<Rimozione di un criterio di snapshot da un volume,rimuoverlo>> da tutti i volumi. In alternativa, è possibile <<Assegnare un criterio snapshot a un volume,assegnare un criterio di snapshot diverso>> accedere ai volumi.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

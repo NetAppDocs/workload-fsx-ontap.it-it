@@ -75,6 +75,18 @@ Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managi
 * Impossibile eliminare gli snapshot.
 * Quando si replica un file system, tutti i volumi del file system utilizzano la stessa policy di replica.
 * Per le relazioni di replica con conservazione a lungo termine, solo l'ultimo snapshot è disponibile per il ripristino.
+* Le seguenti funzioni non sono supportate con gli snapshot immutabili:
++
+** Gruppi di coerenza
+** FabricPool
+** Volumi FlexCache
+** SMtape
+** Sincronizzazione attiva di SnapMirror
+** Regole dei criteri SnapMirror che utilizzano il parametro -Schedule
+** SnapMirror sincrono
+** Mobilità dei dati delle SVM (utilizzata per la migrazione o il trasferimento di una SVM da un cluster di origine a un cluster di destinazione)
+
+
 
 
 
