@@ -27,12 +27,12 @@ FSX per ONTAP dispone di due Tier per la memorizzazione dei dati dei volumi:
 Per ulteriori informazioni sui Tier di storage, fai riferimento link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Gestione della capacità di storage"^] alla documentazione in AWS for FSX for NetApp ONTAP.
 
 .Prima di iniziare
-Prima di modificare le policy di tiering, rivedere le quattro policy disponibili.
+Prima di modificare la policy di tiering, rivedere le policy disponibili.
 
-* *Auto*: Esegue il tiering di tutti i dati cold che includono i dati utente e le istantanee al Tier di storage del pool di capacità per un periodo di tempo specifico.
-* *Solo Snapshot*: Esegue il tiering solo dei dati snapshot nel Tier di storage del pool di capacità.
-* *Nessuno*: Mantiene tutti i dati del volume nel Tier di storage primario.
-* *All*: Contrassegna tutti i dati utente e i dati snapshot come cold e li memorizza nel Tier di storage del pool di capacità.
+* *Balanced (Auto)*: Criterio di tiering predefinito quando si crea un volume utilizzando l'interfaccia utente. Mantiene i dati ad accesso frequente nel Tier di storage SSD ed esegue il tiering di dati e Snapshot con accesso meno frequente al Tier di storage del pool di capacità dopo il periodo di raffreddamento. Consigliato per carichi di lavoro primari generali.
+* *Ottimizzazione dei costi (tutto)*: Esegue il tiering di tutti gli snapshot e i dati nel Tier di storage del pool di capacità. Consigliato per obiettivi secondari.
+* *Performance Optimized (solo Snapshot)*: Esegue il tiering solo dei dati snapshot nel Tier di storage del pool di capacità. Consigliato per carichi di lavoro a bassa latenza come database mission-critical.
+* *Nessuno*: Mantiene i dati del volume nel Tier di storage SSD, impedendone lo spostamento nel Tier di storage del pool di capacità.
 
 
 Tenere presente che alcune policy di tiering dispongono di un periodo di raffreddamento minimo associato che imposta il tempo, o _giorni di raffreddamento_, che i dati dell'utente in un volume devono rimanere inattivi per essere considerati "cold" e spostati nel Tier di storage del pool di capacità. Il periodo di raffreddamento inizia quando i dati vengono scritti sul disco.
@@ -44,12 +44,12 @@ Tenere presente che alcune policy di tiering dispongono di un periodo di raffred
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda Volumes (volumi), seleziona il menu a tre punti del volume per cui modificare la policy di tiering.
 . Selezionare *azioni avanzate*, quindi *Modifica criterio di tiering*.
-. Nella pagina Modifica criteri di tiering, selezionare uno dei seguenti criteri di tiering:
+. Nella pagina Change tiering policy (Modifica policy di tiering), selezionare per copiare la policy di tiering del volume di origine o selezionare una delle seguenti policy di tiering:
 +
-** *Auto*: Immettere il numero di giorni di raffreddamento.
-** *Solo istantanea*: Immettere il numero di giorni di raffreddamento.
+** *Bilanciato (Auto)*: Immettere il numero di giorni di raffreddamento.
+** *Costi ottimizzati (tutti)*
+** *Ottimizzazione delle prestazioni (solo istantanee)*: Immettere il numero di giorni di raffreddamento.
 ** *Nessuno*
-** *Tutti*
 
 
 . Selezionare *Applica*.
