@@ -350,7 +350,6 @@
   <block id="00c83c7330e77156c35301871a4c4199" category="list-text">*Snapshot policies*: Selezionare uno o più criteri snapshot.</block>
   <block id="9823554a2be74ea3c8fe833a284ad50a" category="list-text">*Copie da conservare*: Immettere il numero di copie snapshot da conservare nel file system di destinazione.</block>
   <block id="1deea867e21bd00dec42db5a9c106317" category="summary">Esplora i risparmi per i carichi di lavoro di storage nello storage di Amazon Elastic Block Store (EBS), Elastic file System (EFS) ed FSX per Windows file Server su AWS FSX per NetApp ONTAP.</block>
-  <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">concedi autorizzazioni _automatizza_</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">Scopri i risparmi</block>
   <block id="71399ad2fbf1c89cad16b73c9e208e04" category="paragraph">Seguire i passaggi nella scheda per la selezione della memoria.</block>
   <block id="8e276a5c4eecb9cd5c1fbb0729744eb5" category="open-title">Amazon Elastic Block Store (EBS)</block>
@@ -935,7 +934,6 @@
   <block id="dd0818ef84ecf338be3c795b4a57e5c4" category="doc">Esplora i risparmi con FSX per ONTAP nella workload factory di BlueXP </block>
   <block id="26852699cf6fe74856b51ba453d4c0ac" category="paragraph">Se il calcolatore di storage determina che lo storage più conveniente è FSX per ONTAP, puoi creare o salvare le configurazioni di FSX per ONTAP e utilizzare Codebox per generare modelli di Infrastructure-as-Code indipendentemente dalle autorizzazioni concesse alla fabbrica dei carichi di lavoro.</block>
   <block id="798944cb742e35be45b885ba05ab898c" category="paragraph">Scopri i risparmi per gli ambienti di storage rilevati: Collega la fabbrica del carico di lavoro ai tuoi ambienti di storage AWS esistenti ed estrae i dettagli dal calcolatore per il confronto automatico. Per utilizzare la modalità automatica, è necessario concedere autorizzazioni automatiche. È possibile modificare il caso di utilizzo, ma tutti gli altri dettagli vengono determinati automaticamente nel calcolo.</block>
-  <block id="b86c5bb2dd8e6c760c8bbfff2ddf0923" category="paragraph">Per la fabbrica dei carichi di lavoro per rilevare gli ambienti di storage Amazon Elastic Block Store (EBS), Elastic file System (EFS) ed FSX per Windows file Server nel tuo account AWS, assicurati di <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block>utilizzare il tuo account AWS.</block>
   <block id="2d83cd56bca59e576fa64b1541748a03" category="list-text">Nella scheda *Elastic Block Store (EBS)*, selezionare le istanze da confrontare con FSX per ONTAP e selezionare *Explore Savings*.</block>
   <block id="f900c4b34e11b02792e1333279ad7266" category="list-text">Nella scheda *Amazon FSX per Windows file Server*, seleziona le istanze da confrontare con FSX per ONTAP e seleziona *Esplora risparmio*.</block>
   <block id="44db8262955279888fe6689ae1925444" category="list-text">Nella scheda * Elastic file System (EFS)*, selezionare le istanze da confrontare con FSX per ONTAP e selezionare *Explore Savings*.</block>
@@ -1669,4 +1667,6 @@
   <block id="d4b4ed7579a4f9267cc7dff8a948018e" category="cell">Tutti gli ICMP</block>
   <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">Tutto</block>
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Eseguire il ping dell'istanza</block>
+  <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">concedi autorizzazioni _read_</block>
+  <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">Per la fabbrica dei carichi di lavoro per rilevare gli ambienti di storage Amazon Elastic Block Store (EBS), Elastic file System (EFS) ed FSX per Windows file Server nel tuo account AWS, assicurati di <block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>utilizzare il tuo account AWS.</block>
 </blocks>
