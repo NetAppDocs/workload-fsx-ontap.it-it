@@ -55,6 +55,17 @@ Puoi replicare un volume di origine (lettura/scrittura) o un volume di data Prot
 
 
 *** Altro
++
+Inoltre, la selezione del caso d'utilizzo determina il criterio di replica o il criterio SnapMirror (ONTAP). I termini utilizzati per descrivere i criteri di replica provengono da link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentazione di ONTAP 9"^].
+
++
+**** Per la migrazione e altre, il criterio di replica è denominato _MirrorAllSnapshots_. _MirrorAllSnapshots_ è un criterio asincrono per il mirroring di tutti gli snapshot e del file system attivo più recente.
+**** Per il disaster recovery hot, cold o di archivio, il criterio di replica si chiama _MirrorAndVault_. _MirrorAndVault_ è un criterio asincrono e vault per il mirroring del file system attivo più recente e degli snapshot giornalieri e settimanali.
++
+Per tutti i casi di utilizzo, se si abilitano gli snapshot per la conservazione a lungo termine, il criterio di replica predefinito è _MirrorAndVault_.
+
+
+
 
 
 .. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione. Il criterio di tiering predefinito corrisponde alla policy di tiering consigliata per il caso d'utilizzo selezionato.
@@ -127,6 +138,17 @@ NOTE: La replica di un volume di protezione dei dati è supportata una volta.
 
 
 *** Altro
++
+Inoltre, la selezione del caso d'utilizzo determina il criterio di replica o il criterio SnapMirror (ONTAP). I termini utilizzati per descrivere i criteri di replica provengono da link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentazione di ONTAP 9"^].
+
++
+**** Per la migrazione e altre, il criterio di replica è denominato _MirrorAllSnapshots_. _MirrorAllSnapshots_ è un criterio asincrono per il mirroring di tutti gli snapshot e del file system attivo più recente.
+**** Per il disaster recovery hot, cold o di archivio, il criterio di replica si chiama _MirrorAndVault_. _MirrorAndVault_ è un criterio asincrono e vault per il mirroring del file system attivo più recente e degli snapshot giornalieri e settimanali.
++
+Per tutti i casi di utilizzo, se si abilitano gli snapshot per la conservazione a lungo termine, il criterio di replica predefinito è _MirrorAndVault_.
+
+
+
 
 
 .. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione. Il criterio di tiering predefinito corrisponde alla policy di tiering consigliata per il caso d'utilizzo selezionato.
