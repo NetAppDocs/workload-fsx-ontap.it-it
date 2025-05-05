@@ -106,6 +106,12 @@ Il calcolatore di risparmio dello storage non calcola il risparmio sui costi per
 
 Gestione sistema non supporta i collegamenti per la connettività di FSX per ONTAP.
 
+
+
+== Supporto di AWS Secrets Manager
+
+AWS Secrets Manager non è supportato quando si utilizza un connettore.
+
 Nota:
 
 . Si applica ad Amazon FSX per NetApp ONTAP

@@ -13,6 +13,12 @@ summary: Invertire una relazione di replica in modo che il volume di destinazion
 [role="lead"]
 Invertire una relazione di replica nella fabbrica dei carichi di lavoro BlueXP , in modo che il volume di destinazione diventi il volume di origine.
 
+Le operazioni inverse sono supportate per:
+
+* Due file system FSX per ONTAP
+* Un file system FSX per ONTAP e un cluster ONTAP on-premise
+
+
 Una volta interrotta la replica e apportate modifiche al volume di destinazione, è possibile replicare tali modifiche nel volume di origine. Questo processo è comune in uno scenario di disaster recovery in cui si opera sul volume di destinazione per un po' e si desidera cambiare ruolo dei volumi.
 
 .A proposito di questa attività

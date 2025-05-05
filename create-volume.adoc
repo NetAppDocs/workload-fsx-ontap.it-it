@@ -95,6 +95,7 @@ Se è stato selezionato un criterio di esportazione esistente, immettere un nuov
 ..... *Autorizzazioni*: Selezionare controllo completo, lettura/scrittura, lettura o Nessun accesso, quindi immettere gli utenti o i gruppi separati da un punto e virgola ( ; ). Gli utenti o i gruppi rilevano la distinzione tra maiuscole e minuscole e il dominio dell'utente deve essere incluso nel formato "dominio\nome utente".
 
 
+.... *Stile di protezione*: Per i volumi a doppio protocollo, selezionare lo stile di protezione UNIX o NTFS. UNIX è lo stile di protezione predefinito per i volumi a doppio protocollo. Per informazioni dettagliate sulla mappatura degli utenti in questo contesto, fare riferimento all'articolo del blog AWS link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["Abilita carichi di lavoro multiprotocollo con Amazon FSX per NetApp ONTAP"^].
 
 
 *** *Block access*: Consente agli host che eseguono applicazioni aziendali critiche di accedere al volume utilizzando il protocollo iSCSI. L'accesso a blocchi è disponibile solo quando le implementazioni scale-out del file system hanno sei coppie ha o meno.

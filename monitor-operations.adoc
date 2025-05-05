@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track database jobs 
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
 summary: 'Tieni traccia di FSX per ONTAP, delle credenziali e delle operazioni di collegamento e monitora l"avanzamento dei lavori con Tracker in BlueXP  workload Factory per lo storage.' 
 ---
 = Monitora le operazioni di storage con Tracker in BlueXP  workload factory
@@ -14,9 +14,11 @@ summary: 'Tieni traccia di FSX per ONTAP, delle credenziali e delle operazioni d
 Monitora e monitora l'esecuzione di FSX per ONTAP, le credenziali e le operazioni di collegamento e monitora l'avanzamento dei task con Tracker in BlueXP  workload Factory.
 
 .A proposito di questa attività
-Workload Factory offre Tracker, una funzionalità di monitoraggio che consente di monitorare e monitorare lo stato e l'avanzamento di FSX per ONTAP, le credenziali e le operazioni di collegamento, rivedere i dettagli relativi alle attività operative e alle sottoattività, diagnosticare eventuali problemi o errori, modificare i parametri per le operazioni non riuscite e riprovare le operazioni non riuscite. È possibile filtrare i lavori per tipo e stato, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori.
+Workload Factory offre Tracker, una funzionalità di monitoraggio che consente di monitorare e monitorare lo stato e l'avanzamento di FSX per ONTAP, le credenziali e le operazioni di collegamento, esaminare i dettagli delle attività operative e delle attività secondarie e diagnosticare eventuali problemi o errori.
 
-Tracker supporta fino a tre livelli di monitoraggio a seconda del funzionamento. Ogni attività, come la distribuzione del file system, visualizza la descrizione dell'attività, lo stato, l'ora di inizio, la durata dell'attività, l'utente, la regione, la risorsa proxy, l'ID attività e tutte le attività secondarie correlate.
+In Tracker sono disponibili diverse azioni. È possibile filtrare i lavori in base all'intervallo di tempo (ultime 24 ore, 7 giorni, 14 giorni o 30 giorni), al carico di lavoro, allo stato e all'utente, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori come file CSV. Puoi aggiornare il Tracker in qualsiasi momento. È inoltre possibile riprovare a eseguire un'operazione non riuscita o modificare i parametri per un'operazione non riuscita e riprovare.
+
+Tracker supporta due livelli di monitoraggio a seconda del funzionamento. Ogni attività, come la distribuzione del file system, visualizza la descrizione dell'attività, lo stato, l'ora di inizio, la durata dell'attività, l'utente, la regione, la risorsa proxy, l'ID attività e tutte le attività secondarie correlate. È possibile visualizzare le risposte API per capire cosa è successo durante l'operazione.
 
 Tracker i livelli di attività con esempi::
 +

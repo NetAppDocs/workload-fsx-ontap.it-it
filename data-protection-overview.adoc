@@ -22,13 +22,16 @@ La data Protection per i tuoi carichi di lavoro ti aiuta a garantire un ripristi
 .Snapshot
 Uno snapshot crea un'immagine point-in-time di sola lettura di un volume all'interno del volume di origine come copia snapshot. È possibile utilizzare la copia snapshot per recuperare singoli file o per ripristinare l'intero contenuto di un volume. Le snapshot sono la base di tutti i metodi di backup. La copia snapshot creata sul volume viene utilizzata per mantenere il volume replicato e il file di backup sincronizzati con le modifiche apportate al volume di origine.
 
-.Backup
-Puoi creare backup dei tuoi dati nel cloud per la protezione e la conservazione a lungo termine. Se necessario, è possibile ripristinare un volume, una cartella o singoli file dal backup nello stesso file system di lavoro o in un altro file system.
+.Protezione ransomware autonoma
+La protezione autonoma dal ransomware (ARP) utilizza l'analisi dei workload negli ambienti NAS (NFS/SMB) per rilevare e informare l'utente in caso di attività anomale che potrebbero essere un attacco ransomware. Quando si sospetta un attacco, ARP crea anche nuovi snapshot immutabili oltre alla protezione esistente fornita dagli snapshot pianificati.
 
 .Replica
 La replica crea una copia secondaria dei dati su un altro file system FSX per ONTAP e aggiorna continuamente i dati secondari. I dati restano aggiornati e disponibili in qualsiasi momento, ad esempio per il disaster recovery.
 
 Puoi scegliere di creare sia volumi replicati in un altro file system FSX per ONTAP e file di backup nel cloud. In alternativa, puoi scegliere di creare volumi replicati o file di backup.
+
+.Backup
+Puoi creare backup dei tuoi dati nel cloud per la protezione e la conservazione a lungo termine. Se necessario, è possibile ripristinare un volume, una cartella o singoli file dal backup nello stesso file system di lavoro o in un altro file system.
 
 Il diagramma seguente mostra una rappresentazione visiva della data Protection per lo storage FSX per ONTAP utilizzando snapshot, replica tra aree e backup in storage a oggetti.
 
@@ -62,6 +65,12 @@ La replica di un volume crea una copia dei dati più recenti di un volume, inclu
 
 
 
+== Proteggi i dati del tuo carico di lavoro con la protezione autonoma dal ransomware
+
+ARP agisce come un importante ulteriore livello di difesa se il software antivirus non è riuscito a rilevare un'intrusione. L'impostazione di un criterio ARP lo abilita per tutte le VM di storage e per tutti i volumi esistenti e appena creati. Una volta abilitata, ARP rileva e protegge tutti i volumi e le VM di storage. Se l'estensione di un file è contrassegnata come anomala, è necessario valutare l'avviso.
+
+
+
 == Consigli per la protezione dei dati dei carichi di lavoro
 
 Prendi in considerazione i seguenti consigli per proteggere i dati del tuo carico di lavoro.
@@ -69,4 +78,6 @@ Prendi in considerazione i seguenti consigli per proteggere i dati del tuo caric
 * Utilizzare i backup di volume insieme alle istantanee: L'utilizzo congiunto delle due funzioni garantisce la possibilità di ripristinare i file dalle istantanee ed eseguire ripristini completi in caso di perdita di volume utilizzando i backup.
 * Definire una policy di backup dei volumi: Accertarsi che la policy di backup soddisfi i requisiti aziendali in termini di durata e frequenza dei backup. Si consiglia di conservare un minimo di due backup giornalieri per ogni volume.
 * Definire una pianificazione snapshot: È meno probabile che vengano utilizzate le snapshot meno recenti per ripristinare i dati. Consigliamo di definire una pianificazione delle snapshot che tenga conto dei rendimenti in diminuzione dovuti al mantenimento delle snapshot più vecchie rispetto al costo di capacità delle snapshot aggiuntiva.
+* Monitora i volumi in modo da rimanere al corrente di potenziali attacchi ransomware.
+* Abilita la policy ARP per i tuoi volumi e VM di storage per aggiungere un livello aggiuntivo di protezione per proteggere i dati dagli attacchi ransomware.
 

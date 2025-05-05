@@ -37,29 +37,58 @@ image:screenshot-view-link-details.png["Una schermata che mostra i file system F
 
 
 
-== Associare un collegamento a un file system FSX per ONTAP
-
-Dopo aver creato un collegamento, è possibile associarlo ai file system FSX per ONTAP. Ogni file system può essere associato a un solo collegamento in un singolo account NetApp, ma un collegamento può essere associato a molti file system.
-
-.Fasi
-. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare *Associa collegamento*.
-. Nella pagina di collegamento Associa, selezionare *Associa un collegamento esistente*, selezionare il collegamento e selezionare *Applica*.
-
-
-.Risultato
-Il link è associato al file system FSX per ONTAP ed è possibile eseguire operazioni ONTAP avanzate.
-
-
-
 == Modificare un collegamento
 
 Non è possibile modificare un collegamento dall'interfaccia di fabbrica del carico di lavoro. Se è necessario apportare una modifica a un collegamento, è necessario creare un nuovo collegamento e quindi associarlo al file system.
 
 
 NOTE: È possibile modificare la configurazione di rete Lambda (ad esempio VPC, subnet e gruppi di sicurezza) utilizzando la console AWS e le modifiche verranno riflesse nell'interfaccia utente di gestione dei collegamenti; tuttavia, queste modifiche possono causare problemi di connettività tra Lambda e ONTAP e non sono consigliate.
+
+
+
+== Autenticare un collegamento
+
+Fornisci una password utente amministrativo per le credenziali Factory del workload o un ARN segreto di AWS Secrets Manager per collegare il link a un file system FSX per ONTAP.
+
+AWS Secrets Manager non è supportato quando si utilizza un connettore.
+
+
+NOTE: Per ogni collegamento è supportato un solo metodo di autenticazione. Ad esempio, se si seleziona l'autenticazione del collegamento con AWS Secrets Manager, non sarà possibile modificare il metodo di autenticazione in un secondo momento.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare *autentica il collegamento*.
+. Nella pagina di collegamento Authenticate (autenticazione), selezionare una modalità Authenticate (autenticazione):
++
+** Workload Factory: Immettere la password due volte.
+** AWS Secrets Manager: Inserisci il segreto ARN.
+
+
+. Selezionare *Applica*.
+
+
+.Risultato
+Il collegamento viene autenticato ed è possibile eseguire operazioni ONTAP avanzate
+
+
+
+== Aggiornare la password per l'autenticazione del collegamento
+
+Se la password amministrativa non è valida, aggiornare la password per collegare il collegamento al file system FSX per ONTAP.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare *Aggiorna password*.
+. Nella pagina di collegamento Authenticate (autenticazione), immettere due volte la nuova password.
+. Selezionare *Applica*.
+
+
+.Risultato
+La password viene aggiornata e il collegamento è ora collegato al file system FSX per ONTAP.
 
 
 

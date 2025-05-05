@@ -13,6 +13,8 @@ summary: Ripristina un volume da un backup in qualsiasi file system FSX per ONTA
 [role="lead"]
 Nella fabbrica dei carichi di lavoro BlueXP , puoi ripristinare un volume da un backup su qualsiasi file system FSX per ONTAP nel tuo account AWS.
 
+Workload Factory determina se si dispone di capacità sufficiente per il ripristino e, in caso contrario, può aggiungere automaticamente capacità del Tier di storage SSD.
+
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
@@ -26,6 +28,15 @@ Nella fabbrica dei carichi di lavoro BlueXP , puoi ripristinare un volume da un
 .. *VM di archiviazione di destinazione*: Selezionare la VM di archiviazione di destinazione dal menu a discesa.
 .. *Nome backup*: Selezionare il nome del backup dal menu a discesa.
 .. *Nome volume ripristinato*: Immettere il nome del volume ripristinato.
+
+
+. Verificare la capacità del file system per l'operazione di ripristino.
++
+Quando la capacità del file system è limitata, si possono verificare le seguenti condizioni:
+
++
+** Il ripristino può eseguire il push della capacità utilizzata oltre la soglia specificata. È possibile completare l'operazione di ripristino. Considerare link:increase-file-system-capacity.html["Aggiunta manuale della capacità del Tier di storage SSD"] o selezionare una fabbrica di carichi di lavoro per aggiungere automaticamente la capacità del Tier di storage SSD.
+** Il ripristino richiede capacità SSD aggiuntiva. È necessario selezionare affinché la fabbrica del carico di lavoro aggiunga automaticamente la capacità del Tier di storage SSD per procedere.
 
 
 . Selezionare *Restore* (Ripristina).

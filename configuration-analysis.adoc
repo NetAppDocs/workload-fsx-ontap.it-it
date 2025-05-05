@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: configuration-analysis.html 
+keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: La fabbrica dei carichi di lavoro di BlueXP  analizza regolarmente le configurazioni del file system Amazon FSX per NetApp ONTAP per determinare se vi sono problemi. 
+---
+= Analisi della configurazione di FSX per i file system ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La fabbrica dei carichi di lavoro di BlueXP  analizza regolarmente le configurazioni del file system Amazon FSX per NetApp ONTAP per determinare se vi sono problemi. Una volta rilevati i problemi, la fabbrica dei carichi di lavoro mostra quali sono i problemi e spiega quali devono essere modificati per garantire che lo storage del file system raggiunga le massime prestazioni, l'efficienza dei costi e la conformità alle Best practice.
+
+Le funzionalità principali includono:
+
+* Analisi quotidiana della configurazione
+* Convalida automatica delle Best practice
+* Osservabilità proattiva
+* Informazioni sull'azione
+* Framework Advisor di AWS con architettura ottimale
+
+
+
+
+== Stato ben progettato
+
+Nella console workload Factory a livello di file system, viene elencato lo stato con un'architettura appropriata per tutti i file system FSX per ONTAP. Gli stati ben architettati sono classificati come "problemi", "non analizzati" o "ben architettati". Selezionando lo stato con un'architettura ottimale si passa alla scheda di stato con un'architettura ottimale all'interno del file system, dove è possibile trovare il punteggio con un'architettura adeguata, le categorie di configurazione e tutte le configurazioni del file system.
+
+Punteggio ben strutturato:: Il punteggio include tutte le configurazioni attualmente analizzate e viene visualizzato come percentuale. Un punteggio del 25% indica che il 25% delle configurazioni del file system è caratterizzato da un'architettura ottimale.
+Categorie di configurazione:: Le configurazioni del file system sono organizzate in categorie allineate con i seguenti cinque pilastri del framework ben strutturato AWS.
++
+--
+* _Reliability_: Garantisce che i carichi di lavoro svolgano le funzioni previste in modo corretto e coerente, anche in presenza di interruzioni. Un esempio di configurazione è FSX per i backup ONTAP.
+* _Sicurezza_: Sottolinea la protezione di dati, sistemi e risorse attraverso valutazioni dei rischi e strategie di mitigazione.
+* _Eccellenza operativa_: Si concentra sulla fornitura dell'architettura e del valore di business ottimali.
+* _Ottimizzazione dei costi_: Mira a fornire valore aziendale riducendo al minimo i costi.
+* _Performance Efficiency_: Si concentra sull'utilizzo efficiente delle risorse per soddisfare i requisiti di sistema e mantenere prestazioni ottimali con il variare delle esigenze.
+
+
+--
+
+
+
+
+== Requisiti di analisi
+
+Per un'analisi completa del file system, è necessario associare un collegamento. La connettività di collegamento consente alla workload Factory di analizzare tutte le configurazioni di file system, come la data Protection e le performance.
+
+link:create-link.html["Scopri come creare un collegamento."]
+
+.Cosa succederà
+link:improve-configurations.html["Migliora le configurazioni per le implementazioni di FSX per ONTAP"]

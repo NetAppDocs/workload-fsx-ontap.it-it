@@ -77,7 +77,10 @@ Per eseguire il provisioning dei volumi di blocchi iSCSI sul file system, selezi
 . In *Dettagli file system*, specificare quanto segue:
 +
 .. *Capacità di archiviazione SSD*: Immettere la capacità di archiviazione e selezionare l'unità della capacità di archiviazione.
-.. *Credenziali ONTAP*: Immettere il nome utente e la password ONTAP.
+.. *Credenziali ONTAP*: Facoltativo. Inserire il nome utente e la password ONTAP. La password può essere impostata ora o in un secondo momento.
++
+Se l'utente fornito non è l'utente fsxadmin, e in seguito è necessario reimpostare la password fsxadmin, sarà possibile farlo dalla console AWS.
+
 .. *Impostazione SMB/CIFS*: Opzionale. Se si intende utilizzare il protocollo SMB/CIFS per accedere ai volumi, è necessario configurare Active Directory per la VM di storage durante la creazione del file system. Fornire i seguenti dettagli per la VM di storage creata per questo file system.
 +
 ... *Dominio Active Directory a cui collegarsi*: Immettere il nome di dominio completo (FQDN) per Active Directory.
@@ -169,8 +172,11 @@ Per un nuovo gruppo di protezione, fare riferimento alla <<Dettagli del gruppo d
 .. *Capacità di archiviazione SSD*: Immettere la capacità di archiviazione e selezionare l'unità della capacità di archiviazione.
 .. *IOPS forniti*: Selezionare *automatico* o *fornito dall'utente*.
 .. *Capacità di throughput per coppia ha*: Selezionare la capacità di throughput per coppia ha.
-.. *Credenziali ONTAP*: Immettere il nome utente e la password ONTAP.
-.. *Credenziali VM di archiviazione*: Immettere il proprio nome utente. La password può essere specifica per questo file system o si utilizza la stessa password immessa per le credenziali ONTAP.
+.. *Credenziali ONTAP*: Facoltativo. Inserire il nome utente e la password ONTAP. La password può essere impostata ora o in un secondo momento.
++
+Se l'utente fornito non è l'utente fsxadmin, e in seguito è necessario reimpostare la password fsxadmin, sarà possibile farlo dalla console AWS.
+
+.. *Credenziali VM di archiviazione*: Opzionale. Immettere il proprio nome utente. La password può essere specifica per questo file system o è possibile utilizzare la stessa password immessa per le credenziali ONTAP. La password può essere impostata ora o in un secondo momento.
 .. *Impostazione SMB/CIFS*: Opzionale. Se si intende utilizzare il protocollo SMB/CIFS per accedere ai volumi, è necessario configurare Active Directory per la VM di storage durante la creazione del file system. Fornire i seguenti dettagli per la VM di storage creata per questo file system.
 +
 ... *Dominio Active Directory a cui collegarsi*: Immettere il nome di dominio completo (FQDN) per Active Directory.

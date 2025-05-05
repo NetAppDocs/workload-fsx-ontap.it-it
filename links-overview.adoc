@@ -11,7 +11,7 @@ summary: Un collegamento in fabbrica dei carichi di lavoro crea una relazione di
 
 
 [role="lead"]
-Un collegamento alla fabbrica dei carichi di lavoro BlueXP  crea una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. In questo modo puoi monitorare e gestire determinate funzionalità del file system direttamente dalle chiamate delle API REST di ONTAP non disponibili tramite l'API Amazon FSX per ONTAP.
+Un collegamento alla fabbrica dei carichi di lavoro BlueXP  crea una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. Ciò ti consente di monitorare e gestire determinate funzionalità del file system direttamente dalle chiamate delle API REST di ONTAP che non sono disponibili tramite l'API Amazon FSX per ONTAP.
 
 Non è necessario un collegamento per iniziare con la fabbrica dei carichi di lavoro, ma in alcuni casi è necessario creare un collegamento per sbloccare tutte le funzioni di fabbrica dei carichi di lavoro e le capacità dei carichi di lavoro.
 
@@ -24,6 +24,8 @@ I link sfruttano AWS Lambda. Lambda esegue il codice in risposta agli eventi e g
 Dopo aver creato un collegamento, è possibile associarlo a uno o più file system FSX per ONTAP. Ogni file system può essere associato a un solo collegamento nello stesso account NetApp. Se si dispone di più account NetApp, è possibile associare un singolo file system a collegamenti aggiuntivi in diversi account NetApp.
 
 Vengono creati collegamenti dalle pagine del file system FSX per ONTAP in workload factory. link:create-link.html["Informazioni su come creare collegamenti"] per ulteriori informazioni.
+
+Puoi creare link autentici utilizzando le credenziali memorizzate nel servizio delle credenziali in fabbrica del workload o con le tue credenziali memorizzate in AWS Secrets Manager. Workload Factory non supporta la modifica delle modalità di autenticazione.
 
 
 

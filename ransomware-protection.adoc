@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: ransomware-protection.html 
+keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy 
+summary: 'La protezione autonoma contro il ransomware sfrutta l"analisi dei workload negli ambienti NAS per rilevare e informare l"utente in caso di attività anomale che potrebbero essere attacchi ransomware.' 
+---
+= Proteggi i tuoi dati con la protezione autonoma dal ransomware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Proteggi i tuoi dati con la protezione autonoma dal ransomware (ARP), una funzionalità che sfrutta l'analisi dei workload negli ambienti NAS (NFS/SMB) per rilevare e informare l'utente in caso di attività anomale che potrebbero essere un attacco ransomware. Quando si sospetta un attacco, ARP crea anche nuove istantanee immutabili da cui è possibile ripristinare i dati.
+
+.A proposito di questa attività
+Utilizzare ARP per proteggere da attacchi di tipo Denial-of-service in cui l'utente malintenzionato trattiene i dati fino a quando non viene pagato un riscatto. ARP offre il rilevamento del ransomware in tempo reale basato su:
+
+* Identificazione dei dati in entrata come crittografati o non crittografati.
+* Analisi che rilevano:
++
+** **Entropia**: Una valutazione della casualità dei dati in un file
+** **Tipi di estensione del file**: Un'estensione non conforme al normale tipo di estensione
+** **IOPS dei file**: Un picco nell'attività anomala dei volumi con crittografia dei dati
+
+
+
+
+ARP è in grado di rilevare la diffusione della maggior parte degli attacchi ransomware dopo la crittografia di un numero limitato di file, intraprendere azioni automatiche per proteggere i dati e avvisare l'utente che si sta verificando un attacco sospetto.
+
+La funzione ARP si aggiorna automaticamente in base alla versione di ONTAP eseguita da Amazon FSX per NetApp ONTAP, in modo da non dover effettuare aggiornamenti manuali.
+
+Modalità di apprendimento e attive:: ARP opera prima in _modalità di apprendimento_ e poi passa automaticamente alla _modalità attiva_.
++
+--
+* *Modalità di apprendimento*: Quando si attiva ARP viene eseguito in _modalità di apprendimento_. In modalità di apprendimento, il file system FSX per ONTAP sviluppa un profilo di avviso in base alle aree di analisi: Entropia, tipi di estensione del file e IOPS dei file. Dopo che il file system esegue ARP in modalità di apprendimento per un tempo sufficiente a valutare le caratteristiche del carico di lavoro, workload Factory passa automaticamente alla modalità ARP attiva e inizia a proteggere i dati.
+* *Modalità attiva*: Dopo che ARP passa alla modalità _attiva_, FSX per ONTAP crea istantanee ARP/ai per proteggere i dati se viene rilevata una minaccia.
++
+In modalità attiva, se un'estensione del file è contrassegnata come anomala, è necessario valutare l'avviso. Puoi agire sull'avviso per proteggere i tuoi dati o contrassegnarlo come falso positivo. Se si contrassegna un avviso come falso positivo, il profilo di avviso viene aggiornato. Ad esempio, se l'avviso viene attivato da una nuova estensione di file e l'utente contrassegna l'avviso come falso positivo, non verrà visualizzato alcun avviso alla successiva visualizzazione dell'estensione del file.
+
+
+
+--
+Configurazioni non supportate:: Le seguenti configurazioni non supportano l'uso di ARP.
++
+--
+* Volumi SAN/blocchi
+* Volumi iSCSI
+* Volumi NVMe
+
+
+--
+
+
+
+
+== Abilita la protezione autonoma dal ransomware per un file system
+
+L'abilitazione di ARP per un file system aggiunge automaticamente protezione a tutti i volumi NAS esistenti e NAS appena creati.
+
+Dopo aver attivato l'ARP, se si verifica un attacco e l'attacco è reale, BlueXP  workload Factory imposta automaticamente una policy di snapshot che richiede fino a sei snapshot ogni quattro ore. Ogni istantanea viene bloccata per 2-5 giorni.
+
+.Prima di iniziare
+Per abilitare ARP per un file system, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system per attivare ARP, quindi selezionare *Gestisci*.
+. Sotto informazioni, seleziona l'icona a forma di matita accanto a *protezione autonoma da ransomware*. L'icona a forma di matita appare accanto alla freccia a discesa quando il mouse passa sopra la riga *protezione autonoma da ransomware*.
+. Nella finestra di dialogo Autonomous ransomware Protection, abilitare o disabilitare la funzionalità.
+. Accettare la dichiarazione per procedere.
+. Selezionare *Applica* per salvare le modifiche.
+
+
+
+
+== Convalida degli attacchi ransomware
+
+Determinare se un attacco è un falso allarme o un incidente ransomware autentico.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Seleziona *analizza attacchi* dal riquadro Autonomous ransomware Protection.
+. Scarica il report sugli eventi di attacco per verificare se alcuni file o cartelle sono stati compromessi e decidere se si è verificato un attacco.
+. Se non si è verificato alcun attacco, selezionare *Falso allarme* per il volume nella tabella, quindi selezionare *Chiudi*
+. Se si è verificato un attacco, selezionare *attacco reale* per il volume nella tabella. Viene visualizzata la finestra di dialogo Ripristina dati volume compromessi. È possibile procedere immediatamente a oppure selezionare *Chiudi* e tornare a <<Recuperare i dati dopo un attacco ransomware,ripristina i tuoi dati>>completare il processo di ripristino in un secondo momento.
+
+
+
+
+== Recuperare i dati dopo un attacco ransomware
+
+Quando si sospetta un attacco, il sistema acquisisce uno snapshot del volume in tale point-in-time e la blocca. Se l'attacco viene confermato in seguito, i file interessati o l'intero volume possono essere ripristinati utilizzando lo snapshot ARP.
+
+Gli snapshot bloccati non possono essere eliminati fino al termine del periodo di conservazione. Tuttavia, se in seguito decidi di contrassegnare l'attacco come falso positivo, la copia bloccata verrà eliminata.
+
+Conoscendo i file interessati e il momento dell'attacco, è possibile recuperare in modo selettivo i file interessati da vari snapshot, anziché semplicemente riportare l'intero volume in uno degli snapshot.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Seleziona *analizza attacchi* dal riquadro Autonomous ransomware Protection.
+. Se si è verificato un attacco, selezionare *attacco reale* per il volume nella tabella.
+. Nella finestra di dialogo Ripristina dati volume compromessi, seguire le istruzioni per eseguire il ripristino a livello di file o a livello di volume. Nella maggior parte dei casi, i file vengono ripristinati piuttosto che in un intero volume.
+. Dopo aver completato il ripristino, selezionare *Chiudi*.
+
+
+.Risultato
+I dati compromessi sono stati ripristinati.
