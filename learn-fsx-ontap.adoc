@@ -53,11 +53,13 @@ FSX per ONTAP offre le seguenti caratteristiche:
 
 È possibile utilizzare la farm di workload BlueXP  con i seguenti tool:
 
-* *Workload Factory Console*: La console workload Factory offre un'interfaccia visiva che offre una visione olistica delle applicazioni e dei progetti
-* *Console BlueXP *: La console BlueXP  offre un'interfaccia ibrida in modo da poter utilizzare la fabbrica dei workload BlueXP  insieme ad altri servizi BlueXP 
-* *API REST*: Le API REST DI workload Factory ti consentono di implementare e gestire i file system FSX per ONTAP e altre risorse AWS
-* *CloudFormation*: Il codice AWS CloudFormation consente di eseguire le azioni definite nella console del workload factory per modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS
-* *Terraform BlueXP  workload Factory Provider*: Terraform consente di creare e gestire i flussi di lavoro dell'infrastruttura generati nella console di workload Factory
+* *Workload Factory Console*: La console workload Factory offre una visione visiva e olistica delle applicazioni e dei progetti.
+* *Console BlueXP *: La console BlueXP  offre un'interfaccia ibrida in modo da poter utilizzare la fabbrica dei workload BlueXP  insieme ad altri servizi BlueXP .
+* *Chiedimi*: Utilizza l'assistente Ask me ai per porre domande e saperne di più sulla fabbrica di workload senza abbandonare l'interfaccia utente web della fabbrica di workload. Accedere a Chiedimi dal menu della guida di fabbrica del carico di lavoro.
+* *CLI CloudShell*: Workload Factory include una CLI CloudShell per gestire e utilizzare ambienti AWS e NetApp tra diversi account da un'unica CLI basata su browser. Accedi a CloudShell dalla barra superiore della console workload Factory.
+* *API REST*: Utilizza le API REST DI workload factory per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
+* *CloudFormation*: Utilizzare il codice AWS CloudFormation per eseguire le azioni definite nella console workload factory in modo da modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.
+* *Terraform BlueXP  workload Factory Provider*: USA Terraform per costruire e gestire i flussi di lavoro infrastrutturali generati nella console di workload Factory.
 
 
 
