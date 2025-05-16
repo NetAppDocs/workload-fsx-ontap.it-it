@@ -51,4 +51,4 @@ Per un'analisi completa del file system, è necessario associare un collegamento
 link:create-link.html["Scopri come creare un collegamento."]
 
 .Cosa succederà
-link:improve-configurations.html["Migliora le configurazioni per le implementazioni di FSX per ONTAP"]
+link:improve-configurations.html["Implementa configurazioni del file system con un'architettura ottimale"]

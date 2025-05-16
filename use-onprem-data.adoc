@@ -19,7 +19,7 @@ Per utilizzare i dati da un cluster ONTAP on-premise, dovrai prima rilevare il c
 Casi di utilizzo:: Si noti che il caso di utilizzo principale per il carico di lavoro GenAI è al centro di questa serie di attività.
 +
 --
-* *Workload Genai*: Replica dei dati dei volumi ONTAP on-premise in un file system FSX per ONTAP in modo che i dati possano essere utilizzati in link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Arricchire le knowledge base dell'ai"^].
+* *Workload Genai*: Replica dei dati dei volumi ONTAP on-premise in un file system FSX per ONTAP in modo che i dati possano essere utilizzati in link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Arricchire le knowledge base dell'ai"^].
 * *Backup e migrazione nel cloud*: I dati dei volumi ONTAP on-premise replicati in un file system FSX per ONTAP possono essere utilizzati come backup nel cloud.
 * *Tiering dei dati*: Dopo la replica, è possibile eseguire il tiering dei dati del volume ONTAP on-premise con accesso meno frequente dal Tier di storage SSD al Tier di storage del pool di capacità.
 
