@@ -15,12 +15,6 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 
 
-== Collegamento richiesto per operazioni ONTAP avanzate
-
-È necessario un collegamento per completare alcune operazioni, come la replica nell'interfaccia utente della fabbrica dei workload.
-
-
-
 == Aggiunta delle limitazioni di coppie ha
 
 * Questa operazione potrebbe richiedere circa 30 minuti.
@@ -41,7 +35,7 @@ Le configurazioni scale-up sono supportate fino a 2 GB/s in tutte le regioni. Le
 
 === Implementazioni con scalabilità orizzontale
 
-Le seguenti regioni supportano fino a 3 GB e 6 GB/s di capacità di throughput massima per implementazioni scale-out: STATI UNITI Est (N. Virginia), Stati Uniti Est (Ohio), Stati Uniti Ovest (Oregon), Europa (Irlanda) e Asia Pacifico (Sydney).
+Le seguenti regioni supportano una capacità di throughput massima fino a 6 GB/s per distribuzioni scalabili: Stati Uniti orientali (Virginia settentrionale e Ohio), Stati Uniti occidentali (California settentrionale e Oregon), Europa (Francoforte, Irlanda e Stoccolma) e Asia Pacifico (Singapore e Sydney).
 
 
 
@@ -50,6 +44,7 @@ Le seguenti regioni supportano fino a 3 GB e 6 GB/s di capacità di throughput m
 * La funzione di crescita automatica dei volumi non è attualmente supportata per il protocollo iSCSI.
 * Quando la funzione di gestione automatica della capacità è in esecuzione, non è consentito l'aumento manuale della capacità.
 * La disattivazione della funzione di gestione automatica della capacità è possibile solo con le stesse autorizzazioni utilizzate per attivarla.
+* Quando la gestione automatica della capacità è abilitata, è necessario un collegamento per garantire che gli inode del volume aumentino insieme alla capacità di archiviazione.
 
 
 

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: 'Abilita l"espansione automatica dei volumi per permettere alle aziende di gestire in fabbrica la capacità dei volumi con carichi di lavoro BlueXP . È possibile disattivarla in qualsiasi momento.' 
+summary: 'Abilita l"aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te. È possibile disattivarla in qualsiasi momento.' 
 ---
-= Abilita l'espansione automatica del volume in una fabbrica di carichi di lavoro BlueXP 
+= Abilita l'aumento automatico del volume nella fabbrica dei carichi di lavoro
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Abilita l'espansione automatica dei volumi per permettere alle aziende di gestire in fabbrica la capacità dei volumi con carichi di lavoro BlueXP . È possibile disattivarla in qualsiasi momento.
+Abilita l'aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te. È possibile disattivarla in qualsiasi momento.
 
 In alternativa, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzando link:increase-volume-capacity.html["funzione di aumento della capacità del volume"].
 
@@ -27,7 +27,10 @@ Per attivare la crescita automatica del volume, è necessario link:manage-links.
 . Nella scheda FSX per ONTAP, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda volumi, selezionare il menu a tre punti per il volume che si desidera modificare.
-. Selezionare *azioni di base*, quindi *Modifica crescita automatica volume*.
-. Nella finestra di dialogo Modifica crescita automatica, attivare l'espansione automatica del volume.
+. Selezionare *Azioni di base*, quindi *Imposta aumento automatico volume*.
+. Nella finestra di dialogo Imposta aumento automatico, abilita l'aumento automatico del volume per espandere automaticamente la capacità del volume fino al raggiungimento della dimensione massima. Questa funzione si adatta all'aumento dell'utilizzo dei dati, garantendo operazioni senza interruzioni.
++
+Specificare la dimensione massima di crescita del volume e l'unità di misura. La dimensione massima di crescita non può essere inferiore alla dimensione del volume corrente.
+
 . Selezionare *Applica*.
 

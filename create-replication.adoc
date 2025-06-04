@@ -91,6 +91,9 @@ Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuir
 .. *Intervallo di replica*: Consente di selezionare la frequenza di trasferimento degli snapshot dal volume di origine al volume di destinazione.
 .. *Conservazione a lungo termine*: Facoltativamente, abilitare gli snapshot per la conservazione a lungo termine. La conservazione a lungo termine permette ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria.
 +
+Le repliche senza conservazione a lungo termine utilizzano la policy _MirrorAllSnapshots_. Abilitando la conservazione a lungo termine, alla replica viene assegnata la policy _MirrorAndVault_.
+
++
 Se si attiva la conservazione a lungo termine, selezionare un criterio esistente o creare un nuovo criterio per definire gli snapshot da replicare e il numero da conservare.
 
 +

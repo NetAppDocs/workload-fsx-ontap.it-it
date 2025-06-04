@@ -11,7 +11,7 @@ summary: Abilitando questa funzionalità, i workload Factory aggiungono automati
 
 
 [role="lead"]
-Abilitando questa funzionalità, i workload BlueXP  possono aggiungere automaticamente storage incrementale a un file system FSX per ONTAP con il variare delle esigenze di capacità nel tempo.
+Abilitando la gestione automatica della capacità, BlueXP Workload Factory aggiunge automaticamente storage incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo. Inoltre, l'abilitazione di questa funzionalità elimina la necessità di monitorare manualmente la capacità e riduce il rischio di letture e scritture di dati applicativi che potrebbero avere un impatto negativo.
 
 .A proposito di questa attività
 Ogni 30 minuti viene eseguita una scansione del file system FSX per ONTAP per determinare se è necessario aggiungere lo storage incrementale e controllare gli inode di volumi disponibili o il numero massimo di file e cartelle in un volume, in modo che il loro conteggio aumenti in base alle soglie di gestione automatica della capacità configurate.
@@ -21,9 +21,12 @@ Questa funzione può essere gestita da un solo account.
 La quantità massima di capacità di storage SSD per tutti i file system FSX per ONTAP è di 524.288 GiB. Per richiedere un aumento delle quote, fai riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quote"^] documentazione di AWS FSX per NetApp ONTAP.
 
 .Prima di iniziare
-Per completare questa attività, è necessario disporre di credenziali con autorizzazioni _automatizza_ in fabbrica del carico di lavoro.
+Prima di iniziare, prendere in considerazione quanto segue:
 
-Per assicurarsi che gli inode del volume aumentino insieme alla capacità di memorizzazione, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per completare questa attività, è necessario disporre di credenziali con autorizzazioni di lettura/scrittura nella fabbrica dei carichi di lavoro.
+* Per assicurarsi che gli inode del volume aumentino insieme alla capacità di memorizzazione, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Si consiglia di non abilitare questa funzionalità durante la migrazione dei dati, poiché AWS impone un periodo di attesa minimo di sei ore tra un aumento della capacità dell'SSD e l'altro. Questa restrizione potrebbe ritardare gli adeguamenti, quindi è opportuno pianificare di conseguenza.
+
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
