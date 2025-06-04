@@ -39,7 +39,7 @@ Sono disponibili due opzioni per la creazione dei collegamenti, automatica o man
 
 .Prima di iniziare
 * Si consiglia di considerare quale opzione di creazione del collegamento si utilizzerà.
-* Devi avere almeno un file system FSX per ONTAP in una workload factory. Per scoprire o creare file system FSX per ONTAP, devi disporre di un account AWS con permessi per le istanze di FSX per ONTAP e link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["aggiungere le credenziali in fabbrica del carico di lavoro"^] con permessi di sola lettura o lettura/scrittura per la gestione dello storage.
+* Devi avere almeno un file system FSX per ONTAP in una workload factory. Per scoprire o creare file system FSx per ONTAP, è necessario disporre di un account AWS con autorizzazioni per le istanze FSx per ONTAP e link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["aggiungere le credenziali in fabbrica del carico di lavoro"^] con autorizzazioni di _sola lettura_ o _lettura/scrittura_ per la gestione dell'archiviazione.
 * Quando si aggiunge un collegamento utilizzando uno stack CloudFormation, è necessario disporre delle seguenti autorizzazioni nell'account AWS:
 +
 [%collapsible]

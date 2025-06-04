@@ -33,7 +33,7 @@ Cosa viene analizzato:: Workload Factory analizza lo stato con un'architettura a
 
 
 .Prima di iniziare
-* È necessario disporre di credenziali con autorizzazioni di sola lettura o di lettura/scrittura. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni al tuo account AWS"^].
+* È necessario disporre di credenziali con autorizzazioni di _sola lettura_ o _lettura/scrittura_. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni al tuo account AWS"^].
 * Assicurarsi di rivedere attentamente ogni suggerimento prima di selezionare per correggere un'impostazione o una configurazione.
 
 
