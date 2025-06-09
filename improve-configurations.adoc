@@ -27,6 +27,7 @@ Cosa viene analizzato:: Workload Factory analizza lo stato con un'architettura a
 * FSx per backup ONTAP
 * Replica remota dei dati
 * Efficienza dello storage
+* Gestione automatica della capacità
 
 
 --
