@@ -24,7 +24,7 @@ La quantità massima di capacità di storage SSD per tutti i file system FSX per
 Prima di iniziare, prendere in considerazione quanto segue:
 
 * Per completare questa attività, è necessario disporre di credenziali con autorizzazioni di lettura/scrittura nella fabbrica dei carichi di lavoro.
-* Per assicurarsi che gli inode del volume aumentino insieme alla capacità di memorizzazione, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per assicurarsi che il volume degli inode aumenti insieme alla capacità di archiviazione, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 * Si consiglia di non abilitare questa funzionalità durante la migrazione dei dati, poiché AWS impone un periodo di attesa minimo di sei ore tra un aumento della capacità dell'SSD e l'altro. Questa restrizione potrebbe ritardare gli adeguamenti, quindi è opportuno pianificare di conseguenza.
 
 

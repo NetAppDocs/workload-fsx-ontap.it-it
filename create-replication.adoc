@@ -24,7 +24,7 @@ I volumi replicati nel file system di destinazione sono volumi di protezione dei
 Prima di iniziare, assicurarsi di soddisfare i seguenti prerequisiti.
 
 * È necessario disporre di due file system disponibili nell'inventario di storage per creare una relazione di replica.
-* I due file system utilizzati per la relazione di replica devono disporre di un collegamento associato. Se i file system non dispongono di collegamenti esistenti, link:create-link.html["creare innanzitutto un collegamento"]. In link:manage-links.html["associare un collegamento"] nei file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento in entrambi i file system, tornare a questa operazione.
+* I due file system utilizzati per la relazione di replica devono disporre di un collegamento associato. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 
 
 Completare i seguenti passaggi per replicare volumi selezionati o replicare tutti i volumi in un file system.

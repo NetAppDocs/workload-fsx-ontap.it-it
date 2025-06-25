@@ -33,7 +33,7 @@ La personalizzazione di un criterio consente di specificare quando creare le sna
 ** La sovrascrittura di tutti i dati di uno snapshot consuma una notevole capacità del volume, fattore che influisce sul provisioning della capacità del volume.
 
 
-* Per creare un criterio snapshot personalizzato, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento, tornare a questa operazione.
+* Per creare un criterio di snapshot personalizzato, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 
 
 .Fasi

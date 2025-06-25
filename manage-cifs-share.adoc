@@ -16,7 +16,7 @@ La gestione della CIFS share di un volume nella farm di carico di lavoro BlueXP�
 .Prima di iniziare
 Prima di iniziare, effettuare le seguenti operazioni:
 
-* Per gestire le condivisioni CIFS, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per gestire le condivisioni CIFS, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 * Determinare gli utenti o i gruppi a cui assegnare l'accesso e il livello di autorizzazioni da assegnare.
 
 

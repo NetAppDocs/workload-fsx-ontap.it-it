@@ -34,7 +34,7 @@ Controllare il bilanciamento di un volume FlexGroup attivo.
 .Prima di iniziare
 * Il bilanciamento del volume di FlexGroup è disponibile solo per i file system FSX per ONTAP utilizzando un'implementazione scale-out con almeno due coppie ha.
 * Lo stile del volume deve essere un volume FlexGroup.
-* Per controllare il bilanciamento di un volume FlexGroup, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per verificare il saldo di un volume FlexGroup, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 
 
 .Fasi
@@ -60,7 +60,7 @@ NOTE: Un amministratore di fabbrica dei carichi di lavoro può interrompere il r
 
 .Prima di iniziare
 * <<Controllare il bilanciamento di un volume FlexGroup,Controllare il bilanciamento di un volume FlexGroup>> prima di ribilanciare i volumi.
-* Per riequilibrare un volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per ribilanciare un volume, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 * Gli snapshot esistenti sui volumi ribilanciati diventano parziali e non possono essere utilizzati per ripristinare i dati dei volumi, ma è possibile utilizzare i nuovi snapshot acquisiti dopo il ribilanciamento per ripristinare i dati dei volumi.
 
 

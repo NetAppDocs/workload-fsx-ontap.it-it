@@ -48,7 +48,7 @@ Categorie di configurazione:: Le configurazioni del file system sono organizzate
 
 Per un'analisi completa del file system, è necessario associare un collegamento. La connettività di collegamento consente alla workload Factory di analizzare tutte le configurazioni di file system, come la data Protection e le performance.
 
-link:create-link.html["Scopri come creare un collegamento."]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"].
 
 .Cosa succederà
 link:improve-configurations.html["Implementa configurazioni del file system con un'architettura ottimale"]

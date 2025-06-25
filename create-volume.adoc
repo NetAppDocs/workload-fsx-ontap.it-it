@@ -30,7 +30,7 @@ Prima di creare un volume, esaminare i seguenti prerequisiti:
 * Devi avere una macchina virtuale di storage.
 * Per l'accesso al protocollo, completare quanto segue:
 +
-** Per configurare l'accesso al volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+** Per configurare l'accesso al volume, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 ** Devi configurare l'accesso per il protocollo selezionato, ovvero CIFS, NFS o iSCSI.
 
 
@@ -181,7 +181,7 @@ Modalità di aggiunta volume:: Non è possibile modificare i dati esistenti in u
 
 .. *Criterio snapshot*: Selezionare il criterio snapshot per specificare la frequenza e la conservazione degli snapshot.
 +
-Di seguito sono riportate le policy predefinite di AWS. Per i criteri snapshot personalizzati, è necessario associare un collegamento.
+Di seguito sono riportate le policy predefinite di AWS. Per i criteri di snapshot personalizzati, è necessario link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associare un collegamento"] .
 
 +
 `default`:: Questo criterio crea automaticamente gli snapshot nella seguente pianificazione, con le copie snapshot più vecchie eliminate per fare spazio alle copie più recenti:

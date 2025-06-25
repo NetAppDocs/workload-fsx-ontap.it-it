@@ -79,7 +79,7 @@ Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX
 .Prima di iniziare
 * Devi rilevare un cluster ONTAP on-premise per replicare i dati dei suoi volumi.
 * È necessario disporre di un file system FSX disponibile per ONTAP come destinazione della replica.
-* Sia il cluster ONTAP on-premise che il file system FSX per ONTAP utilizzati per la relazione di replica devono avere un link associato. Se uno o entrambi i cluster on-premise e FSX per ONTAP non dispongono di collegamenti esistenti, link:create-link.html["creare innanzitutto un collegamento"]. In link:manage-links.html["associare un collegamento"] nei file system, selezionare *Associa collegamento* in *Nome account*. Una volta associato il collegamento nel cluster ONTAP on-premise e nel file system FSX per ONTAP, tornare a questa operazione.
+* Sia il cluster ONTAP on-premise che il file system FSX per ONTAP utilizzati per la relazione di replica devono avere un link associato. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 
 
 .Fasi

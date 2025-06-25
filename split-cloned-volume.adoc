@@ -28,8 +28,7 @@ L'operazione di suddivisione dei cloni comporta quanto segue:
 .Prima di iniziare
 Prima di dividere un volume clonato, prendere in considerazione quanto segue:
 
-* Per suddividere un volume clonato, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
-* Devi essere un amministratore del cluster.
+* Per dividere un volume clonato, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 * Il volume FlexClone deve essere online all'inizio dell'operazione di divisione.
 * Il volume principale deve essere online perché la divisione abbia successo.
 
