@@ -1694,7 +1694,6 @@
   <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS Secrets Manager: Inserisci il segreto ARN.</block>
   <block id="0481a079b29497027474b2f22074dd5a" category="paragraph">L'ARN segreto deve includere le seguenti coppie di chiavi valide:</block>
   <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">FilesystemID = FSX_filesystem_id</block>
-  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">Utente = FSX_utente</block>
   <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">password = password_utente</block>
   <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">Il collegamento è associato al file system FSX per ONTAP. È possibile eseguire operazioni ONTAP avanzate.</block>
   <block id="db9a0ca8d6bb6376ddaad7f254b049aa" category="section-title">Risolvere i problemi relativi all'autenticazione del collegamento di AWS Secrets Manager</block>
@@ -1938,4 +1937,5 @@
   <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">Per replicare una VM di archiviazione su un altro file system FSx for ONTAP, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
   <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">Per dividere un volume clonato, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
   <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">Sia il cluster ONTAP on-premise che il file system FSX per ONTAP utilizzati per la relazione di replica devono avere un link associato. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
+  <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">nome utente = FSx_user</block>
 </blocks>

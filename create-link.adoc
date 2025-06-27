@@ -212,7 +212,7 @@ L'ARN segreto deve includere le seguenti coppie di chiavi valide:
 
 +
 *** FilesystemID = FSX_filesystem_id
-*** Utente = FSX_utente
+*** nome utente = FSx_user
 *** password = password_utente
 
 
@@ -248,7 +248,7 @@ Problema:: Il segreto non è nel formato giusto.
 Il segreto deve contenere le seguenti coppie di chiavi valide:
 
 * FilesystemID = FSX_filesystem_id
-* Utente = FSX_utente
+* nome utente = FSx_user
 * password = password_utente
 
 
