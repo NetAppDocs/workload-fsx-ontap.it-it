@@ -20,6 +20,8 @@ Questa operazione crea una relazione di replica per uno o tutti i volumi di orig
 
 I volumi replicati nel file system di destinazione sono volumi di protezione dei dati (DP) e seguono il formato di denominazione: `{OriginalVolumeName}_copy`.
 
+Quando si replica un volume sorgente con file immutabili, il volume di destinazione e il file system vengono bloccati fino al termine del periodo di conservazione dei file immutabili nel volume sorgente. La funzionalità dei file immutabili è disponibile quando link:create-volume.html["creare un volume"] per un file system FSx per ONTAP.
+
 .Prima di iniziare
 Prima di iniziare, assicurarsi di soddisfare i seguenti prerequisiti.
 
@@ -47,7 +49,7 @@ Nella tabella volumi, selezionare uno o più volumi, quindi selezionare *Replica
 . Nella pagina Replica dati, in destinazione replica, fornire quanto segue:
 +
 .. *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.
-.. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa.
+.. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa. La VM di archiviazione selezionata è la destinazione per tutti i volumi selezionati in questa relazione di replica.
 .. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
 .. *Caso di utilizzo*: Selezionare uno dei seguenti casi di utilizzo per la replica. In base al caso di utilizzo selezionato, il modulo viene compilato in fabbrica dal carico di lavoro con i valori consigliati, conformemente alle Best practice. È possibile accettare i valori consigliati o apportare modifiche durante la compilazione del modulo.
 +
@@ -102,16 +104,13 @@ NOTE: Per la conservazione a lungo termine sono necessarie etichette di origine 
 
 +
 *** *Scegliere un criterio esistente*: Selezionare un criterio esistente dal menu a discesa.
-*** *Creare una nuova policy*: Fornire quanto segue:
-+
-**** *Policy name*: Inserire un nome di policy.
-**** Opzionale: Attiva gli snapshot immutabili.
-+
-***** Selezionare *attiva istantanee immutabili* per impedire l'eliminazione degli snapshot creati in questo criterio durante il periodo di conservazione.
-***** Impostare *periodo di conservazione* in numero di ore, giorni, mesi o anni.
+*** *Crea una nuova policy*: inserisci un *nome policy*.
 
 
-**** *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
+.. *Snapshot immutabili*: Facoltativo. Selezionare *attiva istantanee immutabili* per impedire l'eliminazione degli snapshot creati in questo criterio durante il periodo di conservazione.
++
+*** Impostare *periodo di conservazione* in numero di ore, giorni, mesi o anni.
+*** *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
 
 
 

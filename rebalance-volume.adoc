@@ -11,58 +11,115 @@ summary: Controllare e riequilibrare la capacità di un volume per evitare squil
 
 
 [role="lead"]
-Verifica il bilanciamento della capacità del volume FlexGroup e ribilancia la capacità del volume per distribuire i file in modo uniforme in tutti i componenti, in modo che tutti i nodi partecipino al carico di lavoro di un singolo volume di Gruppo Flex.
+Controllare il bilanciamento della capacità del volume FlexVol o FlexGroup e ribilanciare la capacità del volume per distribuire i file in modo uniforme su tutti i volumi FlexVol in un nodo o su tutti i componenti, in modo che tutti i nodi partecipino al carico di lavoro di un singolo volume FlexGroup.
 
 .A proposito di questa attività
-La capacità del volume FlexGroup è distribuita in una serie di elementi costitutivi di un file system FSX per ONTAP scale-out con due o più coppie ha (high Availability). Ogni componente è un contenitore che determina la dimensione massima del singolo file. FSX per ONTAP distribuisce i file in tutti i componenti in modo uniforme, in modo che tutti i nodi partecipino al carico di lavoro di un singolo volume FlexGroup.
+Il ribilanciamento della capacità del volume è supportato per i volumi FlexVol e FlexGroup. Il ribilanciamento di un volume ridistribuisce la capacità quando gli squilibri si sviluppano nel tempo a causa dell'aggiunta di nuovi file e della crescita dei file. Dopo aver avviato manualmente l'operazione di riequilibrio, selezioniamo i file e li spostiamo automaticamente e senza interruzioni. Le operazioni di trasferimento dei volumi consumano risorse del file system.
+
+Ogni tipologia di volume e ogni operazione di ribilanciamento differiscono come segue.
+
+Volumi FlexVol:: I volumi FlexVol sono contenitori logici che offrono flessibilità nella gestione dei dati, consentendone l'espansione, la contrazione, lo spostamento e la copia efficiente. Possono essere utilizzati in ambienti NAS e SAN.
++
+--
+Un volume FlexVol può essere bilanciato in relazione ad altri volumi FlexVol all'interno di un nodo in un file system FSx for ONTAP. Se il file system ha un solo volume FlexVol, il ribilanciamento non è possibile. Quando il file system ha più di un volume FlexVol per nodo e viene selezionato un singolo volume FlexVol, il volume FlexVol viene bilanciato nel contesto di tutti i FlexVol, ma solo il volume selezionato può essere spostato.
+
+--
+Volumi FlexGroup:: I volumi FlexGroup, d'altra parte, sono contenitori NAS scalabili progettati per alte prestazioni e distribuzione automatica del carico. Sono costituiti da più volumi membri (costituenti) che condividono il traffico in modo trasparente. I volumi FlexGroup offrono una capacità enorme, superando i limiti FlexVol, con una capacità fino a 60 PB e 400 miliardi di file. Semplificano la gestione offrendo un singolo contenitore namespace.
++
+--
+La capacità è distribuita tra un certo numero di componenti in un file system FSx for ONTAP scalabile con due o più coppie ad alta disponibilità (HA). Ogni componente è un contenitore che determina la dimensione massima del singolo file. FSX per ONTAP distribuisce i file in tutti i componenti in modo uniforme, in modo che tutti i nodi partecipino al carico di lavoro di un singolo volume FlexGroup.
 
 Quando i componenti non sono distribuiti in modo uniforme in tutti i nodi, le performance del volume FlexGroup diminuiscono.
 
 Il controllo dell'equilibrio della capacità volumetrica FlexGroup comprende la valutazione della disposizione attuale dei componenti. Quando si riequilibra la capacità del volume, BlueXP  workload Factory progetta un nuovo layout costituente con un numero pari di componenti per distribuire i dati in modo uniforme in tutte le coppie ha. Il servizio esegue il piano di ribilanciamento, che a sua volta migliora le operazioni di lettura e scrittura.
 
-Il ribilanciamento di un volume ridistribuisce la capacità quando gli squilibri si sviluppano nel tempo a causa dell'aggiunta di nuovi file e della crescita dei file. Dopo aver avviato manualmente l'operazione di riequilibrio, selezioniamo i file e li spostiamo automaticamente e senza interruzioni. Le operazioni di trasferimento dei volumi consumano risorse del file system.
-
-
-NOTE: Il ribilanciamento è supportato solo per volumi FlexGroup, ma non per volumi FlexGroup iSCSI o NVMe.
+--
 
 
 
-== Controllare il bilanciamento di un volume FlexGroup
+NOTE: Il ribilanciamento non è supportato per volumi SAN come iSCSI e NVMe.
 
-Controllare il bilanciamento di un volume FlexGroup attivo.
+
+
+== Controlla il saldo dei tuoi volumi
+
+Controllare il saldo dei volumi FlexVol o FlexGroup in un file system FSx for ONTAP.
 
 .Prima di iniziare
 * Il bilanciamento del volume di FlexGroup è disponibile solo per i file system FSX per ONTAP utilizzando un'implementazione scale-out con almeno due coppie ha.
-* Lo stile del volume deve essere un volume FlexGroup.
-* Per verificare il saldo di un volume FlexGroup, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per verificare il saldo di un volume, è necessario link:manage-links.html["associare un collegamento"] . Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
 
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSx per ONTAP*, selezionare il menu a tre punti del file system che contiene i volumi da ribilanciare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda Volumi, seleziona *Verifica bilanciamento volume* nella parte superiore della tabella.
+. Nella finestra Saldo volume, controlla lo stato del saldo di:
++
+** Volumi FlexGroup
+** Volumi FlexVol
++
+Quando un volume è sbilanciato, considera <<Rebalance a volume,ribilanciamento dell'it>> .
+
+
+
+
+
+
+
+== Riequilibrare la capacità del volume
+
+Riequilibrare uno o più volumi non bilanciati.
+
+
+NOTE: Un amministratore della fabbrica di carichi di lavoro può <<Interrompere un'operazione di ribilanciamento del volume,smettere di riequilibrare>> durante l'operazione.
+
+.Prima di iniziare
+* <<Controlla il saldo dei tuoi volumi,Controllare il saldo di un volume>> prima di ribilanciare i volumi.
+* Per riequilibrare un volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Gli snapshot esistenti sui volumi ribilanciati diventano parziali e non possono essere utilizzati per ripristinare i dati dei volumi, ma è possibile utilizzare i nuovi snapshot acquisiti dopo il ribilanciamento per ripristinare i dati dei volumi.
+* Si consiglia di ribilanciare i volumi FlexVol in modo uniforme per bilanciare tutte le risorse del volume. I volumi deselezionati non partecipano attivamente alla procedura di bilanciamento.
+
+
+[role="tabbed-block"]
+====
+.Volume FlexVol
+--
+Un volume FlexVol può essere bilanciato in relazione ad altri volumi FlexVol all'interno di un nodo in un file system FSx for ONTAP. Quando il file system ha più di un volume FlexVol per nodo e viene selezionato un singolo volume FlexVol, il volume FlexVol viene bilanciato nel contesto di tutti i FlexVol, ma solo il volume selezionato può essere spostato.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system che contiene il volume da riequilibrare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda volumi, selezionare *verifica bilanciamento FlexGroup* nella parte superiore della tabella.
-. Nella finestra FlexGroup Balance, controlla lo stato di Balance di tutti i volumi FlexGroup nel file system FSX per ONTAP.
+. Dalla scheda Volumi, seleziona *Verifica bilanciamento volume* nella parte superiore della tabella.
+. Nella finestra Bilancio volumi, seleziona facoltativamente *Distribuzione dati* nel riepilogo del bilancio FlexVol per visualizzare la capacità utilizzata per aggregato.
+. Selezionare *Ribilancia* per ribilanciare uno o più volumi sbilanciati.
+. Nella procedura guidata di ribilanciamento, seguire i passaggi indicati.
 +
-Quando un volume FlexGroup non è bilanciato, considerare <<Ribilanciare un volume FlexGroup,ribilanciamento dell'it>>.
+.. *Velocità di trasferimento massima*: Facoltativo. Disattivato per impostazione predefinita. Abilitare la funzione di limitazione per limitare la larghezza di banda dello spostamento di un volume nel file system e rallentare il traffico di replica del volume in uscita.
++
+Immettere il valore dell'acceleratore in MB/s.
+
++
+Selezionare *Avanti*.
+
+.. Esaminare i layout attuali e proposti di tutti i volumi FlexVol, quindi selezionare *Avanti*.
+.. Prima di iniziare l'operazione di ribilanciamento, esaminare attentamente cosa accadrà e la nota.
 
 
+. Selezionare *Ribilanciamento*.
 
 
+.Risultato
+Il volume FlexVol è stato ribilanciato. Una volta completata l'operazione, il file system viene nuovamente regolato al valore originale.
 
-== Ribilanciare un volume FlexGroup
-
-Riequilibrare uno o più volumi non bilanciati. I dati si ridistribuiscono tra i volumi degli utenti per ribilanciare il volume FlexGroup. In base al layout preferito per la distribuzione dei dati, l'operazione di ribilanciamento potrebbe aggiungere volumi membri FlexGroup e aumentare le dimensioni dei volumi sottoposti a provisioning.
-
-
-NOTE: Un amministratore di fabbrica dei carichi di lavoro può interrompere il ribilanciamento durante l'operazione.
-
-.Prima di iniziare
-* <<Controllare il bilanciamento di un volume FlexGroup,Controllare il bilanciamento di un volume FlexGroup>> prima di ribilanciare i volumi.
-* Per ribilanciare un volume, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
-* Gli snapshot esistenti sui volumi ribilanciati diventano parziali e non possono essere utilizzati per ripristinare i dati dei volumi, ma è possibile utilizzare i nuovi snapshot acquisiti dopo il ribilanciamento per ripristinare i dati dei volumi.
-
+--
+.Volume FlexGroup
+--
+I dati si ridistribuiscono tra i volumi degli utenti per ribilanciare il volume FlexGroup. In base al layout scelto, l'operazione di ribilanciamento potrebbe aggiungere volumi membri FlexGroup e aumentare le dimensioni dei volumi forniti.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -93,4 +150,22 @@ Immettere il valore dell'acceleratore in MB/s.
 
 
 .Risultato
-In base al numero di volumi membro FlexGroup aggiunti a FlexGroup, viene eseguita un'operazione di spostamento del membro del volume FlexGroup singolo alla volta. Una volta completata l'operazione, il file system viene nuovamente regolato al valore originale.
+Durante il ribilanciamento, i volumi dei membri FlexGroup vengono spostati uno alla volta. Una volta completata l'operazione, il file system viene nuovamente regolato al valore originale.
+
+--
+====
+
+
+== Interrompere un'operazione di ribilanciamento del volume
+
+È possibile interrompere un'operazione di ribilanciamento in qualsiasi momento; non è un'interruzione. L'interruzione dell'operazione annulla gli spostamenti di volume attivi.
+
+Sarà possibile avviare un'altra operazione di ribilanciamento in un secondo momento.
+
+.Fasi
+. Dopo aver avviato l'operazione di ribilanciamento, dalla pagina Bilanciamento volume, seleziona *Interrompi ribilanciamento*.
+. Nella finestra di dialogo Interrompi ribilanciamento, seleziona *Interrompi*.
+
+
+.Risultato
+L'operazione di ribilanciamento del volume si interrompe e gli spostamenti del volume attivi vengono annullati.

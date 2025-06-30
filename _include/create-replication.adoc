@@ -1,0 +1,68 @@
+= 
+:allow-uri-read: 
+
+
+. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa. La VM di archiviazione selezionata è la destinazione per tutti i volumi selezionati in questa relazione di replica.
+. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
+. *Caso di utilizzo*: Selezionare uno dei seguenti casi di utilizzo per la replica. In base al caso di utilizzo selezionato, il modulo viene compilato in fabbrica dal carico di lavoro con i valori consigliati, conformemente alle Best practice. È possibile accettare i valori consigliati o apportare modifiche durante la compilazione del modulo.
++
+** Migrazione: Trasferimento dei dati nel file system FSX per ONTAP di destinazione
+** Disaster recovery "hot": Garantisce alta disponibilità e rapido disaster recovery per i carichi di lavoro critici
+** Disaster recovery a freddo o di archivio:
++
+*** Disaster recovery a freddo: Utilizza RTO (recovery time objective) e RPO (recovery point objects) più lunghi per ridurre i costi
+*** Archiviazione: Replica i dati per storage e conformità a lungo termine
+
+
+** Altro
++
+Inoltre, la selezione del caso d'utilizzo determina il criterio di replica o il criterio SnapMirror (ONTAP). I termini utilizzati per descrivere i criteri di replica provengono da link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentazione di ONTAP 9"^].
+
++
+*** Per la migrazione e altre, il criterio di replica è denominato _MirrorAllSnapshots_. _MirrorAllSnapshots_ è un criterio asincrono per il mirroring di tutti gli snapshot e del file system attivo più recente.
+*** Per il disaster recovery hot, cold o di archivio, il criterio di replica si chiama _MirrorAndVault_. _MirrorAndVault_ è un criterio asincrono e vault per il mirroring del file system attivo più recente e degli snapshot giornalieri e settimanali.
++
+Per tutti i casi di utilizzo, se si abilitano gli snapshot per la conservazione a lungo termine, il criterio di replica predefinito è _MirrorAndVault_.
+
+
+
+
+
+. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione. Il criterio di tiering predefinito corrisponde alla policy di tiering consigliata per il caso d'utilizzo selezionato.
++
+_Balanced (Auto)_ è la policy di tiering predefinita quando si crea un volume utilizzando la console workload Factory. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSX per NetApp ONTAP. Nota: Workload Factory utilizza nomi basati su casi d'utilizzo nella console workload Factory per le policy di tiering e include i nomi delle policy di tiering di FSX per ONTAP tra parentesi.
+
++
+Se hai selezionato il caso di utilizzo della migrazione, il workload in fabbrica sceglie automaticamente di copiare la policy di tiering del volume di origine nel volume di destinazione. Puoi deselezionare questa casella per copiare la policy di tiering e selezionare una policy di tiering che si applica al volume selezionato per la replica.
+
+. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s. In alternativa, selezionare *illimitato*.
++
+Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery. . In Impostazioni di replica, specificare quanto segue:
+
+. *Intervallo di replica*: Consente di selezionare la frequenza di trasferimento degli snapshot dal volume di origine al volume di destinazione.
+. *Conservazione a lungo termine*: Facoltativamente, abilitare gli snapshot per la conservazione a lungo termine. La conservazione a lungo termine permette ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria.
++
+Le repliche senza conservazione a lungo termine utilizzano la policy _MirrorAllSnapshots_. Abilitando la conservazione a lungo termine, alla replica viene assegnata la policy _MirrorAndVault_.
+
++
+Se si attiva la conservazione a lungo termine, selezionare un criterio esistente o creare un nuovo criterio per definire gli snapshot da replicare e il numero da conservare.
+
++
+
+NOTE: Per la conservazione a lungo termine sono necessarie etichette di origine e destinazione corrispondenti. Se lo si desidera, workload Factory può creare etichette mancanti.
+
++
+** *Scegliere un criterio esistente*: Selezionare un criterio esistente dal menu a discesa.
+** *Crea una nuova policy*: inserisci un *nome policy*.
+
+
+. *Snapshot immutabili*: Facoltativo. Selezionare *attiva istantanee immutabili* per impedire l'eliminazione degli snapshot creati in questo criterio durante il periodo di conservazione.
++
+** Impostare *periodo di conservazione* in numero di ore, giorni, mesi o anni.
+** *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
+
+
+
+
+. Selezionare *Crea*.
+

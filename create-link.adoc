@@ -31,10 +31,10 @@ NOTE: AWS Secrets Manager non è supportato quando si utilizza un connettore.
 
 L'associazione di un nuovo collegamento include la creazione e l'associazione di collegamenti.
 
-Sono disponibili due opzioni per la creazione dei collegamenti, automatica o manuale. Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account AWS.
+Per creare collegamenti in questo flusso di lavoro sono disponibili due opzioni: automaticamente o manualmente. Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account AWS.
 
 * Automaticamente: Crea un collegamento con la registrazione automatica tramite workload Factory. Un collegamento creato automaticamente richiede token per l'automazione della fabbrica del carico di lavoro e il codice CloudFormation ha una durata breve. Può essere utilizzato solo per un massimo di sei ore.
-* Manualmente: Crea un collegamento con la registrazione manuale. Il codice CloudFormation persiste e consente di completare l'operazione con più tempo. Ciò è utile quando si lavora con team diversi come Security e DevOps, che potrebbero prima dover concedere le autorizzazioni necessarie per completare la creazione del collegamento.
+* Manualmente: crea un collegamento con registrazione manuale utilizzando CloudFormation o Terraform dal Codebox. Il codice rimane attivo, dandoti più tempo per completare l'operazione. Ciò è utile quando si lavora con team diversi come Security e DevOps, che potrebbero prima dover concedere le autorizzazioni necessarie per completare la creazione del collegamento.
 
 
 .Prima di iniziare
@@ -110,6 +110,25 @@ Lo stack di distribuzione dei collegamenti aggiunge il seguente regex ARN del ge
 +
 *Configurare l'endpoint privato VPC in AWS Secrets Manager* è disattivato per impostazione predefinita. Se si seleziona questa opzione, il segreto viene memorizzato utilizzando l'endpoint privato VPC anziché localmente.
 
+.. *Autorizzazioni collegamento*: seleziona una delle seguenti opzioni per le autorizzazioni collegamento:
++
+*** *Automatico*: seleziona questa opzione in modo che il codice AWS CloudFormation o Terraform crei automaticamente la policy di autorizzazione Lambda e il ruolo di esecuzione.
+*** *Fornito dall'utente*: selezionare questa opzione per assegnare un ruolo di esecuzione Lambda specificato e le relative policy associate al collegamento Lambda. Le seguenti autorizzazioni sono richieste per la policy di autorizzazione Lambda .  `secretsmanager:GetSecretValue` l'autorizzazione è richiesta solo se hai abilitato AWS Secrets Manager.
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses",
+"secretsmanager:GetSecretValue"
+----
++
+Immettere l'ARN del ruolo di esecuzione Lambda nella casella di testo.
+
+
+
 .. *Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.
 +
 L'account AWS e le informazioni aggiuntive per account, posizione e gruppo sicurezza vengono recuperate automaticamente in base al file system FSX per ONTAP.
@@ -142,7 +161,7 @@ Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia
 --
 .Crea manualmente
 --
-Con questa opzione, estrai l'ARN per il link da AWS CloudFormation e riportalo qui. Workload Factory registra manualmente il collegamento.
+Con questa opzione, puoi estrarre l'ARN del collegamento e segnalarlo qui. Workload Factory registra manualmente il collegamento. Puoi creare un collegamento utilizzando due strumenti Infrastructure-as-Code (IaC) di Codebox: CloudFormation o Terraform.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -162,8 +181,27 @@ Lo stack di distribuzione dei collegamenti aggiunge il seguente regex ARN del ge
 +
 *Configurare l'endpoint privato VPC in AWS Secrets Manager* è disattivato per impostazione predefinita. Se si seleziona questa opzione, il segreto viene memorizzato utilizzando l'endpoint privato VPC anziché localmente.
 
+.. *Autorizzazioni collegamento*: seleziona una delle seguenti opzioni per le autorizzazioni collegamento:
++
+*** *Automatico*: seleziona questa opzione in modo che il codice AWS CloudFormation o Terraform crei automaticamente la policy di autorizzazione Lambda e il ruolo di esecuzione.
+*** *Fornito dall'utente*: selezionare questa opzione per assegnare un ruolo di esecuzione Lambda specificato e le relative policy associate al collegamento Lambda. Le seguenti autorizzazioni sono richieste per la policy di autorizzazione Lambda .  `secretsmanager:GetSecretValue` l'autorizzazione è richiesta solo se hai abilitato AWS Secrets Manager.
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses"
+"secretsmanager:GetSecretValue"
+----
++
+Immettere l'ARN del ruolo di esecuzione Lambda nella casella di testo.
+
+
+
 .. *Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.
-.. *Registrazione link*: Seleziona sulla freccia a discesa per espandere le istruzioni su come registrare il link dal servizio AWS CloudFormation. Seguire le istruzioni.
+.. *Registrazione del collegamento*: seleziona la freccia a discesa per espandere le istruzioni su come registrare il collegamento dal servizio AWS CloudFormation o tramite Terraform. Seguire le istruzioni.
 +
 Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia il modello CloudFormation. Workload Factory utilizza queste autorizzazioni quando si utilizzano i collegamenti.
 
