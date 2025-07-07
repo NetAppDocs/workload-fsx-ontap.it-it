@@ -61,7 +61,7 @@ Controllare il saldo dei volumi FlexVol o FlexGroup in un file system FSx for ON
 ** Volumi FlexGroup
 ** Volumi FlexVol
 +
-Quando un volume è sbilanciato, considera <<Rebalance a volume,ribilanciamento dell'it>> .
+Quando un volume è sbilanciato, considera <<Riequilibrare la capacità del volume,ribilanciamento dell'it>> .
 
 
 
