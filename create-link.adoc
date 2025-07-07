@@ -112,7 +112,7 @@ Lo stack di distribuzione dei collegamenti aggiunge il seguente regex ARN del ge
 
 .. *Autorizzazioni collegamento*: seleziona una delle seguenti opzioni per le autorizzazioni collegamento:
 +
-*** *Automatico*: seleziona questa opzione in modo che il codice AWS CloudFormation o Terraform crei automaticamente la policy di autorizzazione Lambda e il ruolo di esecuzione.
+*** *Automatico*: seleziona questa opzione in modo che il codice AWS CloudFormation crei automaticamente la policy di autorizzazione Lambda e il ruolo di esecuzione.
 *** *Fornito dall'utente*: selezionare questa opzione per assegnare un ruolo di esecuzione Lambda specificato e le relative policy associate al collegamento Lambda. Le seguenti autorizzazioni sono richieste per la policy di autorizzazione Lambda .  `secretsmanager:GetSecretValue` l'autorizzazione è richiesta solo se hai abilitato AWS Secrets Manager.
 +
 [source, json]
