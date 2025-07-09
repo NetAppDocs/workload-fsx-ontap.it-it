@@ -20,6 +20,8 @@ indexpage:
       url: "/explore-savings.html"
     - title: Crea un file system FSX per ONTAP
       url: "/create-file-system.html"
+    - title: Visualizza lo stato ben progettato dei tuoi file system FSx per ONTAP
+      url: "/improve-configurations.html"
     - title: Crea un volume FSX per ONTAP
       url: "/create-volume.html"
     - title: Proteggi i tuoi dati

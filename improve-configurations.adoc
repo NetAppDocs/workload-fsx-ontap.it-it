@@ -11,12 +11,14 @@ summary: 'La farm di workload BlueXP  per i database analizza le configurazioni
 
 
 [role="lead"]
-Utilizzando gli approfondimenti e i consigli dell'analisi della configurazione, sfrutta la fabbrica di carichi di lavoro BlueXP  per implementare le Best practice per i file system FSX per ONTAP. È possibile individuare facilmente i problemi e intervenire per migliorare l'architettura di qualsiasi sistema non ottimizzato per affidabilità, sicurezza, efficienza, prestazioni e costi.
+Utilizzando informazioni e suggerimenti sull'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per i tuoi file system FSx for ONTAP . Puoi facilmente verificare lo stato di corretta architettura, individuare eventuali problemi nelle tue configurazioni e intervenire per migliorare l'architettura di qualsiasi sistema non ottimizzato in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.
+
+link:configuration-analysis.html["Scopri di più sull'analisi della configurazione e sullo stato ben progettato nella fabbrica dei carichi di lavoro."]
 
 .A proposito di questa attività
-BlueXP  analizza ogni giorno le configurazioni di implementazione del file system Amazon FSX per NetApp ONTAP. L'analisi quotidiana fornisce informazioni e consigli con opzioni per risolvere automaticamente i problemi di configurazione in modo che il file system soddisfi le Best practice.
+Workload Factory analizza quotidianamente le configurazioni di distribuzione del file system Amazon FSx for NetApp ONTAP . L'analisi giornaliera fornisce informazioni sullo stato di corretta architettura, oltre a informazioni e suggerimenti, con opzioni per risolvere automaticamente i problemi di configurazione, in modo che il file system soddisfi le best practice.
 
-Potrai scegliere di rivedere i consigli sui problemi di configurazione con i file system e risolvere tali problemi dall'inventario dello storage all'interno della console della workload Factory.
+Puoi esaminare i suggerimenti per i problemi di configurazione dei tuoi file system e risolvere i problemi dall'inventario di archiviazione all'interno della console di Workload Factory.
 
 Cosa viene analizzato:: Workload Factory analizza lo stato con un'architettura appropriata delle seguenti configurazioni per i file system FSX per ONTAP:
 +
