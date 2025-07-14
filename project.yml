@@ -1,7 +1,6 @@
 ---
 settings:
   name: Amazon FSx for NetApp ONTAP
-  platform: cloud
   internal:
     pdf_enabled: true
     termcheck_enabled: true
@@ -36,7 +35,7 @@ sidebar:
       url: "/explore-savings.html"
     - title: Utilizzare i collegamenti
       entries:
-      - title: Panoramica dei collegamenti
+      - title: Scopri di più sui link
         url: "/links-overview.html"
       - title: Connettersi a un file system con un collegamento
         url: "/create-link.html"
