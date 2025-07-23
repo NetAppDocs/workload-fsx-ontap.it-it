@@ -96,6 +96,23 @@ Se è stato selezionato un criterio di esportazione esistente, immettere un nuov
 .... *CIFS share*: Fornire quanto segue:
 +
 ..... *Nome*: Immettere il nome della condivisione CIFS per fornire l'accesso SMB.
+..... *Percorso*: definire il percorso utilizzando il nome del volume predefinito oppure fornire una condivisione in una directory interna.
++
+I percorsi validi per il nome del volume, ad esempio "avocado", sono i seguenti:
+
++
+****** /avocado
+****** /avocado/cartella
+****** /avocado/cartella/sottocartella
+****** /avocado/nome-file
++
+I percorsi validi per il nome della condivisione, ad esempio "Server", sono i seguenti:
+
+****** \\Server
+****** \\Server\Progetti
+****** \\Server\Progetti\Risorse condivise
+
+
 ..... *Autorizzazioni*: Selezionare controllo completo, lettura/scrittura, lettura o Nessun accesso, quindi immettere gli utenti o i gruppi separati da un punto e virgola ( ; ). Gli utenti o i gruppi rilevano la distinzione tra maiuscole e minuscole e il dominio dell'utente deve essere incluso nel formato "dominio\nome utente".
 
 
