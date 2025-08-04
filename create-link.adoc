@@ -34,7 +34,7 @@ L'associazione di un nuovo collegamento include la creazione e l'associazione di
 Per creare collegamenti in questo flusso di lavoro sono disponibili due opzioni: automaticamente o manualmente. Per creare il link, devi lanciare uno stack AWS CloudFormation nel tuo account AWS.
 
 * Automaticamente: crea un collegamento con registrazione automatica tramite Workload Factory.  Ciò richiede token per l'automazione della fabbrica del carico di lavoro e il codice CloudFormation ha vita breve e può essere utilizzato fino a sei ore.
-* Manualmente: Crea un collegamento con la registrazione manuale. Il codice CloudFormation persiste e consente di completare l'operazione con più tempo. Ciò è utile quando si lavora con team diversi come Security e DevOps, che potrebbero prima dover concedere le autorizzazioni necessarie per completare la creazione del collegamento.
+* Manualmente: crea un collegamento con registrazione manuale utilizzando CloudFormation o Terraform da Codebox.  Il codice persiste, dandoti più tempo per completare l'operazione.  Questa funzionalità è utile quando si lavora con team diversi, come quelli di sicurezza e DevOps, che potrebbero dover prima concedere le autorizzazioni necessarie per completare la creazione del collegamento.
 
 
 .Prima di iniziare
@@ -161,14 +161,14 @@ Puoi monitorare lo stato di creazione del collegamento nella pagina Eventi.  L'o
 --
 .Crea manualmente
 --
-Con questa opzione, estrai l'ARN per il link da AWS CloudFormation e riportalo qui. Workload Factory registra manualmente il collegamento.
+È possibile creare un collegamento utilizzando due strumenti Infrastructure-as-Code (IaC) di Codebox: CloudFormation o Terraform.  Con questa opzione, puoi estrarre l'ARN per il collegamento da AWS CloudFormation e segnalarlo qui.  Workload Factory registra manualmente il collegamento per te.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Associa collegamento*.
 . Nella finestra di dialogo Associa collegamento, selezionare *Crea un nuovo collegamento* e selezionare *continua*.
-. Nella pagina Crea collegamento, fornire quanto segue:
+. Nella pagina Crea collegamento, seleziona CloudFormation o Terraform dalla casella del codice, quindi fornisci quanto segue:
 +
 .. *Nome collegamento*: Immettere il nome che si desidera utilizzare per questo collegamento. Il nome deve essere univoco all'interno dell'account.
 .. *AWS Secrets Manager*: Facoltativo. Consente alla workload Factory di recuperare le credenziali di accesso a FSX per ONTAP da AWS Secrets Manager.
@@ -201,7 +201,7 @@ Immettere l'ARN del ruolo di esecuzione Lambda nella casella di testo.
 
 
 .. *Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.
-.. *Registrazione del collegamento*: seleziona la freccia a discesa per espandere le istruzioni su come registrare il collegamento dal servizio AWS CloudFormation o tramite Terraform. Seguire le istruzioni.
+.. *Registrazione del collegamento*: seleziona CloudFormation o Terraform per le istruzioni su come registrare il collegamento e segui le istruzioni.
 +
 Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia il modello CloudFormation. Workload Factory utilizza queste autorizzazioni quando si utilizzano i collegamenti.
 

@@ -11,7 +11,9 @@ summary: 'La farm di workload BlueXP  per i database analizza le configurazioni
 
 
 [role="lead"]
-Utilizzando informazioni e suggerimenti sull'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per i tuoi file system FSx for ONTAP . Puoi facilmente verificare lo stato di corretta architettura, individuare eventuali problemi nelle tue configurazioni e intervenire per migliorare l'architettura di qualsiasi sistema non ottimizzato in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.
+Utilizzando informazioni e consigli sull'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per i tuoi file system FSx for ONTAP .  È possibile esaminare facilmente lo stato di buona architettura, scoprire eventuali problemi con le configurazioni e intervenire per migliorare l'architettura di qualsiasi sistema non ottimizzato in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.
+
+È anche possibile ignorare l'analisi di configurazioni di archiviazione specifiche che non si applicano al proprio ambiente di archiviazione per evitare avvisi non necessari e risultati di ottimizzazione imprecisi.
 
 link:configuration-analysis.html["Scopri di più sull'analisi della configurazione e sullo stato ben progettato nella fabbrica dei carichi di lavoro."]
 
@@ -19,6 +21,8 @@ link:configuration-analysis.html["Scopri di più sull'analisi della configurazio
 Workload Factory analizza quotidianamente le configurazioni di distribuzione del file system Amazon FSx for NetApp ONTAP . L'analisi giornaliera fornisce informazioni sullo stato di corretta architettura, oltre a informazioni e suggerimenti, con opzioni per risolvere automaticamente i problemi di configurazione, in modo che il file system soddisfi le best practice.
 
 Puoi esaminare i suggerimenti per i problemi di configurazione dei tuoi file system e risolvere i problemi dall'inventario di archiviazione all'interno della console di Workload Factory.
+
+Poiché i requisiti per le configurazioni di archiviazione variano, è possibile ignorare l'analisi di configurazioni specifiche che non si applicano al proprio ambiente di archiviazione.  In questo modo puoi evitare avvisi inutili e risultati di ottimizzazione imprecisi.  Quando un'analisi di configurazione specifica viene ignorata, la configurazione non viene inclusa nel punteggio di ottimizzazione totale.
 
 Cosa viene analizzato:: Workload Factory analizza lo stato con un'architettura appropriata delle seguenti configurazioni per i file system FSX per ONTAP:
 +
@@ -30,6 +34,8 @@ Cosa viene analizzato:: Workload Factory analizza lo stato con un'architettura a
 * Replica remota dei dati
 * Efficienza dello storage
 * Gestione automatica della capacità
+* Protezione autonoma dal ransomware NetApp con intelligenza artificiale (ARP/AI)
+* Affidabilità dei dati per la conservazione a lungo termine
 
 
 --
@@ -41,11 +47,17 @@ Cosa viene analizzato:: Workload Factory analizza lo stato con un'architettura a
 
 
 
+
+== Risolvi un problema di configurazione
+
+È possibile risolvere i problemi di configurazione per un file system FSx for ONTAP o per volumi selezionati in un file system.  È possibile selezionare una o più configurazioni da correggere.
+
+
 NOTE: Il processo di correzione potrebbe causare tempi di inattività delle istanze o interruzioni del servizio. Prima di risolvere un problema di configurazione, leggere attentamente il suggerimento.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario di archiviazione*.
+. Nel riquadro Archiviazione, seleziona *Vai all'inventario di archiviazione*.
 . Nella scheda *FSX per ONTAP*, accedere alla colonna *Stato ben strutturato* e selezionare i problemi che il file system deve risolvere.
 . Nel dashboard ben strutturato per il file system, filtra i problemi di configurazione per categorie, sottocategorie, stato, gravità e tag.
 . Selezionare la freccia dell'elenco a discesa per visualizzare il suggerimento per qualsiasi configurazione. Verificare attentamente il suggerimento.
@@ -62,3 +74,91 @@ Quando *Visualizza e correggi* è un'opzione, selezionare i volumi interessati d
 
 .Risultato
 Viene avviato il processo di risoluzione del problema. Selezionare il menu delle impostazioni dell'account e quindi selezionare *Tracker* per visualizzare lo stato dell'operazione.
+
+
+
+== Ignora un'analisi di configurazione
+
+Ignora per interrompere indefinitamente un'analisi della configurazione per un file system FSx for ONTAP o per volumi selezionati in un file system.  È possibile riavviare l'analisi quando necessario.
+
+[role="tabbed-block"]
+====
+.Ignora un'analisi della configurazione per un file system
+--
+Ignora per interrompere a tempo indeterminato un'analisi della configurazione per un file system FSx per ONTAP .  È possibile riavviare l'analisi quando necessario.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai all'inventario di archiviazione*.
+. Nella scheda *FSx per ONTAP*, selezionare il menu a tre punti e quindi *Gestisci*.
+. Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
+. In *Configurazioni*, identifica la configurazione che desideri ignorare e seleziona *Ignora*.
+. Selezionare *Ignora* per interrompere l'analisi della configurazione.
+
+
+--
+.Ignora un'analisi di configurazione per un volume
+--
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai all'inventario di archiviazione*.
+. Nella scheda *FSx per ONTAP*, selezionare il menu a tre punti e quindi *Gestisci*.
+. Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
+. In *Configurazioni*, identifica la configurazione da ignorare per i volumi selezionati e seleziona *Visualizza e correggi*.
+. Identificare i volumi da escludere dall'analisi della configurazione.
++
+** Per un volume: seleziona il menu a tre punti e poi seleziona *Ignora volume*.
+** Per più volumi: selezionare i volumi e quindi selezionare *Ignora* accanto ad Azione in blocco.
+
+
+. Selezionare *Ignora* per interrompere l'analisi della configurazione.
+. Nella finestra di dialogo Ignora volumi, selezionare *Ignora* per confermare.
+
+
+--
+====
+.Risultato
+L'analisi della configurazione si interrompe per il file system o per i volumi selezionati.
+
+È possibile riattivare l'analisi in qualsiasi momento.  La configurazione non è più inclusa nel punteggio di ottimizzazione totale.
+
+
+
+== Riattivare un'analisi di configurazione ignorata
+
+È possibile riattivare in qualsiasi momento un'analisi di configurazione ignorata.  È possibile selezionare una o più configurazioni da riattivare.
+
+[role="tabbed-block"]
+====
+.Riattivare un'analisi della configurazione per un file system
+--
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai all'inventario di archiviazione*.
+. Nella scheda *FSx per ONTAP*, selezionare il menu a tre punti e quindi *Gestisci*.
+. Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
+. Accanto a *Configurazioni*, seleziona *Configurazioni ignorate*.
+. Identifica la configurazione che desideri riattivare e seleziona *Riattiva*.
+
+
+--
+.Riattivare un'analisi di configurazione per un volume
+--
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai all'inventario di archiviazione*.
+. Nella scheda *FSx per ONTAP*, selezionare il menu a tre punti e quindi *Gestisci*.
+. Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
+. In *Configurazioni*, identifica la configurazione da riattivare per i volumi selezionati e seleziona *Visualizza e correggi*.
+. Identificare i volumi da riattivare dall'analisi della configurazione.
++
+** Per un volume: seleziona il menu a tre punti e poi seleziona *Riattiva volume*.
+** Per più volumi: selezionare i volumi e quindi selezionare *Riattiva* accanto ad Azione in blocco.
+
+
+
+
+--
+====
+.Risultato
+L'analisi della configurazione viene riattivata.  Ogni giorno viene effettuata una nuova analisi.

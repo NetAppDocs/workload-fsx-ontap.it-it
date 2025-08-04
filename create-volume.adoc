@@ -18,7 +18,7 @@ I volumi FSx per ONTAP raggruppano virtualmente i dati, determinano come vengono
 
 Per i volumi in uso possono essere utilizzati i seguenti protocolli:
 
-* CIFS: Protocollo di file storage per sistemi operativi Windows
+* SMB/CIFS: protocollo di archiviazione file per sistemi operativi Windows
 * NFS: Protocollo di file storage per sistemi operativi Unix
 * ISCSI: Protocollo storage a blocchi
 
@@ -31,7 +31,7 @@ Prima di creare un volume, esaminare i seguenti prerequisiti:
 * Per l'accesso al protocollo, completare quanto segue:
 +
 ** Per configurare l'accesso al volume, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
-** Devi configurare l'accesso per il protocollo selezionato, ovvero CIFS, NFS o iSCSI.
+** È necessario configurare l'accesso per il protocollo selezionato: SMB/CIFS, NFS o iSCSI.
 
 
 
@@ -93,9 +93,9 @@ Se è stato selezionato un criterio di esportazione esistente, immettere un nuov
 ..... *Aggiungi regola criterio di esportazione*: In alternativa, per un criterio di esportazione personalizzato, è possibile aggiungere regole al criterio.
 
 
-.... *CIFS share*: Fornire quanto segue:
+.... *Condivisione SMB/CIFS*: fornire quanto segue:
 +
-..... *Nome*: Immettere il nome della condivisione CIFS per fornire l'accesso SMB.
+..... *Nome*: immettere il nome della condivisione SMB/CIFS per consentire l'accesso.
 ..... *Percorso*: definire il percorso utilizzando il nome del volume predefinito oppure fornire una condivisione in una directory interna.
 +
 I percorsi validi per il nome del volume, ad esempio "avocado", sono i seguenti:

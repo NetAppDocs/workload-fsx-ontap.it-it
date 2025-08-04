@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection-overview.html 
 keywords: overview 
-summary: FSX per ONTAP supporta snapshot, backup di volumi e replica dei volumi in una fabbrica di workload BlueXP . 
+summary: FSx per ONTAP supporta snapshot, NetApp Autonomous Ransomware con intelligenza artificiale, replicazione dei volumi e backup nella BlueXP workload factory. 
 ---
 = Tipi di protezione dei dati in BlueXP  workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: FSX per ONTAP supporta snapshot, backup di volumi e replica dei volumi 
 
 
 [role="lead"]
-FSX per ONTAP supporta snapshot, backup e replica per la data Protection. Si consiglia di utilizzare una combinazione di tipi di protezione dei dati per prepararsi all'inevitabile e salvaguardare i dati.
+FSx per ONTAP supporta snapshot, NetApp Autonomous Ransomware Protection con intelligenza artificiale, replica e backup per la protezione dei dati.  Ti consigliamo di utilizzare una combinazione di diverse tipologie di protezione dei dati per prepararti all'inevitabile e salvaguardare i tuoi dati.
 
 
 
@@ -22,8 +22,8 @@ La data Protection per i tuoi carichi di lavoro ti aiuta a garantire un ripristi
 .Snapshot
 Uno snapshot crea un'immagine point-in-time di sola lettura di un volume all'interno del volume di origine come copia snapshot. È possibile utilizzare la copia snapshot per recuperare singoli file o per ripristinare l'intero contenuto di un volume. Le snapshot sono la base di tutti i metodi di backup. La copia snapshot creata sul volume viene utilizzata per mantenere il volume replicato e il file di backup sincronizzati con le modifiche apportate al volume di origine.
 
-.Protezione ransomware autonoma
-La protezione autonoma dal ransomware (ARP) utilizza l'analisi dei workload negli ambienti NAS (NFS/SMB) per rilevare e informare l'utente in caso di attività anomale che potrebbero essere un attacco ransomware. Quando si sospetta un attacco, ARP crea anche nuovi snapshot immutabili oltre alla protezione esistente fornita dagli snapshot pianificati.
+.Protezione autonoma dal ransomware NetApp con intelligenza artificiale
+NetApp Autonomous Ransomware Protection with AI (ARP/AI) utilizza l'analisi del carico di lavoro negli ambienti NAS (NFS/SMB) per rilevare e segnalare attività anomale che potrebbero essere un attacco ransomware.  Quando si sospetta un attacco, ARP/AI crea anche nuovi snapshot immutabili, oltre alla protezione esistente fornita dagli snapshot pianificati.
 
 .Replica
 La replica crea una copia secondaria dei dati su un altro file system FSX per ONTAP e aggiorna continuamente i dati secondari. I dati restano aggiornati e disponibili in qualsiasi momento, ad esempio per il disaster recovery.
@@ -53,9 +53,9 @@ Gli Snapshot sono versioni virtuali point-in-time di un volume acquisite su base
 
 
 
-== Proteggi i dati dei tuoi carichi di lavoro con i backup
+== Proteggi i dati del tuo carico di lavoro con la protezione autonoma dai ransomware NetApp con intelligenza artificiale
 
-I backup dei volumi offrono copie point-in-time indipendenti del tuo volume. Possono essere utilizzati per archiviare vecchi backup e fornire la seconda copia dei dati necessaria. Le pianificazioni di backup giornaliere, settimanali e mensili consentono RPO a partire da un giorno. I backup di volumi possono essere ripristinati solo nel loro complesso. La creazione di un volume da un backup (RTO) può richiedere da ore a molti giorni, a seconda delle dimensioni del backup.
+NetApp Autonomous Ransomware Protection with AI (ARP/AI) funge da importante ulteriore livello di difesa se il software antivirus non riesce a rilevare un'intrusione.  L'impostazione di una policy ARP/AI la abilita per tutte le VM di archiviazione e per tutti i volumi esistenti e di nuova creazione.  Una volta abilitato, ARP/AI rileva e protegge tutti i volumi e le VM di archiviazione.  Se un'estensione di file viene contrassegnata come anomala, è necessario valutare l'avviso.
 
 
 
@@ -65,9 +65,9 @@ La replica di un volume crea una copia dei dati più recenti di un volume, inclu
 
 
 
-== Proteggi i dati del tuo carico di lavoro con la protezione autonoma dal ransomware
+== Proteggi i dati dei tuoi carichi di lavoro con i backup
 
-ARP agisce come un importante ulteriore livello di difesa se il software antivirus non è riuscito a rilevare un'intrusione. L'impostazione di un criterio ARP lo abilita per tutte le VM di storage e per tutti i volumi esistenti e appena creati. Una volta abilitata, ARP rileva e protegge tutti i volumi e le VM di storage. Se l'estensione di un file è contrassegnata come anomala, è necessario valutare l'avviso.
+I backup dei volumi offrono copie point-in-time indipendenti del tuo volume. Possono essere utilizzati per archiviare vecchi backup e fornire la seconda copia dei dati necessaria. Le pianificazioni di backup giornaliere, settimanali e mensili consentono RPO a partire da un giorno. I backup di volumi possono essere ripristinati solo nel loro complesso. La creazione di un volume da un backup (RTO) può richiedere da ore a molti giorni, a seconda delle dimensioni del backup.
 
 
 
@@ -78,6 +78,5 @@ Prendi in considerazione i seguenti consigli per proteggere i dati del tuo caric
 * Utilizzare i backup di volume insieme alle istantanee: L'utilizzo congiunto delle due funzioni garantisce la possibilità di ripristinare i file dalle istantanee ed eseguire ripristini completi in caso di perdita di volume utilizzando i backup.
 * Definire una policy di backup dei volumi: Accertarsi che la policy di backup soddisfi i requisiti aziendali in termini di durata e frequenza dei backup. Si consiglia di conservare un minimo di due backup giornalieri per ogni volume.
 * Definire una pianificazione snapshot: È meno probabile che vengano utilizzate le snapshot meno recenti per ripristinare i dati. Consigliamo di definire una pianificazione delle snapshot che tenga conto dei rendimenti in diminuzione dovuti al mantenimento delle snapshot più vecchie rispetto al costo di capacità delle snapshot aggiuntiva.
-* Monitora i volumi in modo da rimanere al corrente di potenziali attacchi ransomware.
-* Abilita la policy ARP per i tuoi volumi e VM di storage per aggiungere un livello aggiuntivo di protezione per proteggere i dati dagli attacchi ransomware.
+* Abilita una policy ARP/AI per il tuo file system o per singoli volumi per aggiungere un ulteriore livello di protezione e proteggere i tuoi dati dagli attacchi ransomware.
 
