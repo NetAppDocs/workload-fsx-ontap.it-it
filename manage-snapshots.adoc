@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshots.html 
+keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
+summary: 'Modifica le impostazioni degli snapshot, abilita l"accesso alla directory ed elimina gli snapshot per gestire gli snapshot e la protezione dei dati in Workload Factory.' 
+---
+= Gestire gli snapshot di un volume FSx for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Modifica le impostazioni degli snapshot, abilita l'accesso alla directory ed elimina gli snapshot per gestire gli snapshot e la protezione dei dati in Workload Factory.
+
+
+
+== Modifica uno snapshot
+
+Modifica il nome, l'etichetta e il periodo di conservazione di uno snapshot.  Se lo snapshot non è già immutabile, è possibile renderlo immutabile.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda *Volumi*, selezionare il menu a tre punti per il volume con lo snapshot da modificare.
+. Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
+. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per lo snapshot da modificare, quindi seleziona *Modifica*.
+. Nella finestra di dialogo Modifica uno snapshot, puoi modificare quanto segue:
++
+.. Cambia il nome.
+.. Cambia l'etichetta.
+.. Modificare il periodo di conservazione.
+.. Facoltativo: *Rendi questo snapshot immutabile* per evitare che venga eliminato durante il periodo di conservazione.
++
+Se lo snapshot è già immutabile, non è possibile modificare questa impostazione.
+
++
+Accettare la dichiarazione relativa agli snapshot immutabili.
+
+
+
+. Selezionare *Applica*.
+
+
+
+
+== Accedi a uno snapshot
+
+Abilita l'accesso alla directory degli snapshot per consentire agli utenti di accedere agli snapshot in modo autonomo.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda *Volumi*, selezionare il menu a tre punti per il volume con lo snapshot a cui accedere.
+. Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
+. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per accedere allo snapshot, quindi seleziona *Accesso*.
+. Nella finestra di dialogo Accedi allo snapshot, seleziona *Abilita accesso alla directory snapshot* per accedere a questo snapshot del volume e a tutti gli snapshot del volume.
++
+** Per volumi NFS: selezionare *Percorso di accesso NFS* per visualizzare il percorso NFS per lo snapshot.
+** Per volumi SMB/CIFS: selezionare *Percorso di accesso SMB* per visualizzare il percorso SMB per lo snapshot.
+
+
+. Copia il percorso di accesso.
+. Selezionare *Applica*.
+
+
+
+
+== Ripristinare i dati da uno snapshot
+
+È possibile ripristinare i dati da uno snapshot su un volume esistente o su un nuovo volume.
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["Ripristinare un volume da uno snapshot"]
+
+
+
+== Elimina uno snapshot
+
+Elimina uno snapshot per liberare spazio.
+
+Gli snapshot immutabili non possono essere eliminati finché non termina il periodo di conservazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
+. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda *Volumi*, selezionare il menu a tre punti per il volume contenente lo snapshot da eliminare.
+. Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
+. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per lo snapshot da eliminare, quindi seleziona *Elimina*.
+. Nella finestra di dialogo Elimina snapshot, digitare "delete".
+. Selezionare *Elimina* per confermare l'eliminazione.
+
+
+.Informazioni correlate
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot.html["Creare un'istantanea"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot-policy.html["Creare un criterio di snapshot"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Ripristinare un volume da uno snapshot"]
+

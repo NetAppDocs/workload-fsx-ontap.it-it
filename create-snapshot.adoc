@@ -29,17 +29,18 @@ Per creare uno snapshot manuale di un volume è necessario associare un collegam
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume per cui creare uno snapshot, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere con le istantanee.
-. Selezionare *azioni protezione dati*, *istantanee*, quindi *Crea un'istantanea*.
-. Nella finestra di dialogo Crea un'istantanea, immettere il nome di un'istantanea nel campo *Nome istantanea*.
-. Facoltativo: Rendere immutabile lo snapshot per evitare che venga eliminato durante il periodo di conservazione.
+. Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
+. Dalla pagina Gestisci snapshot, seleziona *Crea snapshot*.
+. Nella finestra di dialogo Crea uno snapshot, procedi come segue:
 +
-.. Attiva *istantanee immutabili*.
+.. Immettere un nome per lo snapshot nel campo *Nome snapshot*.
+.. Facoltativamente, seleziona un'etichetta o creane una nuova.
 .. Impostare *periodo di conservazione* come numero di ore, giorni, mesi o anni.
-.. Accettare la dichiarazione relativa agli snapshot immutabili.
+.. Facoltativo: *Rendi questo snapshot immutabile* per evitare che venga eliminato durante il periodo di conservazione.
++
+Accettare la dichiarazione relativa agli snapshot immutabili.
+
 
 
 . Selezionare *Crea*.
 
-
-.Risultato
-Il volume dispone di una copia snapshot.

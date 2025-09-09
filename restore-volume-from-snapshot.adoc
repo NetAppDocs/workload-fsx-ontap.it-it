@@ -4,22 +4,27 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Ripristinare un volume FSX per ONTAP da uno snapshot quando il volume contiene file eliminati o danneggiati. 
 ---
-= Ripristino di un volume da uno snapshot nella fabbrica dei carichi di lavoro BlueXP 
+= Ripristina un volume da uno snapshot nella fabbrica del carico di lavoro
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-In una fabbrica di workload BlueXP , puoi ripristinare un volume FSX per ONTAP da uno snapshot quando il volume contiene file eliminati o corrotti.
+In Workload Factory è possibile ripristinare i dati da uno snapshot a un volume esistente o a un nuovo volume.  L'operazione di ripristino consente il recupero in un determinato momento quando un volume contiene file eliminati o danneggiati.
 
 .A proposito di questa attività
-Questa operazione ripristina i dati da uno snapshot a un nuovo volume.
+È possibile ripristinare i dati da uno snapshot su un volume esistente o su un nuovo volume.
+
+La creazione di un nuovo volume da uno snapshot crea una copia di un intero volume in pochi secondi, indipendentemente dalle dimensioni del volume.  La copia appena creata rappresenta un nuovo volume.
 
 .Prima di iniziare
-È possibile ripristinare un volume da uno snapshot solo se si dispone già di una copia snapshot del volume.
+Prima di creare un volume da uno snapshot, prendere in considerazione le seguenti limitazioni:
 
-Assicurarsi di disporre di capacità sufficiente per completare questa operazione.
+* È possibile ripristinare un volume da uno snapshot solo se si dispone già di una copia snapshot del volume.
+* Modifiche ai modelli di autorizzazione: Se si utilizza questa operazione per cambiare il tipo di protocollo NAS (Network-Attached Storage), è possibile che cambi anche il modello di autorizzazione fornito dallo stile di protezione. Potrebbero verificarsi problemi di autorizzazione all'accesso ai file, che è possibile risolvere solo manualmente con l'accesso dell'amministratore utilizzando gli strumenti client NAS per l'impostazione delle autorizzazioni.
+* Aumento del consumo di volume: dopo aver creato un volume da uno snapshot, si hanno due volumi indipendenti, entrambi i quali consumano capacità dal file system host.  Assicuratevi di avere capacità sufficiente per completare questa operazione.
+
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -27,8 +32,19 @@ Assicurarsi di disporre di capacità sufficiente per completare questa operazion
 . Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da ripristinare da uno snapshot.
-. Selezionare *azioni protezione dati*, *istantanee*, quindi *Ripristina volume da uno snapshot*.
-. Nella finestra di dialogo Ripristina volume da uno snapshot, nel campo *Nome istantanea*, selezionare lo snapshot da ripristinare dal menu a discesa.
-. Nel campo *nome volume ripristinato*, immettere un nome univoco per il volume da ripristinare.
+. Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
+. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per lo snapshot da ripristinare, quindi seleziona *Ripristina*.
+. Nella finestra di dialogo Ripristina volume da uno snapshot, seleziona una delle seguenti opzioni:
++
+** Attiva/disattiva per selezionare *Ripristina come nuovo volume*.
++
+Nel campo *nome volume ripristinato*, immettere un nome univoco per il volume da ripristinare.
+
+** Ripristina i dati da uno snapshot a un volume esistente.  Questa operazione elimina definitivamente tutti i dati modificati dopo la creazione dello snapshot.
++
+Accettare la dichiarazione per procedere.
+
+
+
 . Selezionare *Restore* (Ripristina).
 

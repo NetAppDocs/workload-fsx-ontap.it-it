@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Creazione di una policy Snapshot personalizzata per una VM di storage in una fabbrica di workload BlueXP . 
+summary: Crea un criterio di snapshot personalizzato per una VM di archiviazione nella fabbrica dei carichi di lavoro. 
 ---
-= Creazione di una policy Snapshot per le VM di storage in una fabbrica di workload BlueXP 
+= Creare un criterio di snapshot per le VM di archiviazione nella fabbrica dei carichi di lavoro
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Creazione di una policy di snapshot personalizzata per le macchine virtuali storage in una fabbrica di workload BlueXP . Una policy di snapshot definisce il modo in cui il sistema crea snapshot per una VM di storage. Puoi creare una policy di Snapshot per una VM di storage in un file system FSX per ONTAP. È anche possibile condividere la policy su più macchine virtuali storage.
+Crea un criterio di snapshot personalizzato per le VM di archiviazione nella fabbrica dei carichi di lavoro per gestire la creazione e la conservazione degli snapshot.  Un criterio di snapshot definisce il modo in cui il sistema crea snapshot per una VM di archiviazione.  È possibile creare un criterio di snapshot per una VM di archiviazione in un file system FSx for ONTAP .  È anche possibile condividere la policy su più VM di archiviazione.
 
 .A proposito di questa attività
 È possibile creare un criterio di snapshot personalizzato diverso da quello delle tre policy integrate per FSX for ONTAP:
@@ -65,6 +65,3 @@ L'attivazione degli snapshot immutabili blocca tutti gli snapshot in questa poli
 . *Condivisione tra VM di archiviazione*: Abilitata per impostazione predefinita. Quando abilitata, la policy di snapshot viene condivisa tra tutte le macchine virtuali storage nel file system. Disattiva per creare una policy di snapshot per una singola macchina virtuale di storage.
 . Selezionare *Crea*.
 
-
-.Risultato
-Viene creato il criterio snapshot.
