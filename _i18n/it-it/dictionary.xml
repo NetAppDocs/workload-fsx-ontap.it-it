@@ -450,9 +450,7 @@
   <block id="a5a980f3518b6bdf573ccca8b4570aaa" category="list-text">*Codebox*: Fornisce agli sviluppatori un visualizzatore di codice per le operazioni FSX for ONTAP, modelli di codice per la copia e il download e un catalogo di automazione per il riutilizzo del codice.</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Costo</block>
   <block id="2f00f54e8e91e47bd247b06a51824fb0" category="inline-link-macro">Prezzi di Amazon FSX per NetApp ONTAP</block>
-  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">Regioni supportate</block>
   <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">Visualizza le regioni Amazon supportate.</block>
-  <block id="ee9b3af8630059982f4d1dd2fd3834a3" category="paragraph"><block ref="ee9b3af8630059982f4d1dd2fd3834a3" category="inline-link-rx"></block></block>
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">Assistenza</block>
   <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSX per NetApp ONTAP è una soluzione AWS first-party. Per domande o problemi di supporto tecnico associati al file system, all'infrastruttura o alla soluzione FSX per ONTAP che utilizza questo servizio, utilizza il Support Center nella console di gestione AWS per aprire un caso di supporto con AWS. Selezionare il servizio "FSX per ONTAP" e la categoria appropriata. Fornire le informazioni rimanenti necessarie per creare il caso di supporto AWS.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
@@ -2162,7 +2160,6 @@
   <block id="5555c9991f89f798392b8981015a49d6" category="doc">Ripristina un volume da uno snapshot nella fabbrica del carico di lavoro</block>
   <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">In Workload Factory è possibile ripristinare i dati da uno snapshot a un volume esistente o a un nuovo volume.  L'operazione di ripristino consente il recupero in un determinato momento quando un volume contiene file eliminati o danneggiati.</block>
   <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">La creazione di un nuovo volume da uno snapshot crea una copia di un intero volume in pochi secondi, indipendentemente dalle dimensioni del volume.  La copia appena creata rappresenta un nuovo volume.</block>
-  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">Aumento del consumo di volume: dopo aver creato un volume da uno snapshot, si hanno due volumi indipendenti, entrambi i quali consumano capacità dal file system host.  Assicuratevi di avere capacità sufficiente per completare questa operazione.</block>
   <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per lo snapshot da ripristinare, quindi seleziona *Ripristina*.</block>
   <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">Nella finestra di dialogo Ripristina volume da uno snapshot, seleziona una delle seguenti opzioni:</block>
   <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">Attiva/disattiva per selezionare *Ripristina come nuovo volume*.</block>
@@ -2171,4 +2168,13 @@
   <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">Utilizzare gli snapshot</block>
   <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">Utilizzare i backup per l'archiviazione degli oggetti</block>
   <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">Utilizzare la replicazione</block>
+  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">Supporto regionale</block>
+  <block id="468469fded9ecf5cf0e132a6daa62d32" category="paragraph">Le seguenti regioni AWS non sono supportate:</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">regioni della Cina</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">Regioni GovCloud (USA)</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">Nuvola segreta</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">Nuvola top secret</block>
+  <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">Regioni</block>
+  <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">Workload Factory è supportato in tutte le regioni commerciali in cui è supportato FSx per ONTAP .<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">Le seguenti regioni AWS non sono supportate:</block>
 </blocks>

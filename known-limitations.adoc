@@ -15,6 +15,18 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 
 
+== Supporto regionale
+
+Le seguenti regioni AWS non sono supportate:
+
+* regioni della Cina
+* Regioni GovCloud (USA)
+* Nuvola segreta
+* Nuvola top secret
+
+
+
+
 == Aggiunta delle limitazioni di coppie ha
 
 * Questa operazione potrebbe richiedere circa 30 minuti.

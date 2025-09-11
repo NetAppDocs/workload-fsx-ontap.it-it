@@ -70,9 +70,17 @@ AWS gestisce il tuo account FSX per ONTAP, non la fabbrica di workload. Fare rif
 
 
 
-== Regioni supportate
+== Regioni
 
-https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
+Workload Factory è supportato in tutte le regioni commerciali in cui è supportato FSx per ONTAP .link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
+
+Le seguenti regioni AWS non sono supportate:
+
+* regioni della Cina
+* Regioni GovCloud (USA)
+* Nuvola segreta
+* Nuvola top secret
+
 
 
 
