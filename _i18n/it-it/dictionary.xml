@@ -2100,7 +2100,6 @@
   <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">Screenshot che mostra la schermata di gestione degli snapshot.</block>
   <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">Riduzione della capacità di archiviazione SSD disponibile</block>
-  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">Workload Factory supporta la riduzione della capacità dell'unità SSD (Solid State Drive) dei file system di prima e seconda generazione.  Grazie alla capacità elastica del file system, puoi adattare dinamicamente la capacità dei tuoi file system alle esigenze dei tuoi carichi di lavoro.</block>
   <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">Regola la capacità del file system</block>
   <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
   <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">Crea un criterio di snapshot personalizzato per una VM di archiviazione nella fabbrica dei carichi di lavoro.</block>
@@ -2177,4 +2176,6 @@
   <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">Regioni</block>
   <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">Workload Factory è supportato in tutte le regioni commerciali in cui è supportato FSx per ONTAP .<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
   <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">Le seguenti regioni AWS non sono supportate:</block>
+  <block id="edfbca9622799a953a48987a288fe283" category="paragraph">Workload Factory supporta la riduzione della capacità dell'unità SSD (Solid State Drive) dei file system di seconda generazione. Grazie alla capacità elastica del file system, puoi adattare dinamicamente la capacità dei tuoi file system alle esigenze dei tuoi carichi di lavoro.</block>
+  <block id="381c6da705f822c3139853781716a57a" category="admonition">La riduzione della capacità di archiviazione SSD è supportata solo per i file system di seconda generazione.</block>
 </blocks>

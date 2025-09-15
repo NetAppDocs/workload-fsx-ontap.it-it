@@ -17,6 +17,9 @@ Aumentare la capacità di archiviazione SSD di un file system FSx for ONTAP quan
 
 In alternativa, puoi link:enable-auto-capacity-management.html["attivare la funzione di gestione automatica della capacità"] fare in modo che la fabbrica dei carichi di lavoro gestisca la capacità del file system al tuo posto.
 
+
+NOTE: La riduzione della capacità di archiviazione SSD è supportata solo per i file system di seconda generazione.
+
 .A proposito di questa attività
 Grazie alla capacità elastica del file system, puoi adattare dinamicamente la capacità dei tuoi file system alle esigenze dei tuoi carichi di lavoro.
 
