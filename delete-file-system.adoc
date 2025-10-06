@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: Per eliminare un file system in una fabbrica di carichi di lavoro BlueXP , devi prima eliminare qualsiasi volume, VM di storage o relazione di replica associata al file system. 
+summary: Per eliminare un file system in NetApp Workload Factory, è necessario prima eliminare tutti i volumi, le VM di archiviazione o le relazioni di replicazione associati al file system. 
 ---
-= Eliminazione di un file system in una fabbrica di workload BlueXP 
+= Elimina un file system in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Per eliminare un file system in una fabbrica di carichi di lavoro BlueXP , devi prima eliminare qualsiasi volume, VM di storage o relazione di replica associata al file system.
+Per eliminare un file system in NetApp Workload Factory, è necessario prima eliminare tutti i volumi, le VM di archiviazione o le relazioni di replicazione associati al file system.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system FSX per ONTAP che desideri eliminare.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system FSx for ONTAP che desideri eliminare.
 . Selezionare *Gestisci*.
-. Nella scheda *Panoramica*, selezionare il menu a tre punti.
+. Nella scheda *Panoramica*, seleziona il menu azioni.
 . Selezionare *Delete* (Elimina).
 . Nella finestra di dialogo Elimina file system FSX per ONTAP, immettere il nome del file system FSX per ONTAP da eliminare.
-. Selezionare *Delete* (Elimina).
+. Selezionare *Elimina* per confermare.
 

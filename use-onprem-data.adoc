@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: Rileva e replica i dati ONTAP on-premise in una fabbrica di carichi di lavoro BlueXP , in modo che possano essere utilizzati per arricchire le knowledge base ai. 
+summary: 'Scopri e replica i dati ONTAP on-premise in NetApp Workload Factory in modo che possano essere utilizzati per arricchire le basi di conoscenza dell"intelligenza artificiale.' 
 ---
-= Utilizzo dei dati del cluster ONTAP on-premise in una fabbrica di workload BlueXP 
+= Utilizzare i dati del cluster ONTAP locale in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Rileva e replica i dati ONTAP on-premise in una fabbrica di carichi di lavoro BlueXP , in modo che possano essere utilizzati per arricchire le knowledge base ai.
+Scopri e replica i dati ONTAP on-premise in NetApp Workload Factory in modo che possano essere utilizzati per arricchire le basi di conoscenza dell'intelligenza artificiale.
 
 .A proposito di questa attività
 Per utilizzare i dati da un cluster ONTAP on-premise, dovrai prima rilevare il cluster ONTAP on-premise. Dopo aver scoperto un cluster ONTAP on-premise, puoi utilizzare i dati per uno dei seguenti casi di utilizzo.
@@ -31,7 +31,7 @@ Casi di utilizzo:: Si noti che il caso di utilizzo principale per il carico di l
 
 == Scopri un cluster ONTAP on-premise
 
-Scopri un cluster ONTAP on-premise in una farm di workload BlueXP  per replicare i dati in un file system Amazon FSX per NetApp ONTAP.
+Scopri un cluster ONTAP locale in NetApp Workload Factory in modo da poter replicare i dati su un file system Amazon FSx for NetApp ONTAP .
 
 .Prima di iniziare
 Prima di iniziare, assicurarsi di disporre dei seguenti elementi:
@@ -48,13 +48,13 @@ image:screenshot-on-prem-connectivity.png["Screenshot che mostra come si deve co
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
 . Selezionare la scheda *ONTAP on-premise*.
 . Selezionare *Discover*.
 . Esaminare i prerequisiti e selezionare *Avanti*.
 . Nella pagina Scopri ONTAP on-premise, fornire quanto segue in *Configurazione cluster*:
 +
-.. *Collegamento*: Selezionare un collegamento. Il link verrà associato al cluster on-premise per creare connettività tra il cluster e la workload factory.
+.. *Link*: Seleziona un link.  Il collegamento verrà associato al cluster locale per creare connettività tra il cluster e Workload Factory.
 +
 Se non è stato creato un collegamento, seguire le istruzioni, quindi tornare a questa operazione e selezionare il collegamento.
 
@@ -84,8 +84,8 @@ Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Selezionare la scheda *ONTAP on-premise*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare * ONTAP locale*.
 . Per trovare i volumi per VM di archiviazione, è possibile *selezionare VM di archiviazione* dal menu a discesa.
 . Selezionare uno o più volumi da replicare, quindi selezionare *Replica*.
 . Nella pagina Crea replica, in destinazione replica, specificare quanto segue:
@@ -95,7 +95,7 @@ Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX
 .. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
 .. *Dati di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione.
 +
-*** *Auto*: Il criterio di tiering predefinito quando si crea un volume utilizzando l'interfaccia utente FSX per ONTAP in fabbrica del workload. Esegue il tiering di tutti i dati cold che includono i dati dell'utente e le snapshot nel Tier di storage del pool di capacità per un periodo di tempo specifico.
+*** *Auto*: criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando l'interfaccia utente Workload Factory FSx for ONTAP .  Suddivide tutti i dati inattivi, inclusi i dati utente e gli snapshot, nel livello di archiviazione del pool di capacità per un periodo di tempo specifico.
 *** *Solo Snapshot*: Esegue il tiering solo dei dati snapshot nel Tier di storage del pool di capacità.
 *** *Nessuno*: Mantiene tutti i dati del volume nel Tier di storage primario.
 *** *All*: Contrassegna tutti i dati utente e i dati snapshot come cold e li memorizza nel Tier di storage del pool di capacità.
@@ -140,20 +140,20 @@ La relazione di replica viene visualizzata nella scheda *Relazioni di replica* n
 
 
 
-== Rimozione di un cluster ONTAP on-premise dalla farm di workload BlueXP 
+== Rimuovere un cluster ONTAP locale da NetApp Workload Factory
 
-Rimozione di un cluster ONTAP on-premise dalla fabbrica di workload BlueXP  secondo necessità.
+Rimuovere un cluster ONTAP locale da NetApp Workload Factory quando necessario.
 
 .Prima di iniziare
 Prima di rimuovere il cluster, occorre link:delete-replication.html["eliminare tutte le relazioni di replica esistenti"]utilizzare tutti i volumi del cluster ONTAP on-premise, in modo che non rimangano relazioni interrotte.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Selezionare la scheda *ONTAP on-premise*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare * ONTAP locale*.
 . Seleziona il cluster ONTAP on-premise da rimuovere.
-. Selezionare il menu a tre punti e selezionare *Rimuovi da fabbrica workload*.
+. Selezionare il menu azioni e selezionare *Rimuovi da Workload Factory*.
 
 
 .Risultato
-Il cluster ONTAP on-premise viene rimosso dalla farm di workload BlueXP .
+Il cluster ONTAP locale viene rimosso da NetApp Workload Factory.

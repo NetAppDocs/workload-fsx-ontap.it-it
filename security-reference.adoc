@@ -4,7 +4,7 @@ permalink: security-reference.html
 keywords: security, data protection, IAM, file system access control, vpc 
 summary: La documentazione di Amazon FSX per NetApp ONTAP fornisce i seguenti argomenti relativi alla sicurezza come riferimento. 
 ---
-= Sicurezza per FSX per ONTAP in fabbrica di workload BlueXP 
+= Sicurezza per FSx per ONTAP in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords: tiering policy, change tier, change tiers, tier policy update 
-summary: Modificare la policy di tiering in una fabbrica di carichi di lavoro BlueXP  per riallocare i dati dal Tier di storage primario dalle performance elevate al Tier di storage del pool di capacità secondario. 
+summary: Modificare la policy di suddivisione in livelli in NetApp Workload Factory per riallocare i dati dal livello di storage primario ad alte prestazioni al livello di storage del pool di capacità secondario. 
 ---
-= Modifica della policy di tiering di un volume in una fabbrica di carichi di lavoro BlueXP 
+= Modificare la politica di suddivisione in livelli di un volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Nella fabbrica con carichi di lavoro BlueXP , è possibile modificare la policy di tiering per riallocare automaticamente i dati dal Tier di storage primario dalle performance elevate al Tier di storage del pool di capacità secondario.
+In NetApp Workload Factory è possibile modificare la policy di suddivisione in livelli per riallocare automaticamente i dati dal livello di storage primario ad alte prestazioni al livello di storage del pool di capacità secondario.
 
 .A proposito di questa attività
 È possibile modificare in qualsiasi momento la policy di tiering di un volume. La policy di tiering viene definita per volume.
@@ -39,10 +39,11 @@ Tenere presente che alcune policy di tiering dispongono di un periodo di raffred
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda Volumes (volumi), seleziona il menu a tre punti del volume per cui modificare la policy di tiering.
+. Dalla scheda Volumi, seleziona il menu delle azioni del volume per cui vuoi modificare la politica di suddivisione in livelli.
 . Selezionare *azioni avanzate*, quindi *Modifica criterio di tiering*.
 . Nella pagina Change tiering policy (Modifica policy di tiering), selezionare per copiare la policy di tiering del volume di origine o selezionare una delle seguenti policy di tiering:
 +

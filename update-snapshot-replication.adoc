@@ -11,14 +11,15 @@ summary: Aggiorna manualmente i dati dello snapshot trasferiti tra i volumi di o
 
 
 [role="lead"]
-Una relazione di replica dispone di una pianificazione della replica definita, ma è possibile aggiornare manualmente i dati Snapshot trasferiti tra volumi di origine e di destinazione in qualsiasi momento nella fabbrica del carico di lavoro BlueXP .
+Una relazione di replicazione ha una pianificazione di replicazione impostata, ma è possibile aggiornare manualmente i dati snapshot trasferiti tra i volumi di origine e di destinazione in NetApp Workload Factory in qualsiasi momento.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da aggiornare.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da aggiornare.
 . Selezionare *Aggiorna ora*.
 . Nella finestra di dialogo Aggiorna, selezionare *Aggiorna ora*.
 

@@ -44,7 +44,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Creare
 
 ==== Replica inversa supportata da FSX per ONTAP a on-premise
 
-La replica inversa è ora disponibile da un file system FSX per ONTAP a un cluster ONTAP on-premise dall'interno della console della workload factory.
+La replica inversa è ora disponibile da un file system FSx for ONTAP a un cluster ONTAP locale dalla console Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html["Replica inversa"]
 
@@ -124,4 +124,4 @@ Workload Factory ora supporta set alternativi di credenziali ONTAP per la creazi
 
 === Terminologia aggiornata per le autorizzazioni
 
-L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione.
+L'interfaccia utente e la documentazione di Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione.

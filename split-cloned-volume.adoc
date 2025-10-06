@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: Dividere un FlexVol volume clone dal volume principale per rendere il clone un normale FlexVol volume in lettura/scrittura. 
 ---
-= Suddivisione di un volume clonato in una fabbrica di workload BlueXP 
+= Dividi un volume clonato in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Suddividi un FlexVol volume clonato dal suo volume principale per rendere il clone un normale FlexVol volume in lettura/scrittura in una fabbrica di workload BlueXP .
+Dividere un FlexVol volume clonato dal suo volume padre per trasformare il clone in un normale FlexVol volume di lettura/scrittura in NetApp Workload Factory.
 
 I dati sono accessibili sul clone e sull'immagine principale durante la divisione. Il processo di suddivisione aggiorna solo i metadati e richiede un io minimo. Non vengono copiati blocchi di dati.
 
@@ -35,9 +35,11 @@ Prima di dividere un volume clonato, prendere in considerazione quanto segue:
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Selezionare la scheda *volumi*.
-. Nella scheda volumi, selezionare il menu a tre punti del volume con il volume clonato da dividere.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu azioni del file system con il clone del volume da dividere, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Nella scheda Volumi, selezionare il menu azioni del volume contenente il volume clonato da dividere.
 . Selezionare *azioni protezione dati*, quindi *Dividi volume clonato*.
 . Nella finestra di dialogo Dividi volume, selezionare *Elimina*.
 

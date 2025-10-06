@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: Crea una snapshot manuale di un volume FSX per ONTAP in una workload factory BlueXP . Gli snapshot sono versioni point-in-time dei contenuti del tuo volume. 
+summary: Creare uno snapshot manuale di un volume FSx for ONTAP in NetApp Workload Factory.  Gli snapshot sono versioni puntuali del contenuto del volume. 
 ---
 = Crea una snapshot manuale di un volume FSX per ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Crea una snapshot manuale di un volume FSX per ONTAP in una workload fa
 
 
 [role="lead"]
-Crea una snapshot manuale di un volume FSX per ONTAP in una workload factory BlueXP . Gli snapshot sono versioni point-in-time dei contenuti del tuo volume.
+Creare uno snapshot manuale di un volume FSx for ONTAP in NetApp Workload Factory.  Gli snapshot sono versioni puntuali del contenuto del volume.
 
 Gli snapshot sono risorse di volumi e offrono acquisizioni istantanee dei dati che occupano spazio solo per i dati modificati. A causa del cambiamento dei dati nel tempo, le snapshot solitamente occupano più spazio man mano che diventano più datate.
 
@@ -25,10 +25,11 @@ Per creare uno snapshot manuale di un volume è necessario associare un collegam
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene il volume per cui creare uno snapshot, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu azioni del file system che contiene il volume per cui creare uno snapshot, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da proteggere con le istantanee.
+. Dalla scheda *Volumi*, seleziona il menu delle azioni per il volume da proteggere con gli snapshot.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
 . Dalla pagina Gestisci snapshot, seleziona *Crea snapshot*.
 . Nella finestra di dialogo Crea uno snapshot, procedi come segue:

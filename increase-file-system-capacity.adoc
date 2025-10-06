@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
 summary: Regola manualmente la capacità di archiviazione SSD di un file system FSx for ONTAP per soddisfare le esigenze dei carichi di lavoro basati sui progetti con diversi set di lavoro attivi. 
 ---
-= Regola la capacità del file system nella fabbrica dei carichi di lavoro
+= Regola la capacità del file system in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -15,7 +15,7 @@ Regola manualmente la capacità di archiviazione dell'unità a stato solido (SSD
 
 Aumentare la capacità di archiviazione SSD di un file system FSx for ONTAP quando la quantità di capacità di archiviazione SSD utilizzata supera una soglia specificata oppure ridurre la capacità di archiviazione SSD quando i set di lavoro sono inattivi per migliorare l'efficienza dei costi.
 
-In alternativa, puoi link:enable-auto-capacity-management.html["attivare la funzione di gestione automatica della capacità"] fare in modo che la fabbrica dei carichi di lavoro gestisca la capacità del file system al tuo posto.
+In alternativa, puoilink:enable-auto-capacity-management.html["attivare la funzione di gestione automatica della capacità"] quindi Workload Factory gestisce la capacità del file system per te.
 
 
 NOTE: La riduzione della capacità di archiviazione SSD è supportata solo per i file system di seconda generazione.
@@ -36,7 +36,7 @@ Per regolare la capacità di un file system, è necessario primalink:enable-auto
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
 . Dalla Dashboard, seleziona *Regola capacità SSD*.
 . Selezionare il file system per il quale si desidera regolare la capacità, quindi selezionare *Continua*.
 +

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-backup.html 
 keywords: create backup, volume backup, back up a volume 
-summary: Creare un backup manuale di un volume in fabbrica con carichi di lavoro BlueXP  al di fuori dei backup pianificati regolarmente. 
+summary: Creare un backup manuale di un volume in NetApp Workload Factory al di fuori dei backup pianificati regolarmente. 
 ---
-= Creazione di un backup manuale di un volume in una fabbrica di workload BlueXP 
+= Creare un backup manuale di un volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Creare un backup manuale di un volume al di fuori di backup programmati regolarmente in BlueXP  workload Factory.
+Creare un backup manuale di un volume al di fuori dei backup pianificati regolarmente in NetApp Workload Factory.
 
 .A proposito di questa attività
 I backup di FSX per ONTAP vengono eseguiti per volume, pertanto ogni backup contiene solo i dati di un volume specifico.
@@ -23,10 +23,11 @@ Per eseguire il backup dei volumi, sia il volume che il file system devono dispo
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da sottoporre a backup.
+. Dalla scheda *Volumi*, selezionare l'azione relativa al volume di cui eseguire il backup.
 . Selezionare *azioni protezione dati*, *FSX per il backup ONTAP*, quindi *Backup manuale*.
 . Nella finestra di dialogo Backup manuale, immettere un nome per il backup.
 . Selezionare *Backup*.

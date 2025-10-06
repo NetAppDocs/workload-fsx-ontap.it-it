@@ -11,7 +11,7 @@ summary: Abilita le snapshot per la conservazione a lungo termine, che consente 
 
 
 [role="lead"]
-In BlueXP  workload Factory, puoi abilitare le snapshot per la conservazione a lungo termine, che ti consente di replicare snapshot specifiche per il disaster recovery a lungo termine.
+In NetApp Workload Factory è possibile abilitare gli snapshot per la conservazione a lungo termine, il che consente di replicare snapshot specifici per il ripristino di emergenza a lungo termine.
 
 La conservazione a lungo termine permette ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover trasparente delle applicazioni attraverso una copia secondaria.
 
@@ -21,10 +21,11 @@ Quando un cluster ONTAP on-premise è la destinazione della relazione di replica
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare l'azione del file system da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, selezionare il menu a tre punti della pianificazione delle relazioni di replica da modificare.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della pianificazione delle relazioni di replicazione da modificare.
 . Selezionare *Modifica conservazione a lungo termine*.
 . Nella finestra di dialogo Modifica conservazione a lungo termine, attivare o disattivare gli snapshot per la conservazione a lungo termine.
 . Se si sceglie di disattivare gli snapshot per la conservazione a lungo termine, selezionare *Applica* per completare questa operazione.

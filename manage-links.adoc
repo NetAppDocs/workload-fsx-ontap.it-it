@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: 'Puoi visualizzare i link associati al tuo account, aggiornare le password per l"autenticazione dei link e rimuovere un link nella fabbrica dei carichi di lavoro BlueXP.' 
+summary: 'Puoi visualizzare i link associati al tuo account, aggiornare le password per l"autenticazione dei link e rimuovere un link in NetApp Workload Factory.' 
 ---
-= Gestisci i collegamenti della fabbrica dei carichi di lavoro
+= Gestisci i collegamenti di Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gestisci i link associati al tuo account Workload Factory. Puoi visualizzare i link associati a un file system FSx for ONTAP, specificare le password utilizzate per l'autenticazione dei link e rimuovere i link dalla console Workload Factory.
+Gestisci i link associati al tuo account Workload Factory.  È possibile visualizzare i collegamenti associati a un file system FSx for ONTAP , fornire le password utilizzate per l'autenticazione dei collegamenti e rimuovere i collegamenti dalla console Workload Factory.
 
 link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:create-link.html["creare e associare un collegamento"].
 
@@ -23,11 +23,10 @@ link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:creat
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Dalla pagina iniziale, selezionare *Collegamenti* dal menu.
+. Dal menu Archiviazione, seleziona *Amministrazione* e poi *Collegamenti*.
 +
-image:screenshot-menu-links.png["Una schermata che mostra come aprire la pagina dei collegamenti."]
+I link esistenti vengono visualizzati nella pagina Link.
 
-. Se sono presenti collegamenti, la pagina di panoramica fornisce le informazioni.
 . Per visualizzare i file system FSX per ONTAP associati a un collegamento, selezionare il pulsante *Visualizza* nella sezione risorse associate.
 +
 image:screenshot-view-link-details.png["Una schermata che mostra i file system FSX per ONTAP che utilizzano un collegamento specifico."]
@@ -39,7 +38,7 @@ image:screenshot-view-link-details.png["Una schermata che mostra i file system F
 
 == Modificare un collegamento
 
-Non è possibile modificare un collegamento dall'interfaccia di fabbrica del carico di lavoro. Se è necessario apportare una modifica a un collegamento, è necessario creare un nuovo collegamento e quindi associarlo al file system.
+Non è possibile modificare un collegamento dall'interfaccia di Workload Factory.  Se devi apportare una modifica a un collegamento, dovrai creare un nuovo collegamento e quindi associarlo al tuo file system.
 
 
 NOTE: È possibile modificare la configurazione di rete Lambda (ad esempio VPC, subnet e gruppi di sicurezza) utilizzando la console AWS e le modifiche verranno riflesse nell'interfaccia utente di gestione dei collegamenti; tuttavia, queste modifiche possono causare problemi di connettività tra Lambda e ONTAP e non sono consigliate.
@@ -48,17 +47,18 @@ NOTE: È possibile modificare la configurazione di rete Lambda (ad esempio VPC, 
 
 == Autenticare un collegamento
 
-Fornisci una password utente amministrativo per le credenziali Factory del workload o un ARN segreto di AWS Secrets Manager per collegare il link a un file system FSX per ONTAP.
+Fornire una password utente amministrativa per le credenziali di Workload Factory o un ARN segreto di AWS Secrets Manager per connettere il collegamento a un file system FSx for ONTAP .
 
-AWS Secrets Manager non è supportato quando si utilizza un connettore.
+AWS Secrets Manager non è supportato quando si utilizza un agente Console.
 
 
 NOTE: Per ogni collegamento è supportato un solo metodo di autenticazione. Ad esempio, se si seleziona l'autenticazione del collegamento con AWS Secrets Manager, non sarà possibile modificare il metodo di autenticazione in un secondo momento.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system a cui associare un collegamento, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare *autentica il collegamento*.
 . Nella pagina di collegamento Authenticate (autenticazione), selezionare una modalità Authenticate (autenticazione):
 +
@@ -80,8 +80,9 @@ Se la password amministrativa non è valida, aggiornare la password per collegar
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system a cui associare un collegamento, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system a cui associare un collegamento, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare *Aggiorna password*.
 . Nella pagina di collegamento Authenticate (autenticazione), immettere due volte la nuova password.
 . Selezionare *Applica*.
@@ -96,17 +97,18 @@ La password viene aggiornata e il collegamento è ora collegato al file system F
 
 Puoi rimuovere un collegamento che non utilizzi più nel tuo ambiente. Qualsiasi file system FSX per ONTAP o altre risorse che utilizzavano il collegamento non potranno utilizzare determinate funzionalità dopo la rimozione del collegamento.
 
-Il link viene eliminato solo da workload Factory e non dall'ambiente AWS. Devi eliminare la funzione Lambda dal tuo account AWS dopo aver rimosso il link nella fabbrica dei carichi di lavoro.
+Tieni presente che il collegamento viene eliminato solo da Workload Factory e non dall'ambiente AWS.  Dopo aver rimosso il collegamento in Workload Factory, è necessario eliminare la funzione Lambda dal proprio account AWS.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Dalla pagina iniziale, selezionare *Collegamenti* dal menu.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, seleziona *Amministrazione* e poi *Collegamenti*.
 +
-image:screenshot-menu-links.png["Una schermata che mostra come aprire la pagina dei collegamenti."]
+I link esistenti vengono visualizzati nella pagina Link.
 
-. Nella pagina Collegamenti, selezionare il pulsante menu e selezionare *Rimuovi*.
+. Dalla pagina Collegamenti, seleziona il menu azioni del collegamento da rimuovere, quindi seleziona *Rimuovi*.
 +
-image:screenshot-remove-link.png["Uno screenshot che mostra come rimuovere un collegamento dalla fabbrica del carico di lavoro."]
+image:screenshot-remove-link.png["Uno screenshot che mostra come rimuovere un collegamento da Workload Factory."]
 
 . In caso affermativo, selezionare nuovamente *Rimuovi*.
 

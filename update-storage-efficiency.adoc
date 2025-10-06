@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-storage-efficiency.html 
 keywords: storage efficiency change, update storage efficiency 
-summary: In BlueXP  workload Factory, è possibile aggiornare le impostazioni di efficienza dello storage dopo la creazione dei volumi. 
+summary: In NetApp Workload Factory è possibile aggiornare le impostazioni di efficienza dello storage dopo la creazione del volume. 
 ---
 = Consente di aggiornare l'impostazione dell'efficienza dello storage di un volume
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: In BlueXP  workload Factory, è possibile aggiornare le impostazioni d
 
 
 [role="lead"]
-In BlueXP  workload Factory, è possibile aggiornare le impostazioni di efficienza dello storage dopo la creazione dei volumi.
+In NetApp Workload Factory è possibile aggiornare le impostazioni di efficienza dello storage dopo la creazione del volume.
 
 .A proposito di questa attività
 La funzionalità di efficienza dello storage comprende deduplica, compressione dei dati e data compaction per ottenere risparmi di spazio ottimali su FlexVol volume. La deduplica elimina i blocchi di dati duplicati. La compressione dei dati comprime i blocchi di dati per ridurre la quantità di storage fisico richiesta. La compattazione dei dati memorizza più dati in meno spazio per aumentare l'efficienza dello storage.
@@ -22,10 +22,11 @@ I volumi utilizzano il thin provisioning abilitando o disabilitando l'efficienza
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda Volumes (volumi), seleziona il menu a tre punti del volume per cui modificare la policy di tiering.
+. Dalla scheda Volumi, seleziona il menu delle azioni del volume per cui vuoi modificare la politica di suddivisione in livelli.
 . Selezionare *azioni avanzate*, quindi *Imposta efficienza di archiviazione*.
 . Consente di attivare o disattivare l'efficienza dello storage di volumi.
 . Selezionare *Applica* per salvare la modifica.

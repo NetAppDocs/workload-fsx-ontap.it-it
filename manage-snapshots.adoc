@@ -21,12 +21,13 @@ Modifica il nome, l'etichetta e il periodo di conservazione di uno snapshot.  Se
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare il menu a tre punti per il volume con lo snapshot da modificare.
+. Dalla scheda *Volumi*, selezionare il menu azioni per il volume con lo snapshot da modificare.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
-. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per lo snapshot da modificare, quindi seleziona *Modifica*.
+. Dalla pagina Gestisci snapshot, seleziona il menu delle azioni per lo snapshot da modificare, quindi seleziona *Modifica*.
 . Nella finestra di dialogo Modifica uno snapshot, puoi modificare quanto segue:
 +
 .. Cambia il nome.
@@ -52,12 +53,13 @@ Abilita l'accesso alla directory degli snapshot per consentire agli utenti di ac
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare il menu a tre punti per il volume con lo snapshot a cui accedere.
+. Dalla scheda *Volumi*, selezionare il menu delle azioni per il volume con lo snapshot a cui accedere.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
-. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per accedere allo snapshot, quindi seleziona *Accesso*.
+. Dalla pagina Gestisci snapshot, seleziona il menu delle azioni a cui vuoi che lo snapshot acceda, quindi seleziona *Accesso*.
 . Nella finestra di dialogo Accedi allo snapshot, seleziona *Abilita accesso alla directory snapshot* per accedere a questo snapshot del volume e a tutti gli snapshot del volume.
 +
 ** Per volumi NFS: selezionare *Percorso di accesso NFS* per visualizzare il percorso NFS per lo snapshot.
@@ -86,12 +88,13 @@ Gli snapshot immutabili non possono essere eliminati finché non termina il peri
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare il menu a tre punti per il volume contenente lo snapshot da eliminare.
+. Dalla scheda *Volumi*, selezionare il menu azioni per il volume con lo snapshot da eliminare.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
-. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per lo snapshot da eliminare, quindi seleziona *Elimina*.
+. Dalla pagina Gestisci snapshot, seleziona il menu delle azioni per lo snapshot da eliminare, quindi seleziona *Elimina*.
 . Nella finestra di dialogo Elimina snapshot, digitare "delete".
 . Selezionare *Elimina* per confermare l'eliminazione.
 

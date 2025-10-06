@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-storage-vm.html 
 keywords: create storage VM, create svm 
-summary: 'Puoi creare un FSX per ONTAP storage VM (SVM) per fornire servizi dati e storage per i carichi di lavoro in una fabbrica di workload BlueXP .' 
+summary: 'È possibile creare una VM di archiviazione FSx per ONTAP (SVM) per fornire servizi di archiviazione e dati per i carichi di lavoro in NetApp Workload Factory.' 
 ---
 = Crea una macchina virtuale di storage per un file system FSX per ONTAP
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'Puoi creare un FSX per ONTAP storage VM (SVM) per fornire servizi dati
 
 
 [role="lead"]
-Crea una Storage VM (SVM) per un file system FSX per ONTAP per accedere ai servizi dati e allo storage virtualmente per i tuoi carichi di lavoro in una fabbrica di workload BlueXP .
+Crea una VM di archiviazione (SVM) per un file system FSx for ONTAP per accedere virtualmente ai servizi di archiviazione e dati per i tuoi carichi di lavoro in NetApp Workload Factory.
 
 .A proposito di questa attività
-Le macchine virtuali storage sono file server isolati che è possibile utilizzare per accedere ai dati da ogni workload in workload Factory Storage. Ciascuna SVM dispone delle proprie credenziali amministrative e dei propri endpoint per l'amministrazione e l'accesso ai dati.
+Le VM di archiviazione sono file server isolati che puoi utilizzare per accedere ai dati di ciascun carico di lavoro in Workload Factory Storage.  Ogni SVM ha le proprie credenziali amministrative e i propri endpoint per amministrare e accedere ai dati.
 
 Grazie alle SVM, quando accedi ai dati in FSX per ONTAP, client e workstation montano un volume, una CIFS/SMB share o una LUN iSCSI ospitata da una SVM utilizzando l'endpoint (indirizzo IP) della SVM.
 
@@ -25,15 +25,16 @@ Verifica del numero supportato di VM storage per file system. Fare riferimento a
 
 == Creare una VM di storage
 
-Puoi creare una macchina virtuale di storage dalla console della workload Factory. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
+È possibile creare una VM di archiviazione dalla console Workload Factory.  Puoi anche utilizzare i seguenti strumenti disponibili in Codebox: REST API, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^] .
 
 
 NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda FSX per ONTAP, seleziona il menu a tre punti del file system per cui creare una VM di storage e seleziona *Crea una VM di storage*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system per cui creare una VM di archiviazione e seleziona *Crea una VM di archiviazione*.
 . Nella pagina Storage VM, in Storage VM Configuration (Configurazione Storage VM), fornire quanto segue:
 +
 .. *Nome*: Immettere un nome per la VM di archiviazione.

@@ -11,17 +11,18 @@ summary: La replica di una VM di storage su un altro file system FSX per ONTAP f
 
 
 [role="lead"]
-La replica di una VM di storage su un altro file system FSX per ONTAP in una workload Factory di BlueXP  fornisce un layer di protezione per l'accesso ai dati in caso di perdita di dati. Questa operazione replica tutti i volumi di una macchina virtuale di storage in un altro file system FSX per ONTAP.
+La replica di una VM di storage su un altro file system FSx for ONTAP in NetApp Workload Factory fornisce un livello protettivo di accesso ai dati in caso di perdita di dati.  Questa operazione replica tutti i volumi in una VM di archiviazione su un altro file system FSx for ONTAP .
 
 .Prima di iniziare
 Per replicare una VM di archiviazione su un altro file system FSx for ONTAP, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system con la VM di archiviazione da replicare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system con la VM di archiviazione da replicare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.
-. Dalla scheda Storage VM, seleziona il menu a tre punti della VM storage per cui replicare una SVM.
+. Dalla scheda VM di archiviazione, selezionare il menu delle azioni della VM di archiviazione per cui replicare una SVM.
 . Selezionare *Replica VM di archiviazione*.
 . Nella pagina Crea replica, in destinazione replica, specificare quanto segue:
 +
@@ -30,7 +31,7 @@ Per replicare una VM di archiviazione su un altro file system FSx for ONTAP, è 
 .. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`.
 .. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione.
 +
-_Auto_ è la policy di tiering predefinita quando si crea un volume utilizzando l'interfaccia utente di workload Factory FSX for ONTAP. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^]nella documentazione di AWS FSX per NetApp ONTAP.
+_Auto_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando l'interfaccia utente Workload Factory FSx for ONTAP .  Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento alink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx per NetApp ONTAP .
 
 .. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s. In alternativa, selezionare *illimitato*.
 +

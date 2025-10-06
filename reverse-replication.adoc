@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: Invertire una relazione di replica in modo che il volume di destinazione diventi il volume di origine. 
 ---
-= Invertire una relazione di replica nella fabbrica dei carichi di lavoro BlueXP 
+= Invertire una relazione di replicazione in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Invertire una relazione di replica nella fabbrica dei carichi di lavoro BlueXP , in modo che il volume di destinazione diventi il volume di origine.
+Invertire una relazione di replicazione in NetApp Workload Factory in modo che il volume di destinazione diventi il ​​volume di origine.
 
 Le operazioni inverse sono supportate per:
 
@@ -32,10 +32,11 @@ Assicurarsi di conoscere i ruoli attuali e futuri dei volumi di origine e di des
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da invertire.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da invertire.
 . Selezionare *Inverti relazione*.
 . Nella finestra di dialogo relazione inversa, selezionare *Inverti*.
 

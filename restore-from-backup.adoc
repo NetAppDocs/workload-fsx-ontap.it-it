@@ -4,23 +4,24 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: Ripristina un volume da un backup in qualsiasi file system FSX per ONTAP nel tuo account AWS. 
 ---
-= Ripristino di un volume da un backup in una fabbrica di workload BlueXP 
+= Ripristina un volume da un backup in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Nella fabbrica dei carichi di lavoro BlueXP , puoi ripristinare un volume da un backup su qualsiasi file system FSX per ONTAP nel tuo account AWS.
+In NetApp Workload Factory, puoi ripristinare un volume da un backup su qualsiasi file system FSx for ONTAP nel tuo account AWS.
 
 Workload Factory determina se si dispone di capacità sufficiente per il ripristino e, in caso contrario, può aggiungere automaticamente capacità del Tier di storage SSD.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da ripristinare da un backup.
+. Dalla scheda *Volumi*, selezionare il menu delle azioni per il volume da ripristinare da un backup.
 . Selezionare *azioni protezione dati*, *FSX per il backup ONTAP*, quindi *Ripristina da un backup*.
 . Nella finestra di dialogo Ripristina da un backup, specificare quanto segue:
 +
@@ -35,8 +36,8 @@ Workload Factory determina se si dispone di capacità sufficiente per il riprist
 Quando la capacità del file system è limitata, si possono verificare le seguenti condizioni:
 
 +
-** Il ripristino può eseguire il push della capacità utilizzata oltre la soglia specificata. È possibile completare l'operazione di ripristino. Considerare link:increase-file-system-capacity.html["Aggiunta manuale della capacità del Tier di storage SSD"] o selezionare una fabbrica di carichi di lavoro per aggiungere automaticamente la capacità del Tier di storage SSD.
-** Il ripristino richiede capacità SSD aggiuntiva. È necessario selezionare affinché la fabbrica del carico di lavoro aggiunga automaticamente la capacità del Tier di storage SSD per procedere.
+** Il ripristino può spingere la capacità utilizzata oltre la soglia specificata.  È possibile completare l'operazione di ripristino.  Considerarelink:increase-file-system-capacity.html["Aggiunta manuale della capacità del Tier di storage SSD"] oppure selezionando Workload Factory per aggiungere automaticamente la capacità del livello di archiviazione SSD.
+** Il ripristino richiede capacità SSD aggiuntiva.  Per procedere, è necessario selezionare Workload Factory per aggiungere automaticamente la capacità del livello di archiviazione SSD.
 
 
 . Selezionare *Restore* (Ripristina).

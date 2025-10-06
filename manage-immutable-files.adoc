@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files 
 summary: È possibile aggiornare alcune impostazioni dei file immutabili quando la funzione è attivata. 
 ---
-= Gestire file immutabili per un volume in una fabbrica di carichi di lavoro BlueXP 
+= Gestire i file immutabili per un volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,9 +17,10 @@ Si noti che l'abilitazione dei file immutabili è possibile solo durante link:cr
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Selezionare la scheda *volumi*.
-. Nella scheda volumi, selezionare il menu a tre punti del volume da clonare.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nella scheda Volumi, seleziona il menu delle azioni del volume da clonare.
 . Selezionare *azioni protezione dati*, quindi *Gestisci file immutabili*.
 . Nella pagina Gestisci file immutabili, è possibile aggiornare quanto segue:
 +
@@ -35,6 +36,7 @@ Si noti che l'abilitazione dei file immutabili è possibile solo durante link:cr
 
 
 ** *Autocommit*: Abilita o disabilita la funzione per assegnare automaticamente i file al WORM che non sono stati modificati durante il periodo di autocommit.
+** *Eliminazione privilegiata*: abilita o disabilita la funzionalità.  L'abilitazione di questa funzionalità consente all'amministratore SnapLock di eliminare un volume WORM non scaduto.  Questa funzionalità è supportata solo nella modalità di conservazione Enterprise.
 ** *Modalità di aggiunta volume*: Consente di attivare o disattivare la funzione. Abilitando la modalità di aggiunta di volumi è possibile aggiungere nuovi contenuti ai file WORM.
 
 

@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: increase-volume-capacity.html 
 keywords: increase capacity, volume capacity 
-summary: In qualsiasi momento puoi aumentare manualmente la capacità di un volume in fabbrica con carichi di lavoro BlueXP . 
+summary: È possibile aumentare manualmente la capacità di un volume in NetApp Workload Factory in qualsiasi momento. 
 ---
-= Aumentare la capacità del volume nella fabbrica di carichi di lavoro BlueXP 
+= Aumenta la capacità del volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aumentare manualmente la capacità di un volume in qualsiasi momento nella fabbrica di carichi di lavoro BlueXP .
+Aumenta manualmente la capacità di un volume in qualsiasi momento in NetApp Workload Factory.
 
-In alternativa, puoi link:edit-volume-autogrow.html["attivare la funzione di crescita automatica"]lasciare che la capacità del volume sia gestita in fabbrica dai carichi di lavoro.
+Facoltativamente, puoilink:edit-volume-autogrow.html["attivare la funzione di crescita automatica"] per consentire a Workload Factory di gestire la capacità del volume per te.
 
 .A proposito di questa attività
 Per una LUN iSCSI, questa operazione aumenta la dimensione del LUN host. Una volta aumentata la capacità, seguire la procedura fornita dal sistema operativo host per rilevare le nuove dimensioni del LUN ed espandere il file system del LUN.
@@ -23,10 +23,11 @@ Per aumentare la capacità del volume, è necessario associare un collegamento. 
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda volumi, selezionare il menu a tre punti del volume per cui aumentare la capacità.
+. Dalla scheda Volumi, selezionare il menu delle azioni del volume per cui si desidera aumentare la capacità.
 . Selezionare *azioni di base*, quindi *aumenta capacità volume*.
 . Nella finestra di dialogo di aumento della capacità del volume, fornire quanto segue:
 +
@@ -34,5 +35,5 @@ Per aumentare la capacità del volume, è necessario associare un collegamento. 
 .. Se necessario, sostituire l'unità.
 
 
-. Selezionare *aumenta*.
+. Selezionare *Aumenta* per applicare la modifica.
 

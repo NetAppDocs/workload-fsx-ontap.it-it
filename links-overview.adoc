@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: Un collegamento in fabbrica dei carichi di lavoro crea una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. 
+summary: Un collegamento Workload Factory crea una relazione di trust e connettività tra un account Workload Factory e uno o più file system FSx for ONTAP . 
 ---
-= Scopri di più sui collegamenti alla BlueXP  workload Factory
+= Scopri i link di NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Un collegamento alla fabbrica dei carichi di lavoro BlueXP  crea una relazione di fiducia e connettività tra un account workload Factory e uno o più file system FSX per ONTAP. Ciò ti consente di monitorare e gestire determinate funzionalità del file system direttamente dalle chiamate delle API REST di ONTAP che non sono disponibili tramite l'API Amazon FSX per ONTAP.
+Un collegamento NetApp Workload Factory crea una relazione di trust e connettività tra un account Workload Factory e uno o più file system FSx for ONTAP .  Ciò consente di monitorare e gestire determinate funzionalità del file system direttamente dalle chiamate API REST ONTAP che non sono disponibili tramite l'API Amazon FSx for ONTAP .
 
-Non è necessario un collegamento per iniziare con la fabbrica dei carichi di lavoro, ma in alcuni casi è necessario creare un collegamento per sbloccare tutte le funzioni di fabbrica dei carichi di lavoro e le capacità dei carichi di lavoro.
+Per iniziare a usare Workload Factory non è necessario un collegamento, ma in alcuni casi sarà necessario crearne uno per sbloccare tutte le funzionalità di Workload Factory e le capacità del carico di lavoro.
 
 
 
 == Perché i link sono utili
 
-I link sono utili perché consentono alla fabbrica dei carichi di lavoro di eseguire operazioni non disponibili in modo nativo tramite l'API Amazon FSx for ONTAP . I link abilitano funzionalità e automazioni ONTAP avanzate, che migliorano la gestione dei file system FSx for ONTAP .
+I collegamenti sono utili perché consentono a Workload Factory di eseguire operazioni che non sono disponibili in modo nativo tramite l'API Amazon FSx for ONTAP .  I collegamenti abilitano funzionalità e automazioni ONTAP avanzate, che migliorano la gestione dei file system FSx per ONTAP .
 
 Ecco alcuni vantaggi derivanti dall'utilizzo dei link:
 
-* Il collegamento consente a BlueXP di inviare comandi ONTAP direttamente al file system FSx for ONTAP , offrendo funzionalità ONTAP avanzate che vanno oltre ciò che AWS offre in modo nativo.
+* Il collegamento consente alla console NetApp di inviare comandi ONTAP direttamente al file system FSx for ONTAP , offrendo funzionalità ONTAP avanzate che vanno oltre ciò che AWS offre in modo nativo.
 * I collegamenti sfruttano AWS Lambda per eseguire codice in risposta agli eventi. Questo approccio serverless elimina la dipendenza da un'istanza in esecuzione nella tua VPC.
 
 
@@ -35,15 +35,15 @@ I link sfruttano AWS Lambda. Lambda esegue il codice in risposta agli eventi e g
 
 Dopo aver creato un collegamento, è possibile associarlo a uno o più file system FSx per ONTAP . Ogni file system può essere associato a un solo collegamento nello stesso account NetApp. Se si dispone di più account NetApp, è possibile associare un singolo file system a collegamenti aggiuntivi in diversi account NetApp.
 
-È possibile creare e associare collegamenti dal carico di lavoro di archiviazione nella fabbrica dei carichi di lavoro.
+È possibile creare e associare collegamenti dal carico di lavoro di archiviazione in Workload Factory.
 
-È possibile autenticare i collegamenti utilizzando le credenziali archiviate nel servizio Workload Factory o con le credenziali archiviate in AWS Secrets Manager. Workload Factory non supporta la modifica delle modalità di autenticazione.
+È possibile autenticare i collegamenti utilizzando le credenziali archiviate nel servizio credenziali Workload Factory oppure con le credenziali archiviate in AWS Secrets Manager.  Workload Factory non supporta la modifica delle modalità di autenticazione.
 
 
 
 == Costi
 
-Ogni transazione eseguita da Lambda comporta un addebito. Poiché Lambda agisce come proxy tra i due sistemi, quando Lambda invia una richiesta all'API REST ONTAP su un file system e quando invia la risposta a una fabbrica dei carichi di lavoro viene addebitato un costo.
+Ogni transazione eseguita da Lambda comporta un costo.  Poiché Lambda funge da proxy tra i due sistemi, viene addebitato un costo quando Lambda invia una richiesta all'API REST ONTAP su un file system e quando invia la risposta a Workload Factory.
 
 link:https://aws.amazon.com/lambda/pricing/["Scopri di più sui costi legati all'utilizzo di AWS Lambda"^]
 
@@ -51,7 +51,7 @@ link:https://aws.amazon.com/lambda/pricing/["Scopri di più sui costi legati all
 
 == Quando è necessario un collegamento
 
-Workload Factory richiede un collegamento per visualizzare alcune informazioni ed eseguire alcune attività. Se si tenta di eseguire un'operazione che richiede un collegamento e non è stato associato un collegamento al file system FSx for ONTAP , Workload Factory avvisa che l'operazione richiede un collegamento.
+La fabbrica del carico di lavoro necessita di un collegamento per visualizzare alcune informazioni ed eseguire alcune attività.  Se si tenta di eseguire un'operazione che richiede un collegamento e non è stato associato un collegamento al file system FSx for ONTAP , Workload Factory avvisa che l'operazione richiede un collegamento.
 
 Le funzioni che richiedono un collegamento includono:
 

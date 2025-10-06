@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
 keywords: auto capacity, automatic capacity management, file system capacity 
-summary: Abilitando questa funzionalità, i workload Factory aggiungono automaticamente storage incrementale a un file system FSX per ONTAP con il variare delle esigenze di capacità nel tempo. 
+summary: Abilitando questa funzionalità, Workload Factory aggiunge automaticamente spazio di archiviazione incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo. 
 ---
 = Abilita la gestione automatica della capacità per un file system FSX per ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Abilitando questa funzionalità, i workload Factory aggiungono automati
 
 
 [role="lead"]
-Abilitando la gestione automatica della capacità, BlueXP Workload Factory aggiunge automaticamente storage incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo. Inoltre, l'abilitazione di questa funzionalità elimina la necessità di monitorare manualmente la capacità e riduce il rischio di letture e scritture di dati applicativi che potrebbero avere un impatto negativo.
+Abilitando la gestione automatica della capacità, NetApp Workload Factory aggiunge automaticamente storage incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.  Inoltre, l'abilitazione di questa funzionalità elimina la necessità di monitorare manualmente la capacità e riduce il rischio di letture e scritture di dati applicativi che hanno un impatto negativo.
 
 .A proposito di questa attività
 Ogni 30 minuti viene eseguita una scansione del file system FSX per ONTAP per determinare se è necessario aggiungere lo storage incrementale e controllare gli inode di volumi disponibili o il numero massimo di file e cartelle in un volume, in modo che il loro conteggio aumenti in base alle soglie di gestione automatica della capacità configurate.
@@ -23,15 +23,16 @@ La quantità massima di capacità di storage SSD per tutti i file system FSX per
 .Prima di iniziare
 Prima di iniziare, prendere in considerazione quanto segue:
 
-* Per completare questa attività, è necessario disporre di credenziali con autorizzazioni di lettura/scrittura nella fabbrica dei carichi di lavoro.
+* Per completare questa attività è necessario disporre di credenziali con autorizzazioni di lettura/scrittura in Workload Factory.
 * Per assicurarsi che il volume degli inode aumenti insieme alla capacità di archiviazione, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 * Si consiglia di non abilitare questa funzionalità durante la migrazione dei dati, poiché AWS impone un periodo di attesa minimo di sei ore tra un aumento della capacità dell'SSD e l'altro. Questa restrizione potrebbe ritardare gli adeguamenti, quindi è opportuno pianificare di conseguenza.
 
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system per abilitare la gestione automatica della capacità.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu delle azioni del file system per abilitare la gestione automatica della capacità.
 . Selezionare *Gestisci*.
 . In informazioni, selezionare l'icona a forma di matita accanto a *Gestione automatica della capacità*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *Gestione automatica della capacità*.
 . Nella finestra di dialogo *Gestione automatica della capacità*, specificare quanto segue:

@@ -2,23 +2,24 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: Interruzione di un rapporto di replica tra i volumi di origine e di destinazione in una workload factory BlueXP . 
+summary: Interrompere una relazione di replica tra volumi di origine e di destinazione in NetApp Workload Factory. 
 ---
-= Interruzione di un rapporto di replica in una fabbrica di workload BlueXP 
+= Interrompere una relazione di replica in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Interruzione di un rapporto di replica in una fabbrica di workload BlueXP . Quando si interrompe una relazione di replica, vengono pianificati gli aggiornamenti della replica dal volume di origine alla pausa del volume di destinazione. Il volume di destinazione passa da sola lettura a lettura/scrittura.
+Interrompere una relazione di replica in NetApp Workload Factory.  Quando si interrompe una relazione di replica, gli aggiornamenti di replica pianificati dal volume di origine al volume di destinazione vengono sospesi.  Il volume di destinazione passa da sola lettura a lettura/scrittura.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da arrestare.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da interrompere.
 . Selezionare *Pausa*.
 . Nella finestra di dialogo Interrompi replica, selezionare *Interrompi*.
 

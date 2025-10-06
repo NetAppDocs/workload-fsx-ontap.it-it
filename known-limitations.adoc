@@ -63,7 +63,7 @@ Le seguenti regioni supportano una capacità di throughput massima fino a 6 GB/s
 
 == VM di storage
 
-Il numero di VM di storage è limitato per SKU. La creazione di VM di storage oltre il limite non è supportata in fabbrica di workload.^1^
+Il numero di VM di archiviazione è limitato per SKU.  La creazione di VM di archiviazione oltre la limitazione non è supportata in Workload Factory.^1^
 
 Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestione di FSX per ONTAP Storage Virtual Machine"^] nella documentazione AWS per il numero massimo di SVM per file system.
 
@@ -117,7 +117,7 @@ Gestione sistema non supporta i collegamenti per la connettività di FSX per ONT
 
 == Supporto di AWS Secrets Manager
 
-AWS Secrets Manager non è supportato quando si utilizza un connettore.
+AWS Secrets Manager non è supportato quando si utilizza un agente Console.
 
 Nota:
 

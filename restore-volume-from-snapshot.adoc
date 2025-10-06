@@ -4,14 +4,14 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Ripristinare un volume FSX per ONTAP da uno snapshot quando il volume contiene file eliminati o danneggiati. 
 ---
-= Ripristina un volume da uno snapshot nella fabbrica del carico di lavoro
+= Ripristina un volume da uno snapshot in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-In Workload Factory è possibile ripristinare i dati da uno snapshot a un volume esistente o a un nuovo volume.  L'operazione di ripristino consente il recupero in un determinato momento quando un volume contiene file eliminati o danneggiati.
+In Workload Factory è possibile ripristinare i dati da uno snapshot a un volume esistente o a un nuovo volume. L'operazione di ripristino consente il recupero in un determinato momento quando un volume contiene file eliminati o danneggiati.
 
 .A proposito di questa attività
 È possibile ripristinare i dati da uno snapshot su un volume esistente o su un nuovo volume.
@@ -27,12 +27,13 @@ Prima di creare un volume da uno snapshot, prendere in considerazione le seguent
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *volumi*, selezionare il menu a tre punti per il volume da ripristinare da uno snapshot.
+. Dalla scheda *Volumi*, selezionare il menu delle azioni per il volume da ripristinare da uno snapshot.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
-. Dalla pagina Gestisci snapshot, seleziona il menu a tre punti per lo snapshot da ripristinare, quindi seleziona *Ripristina*.
+. Dalla pagina Gestisci snapshot, seleziona il menu delle azioni per lo snapshot da ripristinare, quindi seleziona *Ripristina*.
 . Nella finestra di dialogo Ripristina volume da uno snapshot, seleziona una delle seguenti opzioni:
 +
 ** Attiva/disattiva per selezionare *Ripristina come nuovo volume*.

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: 'Abilita l"aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te. È possibile disattivarla in qualsiasi momento.' 
+summary: 'Abilita l"aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te.  Puoi disattivarlo in qualsiasi momento.' 
 ---
-= Abilita l'aumento automatico del volume nella fabbrica dei carichi di lavoro
+= Abilita l'aumento automatico del volume in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Abilita l'aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te. È possibile disattivarla in qualsiasi momento.
+Abilita l'aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te.  Puoi disattivarlo in qualsiasi momento.
 
 In alternativa, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzando link:increase-volume-capacity.html["funzione di aumento della capacità del volume"].
 
@@ -23,10 +23,11 @@ Per abilitare l'aumento automatico del volume, è necessario associare un colleg
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda FSX per ONTAP, selezionare il menu a tre punti del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda volumi, selezionare il menu a tre punti per il volume che si desidera modificare.
+. Dalla scheda Volumi, seleziona il menu azioni per il volume che desideri modificare.
 . Selezionare *Azioni di base*, quindi *Imposta aumento automatico volume*.
 . Nella finestra di dialogo Imposta aumento automatico, abilita l'aumento automatico del volume per espandere automaticamente la capacità del volume fino al raggiungimento della dimensione massima. Questa funzione si adatta all'aumento dell'utilizzo dei dati, garantendo operazioni senza interruzioni.
 +

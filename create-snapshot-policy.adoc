@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Crea un criterio di snapshot personalizzato per una VM di archiviazione nella fabbrica dei carichi di lavoro. 
+summary: Crea un criterio di snapshot personalizzato per una VM di archiviazione in Workload Factory. 
 ---
-= Creare un criterio di snapshot per le VM di archiviazione nella fabbrica dei carichi di lavoro
+= Creare un criterio di snapshot per le VM di archiviazione in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crea un criterio di snapshot personalizzato per le VM di archiviazione nella fabbrica dei carichi di lavoro per gestire la creazione e la conservazione degli snapshot.  Un criterio di snapshot definisce il modo in cui il sistema crea snapshot per una VM di archiviazione.  È possibile creare un criterio di snapshot per una VM di archiviazione in un file system FSx for ONTAP .  È anche possibile condividere la policy su più VM di archiviazione.
+Crea un criterio di snapshot personalizzato per le VM di archiviazione in Workload Factory per gestire la creazione e la conservazione degli snapshot. Un criterio di snapshot definisce il modo in cui il sistema crea snapshot per una VM di archiviazione. È possibile creare un criterio di snapshot per una VM di archiviazione in un file system FSx for ONTAP . È anche possibile condividere la policy su più VM di archiviazione.
 
 .A proposito di questa attività
 È possibile creare un criterio di snapshot personalizzato diverso da quello delle tre policy integrate per FSX for ONTAP:
@@ -38,10 +38,11 @@ La personalizzazione di un criterio consente di specificare quando creare le sna
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *archiviazione*, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.
-. Dalla scheda *Storage VM*, selezionare il menu a tre punti per il volume da proteggere con gli snapshot pianificati, quindi *azioni avanzate* e *Gestisci criteri snapshot*.
+. Dalla scheda *VM di archiviazione*, seleziona il menu delle azioni per il volume da proteggere con snapshot pianificati, quindi *Azioni avanzate* e infine *Gestisci criteri snapshot*.
 . Nella pagina di gestione dei criteri di snapshot, selezionare *Crea criterio di snapshot*.
 . Nel campo *Snapshot policy name* (Nome criterio istantanea), immettere un nome per il criterio snapshot.
 . Facoltativamente, immettere una descrizione per il criterio snapshot.

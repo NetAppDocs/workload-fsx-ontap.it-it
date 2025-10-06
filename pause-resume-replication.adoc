@@ -4,7 +4,7 @@ permalink: pause-resume-replication.html
 keywords: pause replication, quiesce replication, resume replication 
 summary: Sospendere e riprendere una relazione di replica in modo che il volume di destinazione diventi il volume di origine. 
 ---
-= Sospensione e ripresa di una relazione di replica in una fabbrica di workload BlueXP 
+= Mettere in pausa e riprendere una relazione di replica in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -16,7 +16,7 @@ Sospendere una relazione di replica per interrompere gli aggiornamenti pianifica
 .A proposito di questa attività
 Quando è in pausa, la relazione di replica tra il volume di origine e quello di destinazione continua a esistere. I trasferimenti di dati si interrompono e i volumi diventano indipendenti. Per riattivare il trasferimento delle modifiche dal volume di origine al volume di destinazione, riprendere la replica.
 
-Quando si riprende una replica, tutte le modifiche apportate al volume di destinazione vengono annullate e la funzione factory del carico di lavoro BlueXP  riattiva la replica. Il volume di destinazione passa dalla modalità lettura/scrittura a quella di sola lettura e riceve nuovamente gli aggiornamenti dal volume di origine all'intervallo di replica pianificato. Quando si riprende una relazione di replica, il volume di destinazione torna all'ultimo snapshot di replica iniziale, dopodiché il processo di replica del volume inizia.
+Quando si riprende una replica, tutte le modifiche apportate al volume di destinazione vengono annullate e NetApp Workload Factory riattiva la replica.  Il volume di destinazione passa dalla modalità di lettura/scrittura a quella di sola lettura e riceve nuovamente gli aggiornamenti dal volume di origine all'intervallo di replica pianificato.  Quando si riprende una relazione di replica, il volume di destinazione torna all'ultimo snapshot di replica iniziale, a quel punto il processo di replica del volume ricomincia.
 
 .Prima di iniziare
 Se si effettua una pausa quando un trasferimento è in corso, il trasferimento non viene influenzato e la relazione diventa "Esci" fino al completamento del trasferimento. Se il trasferimento corrente viene interrotto, si tratta di un trasferimento futuro e non viene riavviato.
@@ -27,10 +27,11 @@ Se si effettua una pausa quando un trasferimento è in corso, il trasferimento n
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da sospendere.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da sospendere.
 . Selezionare *Pausa (Quiesce)*.
 . Nella finestra di dialogo *Quiesce Relationship*, selezionare *Quiesce*.
 
@@ -49,10 +50,11 @@ NOTE: Tutti i dati scritti nel volume di origine tra l'ultima replica dei dati e
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica da riprendere.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da riprendere.
 . Selezionare *Riprendi*.
 . Nella finestra di dialogo Riprendi relazione, selezionare *Riprendi*.
 

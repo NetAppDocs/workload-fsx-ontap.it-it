@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary: Configura e aggiorna Active Directory per una VM di storage in un file system FSX per ONTAP in una farm di workload BlueXP . 
+summary: Configurare e aggiornare Active Directory per una VM di archiviazione in un file system FSx for ONTAP in NetApp Workload Factory. 
 ---
 = Configurazione e aggiornamento di Active Directory per una macchina virtuale di storage
 :allow-uri-read: 
@@ -11,17 +11,18 @@ summary: Configura e aggiorna Active Directory per una VM di storage in un file 
 
 
 [role="lead"]
-Configura e aggiorna Active Directory per una VM di storage in un file system FSX per ONTAP in una farm di workload BlueXP .
+Configurare e aggiornare Active Directory per una VM di archiviazione in un file system FSx for ONTAP in NetApp Workload Factory.
 
 .A proposito di questa attività
 La stessa procedura si applica alla configurazione e all'aggiornamento di Active Directory per una VM di storage.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system con la VM di archiviazione da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system con la VM di archiviazione da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.
-. Dalla scheda Storage VM, selezionare il menu a tre punti della VM storage per cui configurare Active Directory.
+. Dalla scheda VM di archiviazione, selezionare il menu delle azioni della VM di archiviazione per cui configurare Active Directory.
 . Selezionare *Gestisci configurazione ad*.
 . Nella pagina Gestione configurazione ad, specificare quanto segue:
 +

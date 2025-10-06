@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-backup-schedule.html 
 keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
-summary: Quando necessario, gestire la pianificazione di backup per un file system FSX per ONTAP in una fabbrica di workload BlueXP . 
+summary: Gestisci la pianificazione del backup per un file system FSx for ONTAP in NetApp Workload Factory quando necessario. 
 ---
 = Gestire la pianificazione di backup per un file system FSX per ONTAP
 :allow-uri-read: 
@@ -11,12 +11,13 @@ summary: Quando necessario, gestire la pianificazione di backup per un file syst
 
 
 [role="lead"]
-Gestire la pianificazione di backup per un file system FSX per ONTAP in una fabbrica di workload BlueXP .
+Gestisci la pianificazione del backup per un file system FSx for ONTAP in NetApp Workload Factory.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system per aggiornare la pianificazione di backup per, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system per cui aggiornare la pianificazione del backup, quindi seleziona *Gestisci*.
 . In informazioni, selezionare l'icona a forma di matita accanto a *FSX per il backup di ONTAP*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *FSX per il backup di ONTAP*.
 . Nella finestra di dialogo *FSX per il backup di ONTAP*, fornire quanto segue:
 +

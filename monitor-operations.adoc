@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: 'Tieni traccia di FSX per ONTAP, delle credenziali e delle operazioni di collegamento e monitora l"avanzamento dei lavori con Tracker in BlueXP  workload Factory per lo storage.' 
+summary: 'Tieni traccia di FSx per ONTAP, credenziali e operazioni di collegamento e monitora l"avanzamento dei lavori con Tracker in NetApp Workload Factory per Storage.' 
 ---
-= Monitora le operazioni di storage con Tracker in BlueXP  workload factory
+= Monitorare le operazioni di archiviazione con Tracker in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Monitora e monitora l'esecuzione di FSX per ONTAP, le credenziali e le operazioni di collegamento e monitora l'avanzamento dei task con Tracker in BlueXP  workload Factory.
+Monitora e tieni traccia dell'esecuzione di FSx per ONTAP, credenziali e operazioni di collegamento e monitora l'avanzamento delle attività con Tracker in NetApp Workload Factory.
 
 .A proposito di questa attività
 Workload Factory offre Tracker, una funzionalità di monitoraggio che consente di monitorare e monitorare lo stato e l'avanzamento di FSX per ONTAP, le credenziali e le operazioni di collegamento, esaminare i dettagli delle attività operative e delle attività secondarie e diagnosticare eventuali problemi o errori.
@@ -42,12 +42,12 @@ Conservazione degli eventi:: Gli eventi vengono conservati nell'interfaccia uten
 
 == Monitoraggio e monitoraggio delle operazioni
 
-Monitoraggio e monitoraggio delle operazioni in BlueXP  con Tracker.
+Monitora e monitora le operazioni nella console NetApp con Tracker.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria, selezionare *Vai all'inventario di archiviazione*.
-. Dall'inventario di archiviazione, selezionare il menu Impostazioni account, quindi selezionare *Tracker*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, seleziona *Amministrazione* e poi *Collegamenti*.
 +
 image:screenshot-menu-tracker-option.png["Una schermata del menu delle impostazioni dell'account con l'opzione Tracker evidenziata."]
 
@@ -62,7 +62,7 @@ Visualizzare la richiesta API nella Codebox per un'attività in Tracker.
 
 .Fasi
 . In Tracker, selezionare un'attività.
-. Selezionare il menu a tre punti, quindi selezionare *Visualizza richiesta API*.
+. Selezionare il menu azioni e quindi selezionare *Visualizza richiesta API*.
 
 
 
@@ -76,7 +76,7 @@ NOTE: Solo x numero di tentativi consentiti per un'operazione non riuscita.
 
 .Fasi
 . In Tracker, selezionare un'operazione non riuscita.
-. Selezionare il menu a tre punti, quindi selezionare *Riprova*.
+. Selezionare il menu azioni e quindi selezionare *Riprova*.
 
 
 .Risultato
@@ -90,7 +90,7 @@ Modificare i parametri dell'operazione non riuscita e riprovare l'operazione al 
 
 .Fasi
 . In Tracker, selezionare un'operazione non riuscita.
-. Selezionare il menu a tre punti, quindi selezionare *Modifica e riprovare*.
+. Selezionare il menu azioni e quindi selezionare *Modifica e riprova*.
 +
 Si viene reindirizzati alla pagina delle operazioni in cui è possibile modificare i parametri e riprovare l'operazione.
 

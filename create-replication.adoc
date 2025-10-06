@@ -4,14 +4,14 @@ permalink: create-replication.html
 keywords: replication, replicate 
 summary: Crea una relazione di replica per un file system FSX per ONTAP per evitare la perdita di dati in caso di disastro imprevisto. 
 ---
-= Creazione di un rapporto di replica in una fabbrica di workload BlueXP 
+= Creare una relazione di replica in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crea un rapporto di replica per un file system FSX per ONTAP in una fabbrica di workload BlueXP  per evitare la perdita di dati in caso di un disastro imprevisto.
+Creare una relazione di replica per un file system FSx for ONTAP in NetApp Workload Factory per evitare la perdita di dati in caso di un disastro imprevisto.
 
 .A proposito di questa attività
 La replica rappresenta un livello aggiuntivo di data Protection, essenziale in caso di disastro nella regione in cui risiedono i dati. La perdita di dati può essere evitata se si utilizza la replica tra più aree.
@@ -25,7 +25,7 @@ Quando si replica un volume sorgente con file immutabili, il volume di destinazi
 .Prima di iniziare
 Prima di iniziare, assicurarsi di soddisfare i seguenti prerequisiti.
 
-* È necessario disporre di due file system disponibili nell'inventario di storage per creare una relazione di replica.
+* Per creare una relazione di replicazione, è necessario disporre di due file system disponibili nel tuo Storage.
 * I due file system utilizzati per la relazione di replica devono disporre di un collegamento associato. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
 
 
@@ -35,8 +35,9 @@ Puoi replicare un volume di origine (lettura/scrittura) o un volume di data Prot
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system che contiene i volumi da replicare, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu azioni del file system che contiene i volumi da replicare, quindi seleziona *Gestisci*.
 . Replicare tutti i volumi in un file system o volumi selezionati.
 +
 ** Per replicare tutti i volumi in un file system: Dalla panoramica del file system, selezionare *Replica dati*.
@@ -51,7 +52,7 @@ Nella tabella volumi, selezionare uno o più volumi, quindi selezionare *Replica
 .. *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.
 .. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa. La VM di archiviazione selezionata è la destinazione per tutti i volumi selezionati in questa relazione di replica.
 .. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
-.. *Caso di utilizzo*: Selezionare uno dei seguenti casi di utilizzo per la replica. In base al caso di utilizzo selezionato, il modulo viene compilato in fabbrica dal carico di lavoro con i valori consigliati, conformemente alle Best practice. È possibile accettare i valori consigliati o apportare modifiche durante la compilazione del modulo.
+.. *Caso d'uso*: selezionare uno dei seguenti casi d'uso per la replica.  A seconda del caso d'uso selezionato, Workload Factory compila il modulo con i valori consigliati in conformità con le best practice.  È possibile accettare i valori consigliati o apportare modifiche durante la compilazione del modulo.
 +
 *** Migrazione: Trasferimento dei dati nel file system FSX per ONTAP di destinazione
 *** Disaster recovery "hot": Garantisce alta disponibilità e rapido disaster recovery per i carichi di lavoro critici
@@ -77,10 +78,10 @@ Per tutti i casi di utilizzo, se si abilitano gli snapshot per la conservazione 
 
 .. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione. Il criterio di tiering predefinito corrisponde alla policy di tiering consigliata per il caso d'utilizzo selezionato.
 +
-_Balanced (Auto)_ è la policy di tiering predefinita quando si crea un volume utilizzando la console workload Factory. Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSX per NetApp ONTAP. Nota: Workload Factory utilizza nomi basati su casi d'utilizzo nella console workload Factory per le policy di tiering e include i nomi delle policy di tiering di FSX per ONTAP tra parentesi.
+_Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando la console Workload Factory.  Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento alink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx per NetApp ONTAP .  Si noti che Workload Factory utilizza nomi basati sui casi d'uso nella console Workload Factory per i criteri di suddivisione in livelli e include i nomi dei criteri di suddivisione in livelli FSx for ONTAP tra parentesi.
 
 +
-Se hai selezionato il caso di utilizzo della migrazione, il workload in fabbrica sceglie automaticamente di copiare la policy di tiering del volume di origine nel volume di destinazione. Puoi deselezionare questa casella per copiare la policy di tiering e selezionare una policy di tiering che si applica al volume selezionato per la replica.
+Se hai selezionato il caso d'uso di migrazione, Workload Factory sceglie automaticamente di copiare la policy di suddivisione in livelli del volume di origine nel volume di destinazione.  È possibile deselezionare la copia del criterio di suddivisione in livelli e selezionare un criterio di suddivisione in livelli che si applichi al volume selezionato per la replica.
 
 .. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s. In alternativa, selezionare *illimitato*.
 +

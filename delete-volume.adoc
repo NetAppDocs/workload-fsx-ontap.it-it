@@ -4,7 +4,7 @@ permalink: delete-volume.html
 keywords: delete volume, volume deletion 
 summary: Elimina un volume nel file system FSX per ONTAP che non è più necessario e per liberare spazio. Questa operazione è irreversibile. 
 ---
-= Eliminazione di un volume nella fabbrica dei carichi di lavoro BlueXP 
+= Elimina un volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -24,10 +24,11 @@ Prima di eliminare un volume, prendere in considerazione quanto segue:
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, selezionare il menu a tre punti del file system con il volume da eliminare, quindi selezionare *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare l'azione del file system con il volume da eliminare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda volumi, selezionare il menu a tre punti del volume da eliminare.
+. Dalla scheda Volumi, selezionare il menu azioni del volume da eliminare.
 . Selezionare *azioni di base*, quindi *Elimina volume*.
 . Nella finestra di dialogo Elimina volume, effettuare le seguenti operazioni:
 +
@@ -37,7 +38,7 @@ Il backup rimane nel file system finché non viene eliminato manualmente.
 
 .. Selezionare *continua*.
 .. Digitare "delete" per eliminare il volume.
-.. Selezionare *Delete* (Elimina).
+.. Selezionare *Elimina* per confermare.
 
 
 

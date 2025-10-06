@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: limit-transfer-rate.html 
 keywords: limit max transfer rate, limit transfer rate 
-summary: Limite della velocità di trasferimento massima di una relazione di replica in una fabbrica di carichi di lavoro BlueXP . 
+summary: Limita la velocità di trasferimento massima di una relazione di replica in NetApp Workload Factory. 
 ---
 = Limitare la velocità di trasferimento massima di una relazione di replica
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Limite della velocità di trasferimento massima di una relazione di rep
 
 
 [role="lead"]
-Limite della velocità di trasferimento massima di una relazione di replica in una fabbrica di carichi di lavoro BlueXP . Una velocità di trasferimento illimitata potrebbe influire negativamente sulle prestazioni di altre applicazioni e della rete.
+Limita la velocità di trasferimento massima di una relazione di replica in NetApp Workload Factory.  Una velocità di trasferimento illimitata potrebbe avere un impatto negativo sulle prestazioni di altre applicazioni e della rete.
 
 .A proposito di questa attività
 La limitazione della velocità di trasferimento massima è facoltativa ma consigliata. Senza un limite, le prestazioni della rete e delle applicazioni potrebbero diminuire.
@@ -23,10 +23,11 @@ Considerare la larghezza di banda da allocare per la replica.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella memoria di archiviazione, selezionare *Vai all'inventario di archiviazione*.
-. Nella scheda *FSX per ONTAP*, seleziona il menu a tre punti del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare l'azione del file system da aggiornare, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
-. Nella scheda Relazioni di replica, selezionare il menu a tre punti della relazione di replica per limitare la velocità di trasferimento massima per.
+. Nella scheda Relazioni di replica, selezionare l'azione della relazione di replica per cui limitare la velocità di trasferimento massima.
 . Selezionare *Modifica velocità di trasferimento massima*.
 . Nella finestra di dialogo Modifica velocità di trasferimento massima, selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s.
 +

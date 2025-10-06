@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, workload factory, storage 
-summary: Usando BlueXP  workload Factory puoi creare un file system FSX per ONTAP per aggiungere e gestire volumi e servizi dati aggiuntivi. 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: Utilizzando NetApp Workload Factory è possibile creare un file system FSx per ONTAP per aggiungere e gestire volumi e servizi dati aggiuntivi. 
 ---
-= Crea un file system FSX per ONTAP in una farm di workload BlueXP 
+= Creare un file system FSx per ONTAP in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Utilizzando BlueXP Workload Factory è possibile creare file system FSx per ONTAP di prima e seconda generazione per aggiungere e gestire volumi e servizi dati aggiuntivi.
+Utilizzando NetApp Workload Factory è possibile creare file system FSx for ONTAP di prima e seconda generazione per aggiungere e gestire volumi e servizi dati aggiuntivi.
 
 .A proposito di questa attività
 Durante la creazione del file system vengono create una macchina virtuale di storage e un gruppo di sicurezza.
@@ -19,7 +19,7 @@ Durante la creazione del file system vengono create una macchina virtuale di sto
 .Prima di iniziare
 Prima di creare il file system FSX per ONTAP, hai bisogno di:
 
-* L'ARN di un ruolo IAM che fornisce a workload Factory le autorizzazioni necessarie per creare un file system FSX per ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni a un account AWS"^].
+* ARN di un ruolo IAM che fornisce a Workload Factory le autorizzazioni necessarie per creare un file system FSx per ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni a un account AWS"^] .
 * Le informazioni relative all'area geografica e alla VPC per la creazione dell'istanza FSX per ONTAP.
 
 
@@ -42,14 +42,14 @@ I file system FSx per ONTAP di seconda generazione rappresentano il tipo di dist
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nell'archiviazione, selezionare *Crea FSX per ONTAP*.
+. Nel riquadro Archiviazione, seleziona *Crea FSx per ONTAP*.
 . Nella pagina Crea FSX per ONTAP, selezionare *creazione rapida*.
 +
 È anche possibile caricare una configurazione salvata.
 
 . In Configurazione generale del file system, fornire quanto segue:
 +
-.. *Credenziali AWS*: Seleziona per aggiungere le credenziali AWS nella fabbrica dei workload oppure continua senza credenziali.
+.. *Credenziali AWS*: seleziona per aggiungere le credenziali AWS in Workload Factory o continuare senza credenziali.
 .. *Nome file system*: Immettere un nome per il file system.
 .. *Regione e VPC*: Selezionare la regione e il VPC per il file system.
 .. *Tipo di distribuzione*: Selezionare un tipo di distribuzione.
@@ -114,14 +114,14 @@ Con creazione avanzata, è possibile impostare tutte le opzioni di configurazion
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nell'archiviazione, selezionare *Crea FSX per ONTAP*.
+. Nel riquadro Archiviazione, seleziona *Crea FSx per ONTAP*.
 . Nella pagina Crea FSX per ONTAP, selezionare *creazione avanzata*.
 +
 È anche possibile caricare una configurazione salvata.
 
 . In Configurazione generale del file system, fornire quanto segue:
 +
-.. *Credenziali AWS*: Seleziona per aggiungere le credenziali AWS nella fabbrica dei workload oppure continua senza credenziali.
+.. *Credenziali AWS*: seleziona per aggiungere le credenziali AWS in Workload Factory o continuare senza credenziali.
 .. *Nome file system*: Immettere un nome per il file system.
 .. *Regione e VPC*: Selezionare la regione e il VPC per il file system.
 .. *Tipo di distribuzione*: seleziona un tipo di distribuzione e una generazione di file system. La disponibilità di un file system di seconda generazione dipende dalla regione selezionata. Se la regione selezionata non supporta i file system FSx for ONTAP di seconda generazione, il tipo di distribuzione passa alla prima generazione.
