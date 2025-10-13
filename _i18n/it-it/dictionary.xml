@@ -2163,7 +2163,6 @@
   <block id="0b9457a2973ff10b39045b865037dcb8" category="list-text">Da *FSx for ONTAP*, seleziona il menu azioni del file system che contiene i volumi da ribilanciare, quindi seleziona *Gestisci*.</block>
   <block id="bf1c457139c3a04a33b336ab43865dad" category="admonition">Un amministratore di Workload Factory può<block ref="6089e6bc679073f1388a01bc136ad00e" category="inline-xref-macro-rx"></block> durante l'operazione.</block>
   <block id="59dfa377d2b15b40ba2bddd83dcb5c53" category="list-text">Da *FSx for ONTAP*, seleziona il menu azioni del file system che contiene il volume da ribilanciare, quindi seleziona *Gestisci*.</block>
-  <block id="2465211fab7d73457701958a158bbf39" category="list-text">In *Archiviazione*, seleziona *Vai ad Archiviazione</block>
   <block id="fbf1bac8c72be0440c190a08fabc8dc0" category="paragraph">La replica di una VM di storage su un altro file system FSx for ONTAP in NetApp Workload Factory fornisce un livello protettivo di accesso ai dati in caso di perdita di dati.  Questa operazione replica tutti i volumi in una VM di archiviazione su un altro file system FSx for ONTAP .</block>
   <block id="e42fc3e4b35126c00393bef5dd43abb0" category="list-text">Da *FSx for ONTAP*, seleziona il menu delle azioni del file system con la VM di archiviazione da replicare, quindi seleziona *Gestisci*.</block>
   <block id="f762650128ec007cd0d70b6659361ba3" category="list-text">Dalla scheda VM di archiviazione, selezionare il menu delle azioni della VM di archiviazione per cui replicare una SVM.</block>
@@ -2238,4 +2237,9 @@
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">Console NetApp</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">Servizi dati NetApp</block>
   <block id="aea7c72083066ee89008056089d95877" category="sidebar">Scopri e visualizza i volumi della cache</block>
+  <block id="ea7d4002457b002b29ca2cb9a498c0bc" category="section-title">Nuova notifica per Storage</block>
+  <block id="ba72fdb3bdfd568a9dee9e12c3566da1" category="paragraph">Il servizio di notifica Workload Factory include notifiche di successo e fallimento per la gestione automatica della capacità per l'archiviazione.</block>
+  <block id="28a2c493e9a663d617e582302e1bcf28" category="inline-link-macro">Notifiche per la BlueXP workload factory</block>
+  <block id="165f0ade723f657a5d7981bfecbfc75a" category="paragraph"><block ref="165f0ade723f657a5d7981bfecbfc75a" category="inline-link-macro-rx"></block></block>
+  <block id="419085fd5f19a39001679a5f52b0acdf" category="list-text">In *Archiviazione*, seleziona *Vai ad Archiviazione*</block>
 </blocks>

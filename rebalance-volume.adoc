@@ -124,7 +124,7 @@ I dati si ridistribuiscono tra i volumi degli utenti per ribilanciare il volume 
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *Archiviazione*, seleziona *Vai ad Archiviazione
+. In *Archiviazione*, seleziona *Vai ad Archiviazione*
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il menu azioni del file system che contiene il volume da ribilanciare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
