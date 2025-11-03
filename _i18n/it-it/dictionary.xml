@@ -2216,18 +2216,15 @@
   <block id="13c47466230be92e5e3aa6588809aeac" category="list-text">Precompilare un volume di cache</block>
   <block id="52fc772a9179443c2c2ba75c94518e8f" category="list-text">Elimina un volume di cache</block>
   <block id="7826298c658de05b150f4b10fc144ea2" category="inline-link-macro">Gestisci i volumi della cache</block>
-  <block id="9223fd31c285815a2492912ef49bdbbb" category="paragraph"><block ref="9223fd31c285815a2492912ef49bdbbb" category="inline-link-macro-rx"></block></block>
   <block id="7c0216aac73557cb5845492aebaeab8a" category="section-title">Gestione automatica degli inode disponibile</block>
   <block id="31dcfbe8cd69ef4085402c0f104858cd" category="paragraph">È possibile abilitare la gestione automatica degli inode senza dover abilitare la gestione automatica della capacità.</block>
   <block id="71e9d4ada3104308778ade0ba22de28d" category="inline-link-macro">Abilita la gestione automatica degli inode</block>
-  <block id="c38d477b997e2c8216a0b40479691f29" category="paragraph"><block ref="c38d477b997e2c8216a0b40479691f29" category="inline-link-macro-rx"></block></block>
   <block id="22fcde27b4672d89a21e10e9be49cdee" category="section-title">Impostazione di avviso di soglia per l'utilizzo di capacità e inode</block>
   <block id="cc72208ba5327054f030d802d324477c" category="inline-link-macro">Servizio di notifica NetApp Workload Factory</block>
   <block id="f1ff66cdf2af497189be6ebd8f6e5fcd" category="paragraph">Sono disponibili avvisi di soglia sia per la capacità che per l'utilizzo degli inode.  È possibile impostare queste soglie quando si abilita la gestione automatica della capacità o degli inode.  Per utilizzare questa impostazione, dovrai configurare le notifiche utilizzando<block ref="52b0820c6dc6b8d67591785df8b1a634" category="inline-link-macro-rx"></block> .</block>
   <block id="76170a72d0c8b98ef012c3b57dc6dbe8" category="section-title">Riduzione delle dimensioni del volume disponibile</block>
   <block id="26b07c7813c6a780d507b42d999b4792" category="paragraph">È possibile ridurre le dimensioni dei volumi NFS e SMB/CIFS in NetApp Workload Factory.  Questa funzionalità consente una migliore gestione delle risorse di archiviazione, consentendo di ridurre le dimensioni dei volumi che non sono più necessari alla loro capacità attuale.</block>
   <block id="fcbcb93b74f64a75b2b710bb8328b4e0" category="inline-link-macro">Diminuire la capacità di un volume</block>
-  <block id="e1b7073be30c28b07f5c847e0a1b56ed" category="paragraph"><block ref="e1b7073be30c28b07f5c847e0a1b56ed" category="inline-link-macro-rx"></block></block>
   <block id="f09c98d35d5b89f3f833636d36ca3283" category="section-title">FSx migliorato per lo stato delle risorse ONTAP</block>
   <block id="9d017083ba2041742b1b85bbb1a846c4" category="paragraph">Workload Factory ha migliorato lo stato della risorsa "non configurata" per includere una spiegazione del problema effettivo della risorsa.</block>
   <block id="48707dc4d2e44fe9cf85834f27b932e8" category="paragraph">Workload Factory analizza i file system FSx for ONTAP per le seguenti configurazioni:</block>
@@ -2240,11 +2237,9 @@
   <block id="036d0224d85e6a18c7e85f034ace65c1" category="list-text">_Creazione ed eliminazione del file system_: crea ed elimina FSx per i file system ONTAP e le VM di archiviazione.</block>
   <block id="c1c8be0a907c363e6506c96d16870672" category="paragraph">Quando si aggiungono le credenziali, è possibile selezionare una o più di queste policy di autorizzazione in base al livello di accesso che si desidera fornire a Workload Factory.</block>
   <block id="b20b01e02162a68002ca1747d1bd3c10" category="inline-link-macro">Riferimento alle autorizzazioni di Workload Factory</block>
-  <block id="444b052e3d1349e221d4ceb42e6c1cf7" category="paragraph"><block ref="444b052e3d1349e221d4ceb42e6c1cf7" category="inline-link-macro-rx"></block></block>
   <block id="c4a6983274098ca737ffda27862010ea" category="section-title">Supporto per FSx per ONTAP Cyber ​​Vault</block>
   <block id="4a3b498d2b39740971d75ebbab434a8f" category="paragraph">È possibile creare un cyber vault utilizzando FSx for ONTAP come origine o destinazione nell'architettura del cyber vault.  I caveau informatici forniscono un ambiente sicuro e isolato per l'archiviazione di dati critici, proteggendoli da ransomware e altre minacce informatiche.</block>
   <block id="4bc6d1e741e4c817c4985300ec66b77f" category="inline-link-macro">Configurare un cyber vault con FSx per ONTAP</block>
-  <block id="545bd81803e837dd73a7bceb1a798b8a" category="paragraph"><block ref="545bd81803e837dd73a7bceb1a798b8a" category="inline-link-macro-rx"></block></block>
   <block id="443d77d8a4d29940f1da82d57cf91d7b" category="summary">È possibile regolare manualmente la capacità di un volume in NetApp Workload Factory in qualsiasi momento.</block>
   <block id="9506827488d3f10bebcc3d5a3e5f83f8" category="doc">Regola la capacità del volume in NetApp Workload Factory</block>
   <block id="2d6396444f6d2c33e9a33bc98d74a44b" category="paragraph">È possibile regolare manualmente la capacità di un volume in qualsiasi momento dalla console NetApp Workload Factory .</block>
@@ -2283,7 +2278,6 @@
   <block id="e8e8dcbe97676a6fe5760aae822c6e61" category="paragraph">Workload Factory fornisce assistenza nella creazione di un'architettura di cyber vault.  Dopo aver contattato NetApp per esprimere il tuo interesse nell'implementazione di un cyber vault, uno specialista NetApp ti contatterà per discutere le tue esigenze.</block>
   <block id="9577a31ea32e2c5b58950150698f2a07" category="paragraph">Per iniziare, invia un'e-mail a ng-FSx-CyberVault@netapp.com.</block>
   <block id="a9541230016fd9f6de7895f1a32b75fb" category="inline-link-macro">Documentazione del cyber vault ONTAP</block>
-  <block id="eac9e4c62fd872313a45023cb8fd31ec" category="paragraph">Per ulteriori informazioni sui cyber vault e su come impostare questa architettura, fare riferimento a<block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block> .</block>
   <block id="18e03b41df425134308f1975a1972f8e" category="list-text">Credenziali con autorizzazioni di _creazione ed eliminazione del file system_ per creare un file system FSx per ONTAP . <block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>.</block>
   <block id="4c4658c6e6bcc607d3d1e8c00d38f9b6" category="list-text">È necessario disporre di almeno un file system FSx per ONTAP in Workload Factory.  Per scoprire i file system FSx per ONTAP , è necessario disporre di un account AWS con autorizzazioni per le istanze FSx per ONTAP e<block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block> con autorizzazioni di _visualizzazione, pianificazione e analisi_ per la gestione dell'archiviazione.</block>
   <block id="8763b09bbcb06ec11c1d0d3331ba74f4" category="paragraph"><block ref="8763b09bbcb06ec11c1d0d3331ba74f4" category="inline-link-macro-rx"></block></block>
@@ -2363,4 +2357,9 @@
   <block id="2d7b297cbb6cd40fb509f94fc82809d8" category="sidebar">Crea un caveau informatico per proteggere i dati</block>
   <block id="77323f759a4ed2ac40e1bf8211da2f5f" category="sidebar">Regola la capacità del volume</block>
   <block id="aadb016687f81f1f6f82a4c97ba651ed" category="sidebar">Abilita la gestione automatica della capacità e degli inode</block>
+  <block id="8cc5e5335040870d41183130dad2a0a6" category="paragraph"><block ref="8cc5e5335040870d41183130dad2a0a6" category="inline-link-macro-rx"></block></block>
+  <block id="6b49a1e6e88960820791afdda16a063c" category="paragraph"><block ref="6b49a1e6e88960820791afdda16a063c" category="inline-link-macro-rx"></block></block>
+  <block id="7999c939951d1cfce0556df15a76a345" category="paragraph"><block ref="7999c939951d1cfce0556df15a76a345" category="inline-link-macro-rx"></block></block>
+  <block id="1aa6907369c233df8f3cc388c26b9890" category="paragraph"><block ref="1aa6907369c233df8f3cc388c26b9890" category="inline-link-macro-rx"></block></block>
+  <block id="9241eb0a9aab7657dc2b300da8931da7" category="paragraph">Per ulteriori informazioni sui cyber vault e su come impostare questa architettura, fare riferimento a <block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block>.</block>
 </blocks>

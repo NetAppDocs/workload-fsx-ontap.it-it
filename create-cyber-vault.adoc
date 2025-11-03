@@ -29,4 +29,4 @@ Workload Factory fornisce assistenza nella creazione di un'architettura di cyber
 Per iniziare, invia un'e-mail a ng-FSx-CyberVault@netapp.com.
 
 .Informazioni correlate
-Per ulteriori informazioni sui cyber vault e su come impostare questa architettura, fare riferimento alink:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentazione del cyber vault ONTAP"^] .
+Per ulteriori informazioni sui cyber vault e su come impostare questa architettura, fare riferimento a link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentazione del cyber vault ONTAP"^].
