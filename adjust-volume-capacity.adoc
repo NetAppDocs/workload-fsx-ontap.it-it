@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: adjust-volume-capacity.html 
+keywords: increase capacity, volume capacity 
+summary: È possibile regolare manualmente la capacità di un volume in NetApp Workload Factory in qualsiasi momento. 
+---
+= Regola la capacità del volume in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile regolare manualmente la capacità di un volume in qualsiasi momento dalla console NetApp Workload Factory .
+
+Facoltativamente, puoilink:edit-volume-autogrow.html["attivare la funzione di crescita automatica"] per consentire a Workload Factory di gestire la capacità del volume per te.
+
+.A proposito di questa attività
+È possibile regolare la capacità del volume aumentando o diminuendo la dimensione di provisioning di un volume.  La tabella seguente mostra le dimensioni minime e massime del volume in base al tipo di volume:
+
+[cols="1,1,1"]
+|===
+| Tipo di volume | Dimensione minima | Dimensione massima 
+
+
+| Volume FlexVol | 20 MB | 300 TiB 
+
+
+| Volume FlexGroup | 800 GB | 2 PiB 
+|===
+Per una LUN iSCSI, aumentando le dimensioni del volume aumentano anche le dimensioni della LUN host.  Dopo aver aumentato la capacità del volume, seguire la procedura fornita dal sistema operativo host per scoprire la nuova dimensione del LUN ed espandere il file system del LUN.
+
+La riduzione delle dimensioni del volume è supportata solo per i volumi NFS e SMB/CIFS.
+
+.Prima di iniziare
+Per regolare la capacità del volume, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo aver associato il collegamento, tornare a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *volumi*.
+. Dalla scheda Volumi, selezionare il menu delle azioni del volume per cui regolare la capacità.
+. Selezionare *Azioni di base*, quindi *Regola capacità volume*.
+. Nella finestra di dialogo Regola capacità volume, imposta la *Capacità fornita* e l'unità.
+. Selezionare *Regola* per applicare le modifiche.
+
+
+.Informazioni correlate
+* link:edit-volume-autogrow.html["Abilita l'aumento automatico del volume in Workload Factory"]
+* link:rebalance-volume.html["Ribilancia un volume in Workload Factory"]
+

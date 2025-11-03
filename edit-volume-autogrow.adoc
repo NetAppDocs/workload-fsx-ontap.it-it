@@ -13,7 +13,7 @@ summary: 'Abilita l"aumento automatico del volume per consentire a Workload Fact
 [role="lead"]
 Abilita l'aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te.  Puoi disattivarlo in qualsiasi momento.
 
-In alternativa, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzando link:increase-volume-capacity.html["funzione di aumento della capacità del volume"].
+Facoltativamente, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzandolink:adjust-volume-capacity.html["funzione di regolazione della capacità del volume"] .
 
 
 NOTE: L'espansione automatica dei volumi non è supportata per i volumi iSCSI.

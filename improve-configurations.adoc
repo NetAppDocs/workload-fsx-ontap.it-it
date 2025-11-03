@@ -30,8 +30,8 @@ Poiché i requisiti per le configurazioni di archiviazione variano, è possibile
 Workload Factory analizza lo stato con un'architettura appropriata delle seguenti configurazioni per i file system FSX per ONTAP:
 
 * Affidabilità: soglia di capacità SSD, snapshot locali pianificati, backup FSx per ONTAP , replicazione remota dei dati e affidabilità dei dati per la conservazione a lungo termine
-* Sicurezza: protezione autonoma dai ransomware NetApp con intelligenza artificiale (ARP/AI)
-* Eccellenza operativa: efficienza di archiviazione, gestione automatica della capacità e soglia di utilizzo della capacità dei file di volume
+* Sicurezza: protezione autonoma da ransomware NetApp con intelligenza artificiale (ARP/AI) e accesso non autorizzato ai volumi
+* Eccellenza operativa: gestione automatica della capacità, soglia di utilizzo della capacità dei file di volume e utilizzo del volume prossimo al completo
 * Ottimizzazione dei costi: efficienza di archiviazione e livelli di dati
 
 
@@ -42,7 +42,7 @@ Workload Factory analizza lo stato con un'architettura appropriata delle seguent
 È possibile risolvere i problemi di configurazione per un file system FSx for ONTAP o per volumi selezionati in un file system.  È possibile selezionare una o più configurazioni da correggere.
 
 .Prima di iniziare
-* È necessario disporre di credenziali con autorizzazioni di _sola lettura_ o _lettura/scrittura_. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni al tuo account AWS"^].
+* Devilink:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere autorizzazioni per _operazioni e bonifica_"^] nel tuo account AWS.
 * Il processo di ripristino potrebbe causare tempi di inattività delle istanze o interruzioni del servizio. Assicurati di leggere attentamente ogni raccomandazione prima di decidere di risolvere un problema di configurazione.
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connettersi a un file system FSx for ONTAP tramite un collegamento"]per l'analisi più completa delle risorse del tuo file system.
 

@@ -116,7 +116,7 @@ Per passare a FSX per ONTAP, seguire le istruzioni riportate in <<Implementa FSX
 == Esplora i risparmi per gli ambienti di storage rilevati
 
 .Prima di iniziare
-Per consentire a Workload Factory di rilevare gli ambienti di archiviazione Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSx per Windows File Server nel tuo account AWS, assicurati dilink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di _sola lettura_"^] nel tuo account AWS.
+Per consentire a Workload Factory di rilevare gli ambienti di archiviazione Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSx per Windows File Server nel tuo account AWS, assicurati dilink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS.
 
 
 NOTE: Questa opzione di calcolo non supporta i calcoli per gli snapshot EBS e le copie shadow di FSX per Windows file Server. Quando si esplorano i risparmi tramite la personalizzazione, è possibile fornire dettagli sugli snapshot EBS ed FSX per Windows file Server.

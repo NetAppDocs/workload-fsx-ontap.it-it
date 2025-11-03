@@ -81,6 +81,8 @@ sidebar:
         url: "/clone-volume.html"
       - title: Utilizzo dei dati ONTAP on-premise
         url: "/use-onprem-data.html"
+      - title: Crea un caveau informatico per proteggere i dati
+        url: "/create-cyber-vault.html"
   - title: Amministrare e monitorare
     entries:
     - title: Monitoraggio delle operazioni con Tracker
@@ -95,14 +97,16 @@ sidebar:
       entries:
       - title: Consente di modificare la crescita automatica del volume
         url: "/edit-volume-autogrow.html"
-      - title: Aumentare la capacità del volume
-        url: "/increase-volume-capacity.html"
+      - title: Regola la capacità del volume
+        url: "/adjust-volume-capacity.html"
+      - title: Riequilibrare la capacità del volume
+        url: "/rebalance-volume.html"
       - title: Gestire i file immutabili
         url: "/manage-immutable-files.html"
       - title: Gestire i tag di volume
         url: "/manage-volume-tags.html"
-      - title: Riequilibrare la capacità del volume
-        url: "/rebalance-volume.html"
+      - title: Gestisci i volumi della cache
+        url: "/manage-cache-volumes.html"
       - title: Modificare una policy di tiering
         url: "/change-tiering-policy.html"
       - title: Update dell'efficienza dello storage
@@ -119,7 +123,7 @@ sidebar:
       entries:
       - title: Regola la capacità del file system
         url: "/increase-file-system-capacity.html"
-      - title: Consentire la gestione automatica della capacità
+      - title: Abilita la gestione automatica della capacità e degli inode
         url: "/enable-auto-capacity-management.html"
       - title: Reimpostare la password fsxadmin
         url: "/reset-fsxadmin-password.html"

@@ -284,8 +284,6 @@
   <block id="856fd7298379e6a75a221ebc3af9cdec" category="list-text">Selezionare *Modifica tag VM di archiviazione*.</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">Nella pagina Modifica tag VM di archiviazione, aggiungere, modificare o rimuovere tag.</block>
   <block id="2d1066d1fee53e98224fefca16751fd3" category="paragraph">Il numero massimo di tag che puoi applicare a una macchina virtuale di storage è 50.</block>
-  <block id="edd5da19d30912fca4670982f9aef531" category="inline-link-macro">funzione di aumento della capacità del volume</block>
-  <block id="f9e4840a1cf1ddb5632e031e0334acb9" category="paragraph">In alternativa, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzando <block ref="11462b2e1fd0bd94e3dc25fc7f04c4ba" category="inline-link-macro-rx"></block>.</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">L'espansione automatica dei volumi non è supportata per i volumi iSCSI.</block>
   <block id="3d7b2807e22b58e985dfcb21a31b176e" category="summary">I tag possono aiutarti a categorizzare le risorse. Puoi aggiungere, modificare e rimuovere i tag di volume in qualsiasi momento per FSX per i volumi ONTAP.</block>
   <block id="c966edae1d484c4f3e557d47709e08a1" category="list-text">Selezionare *azioni di base*, quindi *Modifica tag volume*.</block>
@@ -384,13 +382,7 @@
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">Per i limiti della capacità di storage degli SSD, fai riferimento alla <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> documentazione di AWS FSX per NetApp ONTAP.</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">disattivare la gestione automatica della capacità</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">Seleziona l'unità per la capacità sottoposta a provisioning.</block>
-  <block id="ceadc0f7d6f2330af477eb47568a259b" category="doc">Aumentare la capacità del volume</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">attivare la funzione di crescita automatica</block>
-  <block id="61912f548f2af8c04ce8d9e84cdfcebf" category="paragraph">Per una LUN iSCSI, questa operazione aumenta la dimensione del LUN host. Una volta aumentata la capacità, seguire la procedura fornita dal sistema operativo host per rilevare le nuove dimensioni del LUN ed espandere il file system del LUN.</block>
-  <block id="edd00e1c6dfe245ca67fb40d38a8f612" category="list-text">Selezionare *azioni di base*, quindi *aumenta capacità volume*.</block>
-  <block id="4b3ec30c73a77c948a926f5f261f219f" category="list-text">Nella finestra di dialogo di aumento della capacità del volume, fornire quanto segue:</block>
-  <block id="8ba1ce8b4c03e2fec48c757cacb814de" category="list-text">Selezionare un formato più grande.</block>
-  <block id="0268e0733e81d9eec7959c020c7609fb" category="list-text">Se necessario, sostituire l'unità.</block>
   <block id="26f68296f7b3ad0f394e89c82f5ea642" category="summary">Inizializzare una relazione di replica tra i volumi di origine e di destinazione.</block>
   <block id="45df433d6d3e94a4c9cb03d82b93e7fa" category="doc">Inizializzare una relazione di replica</block>
   <block id="42812c21ac1eee37a9ac12cf59634ce6" category="paragraph">L'inizializzazione esegue un trasferimento _baseline_: Crea uno snapshot del volume di origine, quindi trasferisce lo snapshot e tutti i blocchi di dati che fa riferimento al volume di destinazione.</block>
@@ -492,7 +484,6 @@
   <block id="0d6187a6dbf87b209ebf23f8fee502f9" category="inline-link-macro">accedi</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Due</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Aggiungere credenziali e autorizzazioni</block>
-  <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">modalità operative</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">aggiungere manualmente le credenziali a un account</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tre</block>
   <block id="8c163240a45cebe17c44b7359252c96a" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Creare un file system</block>
@@ -741,7 +732,6 @@
   <block id="c853397a437814fc2251c95bdf57909f" category="list-text">Nella finestra di dialogo Elimina relazione, selezionare *Elimina*.</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">In alternativa, selezionare *Backup del volume* per eseguire il backup del volume prima dell'eliminazione.</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">Selezionare *continua*.</block>
-  <block id="bd0cd4a796621f54f57afed7ce044b14" category="doc">Abilita la gestione automatica della capacità per un file system FSX per ONTAP</block>
   <block id="37315e43d6c90fe6798b7397bf15ebae" category="list-text">In informazioni, selezionare l'icona a forma di matita accanto a *Gestione automatica della capacità*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *Gestione automatica della capacità*.</block>
   <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">Selezionare il pulsante di abilitazione per *abilitare la gestione automatica della capacità*.</block>
   <block id="759c5ad2620497fe90dc2bc5e085c8c0" category="summary">Abilita le snapshot per la conservazione a lungo termine, che consente di replicare snapshot specifiche per il disaster recovery a lungo termine.</block>
@@ -1007,7 +997,6 @@
   <block id="71377237946a16cc4981e8007b83be9b" category="list-text">Selezionare *Abilita*.</block>
   <block id="427c298c7e18f9930012cc8fc9c01fcd" category="summary">Elimina un volume nel file system FSX per ONTAP che non è più necessario e per liberare spazio. Questa operazione è irreversibile.</block>
   <block id="c6e676032b22d8e639d8347f2bfe87d5" category="list-text">File e snapshot immutabili: I volumi che contengono file immutabili e snapshot non possono essere eliminati fino al termine del periodo di conservazione.</block>
-  <block id="c8b905c92d0173f2a57027886d96ccda" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system FSX per ONTAP per determinare se è necessario aggiungere lo storage incrementale e controllare gli inode di volumi disponibili o il numero massimo di file e cartelle in un volume, in modo che il loro conteggio aumenti in base alle soglie di gestione automatica della capacità configurate.</block>
   <block id="c19ec77905390b48637066dbfe338f41" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system per determinare se il file system necessita di capacità aggiuntiva.</block>
   <block id="db95f08d46f6135faf16036ec8d0bee1" category="paragraph">Esplora i risparmi per i workload di storage che utilizzano Amazon Elastic Block Store (EBS), Elastic file System (EFS) ed FSX per Windows file Server rispetto ad FSX per NetApp ONTAP.</block>
   <block id="40042d0ee93698f3f63a7f8a3f2c9c1f" category="paragraph"><block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>Manualmente, potrebbe essere necessario aumentare l'allocazione degli IOPS per supportare l'aumentata capacità del file system.</block>
@@ -1128,9 +1117,6 @@
   <block id="24249670ae7cb490931a0cfb669e35fb" category="list-text">Archiviazione: Replica i dati per storage e conformità a lungo termine</block>
   <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">Altro</block>
   <block id="181b737a36ca59661f38fe5373437f6a" category="list-text">*Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione. Il criterio di tiering predefinito corrisponde alla policy di tiering consigliata per il caso d'utilizzo selezionato.</block>
-  <block id="70790f6319078f7b58ce5d5adf8b27ed" category="list-text">*Aumento soglia*: Immettere la dimensione massima per il file system FSX per ONTAP.</block>
-  <block id="83b9d06ffc256e2f2bbc40862d118517" category="list-text">*Aumento incrementale*: Immettere la percentuale per aumentare la capacità in modo incrementale.</block>
-  <block id="67cfcc957e64e9b21fe6f9036930ba34" category="list-text">Opzionale: Attivare la gestione automatica degli inode per assicurarsi che la capacità dei file per volume aumenti aumentando il numero di inodes (file) fino al limite consentito.</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">30 marzo 2025</block>
   <block id="4992f7a0d7d6ee4776bb87ff9118642c" category="section-title">Dettagli del gruppo di protezione per la creazione del file system</block>
   <block id="b7cc50bb665bb63168fb8d2e9eebaedc" category="paragraph">Viene creato un gruppo di sicurezza come parte del processo di creazione del file system FSX per ONTAP. Sono ora disponibili i dettagli dei gruppi di sicurezza, inclusi protocolli, porte e ruoli.</block>
@@ -1318,7 +1304,6 @@
   <block id="396928510e06818ef017921022cce2af" category="list-text">Tiering dei dati</block>
   <block id="aff279b636a9024db3b44375d88e80eb" category="list-text">Istantanee locali pianificate</block>
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">Replica remota dei dati</block>
-  <block id="2f5c8a4d7476b305dbc46e2886046e37" category="inline-link-macro">Scopri come concedere autorizzazioni al tuo account AWS</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">Il suggerimento spiega le Best practice e i potenziali errori di configurazioni non ottimizzate.</block>
   <block id="8e369a2580b67427ac856eea6e4e3eb6" category="list-text">Selezionare *Correggi*.</block>
   <block id="fe5f70c74405942514095d724e090b64" category="paragraph">Quando *Visualizza e correggi* è un'opzione, selezionare i volumi interessati da correggere.</block>
@@ -1422,11 +1407,7 @@
   <block id="58107709be0f763204df69a361ef7fe0" category="list-text">Quando la gestione automatica della capacità è abilitata, è necessario un collegamento per garantire che gli inode del volume aumentino insieme alla capacità di archiviazione.</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 giugno 2025</block>
   <block id="0592779b8245b0df30d4f675dd276086" category="list-text">Pausa e ripresa della replica: È possibile mettere in pausa (disattivare) gli aggiornamenti di replica pianificati dal volume di origine al volume di destinazione e quindi riprendere la pianificazione della replica quando si è pronti. Durante la pausa, i volumi di origine e di destinazione diventano indipendenti e il volume di destinazione passa da sola lettura a lettura/scrittura.</block>
-  <block id="20f8a84eb910bbd8af91b95f380d163c" category="inline-link-macro">concedere permessi di _sola lettura_</block>
-  <block id="4548f94159b489b0c24b45e3a301c68c" category="list-text">È necessario disporre di credenziali con autorizzazioni di _sola lettura_ o _lettura/scrittura_. <block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>.</block>
   <block id="896d6bec42b8c83090c4e03345712729" category="paragraph">Sospendere una relazione di replica per interrompere gli aggiornamenti pianificati delle repliche dal volume di origine al volume di destinazione. Il volume di destinazione passa da sola lettura a lettura/scrittura. Entrambi i volumi continuano a condividere l'ultimo snapshot di replica come nuova base per la risincronizzazione successiva.</block>
-  <block id="b91aff97cc4dadbca9539fae72dedecc" category="paragraph">Scegli tra _base_, _sola lettura_ e _lettura/scrittura_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
-  <block id="b31987b3ffb35fe02be38fe9d8e701f1" category="paragraph">Se si opera in modalità _sola lettura_ o _lettura/scrittura_, sarà necessario <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> che include la selezione delle funzionalità del carico di lavoro, come database e intelligenza artificiale, e la creazione di policy IAM per garantire di disporre delle autorizzazioni corrette per operare in modalità _sola lettura_ o _lettura/scrittura_.</block>
   <block id="2423cc9c7b9124d70e9fba7ab98b53df" category="doc">Nuova analisi ben progettata e supporto per la risoluzione dei problemi</block>
   <block id="b03b65ae167fa7999b9020739117ae19" category="paragraph">La gestione automatica della capacità per i file system FSx per ONTAP è ora inclusa come analisi della configurazione nella dashboard dello stato ben progettata.</block>
   <block id="f2be69b635c39988351f6636a52c66bd" category="list-text">Gestione automatica della capacità</block>
@@ -1445,7 +1426,6 @@
   <block id="0152fea6b73cbe86540a93515bf61029" category="paragraph">Di seguito sono riportate le policy predefinite di AWS. Per i criteri di snapshot personalizzati, è necessario <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block> .</block>
   <block id="2b34fc0bead4dcf64099078fdaf86d69" category="paragraph">Per abilitare l'aumento automatico del volume, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
   <block id="f8e03e36604030c79d6107b800f61804" category="list-text">Per assicurarsi che il volume degli inode aumenti insieme alla capacità di archiviazione, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
-  <block id="837d97ffb35ee510b7ad737132bf4645" category="paragraph">Per aumentare la capacità del volume, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
   <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">creare e associare un collegamento</block>
   <block id="d2daf1f2c560c48cb1e86e38214b4f9f" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> o <block ref="cd9ae14bef62d063a73930ad8837c0cf" category="inline-link-macro-rx"></block>.</block>
   <block id="facdbacecd0a382dee80b9b865bb8503" category="paragraph">Per visualizzare i criteri di snapshot esistenti, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo l'associazione del collegamento, tornare a questa operazione.</block>
@@ -1876,7 +1856,6 @@
   <block id="43b56786015efd5716b466b10628735f" category="summary">NetApp Workload Factory analizza regolarmente le configurazioni del file system Amazon FSx for NetApp ONTAP per determinare se ci sono problemi.</block>
   <block id="25c58ec67af5ce4deef895fad9566aa0" category="paragraph">NetApp Workload Factory analizza regolarmente le configurazioni del file system Amazon FSx for NetApp ONTAP per determinare se ci sono problemi.  Quando vengono rilevati problemi, Workload Factory ti mostra quali sono e ti spiega cosa è necessario modificare per garantire che l'archiviazione del file system raggiunga le massime prestazioni, la massima efficienza dei costi e la conformità alle best practice.</block>
   <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">Nella console Workload Factory a livello di file system, lo stato di buona architettura è elencato per tutti i file system FSx for ONTAP .  Gli stati ben progettati sono classificati come "problemi", "non analizzati" o "ben progettati".  Selezionando lo stato ben progettato si viene reindirizzati alla scheda dello stato ben progettato all'interno del file system, dove è possibile trovare il punteggio ben progettato, le categorie di configurazione e tutte le configurazioni per il file system.</block>
-  <block id="e51fec3467af5113a01bcde93071f103" category="paragraph">Per un'analisi completa del file system, è necessario associare un collegamento.  La connettività dei link consente a Workload Factory di analizzare tutte le configurazioni del file system, come la protezione dei dati e le prestazioni.</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">Configurare e aggiornare Active Directory per una VM di archiviazione in un file system FSx for ONTAP in NetApp Workload Factory.</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">Da *FSx for ONTAP*, seleziona il menu delle azioni del file system con la VM di archiviazione da aggiornare, quindi seleziona *Gestisci*.</block>
   <block id="55713424abf36138f2e5576255ae328d" category="list-text">Dalla scheda VM di archiviazione, selezionare il menu delle azioni della VM di archiviazione per cui configurare Active Directory.</block>
@@ -1887,7 +1866,6 @@
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">Utilizzando NetApp Workload Factory è possibile creare un file system FSx per ONTAP per aggiungere e gestire volumi e servizi dati aggiuntivi.</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">Creare un file system FSx per ONTAP in NetApp Workload Factory</block>
   <block id="ebb1274f47205fb0c6d6d8988b0944b0" category="paragraph">Utilizzando NetApp Workload Factory è possibile creare file system FSx for ONTAP di prima e seconda generazione per aggiungere e gestire volumi e servizi dati aggiuntivi.</block>
-  <block id="3dea7c5f73758b891c81f43eb58f840c" category="list-text">ARN di un ruolo IAM che fornisce a Workload Factory le autorizzazioni necessarie per creare un file system FSx per ONTAP . <block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block> .</block>
   <block id="ddf59bcbb71271f59e400a7e3d03e5e5" category="list-text">Nel riquadro Archiviazione, seleziona *Crea FSx per ONTAP*.</block>
   <block id="cf8254c1af160e61f04022f6a69ab935" category="list-text">*Credenziali AWS*: seleziona per aggiungere le credenziali AWS in Workload Factory o continuare senza credenziali.</block>
   <block id="d1b55cbdf6e8ca176a53229f6dc39afc" category="summary">È possibile creare e gestire collegamenti per fornire una relazione di trust e connettività tra un account NetApp Workload Factory e uno o più file system FSx for ONTAP .</block>
@@ -1895,7 +1873,6 @@
   <block id="8525c310ff1b921b05db83eb21ea6be7" category="paragraph">I link richiedono l'autenticazione. È possibile autenticare i collegamenti utilizzando le credenziali archiviate nel servizio credenziali Workload Factory oppure con le credenziali archiviate in AWS Secrets Manager. È supportato un solo metodo di autenticazione per collegamento. Ad esempio, se selezioni l'autenticazione tramite collegamento con AWS Secrets Manager, non potrai modificare il metodo di autenticazione in un secondo momento.</block>
   <block id="fa1694d04e308a581d5d23c44b278491" category="list-text">Automaticamente: crea un collegamento con registrazione automatica tramite Workload Factory.  Un collegamento creato automaticamente richiede token per l'automazione di Workload Factory e il codice CloudFormation ha vita breve.  Può essere utilizzato solo per un massimo di sei ore.</block>
   <block id="d6305b17d1542122d978c37db15fd5d3" category="inline-link-macro">aggiungere credenziali in Workload Factory</block>
-  <block id="1858e6285c0971e6fe3339eff4e673ac" category="list-text">È necessario disporre di almeno un file system FSx per ONTAP in Workload Factory.  Per scoprire o creare file system FSx per ONTAP , è necessario disporre di un account AWS con autorizzazioni per le istanze FSx per ONTAP e<block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block> con autorizzazioni di _sola lettura_ o _lettura/scrittura_ per la gestione dell'archiviazione.</block>
   <block id="3b6158401b21fd0fabd6f75b8d9c8c23" category="list-text">Per la console Workload Factory: porta 443 (HTTPS)</block>
   <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">Utilizzare CloudFormation per creare e registrare automaticamente il collegamento all'interno di Workload Factory.</block>
   <block id="40be05127ecd2439f7ee7256f055873a" category="list-text">Da *FSx for ONTAP*, seleziona il menu delle azioni del file system a cui associare un collegamento, quindi seleziona *Associa collegamento*.</block>
@@ -1979,9 +1956,6 @@
   <block id="c39b3cbd986af96ef05b9724f0b92e6b" category="summary">Abilita l'aumento automatico del volume per consentire a Workload Factory di gestire la capacità del volume per te.  Puoi disattivarlo in qualsiasi momento.</block>
   <block id="467fbaad5c04b9212fefde208c6fce39" category="doc">Abilita l'aumento automatico del volume in Workload Factory</block>
   <block id="c7cb41d0ae0beeca525b094df6834ee5" category="list-text">Dalla scheda Volumi, seleziona il menu azioni per il volume che desideri modificare.</block>
-  <block id="209ff7e6ecbe3110db7702a1025e561e" category="summary">Abilitando questa funzionalità, Workload Factory aggiunge automaticamente spazio di archiviazione incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.</block>
-  <block id="02d33101545a159bdb205d55a080cd8f" category="paragraph">Abilitando la gestione automatica della capacità, NetApp Workload Factory aggiunge automaticamente storage incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.  Inoltre, l'abilitazione di questa funzionalità elimina la necessità di monitorare manualmente la capacità e riduce il rischio di letture e scritture di dati applicativi che hanno un impatto negativo.</block>
-  <block id="31612d3d4964dbcf536191df411871dc" category="list-text">Per completare questa attività è necessario disporre di credenziali con autorizzazioni di lettura/scrittura in Workload Factory.</block>
   <block id="700ddd4e501b4b63ce13f0a4091d97c3" category="list-text">Da *FSx for ONTAP*, selezionare il menu delle azioni del file system per abilitare la gestione automatica della capacità.</block>
   <block id="a2f3bd55649066a9bad9a42a8df63f08" category="paragraph">In NetApp Workload Factory è possibile abilitare gli snapshot per la conservazione a lungo termine, il che consente di replicare snapshot specifici per il ripristino di emergenza a lungo termine.</block>
   <block id="116537ad3a8e9d253ab6c2cf9b1375c4" category="list-text">Da *FSx for ONTAP*, selezionare l'azione del file system da aggiornare, quindi selezionare *Gestisci*.</block>
@@ -1993,7 +1967,6 @@
   <block id="4642e285e7941ecca45c4f489b87f287" category="list-text">Nel riquadro Archiviazione, seleziona *Esplora risparmi*, quindi *Amazon Elastic Block Store (EBS)*.</block>
   <block id="5235f3c9988274bcb10c4b2ad1e8abc2" category="list-text">Nel riquadro Archiviazione, seleziona *Esplora risparmi*, quindi * Amazon FSx for Windows File Server*.</block>
   <block id="65fa6947c889eb884d3db5954face1ff" category="list-text">Nel riquadro Archiviazione, seleziona *Esplora risparmi*, quindi *Amazon Elastic File System (EFS)*.</block>
-  <block id="fa43e9d68125b28fd0b5f3f2a0f08266" category="paragraph">Per consentire a Workload Factory di rilevare gli ambienti di archiviazione Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSx per Windows File Server nel tuo account AWS, assicurati di<block ref="13ae78c09f3df6bcab328a886064dd51" category="inline-link-macro-rx"></block> nel tuo account AWS.</block>
   <block id="32ded30570ff532ec17d74df7689f0d7" category="list-text">Dal menu Archiviazione, seleziona *Esplora risparmi*.</block>
   <block id="08b129d5d0d4acb7990365d6ce9f2c5f" category="list-text">*File system selezionati*</block>
   <block id="11ed0b3202d6d086758a8d450bf14383" category="list-text">In modalità _automate_, è possibile distribuire il file system FSx for ONTAP direttamente da Workload Factory.  È anche possibile copiare il contenuto dalla finestra Codebox e distribuire il sistema utilizzando uno dei metodi Codebox.</block>
@@ -2019,8 +1992,6 @@
   <block id="f899a571558dc3581836d9ffe17218ed" category="paragraph">La connettività del collegamento consente a Workload Factory di analizzare i problemi relativi a prestazioni, protezione dei dati e configurazioni. <block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block> per l'analisi più completa delle risorse del tuo file system.</block>
   <block id="efa540b6730dc694889e9447404ff68a" category="paragraph">Hai la possibilità di rivedere i consigli per i problemi di configurazione dei tuoi file system e di risolvere i problemi dall'Archiviazione nella console Workload Factory.</block>
   <block id="73b9ca32e75f36a5247f70e0ac6f7034" category="list-text">Affidabilità: soglia di capacità SSD, snapshot locali pianificati, backup FSx per ONTAP , replicazione remota dei dati e affidabilità dei dati per la conservazione a lungo termine</block>
-  <block id="e05ad8318dcdb75b0f56aa3a9ae7a086" category="list-text">Sicurezza: protezione autonoma dai ransomware NetApp con intelligenza artificiale (ARP/AI)</block>
-  <block id="fcb4f17380114485bf72087c9adb81e3" category="list-text">Eccellenza operativa: efficienza di archiviazione, gestione automatica della capacità e soglia di utilizzo della capacità dei file di volume</block>
   <block id="24ef9c1deb4b27b9f21ac5bafe0b447a" category="list-text">Ottimizzazione dei costi: efficienza di archiviazione e livelli di dati</block>
   <block id="f4620ec86c292b6ceff91a8418771488" category="list-text">Il processo di ripristino potrebbe causare tempi di inattività delle istanze o interruzioni del servizio. Assicurati di leggere attentamente ogni raccomandazione prima di decidere di risolvere un problema di configurazione.</block>
   <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>per l'analisi più completa delle risorse del tuo file system.</block>
@@ -2032,12 +2003,7 @@
   <block id="29c336c9b670f37c678bc693dcbf0271" category="list-text">Per un volume: selezionare l'azione e quindi selezionare *Riattiva volume*.</block>
   <block id="97ab4fe470265bac6bd7eeb0ab6bda75" category="doc">Regola la capacità del file system in Workload Factory</block>
   <block id="e916aa8237833ef72c75def81e289920" category="paragraph">In alternativa, puoi<block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> quindi Workload Factory gestisce la capacità del file system per te.</block>
-  <block id="95ac9df142a7e6c7792a69682f381505" category="summary">È possibile aumentare manualmente la capacità di un volume in NetApp Workload Factory in qualsiasi momento.</block>
-  <block id="1e243240457d81990143c1a64eae70f5" category="doc">Aumenta la capacità del volume in NetApp Workload Factory</block>
-  <block id="fc9ec781843f39a08c97d2ebfe397bfa" category="paragraph">Aumenta manualmente la capacità di un volume in qualsiasi momento in NetApp Workload Factory.</block>
   <block id="39b152c5585fc0bf22a04de0cc07dff1" category="paragraph">Facoltativamente, puoi<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block> per consentire a Workload Factory di gestire la capacità del volume per te.</block>
-  <block id="cc478f41af3ed4f56398aad5a69f46c3" category="list-text">Dalla scheda Volumi, selezionare il menu delle azioni del volume per cui si desidera aumentare la capacità.</block>
-  <block id="ae026ff2589ac9280b905644404ee447" category="list-text">Selezionare *Aumenta* per applicare la modifica.</block>
   <block id="2ee765f12c6b1a8ffcd478e2ea34f09b" category="doc">Inizializzare una relazione di replica in NetApp Workload Factory</block>
   <block id="ddc0042b887590b7a2423362f6c3455b" category="paragraph">Inizializza una relazione di replica tra i volumi di origine e di destinazione per trasferire lo snapshot e tutti i blocchi di dati in NetApp Workload Factory.</block>
   <block id="e7fac383dedc147790819a6b6ec1ca87" category="list-text">Nella scheda Relazioni di replica, selezionare il menu delle azioni della relazione di replica da inizializzare.</block>
@@ -2150,7 +2116,6 @@
   <block id="3d784fb83da69a092542ad97e84229a1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>Accedi a Workload Factory</block>
   <block id="e3f4d5b3a0d16b68c0f95c7031bbab0f" category="inline-link-macro">creare un account con Workload Factory</block>
   <block id="21f5ea0bd2c3e06693357df598869216" category="paragraph">Avrai bisogno di<block ref="9144f2d687cdfc71041a1a85068f8ab7" category="inline-link-macro-rx"></block> E<block ref="10204cc30f2f30795b6ce82a21da7b1a" category="inline-link-macro-rx"></block></block>
-  <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">Se si sceglie di operare in modalità _base_, non è necessario procedere oltre.  È possibile iniziare a utilizzare Workload Factory per FSx per ONTAP per copiare campioni di codice parzialmente completati.</block>
   <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">Console Workload Factory</block>
   <block id="42417c07633018b12e0946c06afcf181" category="paragraph">Creerai un file system FSx per iniziare a gestire le tue risorse di archiviazione e FSx per ONTAP in Workload Factory.  Nel<block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block> , in Archiviazione, seleziona *Crea file system*. <block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block> .</block>
   <block id="189c3af86554306ea0fe0a97bba45b30" category="list-text">*Modalità di apprendimento*: quando si abilita ARP/AI, viene eseguito in _modalità di apprendimento_. In modalità di apprendimento, il file system FSx for ONTAP sviluppa un profilo di avviso basato sulle aree analitiche: entropia, tipi di estensione file e IOPS file. Dopo che il file system ha eseguito ARP/AI in modalità di apprendimento per un tempo sufficiente a valutare le caratteristiche del carico di lavoro, Workload Factory passa automaticamente ad ARP/AI in _modalità attiva_ e inizia a proteggere i dati.</block>
@@ -2242,4 +2207,160 @@
   <block id="28a2c493e9a663d617e582302e1bcf28" category="inline-link-macro">Notifiche per la BlueXP workload factory</block>
   <block id="165f0ade723f657a5d7981bfecbfc75a" category="paragraph"><block ref="165f0ade723f657a5d7981bfecbfc75a" category="inline-link-macro-rx"></block></block>
   <block id="419085fd5f19a39001679a5f52b0acdf" category="list-text">In *Archiviazione*, seleziona *Vai ad Archiviazione*</block>
+  <block id="e36df438b5b93dceba2c7403d4b29005" category="doc">Gestione del volume della cache</block>
+  <block id="97da28c7fc13e427cbb28f833b8e7e6e" category="paragraph">È possibile eseguire le seguenti operazioni di gestione del volume della cache dalla console di Workload Factory:</block>
+  <block id="705987d425caa32725844671dba5db96" category="list-text">Modifica il nome della cache</block>
+  <block id="fb7f41847231da20e771064f5b566df4" category="list-text">Aumentare la capacità di un volume di cache</block>
+  <block id="64fe5cd33226afdb2a1244ea9e67be19" category="list-text">Modifica il percorso di montaggio o la politica di esportazione per un volume di cache</block>
+  <block id="322c847779d1746b4e7d66ee05dcefcd" category="list-text">Modificare il metodo o la modalità di memorizzazione nella cache per un volume di cache</block>
+  <block id="13c47466230be92e5e3aa6588809aeac" category="list-text">Precompilare un volume di cache</block>
+  <block id="52fc772a9179443c2c2ba75c94518e8f" category="list-text">Elimina un volume di cache</block>
+  <block id="7826298c658de05b150f4b10fc144ea2" category="inline-link-macro">Gestisci i volumi della cache</block>
+  <block id="9223fd31c285815a2492912ef49bdbbb" category="paragraph"><block ref="9223fd31c285815a2492912ef49bdbbb" category="inline-link-macro-rx"></block></block>
+  <block id="7c0216aac73557cb5845492aebaeab8a" category="section-title">Gestione automatica degli inode disponibile</block>
+  <block id="31dcfbe8cd69ef4085402c0f104858cd" category="paragraph">È possibile abilitare la gestione automatica degli inode senza dover abilitare la gestione automatica della capacità.</block>
+  <block id="71e9d4ada3104308778ade0ba22de28d" category="inline-link-macro">Abilita la gestione automatica degli inode</block>
+  <block id="c38d477b997e2c8216a0b40479691f29" category="paragraph"><block ref="c38d477b997e2c8216a0b40479691f29" category="inline-link-macro-rx"></block></block>
+  <block id="22fcde27b4672d89a21e10e9be49cdee" category="section-title">Impostazione di avviso di soglia per l'utilizzo di capacità e inode</block>
+  <block id="cc72208ba5327054f030d802d324477c" category="inline-link-macro">Servizio di notifica NetApp Workload Factory</block>
+  <block id="f1ff66cdf2af497189be6ebd8f6e5fcd" category="paragraph">Sono disponibili avvisi di soglia sia per la capacità che per l'utilizzo degli inode.  È possibile impostare queste soglie quando si abilita la gestione automatica della capacità o degli inode.  Per utilizzare questa impostazione, dovrai configurare le notifiche utilizzando<block ref="52b0820c6dc6b8d67591785df8b1a634" category="inline-link-macro-rx"></block> .</block>
+  <block id="76170a72d0c8b98ef012c3b57dc6dbe8" category="section-title">Riduzione delle dimensioni del volume disponibile</block>
+  <block id="26b07c7813c6a780d507b42d999b4792" category="paragraph">È possibile ridurre le dimensioni dei volumi NFS e SMB/CIFS in NetApp Workload Factory.  Questa funzionalità consente una migliore gestione delle risorse di archiviazione, consentendo di ridurre le dimensioni dei volumi che non sono più necessari alla loro capacità attuale.</block>
+  <block id="fcbcb93b74f64a75b2b710bb8328b4e0" category="inline-link-macro">Diminuire la capacità di un volume</block>
+  <block id="e1b7073be30c28b07f5c847e0a1b56ed" category="paragraph"><block ref="e1b7073be30c28b07f5c847e0a1b56ed" category="inline-link-macro-rx"></block></block>
+  <block id="f09c98d35d5b89f3f833636d36ca3283" category="section-title">FSx migliorato per lo stato delle risorse ONTAP</block>
+  <block id="9d017083ba2041742b1b85bbb1a846c4" category="paragraph">Workload Factory ha migliorato lo stato della risorsa "non configurata" per includere una spiegazione del problema effettivo della risorsa.</block>
+  <block id="48707dc4d2e44fe9cf85834f27b932e8" category="paragraph">Workload Factory analizza i file system FSx for ONTAP per le seguenti configurazioni:</block>
+  <block id="04cc0a87491bd184b66866438266882a" category="list-text">Utilizzo del volume quasi completo: controlla se uno qualsiasi dei volumi sta utilizzando l'80% o più della propria capacità di file.  Ciò consente di identificare i volumi che potrebbero richiedere capacità aggiuntiva.</block>
+  <block id="39e165c09308fcda245787c3a6d7bf78" category="list-text">Accesso non autorizzato ai volumi: verifica se un volume iSCSI è accessibile tramite un percorso di montaggio NFS o SMB/CIFS e consente di rimuovere l'accesso non autorizzato al volume per evitare rischi per la sicurezza.</block>
+  <block id="bfd11f24993c810a26cdef233ebbdfb6" category="section-title">Modifiche alle autorizzazioni per Workload Factory per Storage</block>
+  <block id="bdc39f4be3514cc2cad7e4ca6cba0988" category="paragraph">Workload Factory fornisce maggiore chiarezza sulle autorizzazioni richieste per azioni specifiche e granularità per selezionare solo le autorizzazioni necessarie.  Quando aggiungi le credenziali, avrai tre opzioni di autorizzazioni tra cui scegliere, anziché il precedente modello di autorizzazioni che era _sola lettura_ e _lettura/scrittura_.  Il nuovo modello di autorizzazioni suddivide le policy di autorizzazione come segue:</block>
+  <block id="f9113d285c58dd831a3240c5b41a6f84" category="list-text">_Visualizzazione, pianificazione e analisi_: visualizza i file system FSx per ONTAP , scopri di più sullo stato del sistema, ottieni un'analisi ben progettata per i tuoi sistemi ed esplora i risparmi.</block>
+  <block id="a45538554e2c413a5e22df853abb4d27" category="list-text">_Operazioni e risoluzione_: esegui attività operative come la regolazione della capacità del file system e la risoluzione dei problemi relativi alle configurazioni del file system.</block>
+  <block id="036d0224d85e6a18c7e85f034ace65c1" category="list-text">_Creazione ed eliminazione del file system_: crea ed elimina FSx per i file system ONTAP e le VM di archiviazione.</block>
+  <block id="c1c8be0a907c363e6506c96d16870672" category="paragraph">Quando si aggiungono le credenziali, è possibile selezionare una o più di queste policy di autorizzazione in base al livello di accesso che si desidera fornire a Workload Factory.</block>
+  <block id="b20b01e02162a68002ca1747d1bd3c10" category="inline-link-macro">Riferimento alle autorizzazioni di Workload Factory</block>
+  <block id="444b052e3d1349e221d4ceb42e6c1cf7" category="paragraph"><block ref="444b052e3d1349e221d4ceb42e6c1cf7" category="inline-link-macro-rx"></block></block>
+  <block id="c4a6983274098ca737ffda27862010ea" category="section-title">Supporto per FSx per ONTAP Cyber ​​Vault</block>
+  <block id="4a3b498d2b39740971d75ebbab434a8f" category="paragraph">È possibile creare un cyber vault utilizzando FSx for ONTAP come origine o destinazione nell'architettura del cyber vault.  I caveau informatici forniscono un ambiente sicuro e isolato per l'archiviazione di dati critici, proteggendoli da ransomware e altre minacce informatiche.</block>
+  <block id="4bc6d1e741e4c817c4985300ec66b77f" category="inline-link-macro">Configurare un cyber vault con FSx per ONTAP</block>
+  <block id="545bd81803e837dd73a7bceb1a798b8a" category="paragraph"><block ref="545bd81803e837dd73a7bceb1a798b8a" category="inline-link-macro-rx"></block></block>
+  <block id="443d77d8a4d29940f1da82d57cf91d7b" category="summary">È possibile regolare manualmente la capacità di un volume in NetApp Workload Factory in qualsiasi momento.</block>
+  <block id="9506827488d3f10bebcc3d5a3e5f83f8" category="doc">Regola la capacità del volume in NetApp Workload Factory</block>
+  <block id="2d6396444f6d2c33e9a33bc98d74a44b" category="paragraph">È possibile regolare manualmente la capacità di un volume in qualsiasi momento dalla console NetApp Workload Factory .</block>
+  <block id="fa091ab3e96a1d7a44f1f7c711636fb7" category="paragraph">È possibile regolare la capacità del volume aumentando o diminuendo la dimensione di provisioning di un volume.  La tabella seguente mostra le dimensioni minime e massime del volume in base al tipo di volume:</block>
+  <block id="fc18634852d4299cd5f8c7ad55ddefbe" category="cell">Tipo di volume</block>
+  <block id="9dba50d3a2c2f26daddbf9d144c49772" category="cell">Dimensione minima</block>
+  <block id="acfc7717e24258e6355ba4036bf1654d" category="cell">Dimensione massima</block>
+  <block id="7af205ff6788e684be8673a5559a8399" category="cell">20 MB</block>
+  <block id="4dd4655034851cefb46869bef690cc22" category="cell">300 TiB</block>
+  <block id="b5f7116243418c9289af58601bd22424" category="cell">800 GB</block>
+  <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 PiB</block>
+  <block id="08842901b516656f4ce72eb7f4f5c0d1" category="paragraph">Per una LUN iSCSI, aumentando le dimensioni del volume aumentano anche le dimensioni della LUN host.  Dopo aver aumentato la capacità del volume, seguire la procedura fornita dal sistema operativo host per scoprire la nuova dimensione del LUN ed espandere il file system del LUN.</block>
+  <block id="f4d84340dd6fee1664a29cabc2ba8c39" category="paragraph">La riduzione delle dimensioni del volume è supportata solo per i volumi NFS e SMB/CIFS.</block>
+  <block id="2880a60b72532c629f0cc885860ca8e5" category="paragraph">Per regolare la capacità del volume, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, tornare a questa operazione.</block>
+  <block id="57730f251586648892ae3bf2485f043e" category="list-text">Dalla scheda Volumi, selezionare il menu delle azioni del volume per cui regolare la capacità.</block>
+  <block id="4e54161de298fea40a1792b1351b1789" category="list-text">Selezionare *Azioni di base*, quindi *Regola capacità volume*.</block>
+  <block id="4fbd17d05637f9e5fed62de5f827a895" category="list-text">Nella finestra di dialogo Regola capacità volume, imposta la *Capacità fornita* e l'unità.</block>
+  <block id="6a6abbaa1bbd0c301b070b7a1615b31d" category="list-text">Selezionare *Regola* per applicare le modifiche.</block>
+  <block id="25e79c779a2e15c96afc5b7555e58a60" category="list-text"><block ref="25e79c779a2e15c96afc5b7555e58a60" category="inline-link-macro-rx"></block></block>
+  <block id="018b5169ae450db66c30a726fbd7e178" category="inline-link-macro">Ribilancia un volume in Workload Factory</block>
+  <block id="6ab1a086826b377aebef1904415ab23c" category="list-text"><block ref="6ab1a086826b377aebef1904415ab23c" category="inline-link-macro-rx"></block></block>
+  <block id="ccfc2060f8f316d0ccd33b0289111a38" category="paragraph">Per un'analisi completa del file system, è necessario procedere come segue:</block>
+  <block id="f95f58d64ce974b5c7aac839966c9c9b" category="list-text">Associa un collegamento.  La connettività dei link consente a Workload Factory di analizzare tutte le configurazioni del file system, come la protezione dei dati e le prestazioni.</block>
+  <block id="64aefaaa1ffe9f3b50d13850f89ff59a" category="list-text">Concedi le autorizzazioni di _visualizzazione, pianificazione e analisi_ nel tuo account AWS.</block>
+  <block id="582f3532371a870cf4bd6406f93d26de" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block></block>
+  <block id="7335bfe9e44aaa30f676443b169c4028" category="summary">Scopri di più sui cyber vault NetApp e su come implementare l'architettura dei cyber vault per proteggere i tuoi dati da ransomware e minacce informatiche.</block>
+  <block id="82f3873908ce87878ae918ed0d960883" category="doc">Proteggi i tuoi dati con un cyber vault</block>
+  <block id="c20c451e413ebde26a765cbbc0c15afc" category="paragraph">Un volume di cyber vault è un luogo di archiviazione isolato e sicuro utilizzato per archiviare copie di backup dei dati, proteggendoli da attacchi ransomware e altre minacce informatiche.  Come parte della creazione del vault, creerai un volume del cyber vault, disabiliterai tutti i protocolli client e configurerai una relazione di replica tra il volume di origine e il volume del cyber vault, quindi creerai snapshot immutabili sul volume del cyber vault.</block>
+  <block id="d825eb03b1924c3d41f95d2810515203" category="paragraph-title">Cos'è un cyber vault?</block>
+  <block id="2712d3844c4c3f6fae0cd10b9d646084" category="paragraph">Un cyber vault è una tecnica specifica di protezione dei dati che prevede l'archiviazione di dati critici in un ambiente isolato, separato dall'infrastruttura IT primaria.</block>
+  <block id="61e7cd4643e82d4dae37197f961a9d95" category="paragraph">Il cyber vault è un archivio dati "air-gapped", immutabile e indelebile, immune alle minacce che colpiscono la rete principale, come malware, ransomware o persino minacce interne.  È possibile realizzare un caveau informatico con snapshot immutabili e indelebili.</block>
+  <block id="bb393d57385c8b74901eb02a39ed13dc" category="paragraph">I backup air-gapping che utilizzano metodi tradizionali comportano la creazione di spazio e la separazione fisica del supporto primario e secondario. Spostando i media fuori sede e/o interrompendo la connettività, i malintenzionati non hanno accesso ai dati. Ciò protegge i dati ma può comportare tempi di ripristino più lenti.</block>
+  <block id="b84e00df342c7bef670fd67bcf1093fc" category="paragraph-title">FSx per i cyber vault ONTAP</block>
+  <block id="75ef547803457d883c1ab7eec9dd8c12" category="paragraph">Amazon FSx for NetApp ONTAP è supportato come origine e destinazione del cyber vault.</block>
+  <block id="b672f52ade975e864ae6b58722c03689" category="paragraph-title">Implementazione</block>
+  <block id="e8e8dcbe97676a6fe5760aae822c6e61" category="paragraph">Workload Factory fornisce assistenza nella creazione di un'architettura di cyber vault.  Dopo aver contattato NetApp per esprimere il tuo interesse nell'implementazione di un cyber vault, uno specialista NetApp ti contatterà per discutere le tue esigenze.</block>
+  <block id="9577a31ea32e2c5b58950150698f2a07" category="paragraph">Per iniziare, invia un'e-mail a ng-FSx-CyberVault@netapp.com.</block>
+  <block id="a9541230016fd9f6de7895f1a32b75fb" category="inline-link-macro">Documentazione del cyber vault ONTAP</block>
+  <block id="eac9e4c62fd872313a45023cb8fd31ec" category="paragraph">Per ulteriori informazioni sui cyber vault e su come impostare questa architettura, fare riferimento a<block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block> .</block>
+  <block id="18e03b41df425134308f1975a1972f8e" category="list-text">Credenziali con autorizzazioni di _creazione ed eliminazione del file system_ per creare un file system FSx per ONTAP . <block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>.</block>
+  <block id="4c4658c6e6bcc607d3d1e8c00d38f9b6" category="list-text">È necessario disporre di almeno un file system FSx per ONTAP in Workload Factory.  Per scoprire i file system FSx per ONTAP , è necessario disporre di un account AWS con autorizzazioni per le istanze FSx per ONTAP e<block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block> con autorizzazioni di _visualizzazione, pianificazione e analisi_ per la gestione dell'archiviazione.</block>
+  <block id="8763b09bbcb06ec11c1d0d3331ba74f4" category="paragraph"><block ref="8763b09bbcb06ec11c1d0d3331ba74f4" category="inline-link-macro-rx"></block></block>
+  <block id="05fbfa43ca52b70a735d4a870f0f8f6d" category="inline-link-macro">funzione di regolazione della capacità del volume</block>
+  <block id="8f764b06860786fe5978951124c18450" category="paragraph">Facoltativamente, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzando<block ref="e78173f6bdea353abf41de50dd00987d" category="inline-link-macro-rx"></block> .</block>
+  <block id="ad5ba1f7c14b2135486dafc0e40196ac" category="summary">Abilitando questa funzionalità, Workload Factory aggiunge automaticamente storage incrementale o inode a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.</block>
+  <block id="251a3ffdc6a0761b01f0ace790d97c6d" category="doc">Abilita la gestione automatica della capacità e degli inode per un file system</block>
+  <block id="80d103a4c479f8e38dc6456e91cb1909" category="paragraph">Abilitando la gestione automatica della capacità e degli inode, NetApp Workload Factory aggiunge automaticamente storage incrementale o inode a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.  Inoltre, l'abilitazione di questa funzionalità elimina la necessità di monitorare manualmente la capacità e gli inode.</block>
+  <block id="296d96c707449b84b0b4b3f02a91bc6c" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system FSx for ONTAP per determinare se è necessario aggiungere spazio di archiviazione incrementale e per verificare gli inode di volume disponibili, ovvero il numero massimo di file e cartelle in un volume, in modo che il loro conteggio aumenti in base alle soglie di gestione automatica della capacità configurate.</block>
+  <block id="e1d481cddc46ccb42fc6f59c020f5ce1" category="paragraph">Abilita la gestione automatica della capacità per aggiungere automaticamente spazio di archiviazione incrementale fino al limite massimo di dimensione per un file system FSx per ONTAP .</block>
+  <block id="7950e88c4d4bc489666a4af446a7d303" category="inline-link-macro">concedere credenziali con la politica di autorizzazione _visualizzazione, pianificazione e analisi_</block>
+  <block id="37d3a1150da64094460d233181c8c83e" category="list-text">Devi<block ref="1773ab1fe4aa6a3e5fc61d86a29970f0" category="inline-link-macro-rx"></block> in Workload Factory per completare questa attività.</block>
+  <block id="650ad6fb48eb81eacfa521124d1dc357" category="list-text">*Soglia di avviso*: imposta la soglia di avviso su un valore inferiore all'aumento della soglia per attivare una notifica dal servizio di notifica Workload Factory.  Il valore predefinito è 70%.</block>
+  <block id="8ec47943fca737be2b087573534a2057" category="inline-link-macro">abilitato il servizio di notifica Workload Factory</block>
+  <block id="60c52248134394a776265c66248137a8" category="paragraph">L'impostazione della soglia di avviso è disponibile solo se<block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block> .</block>
+  <block id="4e88714beba53ff4a9a4132c11a62597" category="list-text">*Aumento soglia*: immettere l'aumento percentuale massimo per il file system FSx for ONTAP .  Il valore predefinito è 80%.</block>
+  <block id="d12b629d9480f34a15d23dec455a9519" category="paragraph">Questa è la soglia raggiunta la quale Workload Factory attiva un processo per aumentare la capacità.  Ad esempio, se il file system raggiunge l'80% della capacità, Workload Factory aumenterà la capacità.</block>
+  <block id="6e90c3bb0026fc33efcead3220266e2d" category="list-text">*Aumento incrementale*: immettere la percentuale per aumentare la capacità in modo incrementale.  Il valore predefinito è il 10%.</block>
+  <block id="d978b96a75b32e336ed3b9754090bb19" category="paragraph">Questa è la percentuale di aumento della capacità ogni volta che viene raggiunta la soglia.  Ad esempio, se il file system è pieno all'80% e l'aumento incrementale è impostato sul 10%, Workload Factory aumenta la capacità del 10%.</block>
+  <block id="91702a6000d20d7ffbea5fe3ad5f99fa" category="paragraph">Abilitare la gestione automatica degli inode per assicurarsi che la capacità dei file per volume aumenti incrementando il numero di inode (file) fino al limite consentito.</block>
+  <block id="e5896468cb243b3cd2e0e75b0ca7173d" category="admonition">*Utenti Terraform*: Terraform presenta una limitazione che richiede che tutte le operazioni vengano completate all'interno di Terraform.  La gestione degli inode non è supportata in Terraform, ma è possibile abilitare la gestione automatica degli inode nella console Workload Factory.</block>
+  <block id="0a0054f32c5856b9e4d1227d3aff2de3" category="list-text">Per gestire automaticamente gli inode del volume, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, tornare a questa operazione.</block>
+  <block id="2dc6db0702897622d8829494f1d3b37f" category="inline-link-macro">abilitare il servizio di notifica Workload Factory</block>
+  <block id="8166fa3c69aeeb513514d7132a126f1d" category="list-text">La gestione automatica degli inode può essere impostata con una _soglia di avviso_ che attiva una notifica dal servizio di notifica Workload Factory.  Per utilizzare questa funzione, è necessario<block ref="92ba022a113ba350cc22eb4ba703843c" category="inline-link-macro-rx"></block> Primo.</block>
+  <block id="6e5f35050440735f1d3c74313b13121b" category="list-text">Da *FSx for ONTAP*, selezionare il menu delle azioni del file system per abilitare la gestione automatica degli inode.</block>
+  <block id="d1f7d48753d7c7d412198e99284c77c4" category="list-text">In Informazioni, seleziona l'icona della matita accanto a *Gestione automatica degli inode*.  L'icona della matita appare accanto alla freccia a discesa quando il mouse passa sopra la riga *Gestione automatica degli inode*.</block>
+  <block id="a05c0bd49dd6b14a547123422c9700bf" category="list-text">Nella finestra di dialogo *Gestione automatica degli inode*, fornire quanto segue:</block>
+  <block id="ba34a0ebba4d6c09a70fb5064686c0d0" category="list-text">Selezionare il pulsante di abilitazione per *Abilitare la gestione automatica degli inode*.</block>
+  <block id="0b346179a77894b7baa7b4fb9ec8a20b" category="paragraph">In alternativa, disattivare la funzione.  Se è necessario aumentare il numero di inode, è necessario prima disabilitare la gestione automatica degli inode.</block>
+  <block id="589d329d581786f947071a398183e0b2" category="list-text">*Aumento soglia*: immettere la percentuale massima di aumento per il numero di inode (file) per volume.  Il valore predefinito è 80%.</block>
+  <block id="304c69e0afb53f4cc8629f5fbc0057bb" category="list-text">*Aumento incrementale*: immettere la percentuale per aumentare in modo incrementale il numero di inode (file).  Il valore predefinito è il 10%.</block>
+  <block id="3d85ed6e3650fdb2521f4d9f31df975f" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system per determinare se i volumi necessitano di inode (file) aggiuntivi per volume.</block>
+  <block id="af7c77855745c2192ad309cfc11ed68c" category="inline-link-macro">concedere permessi di visualizzazione, pianificazione e analisi</block>
+  <block id="00a34d80b9c8f1d9c82e222ff89f622f" category="paragraph">Per consentire a Workload Factory di rilevare gli ambienti di archiviazione Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSx per Windows File Server nel tuo account AWS, assicurati di<block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> nel tuo account AWS.</block>
+  <block id="c72cfdac6d94ccc9f462d05de25df6f6" category="list-text">Sicurezza: protezione autonoma da ransomware NetApp con intelligenza artificiale (ARP/AI) e accesso non autorizzato ai volumi</block>
+  <block id="191b6288ea89d5cc022ea3d3d9ed8eeb" category="list-text">Eccellenza operativa: gestione automatica della capacità, soglia di utilizzo della capacità dei file di volume e utilizzo del volume prossimo al completo</block>
+  <block id="79e27ec6fe4e85288757fae779bab815" category="inline-link-macro">concedere autorizzazioni per _operazioni e bonifica_</block>
+  <block id="052dbb930400a0ed10fd9a2369d6e91b" category="list-text">Devi<block ref="31bad9d191bee3fabcae484ca4efec82" category="inline-link-macro-rx"></block> nel tuo account AWS.</block>
+  <block id="8397e16109313045973558b01bfb9915" category="list-text">Le riduzioni delle dimensioni del volume non sono supportate per i volumi iSCSI.</block>
+  <block id="00e4e6045ee76f2899377d5370d56a36" category="summary">Gestire i volumi di cache per un file system FSx for ONTAP in NetApp Workload Factory quando necessario.</block>
+  <block id="77202d5f206e842a17a7c71e4612af8c" category="doc">Gestire i volumi di cache per un file system FSx per ONTAP</block>
+  <block id="6d6084417b916dd2a1b60499b04dad76" category="paragraph">Dalla console NetApp Workload Factory è possibile gestire i volumi di cache per i file system FSx for ONTAP .  Le attività di gestione includono la modifica del nome della cache, l'aumento della capacità della cache, la modifica dei criteri di esportazione, la modifica del metodo di memorizzazione nella cache, il pre-popolamento della cache e l'eliminazione del volume della cache quando non è più necessario.</block>
+  <block id="c0c5d63ff1a1fe8bf6fe4f26c7af37c8" category="paragraph">È possibile gestire i volumi di cache associati alle relazioni di cache senza uscire dalla console NetApp Workload Factory .</block>
+  <block id="fe39e5a751393e260c8760e626d46663" category="list-text">È necessario associare un collegamento per gestire i volumi e le relazioni della cache. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, tornare a questa operazione.</block>
+  <block id="2923b8d05b469dec564ede3ae38cab32" category="list-text">Per modificare è necessario disporre di un volume di cache esistente.</block>
+  <block id="9741f5c69b66c193b24db8c6b064d449" category="section-title">Modifica il nome del volume della cache</block>
+  <block id="dd9dbeec9d1d47721414517e8ceb1003" category="paragraph">È possibile modificare il nome di un volume di cache esistente in qualsiasi momento.</block>
+  <block id="f56869ff02af98281054d2801d07131c" category="list-text">Dal menu Archiviazione, selezionare FSx per ONTAP.</block>
+  <block id="71286a348d305558651d594ffb0b7b61" category="list-text">Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.</block>
+  <block id="91c9dd0465d889c4cd7dcd9d00c3cff9" category="list-text">Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.</block>
+  <block id="704333b75cf6acba4392d7ad809dfb1d" category="list-text">Selezionare il menu azioni per il volume della cache che si desidera modificare, quindi selezionare *Modifica nome cache*.</block>
+  <block id="19b0e87ba7ed54521f11cd8489003533" category="list-text">Nella finestra di dialogo *Modifica nome cache*, immettere il nuovo nome per il volume della cache e quindi selezionare *Applica*.</block>
+  <block id="f25e64c5391d2a162a25bbb460a7f886" category="paragraph">Se hai bisogno di aumentare la capacità di un volume di cache esistente, puoi farlo in qualsiasi momento.</block>
+  <block id="dc97b6b6257816c273cb4b23c4be1923" category="list-text">Selezionare il menu azioni per il volume della cache che si desidera modificare, quindi selezionare *Aumenta capacità cache*.</block>
+  <block id="1a6d17f42b3c06ad6ef47079b2b7d2bf" category="list-text">Nella finestra di dialogo *Aumenta capacità cache*, immettere la nuova capacità per il volume della cache in percentuale o in unità, quindi selezionare *Applica*.</block>
+  <block id="d34bce37c8d5cf5a3814d3185867c80e" category="section-title">Modifica la politica di esportazione del volume della cache</block>
+  <block id="3591b370a6ba1fccb018417aa452f30e" category="paragraph">Modificare il percorso di montaggio o la policy di esportazione assegnata a un volume di cache esistente.</block>
+  <block id="19bb8592aa45eac21fc3a0ff7043f17f" category="list-text">Selezionare il menu azioni per il volume di cache che si desidera modificare, quindi selezionare *Modifica criterio di esportazione*.</block>
+  <block id="a23d30d9dbd5b5de5e3ee67a9ded5242" category="list-text">Nella finestra di dialogo *Modifica criterio di esportazione*, modifica il percorso di montaggio o seleziona un criterio di esportazione diverso da assegnare al volume della cache.</block>
+  <block id="7f7e450958b0a4653cfea4189d6ed995" category="section-title">Modificare il metodo di memorizzazione nella cache per un volume di cache</block>
+  <block id="3e5271b8379ddcabf8c8d8673b311437" category="paragraph">Modificare il metodo o la modalità di memorizzazione nella cache per un volume di cache esistente in write-around o write-back.</block>
+  <block id="cabfeb9da681d3ace757106e0813cd8f" category="inline-link-macro">modalità di scrittura</block>
+  <block id="38fdf5539761bcae25e0fc465e40d97f" category="paragraph">Scopri di più su<block ref="956f54ba6b1d39caea9bd76790adf811" category="inline-link-macro-rx"></block> .</block>
+  <block id="a3e52bd74056f56571702f1d78113945" category="list-text">Selezionare il menu azioni per il volume di cache che si desidera modificare, quindi selezionare *Cambia metodo di memorizzazione nella cache*.</block>
+  <block id="0ec532fce8b15ab5badcbf1146af5bef" category="list-text">Nella finestra di dialogo *Modifica metodo di memorizzazione nella cache*, seleziona il nuovo metodo di memorizzazione nella cache e poi seleziona *Applica*.</block>
+  <block id="aef7f37d9224e6cdc84773fd0752841c" category="paragraph">Precompilare un volume di cache con i dati del volume di origine prima di richiederlo per velocizzare l'accesso ai dati memorizzati nella cache.</block>
+  <block id="03b8e2cae40fcbf80cad40862d5d0025" category="list-text">Selezionare il menu azioni per il volume della cache che si desidera modificare, quindi selezionare *Prepopola cache*.</block>
+  <block id="d451f44672ea0a78b72fd7dd794c481e" category="list-text">Nella finestra di dialogo *Prepopola cache*, specificare il percorso del set di dati da utilizzare per il prepopolamento, quindi selezionare *Applica*.</block>
+  <block id="0eb48cd23b461a05c76d8f751c427193" category="paragraph">L'eliminazione di un volume di cache elimina la relazione cache tra il volume di origine e il volume di cache.  Dopo l'eliminazione, i dati memorizzati nella cache non saranno più disponibili.</block>
+  <block id="9bed233fd25bae0dceb43f72350d951b" category="list-text">Selezionare il menu azioni per il volume di cache che si desidera eliminare, quindi selezionare *Elimina volume di cache*.</block>
+  <block id="c150fc012517f3e827497fc4aa6b609a" category="list-text">Nella finestra di dialogo *Elimina volume cache*, confermare l'eliminazione e quindi selezionare *Elimina*.</block>
+  <block id="51bf12717b370e03e3310859db67cac6" category="inline-link-macro">politiche di autorizzazione</block>
+  <block id="1b9d0264ffd97a37d34b3626026426a0" category="paragraph">Scegli il<block ref="7dcfcf538adde0d607dcea20e99b9fe9" category="inline-link-macro-rx"></block> per soddisfare le tue esigenze.</block>
+  <block id="d15741d42f2a6f5f82721fc70d54b6a4" category="paragraph">Se si sceglie di non concedere le autorizzazioni, è possibile iniziare a utilizzare Workload Factory per FSx per ONTAP per copiare campioni di codice parzialmente completati.</block>
+  <block id="38c4c72673e051381c12c32e1dd20f50" category="paragraph">Se scegli di concedere le autorizzazioni, dovrai<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> che include la selezione delle funzionalità del carico di lavoro, come database e intelligenza artificiale, e la creazione di policy IAM per le autorizzazioni richieste.</block>
+  <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">02 novembre 2025</block>
+  <block id="2d7b297cbb6cd40fb509f94fc82809d8" category="sidebar">Crea un caveau informatico per proteggere i dati</block>
+  <block id="77323f759a4ed2ac40e1bf8211da2f5f" category="sidebar">Regola la capacità del volume</block>
+  <block id="aadb016687f81f1f6f82a4c97ba651ed" category="sidebar">Abilita la gestione automatica della capacità e degli inode</block>
 </blocks>

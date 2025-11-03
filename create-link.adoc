@@ -39,7 +39,7 @@ Per creare collegamenti in questo flusso di lavoro sono disponibili due opzioni:
 
 .Prima di iniziare
 * Si consiglia di considerare quale opzione di creazione del collegamento si utilizzerà.
-* È necessario disporre di almeno un file system FSx per ONTAP in Workload Factory.  Per scoprire o creare file system FSx per ONTAP , è necessario disporre di un account AWS con autorizzazioni per le istanze FSx per ONTAP elink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["aggiungere credenziali in Workload Factory"^] con autorizzazioni di _sola lettura_ o _lettura/scrittura_ per la gestione dell'archiviazione.
+* È necessario disporre di almeno un file system FSx per ONTAP in Workload Factory.  Per scoprire i file system FSx per ONTAP , è necessario disporre di un account AWS con autorizzazioni per le istanze FSx per ONTAP elink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["aggiungere credenziali in Workload Factory"^] con autorizzazioni di _visualizzazione, pianificazione e analisi_ per la gestione dell'archiviazione.
 * Per la connettività del collegamento, le seguenti porte devono essere aperte nel gruppo di sicurezza associato al file system FSx per ONTAP.
 +
 ** Per la console Workload Factory: porta 443 (HTTPS)

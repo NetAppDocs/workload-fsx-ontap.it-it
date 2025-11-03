@@ -19,7 +19,7 @@ Durante la creazione del file system vengono create una macchina virtuale di sto
 .Prima di iniziare
 Prima di creare il file system FSX per ONTAP, hai bisogno di:
 
-* ARN di un ruolo IAM che fornisce a Workload Factory le autorizzazioni necessarie per creare un file system FSx per ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni a un account AWS"^] .
+* Credenziali con autorizzazioni di _creazione ed eliminazione del file system_ per creare un file system FSx per ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni a un account AWS"^].
 * Le informazioni relative all'area geografica e alla VPC per la creazione dell'istanza FSX per ONTAP.
 
 

@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: manage-cache-volumes.html 
+keywords: cache volumes, manage cache, FSx for ONTAP cache 
+summary: Gestire i volumi di cache per un file system FSx for ONTAP in NetApp Workload Factory quando necessario. 
+---
+= Gestire i volumi di cache per un file system FSx per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla console NetApp Workload Factory è possibile gestire i volumi di cache per i file system FSx for ONTAP .  Le attività di gestione includono la modifica del nome della cache, l'aumento della capacità della cache, la modifica dei criteri di esportazione, la modifica del metodo di memorizzazione nella cache, il pre-popolamento della cache e l'eliminazione del volume della cache quando non è più necessario.
+
+.A proposito di questa attività
+È possibile gestire i volumi di cache associati alle relazioni di cache senza uscire dalla console NetApp Workload Factory .
+
+.Prima di iniziare
+* È necessario associare un collegamento per gestire i volumi e le relazioni della cache. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo aver associato il collegamento, tornare a questa operazione.
+* Per modificare è necessario disporre di un volume di cache esistente.
+
+
+
+
+== Modifica il nome del volume della cache
+
+È possibile modificare il nome di un volume di cache esistente in qualsiasi momento.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare FSx per ONTAP.
+. Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
+. Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
+. Selezionare il menu azioni per il volume della cache che si desidera modificare, quindi selezionare *Modifica nome cache*.
+. Nella finestra di dialogo *Modifica nome cache*, immettere il nuovo nome per il volume della cache e quindi selezionare *Applica*.
+
+
+
+
+== Aumentare la capacità di un volume di cache
+
+Se hai bisogno di aumentare la capacità di un volume di cache esistente, puoi farlo in qualsiasi momento.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare FSx per ONTAP.
+. Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
+. Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
+. Selezionare il menu azioni per il volume della cache che si desidera modificare, quindi selezionare *Aumenta capacità cache*.
+. Nella finestra di dialogo *Aumenta capacità cache*, immettere la nuova capacità per il volume della cache in percentuale o in unità, quindi selezionare *Applica*.
+
+
+
+
+== Modifica la politica di esportazione del volume della cache
+
+Modificare il percorso di montaggio o la policy di esportazione assegnata a un volume di cache esistente.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare FSx per ONTAP.
+. Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
+. Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
+. Selezionare il menu azioni per il volume di cache che si desidera modificare, quindi selezionare *Modifica criterio di esportazione*.
+. Nella finestra di dialogo *Modifica criterio di esportazione*, modifica il percorso di montaggio o seleziona un criterio di esportazione diverso da assegnare al volume della cache.
+. Selezionare *Applica*.
+
+
+
+
+== Modificare il metodo di memorizzazione nella cache per un volume di cache
+
+Modificare il metodo o la modalità di memorizzazione nella cache per un volume di cache esistente in write-around o write-back.
+
+Scopri di più sulink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["modalità di scrittura"^] .
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare FSx per ONTAP.
+. Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
+. Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
+. Selezionare il menu azioni per il volume di cache che si desidera modificare, quindi selezionare *Cambia metodo di memorizzazione nella cache*.
+. Nella finestra di dialogo *Modifica metodo di memorizzazione nella cache*, seleziona il nuovo metodo di memorizzazione nella cache e poi seleziona *Applica*.
+
+
+
+
+== Precompilare un volume di cache
+
+Precompilare un volume di cache con i dati del volume di origine prima di richiederlo per velocizzare l'accesso ai dati memorizzati nella cache.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare FSx per ONTAP.
+. Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
+. Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
+. Selezionare il menu azioni per il volume della cache che si desidera modificare, quindi selezionare *Prepopola cache*.
+. Nella finestra di dialogo *Prepopola cache*, specificare il percorso del set di dati da utilizzare per il prepopolamento, quindi selezionare *Applica*.
+
+
+
+
+== Elimina un volume di cache
+
+L'eliminazione di un volume di cache elimina la relazione cache tra il volume di origine e il volume di cache.  Dopo l'eliminazione, i dati memorizzati nella cache non saranno più disponibili.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare FSx per ONTAP.
+. Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
+. Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
+. Selezionare il menu azioni per il volume di cache che si desidera eliminare, quindi selezionare *Elimina volume di cache*.
+. Nella finestra di dialogo *Elimina volume cache*, confermare l'eliminazione e quindi selezionare *Elimina*.
+

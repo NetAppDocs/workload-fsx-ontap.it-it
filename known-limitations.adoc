@@ -73,6 +73,7 @@ Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managi
 
 * Il protocollo iSCSI è disponibile solo per i volumi FlexVol. ^1^
 * Per ogni volume è possibile configurare una sola LUN.
+* Le riduzioni delle dimensioni del volume non sono supportate per i volumi iSCSI.
 
 
 

@@ -46,9 +46,17 @@ Categorie di configurazione:: Le configurazioni del file system sono organizzate
 
 == Requisiti di analisi
 
-Per un'analisi completa del file system, è necessario associare un collegamento.  La connettività dei link consente a Workload Factory di analizzare tutte le configurazioni del file system, come la protezione dei dati e le prestazioni.
+Per un'analisi completa del file system, è necessario procedere come segue:
 
+* Associa un collegamento.  La connettività dei link consente a Workload Factory di analizzare tutte le configurazioni del file system, come la protezione dei dati e le prestazioni.
++
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"].
+
+* Concedi le autorizzazioni di _visualizzazione, pianificazione e analisi_ nel tuo account AWS.
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come concedere autorizzazioni a un account AWS"^]
+
+
 
 .Cosa succederà
 link:improve-configurations.html["Implementa configurazioni del file system con un'architettura ottimale"]
