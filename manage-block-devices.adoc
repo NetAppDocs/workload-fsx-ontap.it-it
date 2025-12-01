@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: manage-block-devices.html 
+keywords: block devices, manage luns, manage iscsi 
+summary: Gestire i dispositivi a blocchi per un file system FSx per ONTAP in NetApp Workload Factory. 
+---
+= Gestire i dispositivi a blocchi per un file system FSx per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla console NetApp Workload Factory è possibile gestire i dispositivi a blocchi per i file system FSx for ONTAP .  Le attività di gestione includono la visualizzazione dei dettagli del dispositivo a blocchi e l'aumento della capacità.
+
+.A proposito di questa attività
+I dispositivi a blocchi, o LUN (numeri di unità logica), sono volumi che contengono file system in un ambiente SAN e sono accessibili agli host tramite una rete.
+
+È possibile gestire dispositivi a blocchi per file system FSx per ONTAP che utilizzano il protocollo iSCSI.
+
+.Prima di iniziare
+* È necessario associare un collegamento per gestire i dispositivi a blocchi. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"].  Dopo aver associato il collegamento, tornare a questa operazione.
+* Per visualizzare e gestire è necessario disporre di un dispositivo a blocchi esistente.
+
+
+
+
+== Visualizza i dettagli del dispositivo a blocchi
+
+Visualizza in qualsiasi momento i dettagli di un dispositivo a blocchi esistente.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare la scheda *Blocca dispositivi*.
+. Vai al menu delle azioni per bloccare il dispositivo e seleziona *Visualizza dettagli*.
++
+Vengono visualizzati i dettagli generali, le informazioni sul consumo, l'accesso e la protezione del dispositivo a blocchi.
+
+
+
+
+
+== Aumentare la capacità di un dispositivo a blocchi
+
+Aumenta la capacità di un dispositivo a blocchi esistente in qualsiasi momento.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare la scheda *Blocca dispositivi*.
+. Passare al menu delle azioni per il dispositivo a blocchi e quindi selezionare *Aumenta capacità*.
+. Immettere la nuova capacità per il dispositivo a blocchi e selezionare l'unità.
+. Selezionare *Aumenta* per applicare le modifiche.
+
+
+
+NOTE: Dopo aver aumentato le dimensioni del dispositivo a blocchi, seguire la procedura fornita dal sistema operativo host per scoprire le nuove dimensioni del dispositivo a blocchi ed espandere il file system su di esso.

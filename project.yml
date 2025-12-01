@@ -33,6 +33,8 @@ sidebar:
     entries:
     - title: Scopri i risparmi
       url: "/explore-savings.html"
+    - title: Monitorare e analizzare i costi di FSx per ONTAP
+      url: "/track-costs.html"
     - title: Utilizzare i collegamenti
       entries:
       - title: Scopri di più sui link
@@ -93,6 +95,8 @@ sidebar:
         url: "/configuration-analysis.html"
       - title: Implementa configurazioni del file system con un'architettura ottimale
         url: "/improve-configurations.html"
+    - title: Analizza FSx per eventi ONTAP
+      url: "/analyze-events.html"
     - title: Amministrazione dei volumi
       entries:
       - title: Consente di modificare la crescita automatica del volume
@@ -119,12 +123,18 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: Eliminare un volume
         url: "/delete-volume.html"
+    - title: Amministrazione dei dispositivi a blocchi
+      entries:
+      - title: Gestire i dispositivi a blocchi
+        url: "/manage-block-devices.html"
     - title: Amministrazione del file system
       entries:
       - title: Regola la capacità del file system
         url: "/increase-file-system-capacity.html"
       - title: Abilita la gestione automatica della capacità e degli inode
         url: "/enable-auto-capacity-management.html"
+      - title: Gestisci i tag del file system
+        url: "/manage-fsx-tags.html"
       - title: Reimpostare la password fsxadmin
         url: "/reset-fsxadmin-password.html"
       - title: Eliminare un file system
