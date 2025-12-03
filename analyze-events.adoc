@@ -19,7 +19,7 @@ Utilizza l'analizzatore di eventi intelligente per estrarre e analizzare automat
 
 Spesso gli amministratori di storage rispondono agli eventi FSx for ONTAP EMS solo in seguito ai reclami dei clienti o creando script e allarmi personalizzati.  Questo approccio reattivo rallenta la risoluzione dei problemi, aumenta i tempi di inattività e rende le operazioni meno efficienti.
 
-L'analizzatore di eventi estrae gli eventi FSx for ONTAP EMS e li analizza per aiutarti a mantenere l'integrità e le prestazioni dei file system FSx for ONTAP .
+L'analizzatore di eventi estrae gli eventi FSx for ONTAP EMS e li analizza per aiutarti a mantenere l'integrità e le prestazioni dei file system FSx for ONTAP . Workload Factory visualizza solo gli eventi che si sono verificati nelle ultime 72 ore.
 
 I principali vantaggi includono:
 
@@ -51,13 +51,13 @@ I dati dei clienti non vengono utilizzati per addestrare o migliorare i modelli.
 
 Per utilizzare l'analizzatore di eventi, è necessario soddisfare i seguenti prerequisiti:
 
-* Devilink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS per visualizzare gli eventi per i file system FSx for ONTAP .
+* Devilink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere autorizzazioni per _operazioni e bonifica_"^] nel tuo account AWS per visualizzare gli eventi per i file system FSx for ONTAP .
 * Devilink:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["connettersi a un file system FSx per ONTAP utilizzando un collegamento"] per utilizzare l'analizzatore di eventi EMS.
 * È inoltre necessario soddisfare i seguenti requisiti.  Il sistema ti chiede di completare questi passaggi quando analizzi gli errori del registro.
 +
-** *Attivazione Amazon Bedrock*
+** *Modello Amazon Bedrock*
 +
-L'analizzatore di eventi utilizza le API di Amazon Bedrock per fornire informazioni basate sull'intelligenza artificiale per gli eventi FSx for ONTAP .
+L'analizzatore di eventi utilizza le API Amazon Bedrock per fornire informazioni basate sull'intelligenza artificiale per gli eventi FSx for ONTAP .
 
 +
 Modello consigliato: Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0).  È necessario fornire l'ARN del profilo di inferenza per questo modello nella regione selezionata.
@@ -78,7 +78,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri c
 +
 Queste autorizzazioni consentono a Workload Factory di richiamare i modelli Bedrock per indagini proattive sugli errori e indicazioni sulla correzione. Questo profilo garantisce inoltre un accesso sicuro all'intelligenza artificiale per ottenere informazioni personalizzate.
 
-*** Credenziali AWS associate a Workload Factory: `bedrock:GetFoundationModelAvailability` E `bedrock:ListInferenceProfiles` permessi
+*** Credenziali AWS associate a Workload Factory: `bedrock:GetInferenceProfile` E `bedrock:ListInferenceProfiles` permessi
 +
 Queste autorizzazioni verificano la disponibilità del modello.
 
@@ -97,12 +97,10 @@ Utilizzare la console Workload Factory per visualizzare e analizzare gli eventi 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
-. Dal menu Archiviazione, selezionare *Analisi*.
-. Dalla schermata Analisi, seleziona gli account AWS, le credenziali e le regioni che contengono i file system FSx for ONTAP che desideri analizzare.
-+
-Solo i file system FSx per ONTAP con eventi visualizzati sullo schermo.
-
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Selezionare il file system FSx for ONTAP da analizzare, quindi selezionare *Gestisci*.
+. Selezionare la scheda *Analisi*.
 . Se necessario, completa i *requisiti di configurazione dell'analisi AI* seguendo le istruzioni visualizzate sullo schermo per soddisfare eventuali prerequisiti mancanti.
-. Trova il file system FSx for ONTAP che vuoi analizzare, quindi seleziona *Visualizza eventi*.
+. Selezionare *Analizza*.
 . Consulta le informazioni dettagliate sull'evento.
 

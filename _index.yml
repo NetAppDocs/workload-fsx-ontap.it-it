@@ -13,18 +13,26 @@ indexpage:
       url: "/learn-fsx-ontap.html"
     - title: Avvio rapido
       url: "/quick-start.html"
+    - title: Crea un file system FSX per ONTAP
+      url: "/create-file-system.html"
   - title: USA FSX per ONTAP
     links:
     - title: Scopri i risparmi
       url: "/explore-savings.html"
-    - title: Crea un file system FSX per ONTAP
-      url: "/create-file-system.html"
-    - title: Visualizza lo stato ben progettato dei tuoi file system FSx per ONTAP
-      url: "/improve-configurations.html"
-    - title: Crea un volume FSX per ONTAP
-      url: "/create-volume.html"
+    - title: Tieni traccia dei costi e dell'utilizzo delle risorse FSx per ONTAP
+      url: "/track-costs.html"
+    - title: Connettersi a un file system con un collegamento
+      url: "/create-link.html"
     - title: Proteggi i tuoi dati
       url: "/data-protection-overview.html"
+  - title: Amministrare e monitorare
+    links:
+    - title: Monitoraggio delle operazioni con Tracker
+      url: "/monitor-operations.html"
+    - title: Visualizza lo stato ben progettato dei tuoi file system FSx per ONTAP
+      url: "/improve-configurations.html"
+    - title: Analizza FSx per gli eventi ONTAP EMS
+      url: "/analyze-events.html"
   - title: Conoscenza e supporto
     links:
     - title: Registrati per ricevere assistenza
