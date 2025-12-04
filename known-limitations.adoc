@@ -120,6 +120,12 @@ Gestione sistema non supporta i collegamenti per la connettività di FSX per ONT
 
 AWS Secrets Manager non è supportato quando si utilizza un agente Console.
 
+
+
+== Limitazione dei punti di accesso Amazon S3
+
+Il limite per il numero di punti di accesso S3 per ogni VM di storage è 4.000.
+
 Nota:
 
 . Si applica ad Amazon FSX per NetApp ONTAP

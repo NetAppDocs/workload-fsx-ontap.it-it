@@ -26,6 +26,8 @@ Per i volumi in uso possono essere utilizzati i seguenti protocolli:
 * ISCSI: Protocollo storage a blocchi
 
 
+Gli endpoint S3 possono essere collegati a un volume FSx for ONTAP . Utilizzando un punto di accesso S3, è possibile accedere ai dati dei file residenti su volumi SMB/CIFS o NFS tramite le API AWS S3. Ciò consente di integrare i dati esistenti con GenAI, ML e analisi dai servizi AWS che supportano i punti di accesso S3.
+
 
 
 === Dettagli per le impostazioni del volume
@@ -149,9 +151,9 @@ Completare i seguenti campi per impostare il blocco dell'accesso al volume.
 
 
 
-.. *Endpoint S3*: facoltativamente, collega un endpoint S3 per accedere ai dati del file system FSx for ONTAP residenti su volumi NFS o SMB/CIFS tramite le API AWS S3.  È supportato solo il tipo di accesso ai file.  Fornendo i seguenti dettagli:
+.. *Punto di accesso S3*: facoltativamente, collega un punto di accesso S3 per accedere ai dati del file system FSx for ONTAP residenti su volumi NFS o SMB/CIFS tramite le API AWS S3. È supportato solo il tipo di accesso ai file. Fornendo i seguenti dettagli:
 +
-*** *Nome endpoint S3*: immettere il nome dell'endpoint S3.
+*** *Nome punto di accesso S3*: immettere il nome del punto di accesso S3.
 *** *Utente*: seleziona un utente esistente con accesso al volume oppure crea un nuovo utente.
 *** *Tipo di utente*: selezionare *UNIX* o *Windows* come tipo di utente.
 
