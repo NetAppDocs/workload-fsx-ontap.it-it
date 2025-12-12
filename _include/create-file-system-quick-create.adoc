@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+. Nella pagina Crea FSX per ONTAP, selezionare *creazione rapida*.
++
+È anche possibile caricare una configurazione salvata.
+
+. In Configurazione generale del file system, fornire quanto segue:
++
+.. *Credenziali AWS*: seleziona per aggiungere le credenziali AWS in Workload Factory o continuare senza credenziali.
+.. *Nome file system*: Immettere un nome per il file system.
+.. *Regione e VPC*: Selezionare la regione e il VPC per il file system.
+.. *Tipo di distribuzione*: Selezionare un tipo di distribuzione.
++
+*** Implementazione con zona di disponibilità singola (Single-AZ): Garantisce la disponibilità monitorando gli errori dell'hardware e sostituendo automaticamente i componenti dell'infrastruttura in caso di guasto. Ottiene una durata elevata replicando automaticamente i dati all'interno di una zona di disponibilità per proteggerli dai guasti dei componenti.
++
+Questa configurazione è consigliata per carichi di lavoro ad alte prestazioni o quando i carichi di lavoro iniziano con dimensioni ridotte e aumentano progressivamente fino a 72 GB/s di throughput e 2,4 milioni di IOPS.
+
+*** Implementazione di diverse zone di disponibilità (Multi-AZ): Fornisce disponibilità continua ai dati anche quando una zona di disponibilità non è disponibile. Un file system Multi-AZ è progettato per carichi di lavoro di produzione business-critical che richiedono alta disponibilità per i dati dei file ONTAP condivisi e uno storage necessario con replica integrata tra zone di disponibilità.
++
+Questa configurazione con coppia HA singola è consigliata per carichi di lavoro che richiedono fino a 6 GB/s di throughput o 200.000 IOPS.
+
+
+
+.. *Tags*: Opzionalmente, è possibile aggiungere fino a 50 tag.
+
+
+. In *Dettagli file system*, specificare quanto segue:
++
+.. *Capacità di archiviazione SSD*: Immettere la capacità di archiviazione e selezionare l'unità della capacità di archiviazione.
++
+*** Nelle distribuzioni di prima generazione non è possibile ridurre la capacità dopo la creazione del file system.
+*** Per le distribuzioni di seconda generazione, è possibile aumentare la capacità dopo la creazione del file system.
+
+
+.. *Credenziali ONTAP*: Facoltativo. Inserire il nome utente e la password ONTAP. La password può essere impostata ora o in un secondo momento.
++
+Se l'utente fornito non è l'utente fsxadmin, e in seguito è necessario reimpostare la password fsxadmin, sarà possibile farlo dalla console AWS.
+
+.. *Impostazione SMB/CIFS*: Opzionale. Se si intende utilizzare il protocollo SMB/CIFS per accedere ai volumi, è necessario configurare Active Directory per la VM di storage durante la creazione del file system. Fornire i seguenti dettagli per la VM di storage creata per questo file system.
++
+... *Dominio Active Directory a cui collegarsi*: Immettere il nome di dominio completo (FQDN) per Active Directory.
+... *Indirizzi IP DNS*: Immettere un massimo di tre indirizzi IP DNS separati da virgole.
+... *SMB server NetBIOS name*: Immettere il nome NetBIOS del server SMB dell'oggetto computer Active Directory da creare per la macchina virtuale di storage. Nome della VM di storage in Active Directory.
+... *Nome utente*: Immettere il nome utente dell'account del servizio nell'Active Directory esistente.
++
+Non includere un prefisso o un suffisso di dominio. Per `EXAMPLE\ADMIN`, utilizzare `ADMIN`.
+
+... *Password*: Immettere la password per l'account del servizio.
+... *Unità organizzativa*: Se si desidera, immettere il nome dell'unità organizzativa in cui si intende creare l'account del computer per FSX per ONTAP. L'unità organizzativa è il nome del percorso distinto dell'unità organizzativa a cui si desidera unire il file system.
+... *Gruppo amministratori delegati*: Se si desidera, immettere il nome del gruppo in Active Directory che può amministrare il file system.
++
+Se utilizzi ad Microsoft gestito da AWS, devi specificare un gruppo come ad esempio gli amministratori FSX delegati di AWS, gli amministratori delegati di AWS o un gruppo personalizzato con autorizzazioni delegate all'unità organizzativa.
+
++
+Se si sta effettuando l'accesso a un ad autogestito, utilizzare il nome del gruppo nell'ad. Il gruppo predefinito è `Domain Admins`.
+
+
+
+
+
+. Aprire il *Riepilogo* per esaminare la configurazione definita. Se necessario, è possibile modificare qualsiasi impostazione in questo momento prima di salvare o creare il file system.
+. Salvare o creare il file system.
+
