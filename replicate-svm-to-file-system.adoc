@@ -21,10 +21,9 @@ Per replicare una VM di archiviazione su un altro file system FSx for ONTAP, è 
 . Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il menu delle azioni del file system con la VM di archiviazione da replicare, quindi seleziona *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *Storage VM*.
-. Dalla scheda VM di archiviazione, selezionare il menu delle azioni della VM di archiviazione per cui replicare una SVM.
-. Selezionare *Replica VM di archiviazione*.
-. Nella pagina Crea replica, in destinazione replica, specificare quanto segue:
+. Nella panoramica del file system in VM di archiviazione, selezionare *Gestisci*.
+. Nella schermata Gestisci VM di archiviazione, seleziona il menu delle azioni della VM di archiviazione per cui replicare una SVM, quindi seleziona *Azioni avanzate* > *Replica VM di archiviazione*.
+. Nella pagina Replica dati, in destinazione replica, fornire quanto segue:
 +
 .. *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.
 .. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa.

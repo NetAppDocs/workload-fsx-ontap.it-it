@@ -18,9 +18,8 @@ I tag possono aiutarti a categorizzare le tue risorse.  È possibile aggiungere,
 . Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il menu delle azioni del file system con la VM di archiviazione da aggiornare, quindi seleziona *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *Storage VM*.
-. Dalla scheda VM di archiviazione, seleziona il menu delle azioni della VM di archiviazione per cui modificare i tag.
-. Selezionare *Modifica tag VM di archiviazione*.
+. Nella panoramica del file system in VM di archiviazione, selezionare *Gestisci*.
+. Dalla schermata Gestisci VM di archiviazione, seleziona il menu delle azioni della VM di archiviazione per cui modificare i tag, quindi seleziona *Azioni di base* > *Modifica tag VM di archiviazione*.
 . Nella pagina Modifica tag VM di archiviazione, aggiungere, modificare o rimuovere tag.
 +
 Il numero massimo di tag che puoi applicare a una macchina virtuale di storage è 50.

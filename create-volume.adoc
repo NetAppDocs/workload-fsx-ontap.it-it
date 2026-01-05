@@ -168,7 +168,7 @@ ONTAP raggiunge l'efficienza di archiviazione utilizzando funzionalità di dedup
 
 .. *Criterio snapshot*: Selezionare il criterio snapshot per specificare la frequenza e la conservazione degli snapshot.
 +
-Di seguito sono riportate le policy predefinite di AWS. Per i criteri di snapshot personalizzati, è necessario link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associare un collegamento"] .
+Di seguito sono riportate le policy predefinite di AWS. Per visualizzare i criteri snapshot esistenti, è necessario link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associare un collegamento"].
 
 +
 `default`:: Questo criterio crea automaticamente gli snapshot nella seguente pianificazione, con le copie snapshot più vecchie eliminate per fare spazio alle copie più recenti:
@@ -190,7 +190,7 @@ NOTE: Gli orari degli snapshot si basano sul fuso orario del file system, che pe
 
 .. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume.
 +
-_Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando la console Workload Factory.  Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento alink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx per NetApp ONTAP .  Si noti che Workload Factory utilizza nomi basati sui casi d'uso nella console Workload Factory per i criteri di suddivisione in livelli e include i nomi dei criteri di suddivisione in livelli FSx for ONTAP tra parentesi.
+_Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando la console Workload Factory. Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx per NetApp ONTAP . Si noti che Workload Factory utilizza nomi basati sui casi d'uso nella console di Workload Factory per i criteri di suddivisione in livelli e include i nomi dei criteri di suddivisione in livelli di FSx per ONTAP tra parentesi.
 
 .. *File immutabili*: l'abilitazione della funzionalità dei file immutabili comporta il commit permanente dei file in questo volume in uno stato WORM (write-once-read-many) immutabile.  Fornire i seguenti dettagli:
 +

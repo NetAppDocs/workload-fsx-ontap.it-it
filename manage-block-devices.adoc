@@ -58,3 +58,9 @@ Aumenta la capacità di un dispositivo a blocchi esistente in qualsiasi momento.
 
 
 NOTE: Dopo aver aumentato le dimensioni del dispositivo a blocchi, seguire la procedura fornita dal sistema operativo host per scoprire le nuove dimensioni del dispositivo a blocchi ed espandere il file system su di esso.
+
+
+
+== Informazioni correlate
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Creare un dispositivo a blocchi per un file system FSx per ONTAP"]

@@ -34,8 +34,9 @@ NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scari
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system per cui creare una VM di archiviazione e seleziona *Crea una VM di archiviazione*.
-. Nella pagina Storage VM, in Storage VM Configuration (Configurazione Storage VM), fornire quanto segue:
+. Da *FSx for ONTAP*, selezionare il menu azioni del file system e quindi selezionare *Gestisci*.
+. Nella panoramica del file system in VM di archiviazione, seleziona *Crea VM di archiviazione*.
+. Nella pagina Crea VM di archiviazione, in Configurazione VM di archiviazione, fornisci quanto segue:
 +
 .. *Nome*: Immettere un nome per la VM di archiviazione.
 .. *Credenziali VM di archiviazione*: Fornire una password per l'utente di questa VM di archiviazione o utilizzare le credenziali utente del `vsadmin` file system `fsxadmin` .
