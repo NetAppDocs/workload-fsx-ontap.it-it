@@ -56,6 +56,7 @@ La fabbrica del carico di lavoro necessita di un collegamento per visualizzare a
 Le funzioni che richiedono un collegamento includono:
 
 * Stato ben progettato delle configurazioni del file system FSx per ONTAP per manutenzione proattiva, affidabilità e ottimizzazione dei costi-prestazioni
+* Monitoraggio e avviso degli eventi ONTAP EMS
 * Protezione autonoma da ransomware NetApp (ARP/AI)
 * Miglioramento dell'osservabilità olistica della capacità su FSx per i file system ONTAP
 * Replicazione, gestione e monitoraggio dei dati VM di volume e storage

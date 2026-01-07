@@ -43,7 +43,7 @@ Per creare collegamenti in questo flusso di lavoro sono disponibili due opzioni:
 * Per la connettività del collegamento, le seguenti porte devono essere aperte nel gruppo di sicurezza associato al file system FSx per ONTAP.
 +
 ** Per la console Workload Factory: porta 443 (HTTPS)
-** Per CloudShell: porta 22 (SSH)
+** Per l'analisi degli eventi di CloudShell e FSx per ONTAP Emergency Management System (EMS): porta 22 (SSH)
 
 
 * Quando si aggiunge un collegamento utilizzando uno stack CloudFormation, è necessario disporre delle seguenti autorizzazioni nell'account AWS:
