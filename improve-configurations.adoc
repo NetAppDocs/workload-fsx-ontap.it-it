@@ -30,10 +30,9 @@ Poiché i requisiti per le configurazioni di archiviazione variano, è possibile
 Workload Factory analizza lo stato con un'architettura appropriata delle seguenti configurazioni per i file system FSX per ONTAP:
 
 * Affidabilità: soglia di capacità SSD, snapshot locali pianificati, backup FSx per ONTAP , replicazione remota dei dati e affidabilità dei dati per la conservazione a lungo termine
-* Sicurezza: protezione autonoma da ransomware NetApp con intelligenza artificiale (ARP/AI) e accesso non autorizzato ai volumi
-* Eccellenza operativa: gestione automatica della capacità, soglia di utilizzo della capacità dei file di volume e utilizzo del volume prossimo al completo
-* Ottimizzazione dei costi: efficienza di archiviazione, suddivisione in livelli dei dati ed eliminazione non necessaria degli snapshot
-* Ottimizzazione delle prestazioni: ribilanciamento dei volumi FlexGroup
+* Sicurezza: protezione autonoma da ransomware NetApp con intelligenza artificiale (ARP/AI) disabilitata e accesso non autorizzato ai volumi
+* Eccellenza operativa: gestione automatica della capacità, soglia di utilizzo della capacità del file di volume, utilizzo del volume quasi completo e modalità di scrittura della relazione della cache
+* Ottimizzazione dei costi: efficienza di archiviazione, suddivisione in livelli dei dati, eliminazione di snapshot e backup non necessari
 
 
 
@@ -50,7 +49,7 @@ Workload Factory analizza lo stato con un'architettura appropriata delle seguent
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
 . Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
@@ -84,7 +83,7 @@ Ignora per interrompere a tempo indeterminato un'analisi della configurazione pe
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare il menu azioni del file system e quindi *Gestisci*.
 . Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
@@ -97,7 +96,7 @@ Ignora per interrompere a tempo indeterminato un'analisi della configurazione pe
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare il menu azioni del file system e quindi *Gestisci*.
 . Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
@@ -131,7 +130,7 @@ L'analisi della configurazione si interrompe per il file system o per i volumi s
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare l'azione del file system e quindi *Gestisci*.
 . Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.
@@ -144,7 +143,7 @@ L'analisi della configurazione si interrompe per il file system o per i volumi s
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare il menu azioni del file system e quindi *Gestisci*.
 . Passare dalla panoramica del file system FSx for ONTAP alla scheda *Stato ben progettato*.

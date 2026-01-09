@@ -46,7 +46,7 @@ Monitora e monitora le operazioni nella console NetApp con Tracker.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, seleziona *Amministrazione* e poi *Collegamenti*.
 +
 image:screenshot-menu-tracker-option.png["Una schermata del menu delle impostazioni dell'account con l'opzione Tracker evidenziata."]

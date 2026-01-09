@@ -56,7 +56,7 @@ NOTE: Per ogni collegamento è supportato un solo metodo di autenticazione. Ad e
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il menu delle azioni del file system a cui associare un collegamento, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare *autentica il collegamento*.
@@ -80,7 +80,7 @@ Se la password amministrativa non è valida, aggiornare la password per collegar
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il menu delle azioni del file system a cui associare un collegamento, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare *Aggiorna password*.
@@ -101,7 +101,7 @@ Tieni presente che il collegamento viene eliminato solo da Workload Factory e no
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, seleziona *Amministrazione* e poi *Collegamenti*.
 +
 I link esistenti vengono visualizzati nella pagina Link.

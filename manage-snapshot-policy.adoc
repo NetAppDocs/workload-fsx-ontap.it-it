@@ -31,7 +31,7 @@ Per visualizzare i criteri di snapshot esistenti, è necessario associare un col
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Nella scheda *FSx per ONTAP*, selezionare il menu azioni del file system e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.
 . Dalla scheda *VM di archiviazione*, seleziona il menu delle azioni per la VM di archiviazione contenente il volume da proteggere con snapshot pianificati, quindi *Azioni avanzate* e infine *Gestisci criteri snapshot*.
@@ -54,7 +54,7 @@ Per abilitare gli snapshot immutabili è necessario associare un collegamento. l
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Nella scheda *FSx per ONTAP*, selezionare il menu azioni del file system che contiene il volume per cui bloccare gli snapshot, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda *Volumi*, selezionare l'azione relativa al volume da proteggere.
@@ -83,7 +83,7 @@ Lo snapshot del volume è ora bloccato.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Nella scheda *FSx per ONTAP*, selezionare il menu azioni del file system che contiene il volume a cui assegnare un criterio snapshot, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.
 . Dalla scheda *VM di archiviazione*, seleziona il menu delle azioni per la VM di archiviazione contenente il volume da proteggere con snapshot pianificati, quindi *Azioni avanzate* e infine *Gestisci criteri snapshot*.
@@ -109,7 +109,7 @@ Per rimuovere un criterio di snapshot è necessario associare un collegamento. l
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Nella scheda *FSx per ONTAP*, selezionare il menu azioni del file system che contiene il volume a cui assegnare un criterio snapshot, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.
 . Dalla scheda *VM di archiviazione*, seleziona il menu delle azioni per la VM di archiviazione contenente il volume da proteggere con snapshot pianificati, quindi *Azioni avanzate* e infine *Gestisci criteri snapshot*.
@@ -131,7 +131,7 @@ Quando un criterio snapshot viene assegnato a più volumi, è necessario elimina
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. In *Archiviazione*, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Storage VM*.

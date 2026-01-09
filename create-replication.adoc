@@ -35,7 +35,7 @@ Puoi replicare un volume di origine (lettura/scrittura) o un volume di data Prot
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il menu azioni del file system che contiene i volumi da replicare, quindi seleziona *Gestisci*.
 . Replicare tutti i volumi in un file system o volumi selezionati.

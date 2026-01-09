@@ -42,8 +42,9 @@ I file system FSx per ONTAP di seconda generazione rappresentano il tipo di dist
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Crea FSx per ONTAP*.
-. Nella pagina Crea FSX per ONTAP, selezionare *creazione rapida*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal dashboard di Archiviazione, seleziona *Crea file system*.
+. Nella pagina Crea file system FSx per ONTAP , seleziona *Creazione rapida*.
 +
 È anche possibile caricare una configurazione salvata.
 
@@ -115,7 +116,7 @@ Con creazione avanzata, è possibile impostare tutte le opzioni di configurazion
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nel riquadro Archiviazione, seleziona *Crea FSx per ONTAP*.
-. Nella pagina Crea FSX per ONTAP, selezionare *creazione avanzata*.
+. Nella pagina Crea file system FSx per ONTAP , seleziona *Creazione avanzata*.
 +
 È anche possibile caricare una configurazione salvata.
 

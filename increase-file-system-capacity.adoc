@@ -36,12 +36,9 @@ Per regolare la capacità di un file system, è necessario primalink:enable-auto
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dalla Dashboard, seleziona *Regola capacità SSD*.
 . Selezionare il file system per il quale si desidera regolare la capacità, quindi selezionare *Continua*.
-+
-*Potenziali risparmi* è la raccomandazione per la riduzione della capacità.
-
 . Nella finestra di dialogo Regola capacità SSD, immettere un numero per *Capacità fornita*.
 . Seleziona l'unità per la capacità sottoposta a provisioning.
 . Selezionare *Applica*.

@@ -38,13 +38,15 @@ Modalità di apprendimento e attive:: ARP/AI opera prima in _modalità di appren
 +
 In modalità attiva, se un'estensione del file è contrassegnata come anomala, è necessario valutare l'avviso. Puoi agire sull'avviso per proteggere i tuoi dati o contrassegnarlo come falso positivo. Se si contrassegna un avviso come falso positivo, il profilo di avviso viene aggiornato. Ad esempio, se l'avviso viene attivato da una nuova estensione di file e l'utente contrassegna l'avviso come falso positivo, non verrà visualizzato alcun avviso alla successiva visualizzazione dell'estensione del file.
 
++
+I volumi FlexVol contenenti un dispositivo a blocchi avviano ARP/AI in modalità attiva.
+
 
 
 --
 Configurazioni non supportate:: Le seguenti configurazioni non supportano l'uso di ARP/AI.
 +
 --
-* Volumi SAN/blocchi
 * Volumi iSCSI
 * Volumi NVMe
 
@@ -69,7 +71,7 @@ Per abilitare ARP/AI per un file system o un volume, è necessario associare un 
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx per ONTAP*, selezionare il menu azioni del file system per abilitare ARP/AI, quindi selezionare *Gestisci*.
 . In Informazioni, seleziona l'icona della matita accanto a *Protezione autonoma da ransomware*.  L'icona della matita appare accanto alla freccia quando il mouse passa sopra la riga *Protezione autonoma dal ransomware*.
@@ -90,7 +92,7 @@ Per abilitare ARP/AI per un file system o un volume, è necessario associare un 
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx per ONTAP*, selezionare il menu azioni del file system per abilitare ARP/AI, quindi selezionare *Gestisci*.
 . Dalla scheda Volumi, seleziona il menu azioni del volume per abilitare ARP/AI, quindi *Azioni di protezione dati* e infine *Gestisci ARP/AI*.
@@ -114,7 +116,7 @@ Determinare se un attacco è un falso allarme o un incidente ransomware autentic
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il file system per cui convalidare gli attacchi ransomware.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
@@ -136,7 +138,7 @@ Conoscendo i file interessati e il momento dell'attacco, è possibile recuperare
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, seleziona il file system per cui recuperare i dati.
 . Nella panoramica del file system, selezionare la scheda *volumi*.

@@ -29,7 +29,7 @@ Utilizzare la console NetApp Workload Factory per gestire i volumi di cache per 
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare FSx per ONTAP.
 . Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
 . Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
@@ -45,7 +45,7 @@ Utilizzare la console NetApp Workload Factory per gestire i volumi di cache per 
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare FSx per ONTAP.
 . Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
 . Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
@@ -61,7 +61,7 @@ Modificare il percorso di montaggio o la policy di esportazione assegnata a un v
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare FSx per ONTAP.
 . Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
 . Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
@@ -80,7 +80,7 @@ Scopri di più sulink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-fl
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare FSx per ONTAP.
 . Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
 . Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
@@ -96,7 +96,7 @@ Riempi il volume della cache con i dati del volume di origine prima di utilizzar
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare FSx per ONTAP.
 . Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
 . Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.
@@ -112,7 +112,7 @@ Quando si elimina un volume di cache, si rimuove la relativa relazione con la ca
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare FSx per ONTAP.
 . Da FSx per ONTAP, selezionare il menu azioni del file system con il volume della cache, quindi selezionare *Gestisci*.
 . Dalla panoramica del file system, seleziona la scheda *Relazioni cache*.

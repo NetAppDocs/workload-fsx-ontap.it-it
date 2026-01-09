@@ -48,7 +48,7 @@ image:screenshot-on-prem-connectivity.png["Screenshot che mostra come si deve co
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Selezionare la scheda *ONTAP on-premise*.
 . Selezionare *Discover*.
 . Esaminare i prerequisiti e selezionare *Avanti*.
@@ -84,7 +84,7 @@ Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare * ONTAP locale*.
 . Per trovare i volumi per VM di archiviazione, è possibile *selezionare VM di archiviazione* dal menu a discesa.
 . Selezionare uno o più volumi da replicare, quindi selezionare *Replica*.
@@ -149,7 +149,7 @@ Prima di rimuovere il cluster, occorre link:delete-replication.html["eliminare t
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare * ONTAP locale*.
 . Seleziona il cluster ONTAP on-premise da rimuovere.
 . Selezionare il menu azioni e selezionare *Rimuovi da Workload Factory*.

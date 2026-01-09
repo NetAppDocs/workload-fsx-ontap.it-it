@@ -41,7 +41,8 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Esplora risparmi*, quindi *Amazon Elastic Block Store (EBS)*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda *Amazon Elastic Block Store (EBS)*.
 . Nel calcolatore del risparmio dello storage, fornisci i seguenti dettagli:
 +
 .. *Caso di utilizzo*: Obbligatorio. Selezionare un caso d'uso dal menu a discesa. Il caso d'utilizzo selezionato determina le caratteristiche del file system FSX per ONTAP da confrontare.
@@ -62,7 +63,8 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Esplora risparmi*, quindi * Amazon FSx for Windows File Server*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda *Amazon Elastic Block Store (EBS)*.
 . Nel calcolatore del risparmio dello storage, fornisci i seguenti dettagli:
 +
 .. *Caso di utilizzo*: Obbligatorio. Selezionare un caso d'uso dal menu a discesa. Il caso d'utilizzo selezionato determina le caratteristiche del file system FSX per ONTAP da confrontare.
@@ -84,7 +86,8 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Esplora risparmi*, quindi *Amazon Elastic File System (EFS)*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda *Amazon Elastic Block Store (EBS)*.
 . Nel calcolatore del risparmio dello storage, fornisci i seguenti dettagli:
 +
 .. *Caso di utilizzo*: Obbligatorio. Selezionare un caso d'uso dal menu a discesa. Il caso d'utilizzo selezionato determina le caratteristiche del file system FSX per ONTAP da confrontare.
@@ -129,8 +132,8 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
-. Dal menu Archiviazione, seleziona *Esplora risparmi*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda *Amazon Elastic Block Store (EBS)*.
 . Nella scheda *Elastic Block Store (EBS)*, selezionare le istanze da confrontare con FSX per ONTAP e selezionare *Explore Savings*.
 . Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base alle istanze selezionate:
 +
@@ -148,8 +151,8 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
-. Dal menu Archiviazione, seleziona *Esplora risparmi*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda * Amazon FSx for Windows File Server*.
 . Nella scheda *Amazon FSX per Windows file Server*, seleziona le istanze da confrontare con FSX per ONTAP e seleziona *Esplora risparmio*.
 . Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base al tipo di implementazione delle istanze selezionate:
 +
@@ -167,8 +170,8 @@ Seguire i passaggi nella scheda per la selezione della memoria.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Archiviazione, seleziona *Vai ad Archiviazione*.
-. Dal menu Archiviazione, seleziona *Esplora risparmi*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda *Amazon Elastic File System (EFS)*.
 . Nella scheda * Elastic file System (EFS)*, selezionare le istanze da confrontare con FSX per ONTAP e selezionare *Explore Savings*.
 . Viene visualizzato il calcolatore del risparmio dello storage. Le seguenti caratteristiche del sistema storage sono precompilate in base alle istanze selezionate:
 +
