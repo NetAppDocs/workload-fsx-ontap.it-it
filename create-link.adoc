@@ -23,7 +23,7 @@ I link sfruttano AWS Lambda per eseguire codice in risposta a eventi e gestire a
 I link richiedono l'autenticazione. È possibile autenticare i collegamenti utilizzando le credenziali archiviate nel servizio credenziali Workload Factory oppure con le credenziali archiviate in AWS Secrets Manager. È supportato un solo metodo di autenticazione per collegamento. Ad esempio, se selezioni l'autenticazione tramite collegamento con AWS Secrets Manager, non potrai modificare il metodo di autenticazione in un secondo momento.
 
 
-NOTE: AWS Secrets Manager non è supportato quando si utilizza un connettore.
+NOTE: AWS Secrets Manager non è supportato quando si utilizza un agente Console.
 
 
 
@@ -46,6 +46,7 @@ Per creare collegamenti in questo flusso di lavoro sono disponibili due opzioni:
 ** Per l'analisi degli eventi di CloudShell e FSx per ONTAP Emergency Management System (EMS): porta 22 (SSH)
 
 
+* Il collegamento deve essere in grado di connettersi al seguente endpoint: \ https://api.workloads.netapp.com. La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro FSx for ONTAP .
 * Quando si aggiunge un collegamento utilizzando uno stack CloudFormation, è necessario disporre delle seguenti autorizzazioni nell'account AWS:
 +
 [%collapsible]
