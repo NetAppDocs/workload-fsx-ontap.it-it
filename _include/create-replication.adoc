@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa. La VM di archiviazione selezionata è la destinazione per tutti i volumi selezionati in questa relazione di replica.
-. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
 . *Caso d'uso*: selezionare uno dei seguenti casi d'uso per la replica.  A seconda del caso d'uso selezionato, Workload Factory compila il modulo con i valori consigliati in conformità con le best practice.  È possibile accettare i valori consigliati o apportare modifiche durante la compilazione del modulo.
 +
 ** Migrazione: Trasferimento dei dati nel file system FSX per ONTAP di destinazione
@@ -28,6 +26,9 @@ Per tutti i casi di utilizzo, se si abilitano gli snapshot per la conservazione 
 
 
 
+. *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.
+. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa. La VM di archiviazione selezionata è la destinazione per tutti i volumi selezionati in questa relazione di replica.
+. *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
 . *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione. Il criterio di tiering predefinito corrisponde alla policy di tiering consigliata per il caso d'utilizzo selezionato.
 +
 _Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando la console Workload Factory.  Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento alink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx per NetApp ONTAP .  Si noti che Workload Factory utilizza nomi basati sui casi d'uso nella console Workload Factory per i criteri di suddivisione in livelli e include i nomi dei criteri di suddivisione in livelli FSx for ONTAP tra parentesi.
@@ -62,4 +63,14 @@ NOTE: Per la conservazione a lungo termine sono necessarie etichette di origine 
 ** *Snapshot policies*: Nella tabella, selezionare la frequenza del criterio di snapshot e il numero di copie da conservare. È possibile selezionare più criteri di snapshot.
 
 
+. *Punto di accesso S3*: facoltativamente, collega un punto di accesso S3 per accedere ai dati del file system FSx for ONTAP residenti su volumi NFS o SMB/CIFS tramite le API AWS S3. È supportato solo il tipo di accesso ai file. Fornendo i seguenti dettagli:
++
+** *Nome punto di accesso S3*: immettere il nome del punto di accesso S3.
+** *Utente*: seleziona un utente esistente con accesso al volume oppure crea un nuovo utente.
+** *Tipo di utente*: selezionare *UNIX* o *Windows* come tipo di utente.
+** *Configurazione di rete*: seleziona *Internet* o *Virtual private cloud (VPC)*. Il tipo di rete scelto determina se il punto di accesso è accessibile da Internet o limitato a una VPC specifica.
+** *Abilita metadati*: l'abilitazione dei metadati crea una tabella S3 contenente tutti gli oggetti accessibili dal punto di accesso S3, che puoi utilizzare per auditing, governance, analisi automatica e ottimizzazione. L'abilitazione dei metadati comporta costi AWS aggiuntivi. Consulta link:https://aws.amazon.com/s3/pricing/["Documentazione sui prezzi di Amazon S3"^] per ulteriori informazioni.
+
+
+. *Tag del punto di accesso S3*: Facoltativamente, puoi aggiungere fino a 50 tag.
 

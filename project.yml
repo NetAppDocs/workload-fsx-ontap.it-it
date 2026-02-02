@@ -51,8 +51,12 @@ sidebar:
         url: "/create-volume.html"
       - title: Accedi ai tuoi dati
         url: "/access-data.html"
-    - title: Crea un dispositivo a blocchi
-      url: "/create-block-device.html"
+    - title: Crea risorse di storage a blocchi
+      entries:
+      - title: Crea un igroup
+        url: "/create-igroup.html"
+      - title: Crea un dispositivo a blocchi
+        url: "/create-block-device.html"
     - title: Creare una VM di storage
       url: "/create-storage-vm.html"
     - title: Proteggi i tuoi dati
@@ -127,8 +131,10 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: Eliminare un volume
         url: "/delete-volume.html"
-    - title: Amministrazione dei dispositivi a blocchi
+    - title: Amministrazione dello storage a blocchi
       entries:
+      - title: Gestisci igroups
+        url: "/manage-igroups.html"
       - title: Gestire i dispositivi a blocchi
         url: "/manage-block-devices.html"
     - title: Amministrazione del file system
