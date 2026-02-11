@@ -11,12 +11,12 @@ summary: Crea una relazione di replica per un file system FSX per ONTAP per evit
 
 
 [role="lead"]
-Crea una relazione di replica per un file system FSx for ONTAP in NetApp Workload Factory per evitare la perdita di dati in caso di un disastro imprevisto. La replica è supportata tra due file system FSx for ONTAP e tra Cloud Volumes ONTAP o un sistema ONTAP on-premises e un file system FSx for ONTAP.
+Crea una relazione di replica per un file system FSx for ONTAP in NetApp Workload Factory per evitare la perdita di dati in caso di un disastro imprevisto. La replica è supportata tra due file system FSx for ONTAP e tra un sistema ONTAP on-premises e un file system FSx for ONTAP.
 
 .A proposito di questa attività
-La replica aggiunge protezione contro la perdita di dati se la regione in cui risiedono i dati subisce un disastro.
+La replica protegge i tuoi dati se un disastro colpisce la tua regione.
 
-Questa operazione crea una relazione di replica per i volumi di origine in un file system FSx for ONTAP, un sistema ONTAP on-premises o un sistema Cloud Volumes ONTAP.
+Questa operazione crea una relazione di replica per i volumi di origine in un file system FSx for ONTAP o in un sistema ONTAP locale.
 
 I volumi replicati nel file system di destinazione sono volumi di protezione dei dati (DP) e seguono il formato di denominazione: `{OriginalVolumeName}_copy`.
 
@@ -30,7 +30,7 @@ Quando si replica un volume sorgente con file immutabili, il volume di destinazi
 
 ====
 .Prima di iniziare
-Prima di iniziare, tieni presente quanto segue.
+Rivedi questi requisiti prima di iniziare.
 
 * È necessario disporre di un FSx for ONTAP file system da utilizzare per il volume di destinazione nella replica dei dati.
 * Il file system FSx for ONTAP utilizzato per la relazione di replica deve avere un collegamento associato. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo aver associato il collegamento, tornare a questa operazione.
