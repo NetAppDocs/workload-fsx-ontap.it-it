@@ -5,6 +5,9 @@
 . *Caso d'uso*: selezionare uno dei seguenti casi d'uso per la replica.  A seconda del caso d'uso selezionato, Workload Factory compila il modulo con i valori consigliati in conformità con le best practice.  È possibile accettare i valori consigliati o apportare modifiche durante la compilazione del modulo.
 +
 ** Migrazione: Trasferimento dei dati nel file system FSX per ONTAP di destinazione
++
+*Replica configurazione VM di storage*: facoltativamente, seleziona per replicare i dati e le impostazioni di configurazione della VM di storage per una singola VM di storage. Quando si migrano dati e impostazioni di configurazione simultaneamente, assicurati che l'ultima replica per il volume sia stata completata nelle ultime 24 ore. Tutti i volumi nella stessa VM di storage devono essere selezionati per utilizzare questa funzionalità. La policy di tiering per tutti i volumi predefinita è quella del volume di origine, che è consigliata per i casi d'uso di migrazione.
+
 ** Disaster recovery "hot": Garantisce alta disponibilità e rapido disaster recovery per i carichi di lavoro critici
 ** Disaster recovery a freddo o di archivio:
 +

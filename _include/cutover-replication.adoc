@@ -1,0 +1,10 @@
+= 
+:allow-uri-read: 
+
+
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il file system che contiene il volume o i volumi da replicare.
+. Seleziona la scheda *Replication relationships*.
+. Nella tabella Relazioni di replicazione, seleziona la relazione di replicazione su cui eseguire il cutover, quindi seleziona *Cut over replication*.
+. Rivedere le informazioni nella finestra di dialogo Cut over replication e quindi digitare _cut over_ per confermare.
+

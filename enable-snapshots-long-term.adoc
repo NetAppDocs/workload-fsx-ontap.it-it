@@ -19,11 +19,14 @@ La stessa procedura si applica per abilitare e modificare le istantanee per la c
 
 Quando un cluster ONTAP on-premise è la destinazione della relazione di replica, la modifica delle snapshot per la conservazione a lungo termine non è supportata.
 
+
+NOTE: La modifica della conservazione a lungo termine non è disponibile quando si replicano i dati e le impostazioni di configurazione dello storage VM.
+
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare l'azione del file system da aggiornare, quindi selezionare *Gestisci*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
 . Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della pianificazione delle relazioni di replicazione da modificare.
 . Selezionare *Modifica conservazione a lungo termine*.
