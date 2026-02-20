@@ -86,9 +86,9 @@ NOTE: Dopo aver aumentato le dimensioni del dispositivo a blocchi, seguire la pr
 
 
 
-== Archivia i dati di un dispositivo a blocchi orfano
+== Archivia i dati di un dispositivo a blocchi inattivo
 
-I dispositivi a blocchi che non sono più mappati su un client o che non vengono utilizzati per sette giorni consecutivi vengono classificati come dispositivi a blocchi orfani. È possibile archiviare i dati di un dispositivo a blocchi orfano nel livello del pool di capacità per recuperare capacità SSD.
+I dispositivi a blocchi che non sono più mappati a un client o non sono utilizzati per sette giorni consecutivi sono classificati come dispositivi a blocchi inattivi. Puoi archiviare i dati di un dispositivo a blocchi inattivo nel livello capacity pool per recuperare capacità SSD.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -104,7 +104,7 @@ I dispositivi a blocchi che non sono più mappati su un client o che non vengono
 
 == Elimina un dispositivo a blocchi
 
-I dispositivi a blocchi che non sono più mappati su un client o che non vengono utilizzati per sette giorni consecutivi vengono classificati come dispositivi a blocchi orfani. Questa operazione annulla la mappatura e cancella il dispositivo a blocchi selezionato. Se il FlexVol volume host non contiene alcun dispositivo a blocchi, Workload Factory lo elimina.
+I dispositivi a blocchi che non sono più mappati su un client o che non vengono utilizzati per sette giorni consecutivi sono classificati come dispositivi a blocchi inattivi. Questa operazione annulla la mappatura ed elimina il dispositivo a blocchi selezionato. Se il volume FlexVol host non contiene dispositivi a blocchi, Workload Factory lo elimina.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
