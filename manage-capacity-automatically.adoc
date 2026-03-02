@@ -1,23 +1,25 @@
 ---
 sidebar: sidebar 
-permalink: enable-auto-capacity-management.html 
+permalink: manage-capacity-automatically.html 
 keywords: auto capacity, automatic capacity management, inodes management, file system capacity 
 summary: Abilitando questa funzionalità, Workload Factory aggiunge automaticamente storage incrementale o inode a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo. 
 ---
-= Abilita la gestione automatica della capacità e degli inode per un file system
+= Gestisci automaticamente la capacità del file system e gli inode in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Abilitando la gestione automatica della capacità e degli inode, NetApp Workload Factory aggiunge automaticamente storage incrementale o inode a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.  Inoltre, l'abilitazione di questa funzionalità elimina la necessità di monitorare manualmente la capacità e gli inode.
+Abilitando la gestione della capacità, NetApp Workload Factory aggiunge automaticamente storage incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo. Inoltre, abilitare questa funzionalità elimina la necessità di monitorare manualmente la capacità.
 
 
 
 == A proposito di questa attività
 
-Ogni 30 minuti viene eseguita una scansione del file system FSx for ONTAP per determinare se è necessario aggiungere spazio di archiviazione incrementale e per verificare gli inode di volume disponibili, ovvero il numero massimo di file e cartelle in un volume, in modo che il loro conteggio aumenti in base alle soglie di gestione automatica della capacità configurate.
+Il sistema esegue la scansione del file system FSx for ONTAP ogni 30 minuti. Verifica se è necessario aggiungere storage incrementale e controlla gli inode di volume disponibili. Il conteggio aumenta in base alle soglie di gestione automatica della capacità.
+
+Abilitare la gestione degli inode consente a NetApp Workload Factory di aggiungere automaticamente inode incrementali a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano. Questa funzionalità elimina la necessità di monitorare manualmente gli inode.
 
 Questa funzione può essere gestita da un solo account.
 
@@ -43,25 +45,35 @@ Prima di iniziare, prendere in considerazione quanto segue:
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare il menu delle azioni del file system per abilitare la gestione automatica della capacità.
 . Selezionare *Gestisci*.
-. In informazioni, selezionare l'icona a forma di matita accanto a *Gestione automatica della capacità*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *Gestione automatica della capacità*.
-. Nella finestra di dialogo *Gestione automatica della capacità*, specificare quanto segue:
+. In Informazioni, seleziona l'icona a forma di matita accanto a *capacity management*. L'icona a forma di matita appare accanto alla freccia a discesa quando passi il mouse sulla riga *capacity management*.
+. Nella finestra di dialogo *gestione della capacità*, fornire quanto segue:
 +
 .. *Credenziali*: Selezionare le credenziali con autorizzazioni _automatizza_ dal menu a discesa.
 .. Selezionare il pulsante di abilitazione per *abilitare la gestione automatica della capacità*.
 +
 In alternativa, disattivare la funzione. Se è necessario aumentare la capacità del file system, è necessario prima disabilitare la gestione automatica della capacità.
 
-.. *Soglia di avviso*: imposta la soglia di avviso su un valore inferiore all'aumento della soglia per attivare una notifica dal servizio di notifica Workload Factory.  Il valore predefinito è 70%.
+.. *Modalità*: Seleziona la modalità per gestire automaticamente la capacità. Le opzioni sono modalità incrementale e adattiva.
++
+*** *Modalità incrementale*: aumenta la capacità di una quantità fissa alle soglie.
++
+**** *Soglia di avviso*: imposta la soglia di avviso su un valore inferiore all'aumento della soglia per attivare una notifica dal servizio di notifica Workload Factory.  Il valore predefinito è 70%.
 +
 L'impostazione della soglia di avviso è disponibile solo selink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["abilitato il servizio di notifica Workload Factory"^] .
 
-.. *Aumento soglia*: immettere l'aumento percentuale massimo per il file system FSx for ONTAP .  Il valore predefinito è 80%.
+**** *Aumento soglia*: immettere l'aumento percentuale massimo per il file system FSx for ONTAP .  Il valore predefinito è 80%.
 +
-Questa è la soglia raggiunta la quale Workload Factory attiva un processo per aumentare la capacità.  Ad esempio, se il file system raggiunge l'80% della capacità, Workload Factory aumenterà la capacità.
+Questa è la soglia alla quale Workload Factory attiva un processo per aumentare la capacità. Ad esempio, se il file system raggiunge l'80% della capacità, Workload Factory aumenta la capacità.
 
-.. *Aumento incrementale*: immettere la percentuale per aumentare la capacità in modo incrementale.  Il valore predefinito è il 10%.
+
+
+*** *Modalità adattiva*: prevede e modifica la capacità in base ai dati storici.
 +
-Questa è la percentuale di aumento della capacità ogni volta che viene raggiunta la soglia.  Ad esempio, se il file system è pieno all'80% e l'aumento incrementale è impostato sul 10%, Workload Factory aumenta la capacità del 10%.
+**** *Periodo di analisi*: imposta il periodo di analisi in ore per determinare quanti dati storici considerare per le previsioni di capacità. Il valore predefinito è 120 ore.
+**** *Tempo di buffer pianificato*: imposta il tempo di buffer in ore per garantire che la capacità venga aumentata prima che sia effettivamente necessaria. Il valore predefinito è 48 ore.
+
+
+
 
 
 
@@ -69,13 +81,36 @@ Questa è la percentuale di aumento della capacità ogni volta che viene raggiun
 
 
 .Risultato
-Ogni 30 minuti viene eseguita una scansione del file system per determinare se il file system necessita di capacità aggiuntiva.
+Ogni 30 minuti viene eseguita una scansione del file system per determinare se è necessaria capacità aggiuntiva.
 
 
 
-== Abilita la gestione automatica degli inode
+== Abilita le notifiche di capacità
 
-Abilitare la gestione automatica degli inode per assicurarsi che la capacità dei file per volume aumenti incrementando il numero di inode (file) fino al limite consentito.
+Imposta le notifiche per ricevere avvisi quando il file system raggiunge una certa soglia di capacità.
+
+.Prima di iniziare
+Devi link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["abilitare il servizio di notifica Workload Factory"^] per utilizzare questa funzione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare il menu delle azioni del file system per abilitare la gestione automatica della capacità.
+. Selezionare *Gestisci*.
+. In Informazioni, seleziona l'icona a forma di matita accanto a *capacity management*. L'icona a forma di matita appare accanto alla freccia a discesa quando passi il mouse sulla riga *capacity management*.
+. Nella finestra di dialogo *gestione della capacità*, seleziona *Abilita notifiche capacità* per attivare le notifiche quando la capacità raggiunge la soglia e ogni volta che NetApp Workload Factory esegue un aumento automatico della capacità.
+. Imposta la *Soglia di notifica* per ricevere notifiche quando il file system raggiunge una determinata percentuale di capacità. Il valore predefinito è 70%.
+. Selezionare *Applica*.
+
+
+
+
+== Abilita la gestione degli inode per un file system
+
+Abilita la gestione automatica degli inode per aumentare il numero di inode (file) per volume fino al limite consentito.
+
+Ogni 30 minuti viene eseguita una scansione del file system FSx for ONTAP. Verifica gli inode di volume disponibili e controlla se è necessario aggiungere inode incrementali. Il conteggio aumenta in base alle soglie di gestione automatica degli inode.
 
 
 NOTE: *Utenti Terraform*: Terraform presenta una limitazione che richiede che tutte le operazioni vengano completate all'interno di Terraform.  La gestione degli inode non è supportata in Terraform, ma è possibile abilitare la gestione automatica degli inode nella console Workload Factory.

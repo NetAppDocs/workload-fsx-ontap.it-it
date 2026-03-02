@@ -32,10 +32,10 @@ Poiché i requisiti per le configurazioni di archiviazione variano, è possibile
 .Cosa viene analizzato
 Workload Factory analizza lo stato con un'architettura appropriata delle seguenti configurazioni per i file system FSX per ONTAP:
 
-* Affidabilità: soglia di capacità SSD, snapshot locali pianificati, backup FSx per ONTAP , replicazione remota dei dati e affidabilità dei dati per la conservazione a lungo termine
+* Affidabilità: soglia di capacità SSD, snapshot locali pianificati, backup di volumi pianificati, replica remota dei dati e affidabilità dei dati per la conservazione a lungo termine
 * Sicurezza: protezione autonoma da ransomware NetApp con intelligenza artificiale (ARP/AI) disabilitata e accesso non autorizzato ai volumi
 * Eccellenza operativa: gestione automatica della capacità, soglia di utilizzo della capacità del file di volume, utilizzo del volume quasi completo, modalità di scrittura della relazione della cache, ottimizzazione delle dimensioni del volume della cache e reporting della capacità logica del volume
-* Ottimizzazione dei costi: efficienze di archiviazione, suddivisione in livelli dei dati, eliminazione di snapshot e backup non necessari e dispositivi a blocchi inattivi
+* Ottimizzazione dei costi: storage efficiencies, data tiering, eliminazione di snapshot e backup non necessari, dispositivi a blocchi inattivi e capacità SSD sottoutilizzata
 
 
 

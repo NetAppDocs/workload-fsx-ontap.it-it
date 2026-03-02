@@ -282,7 +282,6 @@
   <block id="3189fa0a6c27988e9ac820b8115f1001" category="paragraph">Questa funzione può essere gestita da un solo account.</block>
   <block id="fb0d8a1c841cd92afd4cb16ddedaeed5" category="inline-link-macro">Quote</block>
   <block id="81b511c5e6d03d742f3a61abc3c4019a" category="paragraph">La quantità massima di capacità di storage SSD per tutti i file system FSX per ONTAP è di 524.288 GiB. Per richiedere un aumento delle quote, fai riferimento alla <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> documentazione di AWS FSX per NetApp ONTAP.</block>
-  <block id="8c197cb16511819fd1686972b919b4bd" category="list-text">Nella finestra di dialogo *Gestione automatica della capacità*, specificare quanto segue:</block>
   <block id="811c0aa0f47faeb6a24c4abfb98d7a22" category="list-text">*Credenziali*: Selezionare le credenziali con autorizzazioni _automatizza_ dal menu a discesa.</block>
   <block id="3e0bdb480d66a7375d532c6c4aff035d" category="paragraph">In alternativa, disattivare la funzione. Se è necessario aumentare la capacità del file system, è necessario prima disabilitare la gestione automatica della capacità.</block>
   <block id="c2a6ed685a94077454f8bad592ecfa44" category="doc">Abilita e modifica le snapshot per la conservazione a lungo termine</block>
@@ -367,7 +366,6 @@
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Chiudi caso*: Fornisci i dettagli sul motivo per cui stai chiudendo il caso e seleziona *Chiudi caso*.</block>
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Una schermata che mostra le azioni che è possibile eseguire dopo aver selezionato il menu nell'ultima colonna della tabella.</block>
   <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7db52e1b6d399a07ae2a24a19f03a6ad" category="inline-link-macro">attivare la funzione di gestione automatica della capacità</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">Provisioning degli IOPS</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">Per i limiti della capacità di storage degli SSD, fai riferimento alla <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> documentazione di AWS FSX per NetApp ONTAP.</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">disattivare la gestione automatica della capacità</block>
@@ -708,7 +706,6 @@
   <block id="c853397a437814fc2251c95bdf57909f" category="list-text">Nella finestra di dialogo Elimina relazione, selezionare *Elimina*.</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">In alternativa, selezionare *Backup del volume* per eseguire il backup del volume prima dell'eliminazione.</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">Selezionare *continua*.</block>
-  <block id="37315e43d6c90fe6798b7397bf15ebae" category="list-text">In informazioni, selezionare l'icona a forma di matita accanto a *Gestione automatica della capacità*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *Gestione automatica della capacità*.</block>
   <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">Selezionare il pulsante di abilitazione per *abilitare la gestione automatica della capacità*.</block>
   <block id="759c5ad2620497fe90dc2bc5e085c8c0" category="summary">Abilita le snapshot per la conservazione a lungo termine, che consente di replicare snapshot specifiche per il disaster recovery a lungo termine.</block>
   <block id="37873c6c78867be44aa0676105354543" category="paragraph">La conservazione a lungo termine permette ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover trasparente delle applicazioni attraverso una copia secondaria.</block>
@@ -971,7 +968,6 @@
   <block id="71377237946a16cc4981e8007b83be9b" category="list-text">Selezionare *Abilita*.</block>
   <block id="427c298c7e18f9930012cc8fc9c01fcd" category="summary">Elimina un volume nel file system FSX per ONTAP che non è più necessario e per liberare spazio. Questa operazione è irreversibile.</block>
   <block id="c6e676032b22d8e639d8347f2bfe87d5" category="list-text">File e snapshot immutabili: I volumi che contengono file immutabili e snapshot non possono essere eliminati fino al termine del periodo di conservazione.</block>
-  <block id="c19ec77905390b48637066dbfe338f41" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system per determinare se il file system necessita di capacità aggiuntiva.</block>
   <block id="db95f08d46f6135faf16036ec8d0bee1" category="paragraph">Esplora i risparmi per i workload di storage che utilizzano Amazon Elastic Block Store (EBS), Elastic file System (EFS) ed FSX per Windows file Server rispetto ad FSX per NetApp ONTAP.</block>
   <block id="40042d0ee93698f3f63a7f8a3f2c9c1f" category="paragraph"><block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>Manualmente, potrebbe essere necessario aumentare l'allocazione degli IOPS per supportare l'aumentata capacità del file system.</block>
   <block id="d2a2f0e04d26b7123eb9c705ec13e758" category="list-text">Questa operazione potrebbe richiedere circa 30 minuti.</block>
@@ -1681,11 +1677,8 @@
   <block id="923a0a2b244437dc531c8a64263b0020" category="list-text">Facoltativo: *Rendi questo snapshot immutabile* per evitare che venga eliminato durante il periodo di conservazione.</block>
   <block id="f7485ffd44c64cac23a73493d66e3cf4" category="summary">Regola manualmente la capacità di archiviazione SSD di un file system FSx for ONTAP per soddisfare le esigenze dei carichi di lavoro basati sui progetti con diversi set di lavoro attivi.</block>
   <block id="36ce9e23b4485aac42f272cf012cfd85" category="paragraph">Regola manualmente la capacità di archiviazione dell'unità a stato solido (SSD) di un file system FSx for ONTAP per soddisfare le esigenze dei carichi di lavoro basati sui progetti con diversi set di lavoro attivi.</block>
-  <block id="383573d373c886b1029b549fd3ab5636" category="paragraph">Aumentare la capacità di archiviazione SSD di un file system FSx for ONTAP quando la quantità di capacità di archiviazione SSD utilizzata supera una soglia specificata oppure ridurre la capacità di archiviazione SSD quando i set di lavoro sono inattivi per migliorare l'efficienza dei costi.</block>
   <block id="3c600356591a28f18cc21513190e4cb5" category="paragraph">Grazie alla capacità elastica del file system, puoi adattare dinamicamente la capacità dei tuoi file system alle esigenze dei tuoi carichi di lavoro.</block>
-  <block id="33f1d74921ddc533e52016f4d1a89af9" category="paragraph">La regolazione della capacità del file system influisce sugli IOPS del file system FSx per ONTAP .</block>
   <block id="fa86270fd952d04b42ae4b5586eabdef" category="paragraph">Quando automaticamente<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> per un file system, gli IOPS aumentano o diminuiscono di 3 IOPS per ogni aumento o diminuzione di 1 GiB nella capacità SSD.</block>
-  <block id="7c4988a80f96ebde3a91c80963bb725d" category="paragraph">Per regolare la capacità di un file system, è necessario prima<block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block> .</block>
   <block id="c58a7814e09e2136ba19c01a85ca87cb" category="list-text">Dalla Dashboard, seleziona *Regola capacità SSD*.</block>
   <block id="22bc230291a62283fe347ecaef11e64d" category="list-text">Selezionare il file system per il quale si desidera regolare la capacità, quindi selezionare *Continua*.</block>
   <block id="ab60333415618ec9fe15bd79adf222ee" category="list-text">Nella finestra di dialogo Regola capacità SSD, immettere un numero per *Capacità fornita*.</block>
@@ -1936,12 +1929,9 @@
   <block id="a9d8fc136a7c1528e9a5743b9de2661a" category="inline-link-macro">Connettersi a un file system FSx for ONTAP tramite un collegamento</block>
   <block id="f899a571558dc3581836d9ffe17218ed" category="paragraph">La connettività del collegamento consente a Workload Factory di analizzare i problemi relativi a prestazioni, protezione dei dati e configurazioni. <block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block> per l'analisi più completa delle risorse del tuo file system.</block>
   <block id="efa540b6730dc694889e9447404ff68a" category="paragraph">Hai la possibilità di rivedere i consigli per i problemi di configurazione dei tuoi file system e di risolvere i problemi dall'Archiviazione nella console Workload Factory.</block>
-  <block id="73b9ca32e75f36a5247f70e0ac6f7034" category="list-text">Affidabilità: soglia di capacità SSD, snapshot locali pianificati, backup FSx per ONTAP , replicazione remota dei dati e affidabilità dei dati per la conservazione a lungo termine</block>
   <block id="f4620ec86c292b6ceff91a8418771488" category="list-text">Il processo di ripristino potrebbe causare tempi di inattività delle istanze o interruzioni del servizio. Assicurati di leggere attentamente ogni raccomandazione prima di decidere di risolvere un problema di configurazione.</block>
   <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>per l'analisi più completa delle risorse del tuo file system.</block>
   <block id="66fc3121113a1126522690fe858e4b3d" category="list-text">Per un volume: selezionare il menu azioni e quindi selezionare *Ignora volume*.</block>
-  <block id="97ab4fe470265bac6bd7eeb0ab6bda75" category="doc">Regola la capacità del file system in Workload Factory</block>
-  <block id="e916aa8237833ef72c75def81e289920" category="paragraph">In alternativa, puoi<block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> quindi Workload Factory gestisce la capacità del file system per te.</block>
   <block id="39b152c5585fc0bf22a04de0cc07dff1" category="paragraph">Facoltativamente, puoi<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block> per consentire a Workload Factory di gestire la capacità del volume per te.</block>
   <block id="2ee765f12c6b1a8ffcd478e2ea34f09b" category="doc">Inizializzare una relazione di replica in NetApp Workload Factory</block>
   <block id="ddc0042b887590b7a2423362f6c3455b" category="paragraph">Inizializza una relazione di replica tra i volumi di origine e di destinazione per trasferire lo snapshot e tutti i blocchi di dati in NetApp Workload Factory.</block>
@@ -2215,9 +2205,6 @@
   <block id="05fbfa43ca52b70a735d4a870f0f8f6d" category="inline-link-macro">funzione di regolazione della capacità del volume</block>
   <block id="8f764b06860786fe5978951124c18450" category="paragraph">Facoltativamente, è possibile aumentare manualmente la capacità del volume di un volume in qualsiasi momento utilizzando<block ref="e78173f6bdea353abf41de50dd00987d" category="inline-link-macro-rx"></block> .</block>
   <block id="ad5ba1f7c14b2135486dafc0e40196ac" category="summary">Abilitando questa funzionalità, Workload Factory aggiunge automaticamente storage incrementale o inode a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.</block>
-  <block id="251a3ffdc6a0761b01f0ace790d97c6d" category="doc">Abilita la gestione automatica della capacità e degli inode per un file system</block>
-  <block id="80d103a4c479f8e38dc6456e91cb1909" category="paragraph">Abilitando la gestione automatica della capacità e degli inode, NetApp Workload Factory aggiunge automaticamente storage incrementale o inode a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo.  Inoltre, l'abilitazione di questa funzionalità elimina la necessità di monitorare manualmente la capacità e gli inode.</block>
-  <block id="296d96c707449b84b0b4b3f02a91bc6c" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system FSx for ONTAP per determinare se è necessario aggiungere spazio di archiviazione incrementale e per verificare gli inode di volume disponibili, ovvero il numero massimo di file e cartelle in un volume, in modo che il loro conteggio aumenti in base alle soglie di gestione automatica della capacità configurate.</block>
   <block id="e1d481cddc46ccb42fc6f59c020f5ce1" category="paragraph">Abilita la gestione automatica della capacità per aggiungere automaticamente spazio di archiviazione incrementale fino al limite massimo di dimensione per un file system FSx per ONTAP .</block>
   <block id="7950e88c4d4bc489666a4af446a7d303" category="inline-link-macro">concedere credenziali con la politica di autorizzazione _visualizzazione, pianificazione e analisi_</block>
   <block id="37d3a1150da64094460d233181c8c83e" category="list-text">Devi<block ref="1773ab1fe4aa6a3e5fc61d86a29970f0" category="inline-link-macro-rx"></block> in Workload Factory per completare questa attività.</block>
@@ -2225,10 +2212,6 @@
   <block id="8ec47943fca737be2b087573534a2057" category="inline-link-macro">abilitato il servizio di notifica Workload Factory</block>
   <block id="60c52248134394a776265c66248137a8" category="paragraph">L'impostazione della soglia di avviso è disponibile solo se<block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block> .</block>
   <block id="4e88714beba53ff4a9a4132c11a62597" category="list-text">*Aumento soglia*: immettere l'aumento percentuale massimo per il file system FSx for ONTAP .  Il valore predefinito è 80%.</block>
-  <block id="d12b629d9480f34a15d23dec455a9519" category="paragraph">Questa è la soglia raggiunta la quale Workload Factory attiva un processo per aumentare la capacità.  Ad esempio, se il file system raggiunge l'80% della capacità, Workload Factory aumenterà la capacità.</block>
-  <block id="6e90c3bb0026fc33efcead3220266e2d" category="list-text">*Aumento incrementale*: immettere la percentuale per aumentare la capacità in modo incrementale.  Il valore predefinito è il 10%.</block>
-  <block id="d978b96a75b32e336ed3b9754090bb19" category="paragraph">Questa è la percentuale di aumento della capacità ogni volta che viene raggiunta la soglia.  Ad esempio, se il file system è pieno all'80% e l'aumento incrementale è impostato sul 10%, Workload Factory aumenta la capacità del 10%.</block>
-  <block id="91702a6000d20d7ffbea5fe3ad5f99fa" category="paragraph">Abilitare la gestione automatica degli inode per assicurarsi che la capacità dei file per volume aumenti incrementando il numero di inode (file) fino al limite consentito.</block>
   <block id="e5896468cb243b3cd2e0e75b0ca7173d" category="admonition">*Utenti Terraform*: Terraform presenta una limitazione che richiede che tutte le operazioni vengano completate all'interno di Terraform.  La gestione degli inode non è supportata in Terraform, ma è possibile abilitare la gestione automatica degli inode nella console Workload Factory.</block>
   <block id="0a0054f32c5856b9e4d1227d3aff2de3" category="list-text">Per gestire automaticamente gli inode del volume, è necessario associare un collegamento. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, tornare a questa operazione.</block>
   <block id="2dc6db0702897622d8829494f1d3b37f" category="inline-link-macro">abilitare il servizio di notifica Workload Factory</block>
@@ -2273,7 +2256,6 @@
   <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">02 novembre 2025</block>
   <block id="2d7b297cbb6cd40fb509f94fc82809d8" category="sidebar">Crea un caveau informatico per proteggere i dati</block>
   <block id="77323f759a4ed2ac40e1bf8211da2f5f" category="sidebar">Regola la capacità del volume</block>
-  <block id="aadb016687f81f1f6f82a4c97ba651ed" category="sidebar">Abilita la gestione automatica della capacità e degli inode</block>
   <block id="8cc5e5335040870d41183130dad2a0a6" category="paragraph"><block ref="8cc5e5335040870d41183130dad2a0a6" category="inline-link-macro-rx"></block></block>
   <block id="6b49a1e6e88960820791afdda16a063c" category="paragraph"><block ref="6b49a1e6e88960820791afdda16a063c" category="inline-link-macro-rx"></block></block>
   <block id="7999c939951d1cfce0556df15a76a345" category="paragraph"><block ref="7999c939951d1cfce0556df15a76a345" category="inline-link-macro-rx"></block></block>
@@ -2282,7 +2264,6 @@
   <block id="081af9c5870a1e2b72453c8137d7fc73" category="doc">Supporto dei dispositivi a blocchi in NetApp Workload Factory</block>
   <block id="41c0f3170443e12c1081a0a411a2c7a4" category="paragraph">Gestisci i tuoi dispositivi a blocchi in modo più efficace con il nuovo supporto per dispositivi a blocchi introdotto in NetApp Workload Factory.  Questa funzionalità consente di visualizzare i dettagli e di aumentare la capacità delle LUN iSCSI, garantendo maggiore flessibilità per le esigenze di archiviazione.</block>
   <block id="83fd7a4dba0970697d173ce4398c1b71" category="inline-link-macro">Gestisci i dispositivi a blocchi in Workload Factory</block>
-  <block id="e739cb7976f49d4295e9ffa8e259037b" category="paragraph"><block ref="e739cb7976f49d4295e9ffa8e259037b" category="inline-link-macro-rx"></block></block>
   <block id="90b40f16cf91d89fc22fbcc0a38efa7c" category="list-text">Eliminazione snapshot non necessari: verifica se i volumi contengono snapshot obsoleti e non necessari che possono essere eliminati per ridurre i costi.</block>
   <block id="2945c0b218624e42ee523aefde446d66" category="list-text">Ribilanciamento dei volumi FlexGroup : verifica se i volumi FlexGroup sono bilanciati uniformemente tra i volumi dei loro membri per garantire prestazioni ottimali.</block>
   <block id="0f80b197268947adedcc0297fc4a4efd" category="section-title">Analizzatore AI per eventi EMS in NetApp Workload Factory</block>
@@ -2315,12 +2296,7 @@
   <block id="3c9bac4bc86cac9a309d9792f5bb65df" category="section-title">Visualizza e analizza gli eventi EMS per FSx per ONTAP</block>
   <block id="6baf937b798e7ea8fa07c50ef6c201f9" category="paragraph">Utilizzare la console Workload Factory per visualizzare e analizzare gli eventi EMS per i file system FSx for ONTAP .</block>
   <block id="dacb27092cd2afb431a6b906c5beb313" category="list-text">Consulta le informazioni dettagliate sull'evento.</block>
-  <block id="36e5c8637cbc6d751b3ef3aea28243c2" category="summary">Gestire i dispositivi a blocchi per un file system FSx per ONTAP in NetApp Workload Factory.</block>
-  <block id="c596ea1662cbb07d0ef3b729c17d7ed2" category="doc">Gestire i dispositivi a blocchi per un file system FSx per ONTAP</block>
-  <block id="2bdf5c50f504c8de4e3490f942010338" category="paragraph">I dispositivi a blocchi, o LUN (numeri di unità logica), sono volumi che contengono file system in un ambiente SAN e sono accessibili agli host tramite una rete.</block>
   <block id="2a29012d549070ee593fcda2b2383198" category="paragraph">È possibile gestire dispositivi a blocchi per file system FSx per ONTAP che utilizzano il protocollo iSCSI.</block>
-  <block id="11f86c8098f50365bfc25a2fb87568db" category="list-text">È necessario associare un collegamento per gestire i dispositivi a blocchi. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>.  Dopo aver associato il collegamento, tornare a questa operazione.</block>
-  <block id="ab333c71570d582979f29ab5f2f547f5" category="list-text">Per visualizzare e gestire è necessario disporre di un dispositivo a blocchi esistente.</block>
   <block id="934c3d38b90775eafeecd6f5f7490e2c" category="section-title">Visualizza i dettagli del dispositivo a blocchi</block>
   <block id="12a66c1ef123e6c23c139c511d70f3f4" category="paragraph">Visualizza in qualsiasi momento i dettagli di un dispositivo a blocchi esistente.</block>
   <block id="1ee5303f1904e713e5abd28b233031e0" category="list-text">Da *FSx for ONTAP*, selezionare la scheda *Blocca dispositivi*.</block>
@@ -2331,7 +2307,6 @@
   <block id="ea25ef7373f521d52fbd5ca2a47bca2f" category="list-text">Passare al menu delle azioni per il dispositivo a blocchi e quindi selezionare *Aumenta capacità*.</block>
   <block id="f038e534cccdfa3eb80bc4f41d03b815" category="list-text">Immettere la nuova capacità per il dispositivo a blocchi e selezionare l'unità.</block>
   <block id="a513f9168d077dcb464740ecedeeeebe" category="list-text">Selezionare *Aumenta* per applicare le modifiche.</block>
-  <block id="fc550a6b2bee383ed3285311141dfd90" category="admonition">Dopo aver aumentato le dimensioni del dispositivo a blocchi, seguire la procedura fornita dal sistema operativo host per scoprire le nuove dimensioni del dispositivo a blocchi ed espandere il file system su di esso.</block>
   <block id="5731c6f2c2af81018b15a6dc509612e7" category="doc">Gestisci i volumi di cache FSx for ONTAP con NetApp Workload Factory</block>
   <block id="434453d056f84022d78f78e508e2c9e4" category="paragraph">Utilizzare la console NetApp Workload Factory per gestire i volumi di cache per i file system FSx for ONTAP .  La memorizzazione nella cache, un metodo per l'archiviazione temporanea dei dati, migliora le prestazioni di accesso ai dati riducendo i tempi di recupero.  È possibile modificare il nome della cache, regolarne la capacità, cambiare i criteri di esportazione, selezionare un metodo di memorizzazione nella cache, precompilare la cache o eliminare i volumi della cache.</block>
   <block id="511fe435e8165aed773eaad3ed9390d2" category="paragraph">È possibile gestire i volumi di cache associati alle relazioni di cache nella console NetApp Workload Factory .</block>
@@ -2367,7 +2342,6 @@
   <block id="db2c0720daa95b2841a73d2a13c0e539" category="list-text">Visualizza i *Dettagli sui costi* per le tue risorse FSx per ONTAP .</block>
   <block id="815e75619b370a1b845eccec6979ed74" category="section-title">27 novembre 2025</block>
   <block id="7ba9e316fdb6ba8e077283db064835f0" category="sidebar">Monitorare e analizzare i costi di FSx per ONTAP</block>
-  <block id="b312d49b502ea93d7b1d38b92313f502" category="sidebar">Gestire i dispositivi a blocchi</block>
   <block id="9f83e27b7a1a59c38fc7d458de16054a" category="sidebar">Gestisci i tag del file system</block>
   <block id="79aceabdc6c99b8ffa443536ee6c3fac" category="list-text">*Modello Amazon Bedrock*</block>
   <block id="ec43608dd1a0c06ed66226644c486b9a" category="sidebar">Tieni traccia dei costi e dell'utilizzo delle risorse FSx per ONTAP</block>
@@ -2400,8 +2374,6 @@
   <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">Nella finestra di dialogo *Crea e collega punto di accesso S3*, fornisci le seguenti informazioni:</block>
   <block id="0802ef324b114effd397e5e5ac619733" category="list-text">Seleziona *Crea e allega*.</block>
   <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">Elimina i punti di accesso S3 esistenti da un volume</block>
-  <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">Selezionare il menu delle azioni per il punto di accesso S3 da eliminare, quindi selezionare *Scollega*.</block>
-  <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">Nella finestra di dialogo *Scollega e rimuovi un punto di accesso S3*, seleziona *Scollega e rimuovi* per eliminare il punto di accesso S3 dal volume.</block>
   <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">Gestire i punti di accesso S3</block>
   <block id="bc5d3bf99236801351dc3a2d7c20aed7" category="paragraph">Workload Factory analizza i file system FSx for ONTAP per le seguenti configurazioni:</block>
   <block id="afc7c7589e5f20d86c03b5e089bbad6b" category="list-text">NetApp Autonomous Ransomware Protection (ARP/AI) disabilitato include dispositivi a blocchi: verifica se ARP/AI è disabilitato sui volumi dei dispositivi a blocchi</block>
@@ -2454,7 +2426,6 @@
   <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">Di seguito sono riportate le policy predefinite di AWS. Per visualizzare i criteri snapshot esistenti, è necessario <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>.</block>
   <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">_Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando la console Workload Factory. Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento a <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> nella documentazione di AWS FSx per NetApp ONTAP . Si noti che Workload Factory utilizza nomi basati sui casi d'uso nella console di Workload Factory per i criteri di suddivisione in livelli e include i nomi dei criteri di suddivisione in livelli di FSx per ONTAP tra parentesi.</block>
   <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">I volumi con file immutabili e i volumi con protocollo NVMe non sono supportati per ARP/AI.</block>
-  <block id="78b92538a82bd788a456f9cf838a5c11" category="paragraph"><block ref="78b92538a82bd788a456f9cf838a5c11" category="inline-link-macro-rx"></block></block>
   <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">Da *FSx for ONTAP*, selezionare il menu azioni del file system e quindi selezionare *Gestisci*.</block>
   <block id="96271eab8824304349d49f716ef08b72" category="list-text">Nella panoramica del file system in VM di archiviazione, seleziona *Crea VM di archiviazione*.</block>
   <block id="355a4219717415b19bc0cfb3a299f9a8" category="list-text">Nella pagina Crea VM di archiviazione, in Configurazione VM di archiviazione, fornisci quanto segue:</block>
@@ -2484,8 +2455,6 @@
   <block id="ac451744a266e36dbad7a3a3b3ade56c" category="list-text">Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda * Amazon FSx for Windows File Server*.</block>
   <block id="17213dc8118fcfe940b37a95d4307e39" category="list-text">Dal menu Archiviazione, seleziona *Esplora risparmi*, quindi seleziona la scheda *Amazon Elastic File System (EFS)*.</block>
   <block id="6cf17777f39e2921315f99c406f682d1" category="list-text">Sicurezza: protezione autonoma da ransomware NetApp con intelligenza artificiale (ARP/AI) disabilitata e accesso non autorizzato ai volumi</block>
-  <block id="5ebcedbb76a1892d9b52cee0bb9b7b56" category="doc">Gestire i dispositivi a blocchi per un file system in NetApp Workload Factory</block>
-  <block id="560a0dd91469e7b95b2ebbbda4fa6b55" category="paragraph">Dalla console NetApp Workload Factory è possibile gestire i dispositivi a blocchi per i file system FSx for ONTAP . Le attività di gestione includono la visualizzazione dei dettagli dei dispositivi a blocchi, l'aumento della capacità, la gestione dell'accesso client, l'archiviazione dei dati dei dispositivi a blocchi e l'eliminazione dei dispositivi a blocchi.</block>
   <block id="c7d27c61cfd9d94c94e936b1785769dd" category="section-title">Gestire l'accesso client per un dispositivo a blocchi</block>
   <block id="679f0d3f635a07fd97dff3c93833dc50" category="paragraph">È possibile gestire l'accesso client per un dispositivo a blocchi esistente in qualsiasi momento creando igroup e aggiungendo o rimuovendo dispositivi a blocchi e iniziatori host.</block>
   <block id="ac40a086c14a9eef79fce5123e9bd49c" category="list-text">Passare al menu delle azioni per il dispositivo a blocchi e quindi selezionare *Gestisci accesso client*.</block>
@@ -2531,7 +2500,6 @@
   <block id="71d01806cd25e89067c25b4f03e9a607" category="list-text"><block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix="" category="inline-code"></block></block>
   <block id="acbb57d15a35fb35e9bb5b030da0d855" category="list-text">*Configurazione di rete*: seleziona *Internet* o *Virtual private cloud (VPC)*. Il tipo di rete scelto determina se il punto di accesso è accessibile da Internet o limitato a una VPC specifica.</block>
   <block id="6c7b2c1264a7189632e27a922b67c8b7" category="inline-link-macro">Documentazione sui prezzi di Amazon S3</block>
-  <block id="caabcc888415814c29639d089816b5fa" category="list-text">*Abilita metadati*: l'abilitazione dei metadati crea una tabella S3 contenente tutti gli oggetti accessibili dal punto di accesso S3, che puoi utilizzare per auditing, governance, analisi automatica e ottimizzazione. L'abilitazione dei metadati comporta costi AWS aggiuntivi. Consulta <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
   <block id="56573dfcf7d1ac3cf78f2423725ccce8" category="list-text">*Tag del punto di accesso S3*: Facoltativamente, puoi aggiungere fino a 50 tag.</block>
   <block id="5e3fec4e574658f05a0b92757b364cd9" category="doc">La home page include problemi well-architected ed eventi EMS per Storage</block>
   <block id="8743ea79d0b29525fd3c69e5e3566399" category="paragraph">La home page di NetApp Workload Factory include un riquadro Focus in cui vengono visualizzati i problemi ben progettati e gli eventi del sistema di gestione delle emergenze (EMS) di FSx for ONTAP per i tuoi carichi di lavoro. Da lì, puoi navigare al carico di lavoro Storage per visualizzare lo stato ben progettato o gli eventi di tutti i file system FSx for ONTAP nel tuo ambiente di storage.</block>
@@ -2572,8 +2540,6 @@
   <block id="cab281453766ba01226c32a419bd00b4" category="list-text">*Nome dispositivo a blocchi*: selezionare uno o più dispositivi a blocchi da associare al gruppo di initiator. I dispositivi a blocchi elencati sono quelli che non sono ancora stati mappati a un initiator host.</block>
   <block id="54d026e00002c68ee50033dbd7e53e6f" category="list-text">*Tipo di sistema operativo*: seleziona Linux, VMware o Windows per il tipo di sistema operativo.</block>
   <block id="283119ca74749a876a6dfcb0c6968a8c" category="list-text">*Iniziatori host*: aggiungi uno o più initiator host qualificati iSCSI (IQN) al gruppo di iniziatori.</block>
-  <block id="8298e20d0a9a0a5f92a40700ffa7ff7e" category="inline-link-macro">Gestire gli igroups per un file system FSx for ONTAP</block>
-  <block id="22774fb9e9e4a2ed10c53dba9c6a522f" category="paragraph"><block ref="22774fb9e9e4a2ed10c53dba9c6a522f" category="inline-link-macro-rx"></block></block>
   <block id="30965461c316b499ed01c7f92f651051" category="list-text">La replica non è supportata per i volumi a blocchi che utilizzano i protocolli iSCSI o NVMe.</block>
   <block id="36e75a4b793293fd1dde9fdc618c8431" category="list-text">È necessario disporre di un FSx for ONTAP file system da utilizzare per il volume di destinazione nella replica dei dati.</block>
   <block id="66aa1d91f89810f078327deb1e1fc2c8" category="list-text">Il file system FSx for ONTAP utilizzato per la relazione di replica deve avere un collegamento associato. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, tornare a questa operazione.</block>
@@ -2588,13 +2554,8 @@
   <block id="fb900cd761e703345ca42d9399cd972d" category="list-text">In Configurazioni, identifica la configurazione da ignorare per i volumi selezionati e quindi seleziona *Visualizza e correggi*.</block>
   <block id="e1b530152da44e105ca4a8d377616f64" category="list-text">Seleziona *Configurazioni ignorate*.</block>
   <block id="bac7c367211d21ad06604f0cd3ce59fd" category="list-text">Per un volume: seleziona il menu azioni e poi seleziona *Riattiva volume*.</block>
-  <block id="f4d2a53dfcd7452de8013a117b37fbeb" category="summary">Gestisci gli igroup per un file system FSx for ONTAP in NetApp Workload Factory.</block>
-  <block id="1a3c09835da3164c0e4cc6a200df5a45" category="doc">Gestire gli igroups per un file system in NetApp Workload Factory</block>
-  <block id="2cb43b34bbfbc5888ef0c394a7851dfa" category="paragraph">Utilizza la console NetApp Workload Factory per gestire gli igroup e controllare l'accesso client per i dispositivi a blocchi FSx for ONTAP. Puoi visualizzare i dettagli degli igroup, gestire l'accesso client ed eliminare gli igroup.</block>
   <block id="bc1c3c9e36135f9757b3dc3c3e193f02" category="list-text">È necessario associare un collegamento per gestire gli igroup. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, tornare a questa operazione.</block>
-  <block id="608f9394164c7de910b74c2003b4eaa9" category="list-text">È necessario disporre di un igroup esistente da visualizzare e gestire.</block>
   <block id="08cd6b7c5ed112ac93d8c42844793856" category="section-title">Gestire l'accesso client per un igroup</block>
-  <block id="c1a0bdd3f38054982adc32d496209b79" category="paragraph">È possibile gestire l'accesso client per un igroup esistente in qualsiasi momento.</block>
   <block id="7da430a2703aa373f838f3ca96dbd76a" category="list-text">Selezionare il tipo di risorsa *Initiator groups (igroups)* per visualizzare gli igroups esistenti.</block>
   <block id="ff1a20fd70e3a7ecfb8b967bada7a3e0" category="list-text">Vai al menu azioni per il block device e seleziona *Manage client access*.</block>
   <block id="ca13293265ec05aedcbfb255da487365" category="list-text">Esaminare i dettagli di accesso del client visualizzati per l'igroup.</block>
@@ -2607,26 +2568,16 @@
   <block id="5fe1130bd31e3efcac03eae9968f43b2" category="list-text">*Tipo di sistema operativo*</block>
   <block id="dd3d8ac5ecdcb54f27c2bfa8e8ca2636" category="list-text">*Initiator host*</block>
   <block id="74066c25b1bbad95426e7c5b36a2a7a6" category="section-title">Elimina un igroup</block>
-  <block id="76dbfd5e73d0791a63bc92d49eb22f4e" category="paragraph">È possibile eliminare un igroup esistente quando non è più necessario.</block>
-  <block id="2a2ff70d842a2e5d60d887e5fcbb0ecf" category="list-text">Passare al menu azioni per il dispositivo a blocchi e quindi selezionare *Elimina initiator group*.</block>
   <block id="a7d242b126bf6ced54231e71dba71bda" category="list-text">Nella finestra di dialogo Elimina initiator group (igroup), digitare "delete" per confermare che si desidera eliminare l'igroup, quindi selezionare *Elimina*.</block>
   <block id="4d7b443b927537bbc33ca3690bbcaed1" category="inline-link-macro">Creare un igroup per un file system FSx for ONTAP</block>
   <block id="34fc9e9b0a58447e45d29d99c376a3ec" category="paragraph"><block ref="34fc9e9b0a58447e45d29d99c376a3ec" category="inline-link-macro-rx"></block></block>
   <block id="1ef8cc6eec11f56d70880a4ca54620d0" category="paragraph">Gestisci i punti di accesso S3 per un volume in NetApp Workload Factory. Puoi utilizzare la console di Workload Factory per assegnare punti di accesso S3 ai volumi esistenti, visualizzare i dettagli dei tuoi bucket S3, apportare modifiche ai punti di accesso esistenti o eliminare punti di accesso S3.</block>
-  <block id="26d7e8128d82da8c5fffb53effe326b6" category="paragraph">Amazon FSx for NetApp ONTAP supporta l'accesso ai dati S3 ai file system NFS e SMB, consentendone l'integrazione con decine di servizi AWS basati su S3, come Amazon Bedrock, SageMaker, Athena, AWS Glue e altri. Puoi connettere i servizi AWS a tutti i tuoi dati di storage a oggetti.</block>
-  <block id="9632f5fea924b5d501a696d96c8167f8" category="paragraph">Collegando punti di accesso S3 ai volumi NFS e SMB in un file system FSx for ONTAP, i file archiviati in questi volumi possono essere accessibili da qualsiasi servizio AWS come se si trovassero in un bucket S3. Quando si collega il punto di accesso, si definisce il suo ID univoco, si specifica il tipo di accesso ai file (UNIX o Windows) e si aggiunge un nome utente per autorizzare le richieste di accesso ai file da parte del punto di accesso.</block>
-  <block id="d18507b68b8503d4c213178c33b89e30" category="paragraph">Dopo che l'access point S3 è stato collegato, appare nella AWS Management Console e ha un alias univoco dell'access point. Questo alias viene utilizzato come nome del bucket S3 fornito ai servizi AWS a cui si desidera connettersi. Ad esempio, è possibile fornire l'alias a una knowledge base di Amazon Bedrock, che utilizzerà i file nel volume FSx for ONTAP per fornire risposte contestuali alle query.</block>
-  <block id="b5059ff136f249234edd477a68d67657" category="paragraph">È possibile collegare più punti di accesso S3 a un singolo volume FSx for ONTAP, ciascuno con il proprio livello di accesso, consentendo di connettersi a tutti i servizi AWS necessari.</block>
   <block id="d33d3fec0d0cc42bf9722d3406ba5aa2" category="paragraph">Assicurati di soddisfare i seguenti requisiti:</block>
   <block id="69b8b9524d643674b889fa70c17e1cc8" category="inline-link-macro">concedere le credenziali con la policy di autorizzazione _operations and remediation_</block>
   <block id="8c378042ad1ba655fb1f5cd941dc98b6" category="list-text">Devi <block ref="c6ffb720e530188ab1b1bff284837062" category="inline-link-macro-rx"></block> in Workload Factory per completare questa attività.</block>
   <block id="f1834a86a3431bfc71aeab4c9747192d" category="paragraph">Crea e collega punti di accesso S3 a un volume esistente in NetApp Workload Factory.</block>
   <block id="0a76b0d6a11006d8a1c5f62db933ddb6" category="list-text">Da *FSx for ONTAP*, seleziona il file system con il volume da aggiornare.</block>
-  <block id="5744cefb66e574df9db55ba88906a34f" category="list-text">*Abilita catalogo metadati*: seleziona per abilitare i metadati sul volume e generare un inventario dei metadati per tutti gli oggetti accessibili al punto di accesso S3. Questa funzionalità comporta costi AWS per le richieste S3.</block>
   <block id="6e9783376d951cfd780e9fdb67a0f02c" category="section-title">Visualizza dettagli</block>
-  <block id="f32d66c3b5a1aff1e9ffd8d3d0311ffb" category="paragraph">Alias, ARN e URI S3 sono dettagli del punto di accesso disponibili senza metadati abilitati.</block>
-  <block id="b4e23b89feadd352dcd7a74e16c044a7" category="paragraph">Con i metadati abilitati sul volume, puoi visualizzare i dettagli dell'access point, della tabella di inventario e del bucket di tabella degli access point S3 esistenti collegati al volume. Viene inoltre fornito un collegamento alla tabella di inventario nella AWS Management Console.</block>
-  <block id="bcbfeb996f0a5cc808497a1040ac24bf" category="paragraph">I dettagli del punto di accesso sono copiabili per l'uso in altre applicazioni.</block>
   <block id="6210aebae6ddd596486bcb13eb5ef89a" category="list-text">Dalla schermata *Manage S3 access points*, seleziona il menu azioni e poi seleziona *Visualizza dettagli*.</block>
   <block id="6ed5516949fd4560f1570e0f701efbac" category="section-title">Modifica punto di accesso</block>
   <block id="803c8783e877d292e1c22e5a3d7cd78a" category="paragraph">Modifica l'utente e il tipo di utente per un punto di accesso S3 esistente collegato a un volume. Puoi anche abilitare o disabilitare i metadati per il punto di accesso.</block>
@@ -2693,9 +2644,100 @@
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">16 febbraio 2026</block>
   <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> per migrare in modo permanente dati e impostazioni di configurazione dal file system di origine al file system FSx for ONTAP di destinazione.</block>
   <block id="3ecf18c09ae5a2bd1855ba6515de6cd7" category="list-text">Dispositivi a blocchi inattivi: consiglia di archiviare i dati del dispositivo a blocchi o di eliminare un dispositivo a blocchi se non è stato utilizzato per sette giorni consecutivi.</block>
-  <block id="3310dcc189ef22670c22a32bdf58f0c9" category="list-text">Dispositivi orfani: mostra se qualche dispositivo a blocchi non è stato utilizzato per sette giorni consecutivi, aiutandoti a identificare e gestire efficacemente le risorse inutilizzate. Da qui, puoi <block ref="5d1d66741e880017163f47d5a2557cb1" category="inline-link-macro-rx"></block>.</block>
-  <block id="628b46b908bfc92bdcca823a9f84cd05" category="list-text">Ottimizzazione dei costi: efficienze di archiviazione, suddivisione in livelli dei dati, eliminazione di snapshot e backup non necessari e dispositivi a blocchi inattivi</block>
   <block id="958926cf6ac067918ae80f7f610d415a" category="section-title">Archivia i dati di un dispositivo a blocchi inattivo</block>
   <block id="d37c72ca2c27b8b48a724120cf91c835" category="paragraph">I dispositivi a blocchi che non sono più mappati a un client o non sono utilizzati per sette giorni consecutivi sono classificati come dispositivi a blocchi inattivi. Puoi archiviare i dati di un dispositivo a blocchi inattivo nel livello capacity pool per recuperare capacità SSD.</block>
-  <block id="01b51d5b9524250e9003d631e9e3f35b" category="paragraph">I dispositivi a blocchi che non sono più mappati su un client o che non vengono utilizzati per sette giorni consecutivi sono classificati come dispositivi a blocchi inattivi. Questa operazione annulla la mappatura ed elimina il dispositivo a blocchi selezionato. Se il volume FlexVol host non contiene dispositivi a blocchi, Workload Factory lo elimina.</block>
+  <block id="3d8f5698e4ea8cae76ec64ff32d1aa8a" category="list-text">Intelligenza artificiale (AI) e machine learning (ML): replica i tuoi dati ONTAP on-premises su Amazon FSx for NetApp ONTAP e crea punti di accesso S3 per supportare l’addestramento di AI e ML nel cloud</block>
+  <block id="911879fb512486e8b5af8019b65a8205" category="list-text">*Abilita tabella inventario*: quando si abilita la tabella inventario sul volume, il sistema genera metadati per tutti gli oggetti accessibili al punto di accesso S3 e comporta costi di richiesta AWS S3. Consultare <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
+  <block id="aa72376768d67d3c8a77216621fb5316" category="paragraph"><block ref="aa72376768d67d3c8a77216621fb5316" category="inline-link-macro-rx"></block></block>
+  <block id="b810156a51d2ff011de686d088c6dcce" category="list-text">Dispositivi orfani: mostra se qualche dispositivo a blocchi non è stato utilizzato per sette giorni consecutivi, aiutandoti a identificare e gestire efficacemente le risorse inutilizzate. Da qui, puoi <block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>.</block>
+  <block id="b4faaa513060331f5bb7705e042e49cd" category="list-text">Capacità SSD sottoutilizzata: verifica se il livello di capacità SSD è sottoutilizzato e consiglia di ridurre la capacità SSD per ottimizzare i costi.</block>
+  <block id="01b065251159f3c3b86f7d49511f1bf7" category="list-text">Pianifica backup dei volumi: NetApp Workload Factory migliora le raccomandazioni di configurazione e aggiunge opzioni per attivare il backup di FSx for ONTAP o AWS Backup. FSx for ONTAP backup applica una policy predefinita a tutti i volumi in un file system, creando backup giornalieri conservati fino a 90 giorni. AWS Backup consente di scegliere periodi di conservazione diversi per ciascun volume nel piano di backup.</block>
+  <block id="9ad8abc81514723f5439d23cac33f67b" category="section-title">Workload Factory supporta il caso d'uso AI &amp; ML per la replica</block>
+  <block id="4fabde129d63ed93da8d3a884a34d989" category="paragraph">Workload Factory supporta la replica dei dati ONTAP locali su FSx for ONTAP e la creazione di punti di accesso S3 per i servizi di AWS Artificial Intelligence (AI) e machine learning (ML) per accelerare i flussi di lavoro AI/ML.</block>
+  <block id="6f93097c4b22d10fa124cc3526343351" category="inline-link-macro">Replicare i dati on-premises per casi d'uso di AI e ML</block>
+  <block id="9204fcf38a3ec17161f43b022482f826" category="paragraph"><block ref="f326bef7ea7d0e36c5b06e0b9913123a" category="inline-link-macro-rx"></block></block>
+  <block id="42fe2ab7947c044bb47fb357526022c2" category="section-title">Modifica dei punti di accesso S3 esistenti</block>
+  <block id="33c5aa1872cfcc4e8c7c5850619e6f87" category="paragraph">È possibile modificare l'utente e il tipo di utente per un punto di accesso S3 esistente collegato a un volume. È anche possibile abilitare o disabilitare i metadati per il punto di accesso.</block>
+  <block id="7525bd4fe22d4a212fea8807fb8d750b" category="inline-link-macro">Modifica i punti di accesso S3 in NetApp Workload Factory</block>
+  <block id="88d72467009c25b9669edfef18e21df3" category="paragraph"><block ref="88d72467009c25b9669edfef18e21df3" category="inline-link-macro-rx"></block></block>
+  <block id="692b5b6f757e38d7e4d1dd3f957a20f0" category="section-title">Aggiunto diagramma dello storage a blocchi</block>
+  <block id="55d6cb6b45d9aaa08c53b22b5ac8a617" category="paragraph">Se utilizzi storage a blocchi, puoi visualizzare il diagramma dello storage a blocchi per vedere come i dispositivi a blocchi si connettono ai nodi e agli igroup. Il diagramma ti aiuta a comprendere e gestire il tuo storage a blocchi.</block>
+  <block id="e852955e53f52fa18c0de4a24d22f4af" category="inline-link-macro">Gestire storage a blocchi in NetApp Workload Factory</block>
+  <block id="e27c0520df6795eedf0c70ef38381a5b" category="paragraph"><block ref="e27c0520df6795eedf0c70ef38381a5b" category="inline-link-macro-rx"></block></block>
+  <block id="fe8de8255ddcf7ab25ab74f8ebd26038" category="section-title">Aggiornamento della funzionalità di gestione automatica della capacità</block>
+  <block id="8e5031888ebd5b1abae0d4eb5bf05af3" category="paragraph">Questo aggiornamento separa la funzionalità in due funzionalità distinte: gestione automatica della capacità e notifiche sulla capacità.</block>
+  <block id="10a7856ed25b37558f2b515fcbe24567" category="paragraph">La gestione automatica della capacità aggiunge o rimuove automaticamente la capacità del file system per mantenere prestazioni ottimali. Le nuove opzioni includono modalità incrementale e adattiva. In modalità incrementale, il sistema aumenta la capacità di un importo fisso alle soglie; in modalità adattiva, utilizza dati storici per prevedere e regolare la capacità.</block>
+  <block id="afca613753b2d7f6ff8f1dad6c1dc86a" category="paragraph">Le notifiche sulla capacità ti avvisano ogni volta che si verifica una modifica della capacità e quando i file system raggiungono i limiti impostati, così puoi gestire lo storage prima che si verifichino problemi.</block>
+  <block id="19d4c34be6525aca788802a6167a4156" category="inline-link-macro">Scopri la gestione automatica della capacità e le notifiche di capacità in NetApp Workload Factory</block>
+  <block id="ef319467f119e3bda1a975eb1f26e46d" category="paragraph"><block ref="ef319467f119e3bda1a975eb1f26e46d" category="inline-link-macro-rx"></block></block>
+  <block id="129560e32411be4dc94c9cfeada8ea67" category="section-title">Nuovo segnalibro Ask Me disponibile in Workload Factory</block>
+  <block id="1c0128659c34cfdfa6e26b42e3133599" category="paragraph">Abbiamo aggiunto un nuovo segnalibro Ask Me in ogni schermata della console di Workload Factory. Questo miglioramento semplifica e velocizza l'accesso ad Ask Me ogni volta che hai bisogno di aiuto. Ask Me è il nostro assistente AI. Puoi porre domande sui tuoi ambienti di workload, ottenere informazioni personalizzate e rivedere le conversazioni precedenti.</block>
+  <block id="b365ed726bb3010ba5b4a6a1479128f9" category="paragraph">Puoi aprire Ask Me da qualsiasi pagina cliccando sul nuovo segnalibro. Si avvia Ask Me in un pannello laterale senza interrompere il tuo lavoro attuale e offre spiegazioni rapide e raccomandazioni relative a ciò che stai facendo.</block>
+  <block id="80dcbdee31e7f18a301f863f8b73dc64" category="inline-link-macro">Scopri di più su Ask Me</block>
+  <block id="df84e5c661ad9c55d4921f236021aac2" category="paragraph"><block ref="df84e5c661ad9c55d4921f236021aac2" category="inline-link-macro-rx"></block></block>
+  <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">Gestire lo storage a blocchi per un file system FSx for ONTAP</block>
+  <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
+  <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">Affidabilità: soglia di capacità SSD, snapshot locali pianificati, backup di volumi pianificati, replica remota dei dati e affidabilità dei dati per la conservazione a lungo termine</block>
+  <block id="b6680821568b93d1977b91f8852a2201" category="list-text">Ottimizzazione dei costi: storage efficiencies, data tiering, eliminazione di snapshot e backup non necessari, dispositivi a blocchi inattivi e capacità SSD sottoutilizzata</block>
+  <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">Regola manualmente la capacità del file system in Workload Factory</block>
+  <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">Aumenta la capacità di storage SSD quando l'utilizzo supera la soglia specificata. Riduci la capacità di storage SSD quando non utilizzi i working set per risparmiare denaro.</block>
+  <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">abilitare la gestione della capacità</block>
+  <block id="ecc53408400ad50b32a298b084aaab6c" category="paragraph">In alternativa, puoi <block ref="3b9a1990588be58052dffdfdaa494467" category="inline-link-macro-rx"></block>fare in modo che Workload Factory gestisca la capacità del file system per te.</block>
+  <block id="50b304c0a704b9a80773e4a50f6e7d06" category="paragraph">La modifica della capacità del file system influisce sugli IOPS del file system FSx for ONTAP.</block>
+  <block id="897441537fb13b6e015f73a76a79d07f" category="paragraph">Per regolare la capacità di un file system, è necessario prima <block ref="ca55c81878fab545ebb59a964af2e0f9" category="inline-link-macro-rx"></block>.</block>
+  <block id="201a18ac1c906df6358f39af33c244de" category="summary">Gestisci lo storage a blocchi per un file system FSx for ONTAP in NetApp Workload Factory.</block>
+  <block id="0006ccbc0d0f541209207d590ebc1b08" category="doc">Gestire storage a blocchi per un file system in NetApp Workload Factory</block>
+  <block id="373d40a556613e20661d6c89ac8751a6" category="paragraph">Utilizza NetApp Workload Factory per semplificare la gestione delle risorse di storage a blocchi, inclusi igroups e dispositivi a blocchi, e controlla l'accesso client per FSx for ONTAP block devices per garantire prestazioni ottimali e ridurre al minimo i costi.</block>
+  <block id="60318fe3439a99a9762a5aaaa9cc7b95" category="paragraph">Dalla console di NetApp Workload Factory, è possibile gestire initiator groups (igroups) per controllare l'accesso dei client ai block devices. È inoltre possibile visualizzare i dettagli dei block devices, aumentare la capacità, gestire l'accesso dei client, archiviare i dati per i block devices inattivi ed eliminare i block devices.</block>
+  <block id="e0c31cfa2277dcf409fc0398234ce79b" category="paragraph">Controllare il diagramma dello storage a blocchi per verificare quanto segue:</block>
+  <block id="30f276b848a0c37c6c54368f5714fc72" category="list-text">Connessioni client</block>
+  <block id="e7963aa68819cfe7f854ea292af57bb0" category="list-text">Stato del dispositivo a blocchi</block>
+  <block id="fa23eba521e62c0f542759bfbbeff7da" category="list-text">Relazione nodo-client</block>
+  <block id="3f28a1e2dd61c5669bfdd67fbc8e684b" category="list-text">Potenziali connessioni client errate</block>
+  <block id="67e2e2f34c9460c37d989c404890a485" category="list-text">È necessario disporre di un igroup o di un block device esistente per visualizzare e gestire.</block>
+  <block id="ce1d8853a8d36962cfd45cb8f75b054b" category="paragraph">Puoi visualizzare i dettagli degli igroup, gestire l'accesso client ed eliminare gli igroup.</block>
+  <block id="aad1d60c477d9cbf7115ff8c5248cc49" category="paragraph">Gestisci l'accesso dei client per un igroup esistente in qualsiasi momento.</block>
+  <block id="01448c8881646ca1e13e2994a263c4ae" category="paragraph">Eliminare un igroup quando non è più necessario.</block>
+  <block id="c39a540bbd345f6201d1d674cb2f0963" category="list-text">Vai al menu azioni per il dispositivo a blocchi e quindi seleziona *Elimina initiator group*.</block>
+  <block id="68e5b165183da1136fceffeaadd24b70" category="section-title">Gestire i dispositivi a blocchi per un igroup</block>
+  <block id="6a7ad49263c3fc8c151eb65f1806da11" category="paragraph">I dispositivi a blocchi, o LUN (logical unit numbers), sono volumi con file system in un ambiente SAN, accessibili agli host tramite una rete.</block>
+  <block id="b8566093dc7e8e13804760276e46227b" category="admonition">Dopo aver aumentato le dimensioni del block device, seguire la procedura fornita dal sistema operativo host per rilevare le nuove dimensioni ed espandere il file system.</block>
+  <block id="5604a07573c6d426e93e84ff1a6bd366" category="paragraph">I dispositivi a blocchi che non sono mappati a un client o che non vengono utilizzati per sette giorni sono dispositivi a blocchi inattivi. Questa operazione annulla la mappatura ed elimina il dispositivo a blocchi selezionato. Se il volume FlexVol host non contiene dispositivi a blocchi, Workload Factory lo elimina.</block>
+  <block id="1abbae8f95c05dac2b36d51f50eb87ac" category="doc">Gestisci automaticamente la capacità del file system e gli inode in Workload Factory</block>
+  <block id="d5d9ee8255b76e97868c3facadf58360" category="paragraph">Abilitando la gestione della capacità, NetApp Workload Factory aggiunge automaticamente storage incrementale a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano nel tempo. Inoltre, abilitare questa funzionalità elimina la necessità di monitorare manualmente la capacità.</block>
+  <block id="b5750806a6c2de28360d7b511ba01b0c" category="paragraph">Il sistema esegue la scansione del file system FSx for ONTAP ogni 30 minuti. Verifica se è necessario aggiungere storage incrementale e controlla gli inode di volume disponibili. Il conteggio aumenta in base alle soglie di gestione automatica della capacità.</block>
+  <block id="7bdf690b1d068245416e9f5cbb766f44" category="paragraph">Abilitare la gestione degli inode consente a NetApp Workload Factory di aggiungere automaticamente inode incrementali a un file system FSx for ONTAP man mano che le esigenze di capacità cambiano. Questa funzionalità elimina la necessità di monitorare manualmente gli inode.</block>
+  <block id="d00e9db543e20f2a587eedfba7e3b329" category="list-text">In Informazioni, seleziona l'icona a forma di matita accanto a *capacity management*. L'icona a forma di matita appare accanto alla freccia a discesa quando passi il mouse sulla riga *capacity management*.</block>
+  <block id="eafb35aad9f2005878f19fafa1be8d82" category="list-text">Nella finestra di dialogo *gestione della capacità*, fornire quanto segue:</block>
+  <block id="70c7829e6e55aa891ddd55aaf7bd1275" category="list-text">*Modalità*: Seleziona la modalità per gestire automaticamente la capacità. Le opzioni sono modalità incrementale e adattiva.</block>
+  <block id="8d1178637079d74b1d4df6828507f656" category="list-text">*Modalità incrementale*: aumenta la capacità di una quantità fissa alle soglie.</block>
+  <block id="a850b45530431e433b34aeb17888df66" category="paragraph">Questa è la soglia alla quale Workload Factory attiva un processo per aumentare la capacità. Ad esempio, se il file system raggiunge l'80% della capacità, Workload Factory aumenta la capacità.</block>
+  <block id="de019eb3e94bf6fbb51fa0fc90f5bd75" category="list-text">*Modalità adattiva*: prevede e modifica la capacità in base ai dati storici.</block>
+  <block id="11d9ed6b9e54bdea1a4ecc52907361f8" category="list-text">*Periodo di analisi*: imposta il periodo di analisi in ore per determinare quanti dati storici considerare per le previsioni di capacità. Il valore predefinito è 120 ore.</block>
+  <block id="39f6b6f1dee1cd96aadfd7e0f2089c76" category="list-text">*Tempo di buffer pianificato*: imposta il tempo di buffer in ore per garantire che la capacità venga aumentata prima che sia effettivamente necessaria. Il valore predefinito è 48 ore.</block>
+  <block id="52f65090db0661db649aa6c7e46a8b14" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system per determinare se è necessaria capacità aggiuntiva.</block>
+  <block id="5d38a14c79cf5c5f38102d6436886068" category="section-title">Abilita le notifiche di capacità</block>
+  <block id="6a93267b6668918bd024785ba7a1af41" category="paragraph">Imposta le notifiche per ricevere avvisi quando il file system raggiunge una certa soglia di capacità.</block>
+  <block id="5c91dfe3f77e6a44fd914ea673600879" category="paragraph">Devi <block ref="92ba022a113ba350cc22eb4ba703843c" category="inline-link-macro-rx"></block> per utilizzare questa funzione.</block>
+  <block id="5bcc265168b27815fd10f23b771bad2a" category="list-text">Nella finestra di dialogo *gestione della capacità*, seleziona *Abilita notifiche capacità* per attivare le notifiche quando la capacità raggiunge la soglia e ogni volta che NetApp Workload Factory esegue un aumento automatico della capacità.</block>
+  <block id="3f810138549fa80c7e69f8ec485c8a27" category="list-text">Imposta la *Soglia di notifica* per ricevere notifiche quando il file system raggiunge una determinata percentuale di capacità. Il valore predefinito è 70%.</block>
+  <block id="fcb18dec8d5281d1ce666db128df5515" category="section-title">Abilita la gestione degli inode per un file system</block>
+  <block id="083afef27eb29c6a017bada830bc631c" category="paragraph">Abilita la gestione automatica degli inode per aumentare il numero di inode (file) per volume fino al limite consentito.</block>
+  <block id="d933b8209c8cd56ba75386ce9ae7847a" category="paragraph">Ogni 30 minuti viene eseguita una scansione del file system FSx for ONTAP. Verifica gli inode di volume disponibili e controlla se è necessario aggiungere inode incrementali. Il conteggio aumenta in base alle soglie di gestione automatica degli inode.</block>
+  <block id="7e360279029f6830f2d762fa5ccf524e" category="paragraph">Amazon FSx for NetApp ONTAP consente ai file system NFS e SMB di accedere ai dati S3 e di connettersi a servizi AWS come Amazon Bedrock, SageMaker, Athena, AWS Glue e altri. Puoi connettere i servizi AWS a tutti i tuoi dati di storage a oggetti.</block>
+  <block id="d38a17b6c80e0c89c1d9fcf60a993290" category="paragraph">Collega i punti di accesso S3 ai volumi NFS e SMB in un file system FSx for ONTAP in modo che i servizi AWS accedano ai file come se si trovassero in un bucket S3. Quando colleghi il punto di accesso, definisci un ID univoco, seleziona il tipo di accesso ai file (UNIX o Windows) e aggiungi un nome utente per l'autorizzazione all'accesso.</block>
+  <block id="050fbf0b45be1573711ea227653f0c71" category="paragraph">Dopo aver collegato l'access point S3, questo appare nella AWS Management Console con un alias univoco. Utilizza questo alias come nome del bucket S3 per i servizi AWS, come Amazon Bedrock, per accedere ai file nel volume FSx for ONTAP.</block>
+  <block id="5fdffd86a20eb0d0630a1c07876def30" category="paragraph">È possibile collegare più punti di accesso S3 a un singolo volume FSx for ONTAP, ciascuno con un livello di accesso univoco, per connettersi a più servizi AWS.</block>
+  <block id="2b66ddc2a8e489f0bdc3cdbd31ddcb5b" category="list-text">Dalla scheda Volumi, seleziona il menu azioni per il volume per cui desideri gestire i punti di accesso S3 e poi seleziona *Azioni avanzate*, e quindi *Gestisci punti di accesso S3*.</block>
+  <block id="dd3517c1da70fae4b3b5b4c3901aeaef" category="paragraph">È possibile visualizzare l'alias, l'ARN e l'S3 URI come dettagli del punto di accesso quando la tabella dell'inventario non è abilitata.</block>
+  <block id="77bfd97469b79623f26d2442c8591082" category="paragraph">Con la tabella di inventario abilitata sul volume, è possibile visualizzare i dettagli dell'access point, della tabella di inventario e del bucket di tabella degli access point S3 esistenti collegati al volume. Il sistema fornisce anche un collegamento alla tabella di inventario nella AWS Management Console.</block>
+  <block id="a0433002dc542bdc0aaeba81d4c088db" category="paragraph">È possibile copiare i dettagli del punto di accesso per utilizzarli in altre applicazioni.</block>
+  <block id="08995153fcac85dd0ea3390effc2faf7" category="list-text">Dalla scheda Volumes, seleziona il menu azioni per il volume per cui desideri gestire S3 access points, quindi seleziona *Advanced actions* e poi *Manage S3 access points*.</block>
+  <block id="e017a7ea48404bb134394eb7fe78d1af" category="list-text">Seleziona il menu delle azioni per il punto di accesso S3 da eliminare e poi seleziona *Elimina*.</block>
+  <block id="95922585c37177ee9b8a541e7e22ca06" category="list-text">Nella finestra di dialogo *Elimina un S3 access point*, selezionare *Elimina* per eliminare l'S3 access point dal volume.</block>
+  <block id="495751a17f4061798aca8d3f98638c0c" category="paragraph">La console Workload Factory non rimuove i metadati, ma puoi rimuoverli dalla AWS Management Console.</block>
+  <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">01 marzo 2026</block>
+  <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">Gestione dello storage a blocchi</block>
+  <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">Regola manualmente la capacità del file system</block>
+  <block id="241296c9db6f3205e0e5738da7ec12ef" category="sidebar">Gestisci automaticamente la capacità del file system</block>
 </blocks>

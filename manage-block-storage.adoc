@@ -1,31 +1,95 @@
 ---
 sidebar: sidebar 
-permalink: manage-block-devices.html 
-keywords: block devices, manage luns, manage iscsi 
-summary: Gestire i dispositivi a blocchi per un file system FSx per ONTAP in NetApp Workload Factory. 
+permalink: manage-block-storage.html 
+keywords: block storage, manage block storage, igroups, block devices, client access, delete block device 
+summary: Gestisci lo storage a blocchi per un file system FSx for ONTAP in NetApp Workload Factory. 
 ---
-= Gestire i dispositivi a blocchi per un file system in NetApp Workload Factory
+= Gestire storage a blocchi per un file system in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Dalla console NetApp Workload Factory è possibile gestire i dispositivi a blocchi per i file system FSx for ONTAP . Le attività di gestione includono la visualizzazione dei dettagli dei dispositivi a blocchi, l'aumento della capacità, la gestione dell'accesso client, l'archiviazione dei dati dei dispositivi a blocchi e l'eliminazione dei dispositivi a blocchi.
+Utilizza NetApp Workload Factory per semplificare la gestione delle risorse di storage a blocchi, inclusi igroups e dispositivi a blocchi, e controlla l'accesso client per FSx for ONTAP block devices per garantire prestazioni ottimali e ridurre al minimo i costi.
 
 .A proposito di questa attività
-I dispositivi a blocchi, o LUN (numeri di unità logica), sono volumi che contengono file system in un ambiente SAN e sono accessibili agli host tramite una rete.
+Dalla console di NetApp Workload Factory, è possibile gestire initiator groups (igroups) per controllare l'accesso dei client ai block devices. È inoltre possibile visualizzare i dettagli dei block devices, aumentare la capacità, gestire l'accesso dei client, archiviare i dati per i block devices inattivi ed eliminare i block devices.
+
+Controllare il diagramma dello storage a blocchi per verificare quanto segue:
+
+* Connessioni client
+* Stato del dispositivo a blocchi
+* Relazione nodo-client
+* Potenziali connessioni client errate
+
+
+.Prima di iniziare
+* È necessario associare un collegamento per gestire gli igroup. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo aver associato il collegamento, tornare a questa operazione.
+* È necessario disporre di un igroup o di un block device esistente per visualizzare e gestire.
+
+
+
+
+== Gestisci igroups
+
+Puoi visualizzare i dettagli degli igroup, gestire l'accesso client ed eliminare gli igroup.
+
+
+
+=== Gestire l'accesso client per un igroup
+
+Gestisci l'accesso dei client per un igroup esistente in qualsiasi momento.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare la scheda *Blocca dispositivi*.
+. Selezionare il tipo di risorsa *Initiator groups (igroups)* per visualizzare gli igroups esistenti.
+. Vai al menu azioni per il block device e seleziona *Manage client access*.
+. Esaminare i dettagli di accesso del client visualizzati per l'igroup.
+. Per apportare modifiche all'accesso client, selezionare *Modifica accesso client*.
+. Nella finestra di dialogo *Modifica accesso client*, puoi modificare quanto segue:
++
+** *nome del gruppo*
+** *descrizione del gruppo*
+** *Nome della VM di storage*
+** *Nome del dispositivo a blocchi*
+** *Tipo di sistema operativo*
+** *Initiator host*
+
+
+. Selezionare *Applica*.
+
+
+
+
+=== Elimina un igroup
+
+Eliminare un igroup quando non è più necessario.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, selezionare la scheda *Blocca dispositivi*.
+. Selezionare il tipo di risorsa *Initiator groups (igroups)* per visualizzare gli igroups esistenti.
+. Vai al menu azioni per il dispositivo a blocchi e quindi seleziona *Elimina initiator group*.
+. Nella finestra di dialogo Elimina initiator group (igroup), digitare "delete" per confermare che si desidera eliminare l'igroup, quindi selezionare *Elimina*.
+
+
+
+
+== Gestire i dispositivi a blocchi per un igroup
+
+I dispositivi a blocchi, o LUN (logical unit numbers), sono volumi con file system in un ambiente SAN, accessibili agli host tramite una rete.
 
 È possibile gestire dispositivi a blocchi per file system FSx per ONTAP che utilizzano il protocollo iSCSI.
 
-.Prima di iniziare
-* È necessario associare un collegamento per gestire i dispositivi a blocchi. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"].  Dopo aver associato il collegamento, tornare a questa operazione.
-* Per visualizzare e gestire è necessario disporre di un dispositivo a blocchi esistente.
 
 
-
-
-== Visualizza i dettagli del dispositivo a blocchi
+=== Visualizza i dettagli del dispositivo a blocchi
 
 Visualizza in qualsiasi momento i dettagli di un dispositivo a blocchi esistente.
 
@@ -42,7 +106,7 @@ Vengono visualizzati i dettagli generali, le informazioni sul consumo, l'accesso
 
 
 
-== Aumentare la capacità di un dispositivo a blocchi
+=== Aumentare la capacità di un dispositivo a blocchi
 
 Aumenta la capacità di un dispositivo a blocchi esistente in qualsiasi momento.
 
@@ -57,11 +121,11 @@ Aumenta la capacità di un dispositivo a blocchi esistente in qualsiasi momento.
 
 
 
-NOTE: Dopo aver aumentato le dimensioni del dispositivo a blocchi, seguire la procedura fornita dal sistema operativo host per scoprire le nuove dimensioni del dispositivo a blocchi ed espandere il file system su di esso.
+NOTE: Dopo aver aumentato le dimensioni del block device, seguire la procedura fornita dal sistema operativo host per rilevare le nuove dimensioni ed espandere il file system.
 
 
 
-== Gestire l'accesso client per un dispositivo a blocchi
+=== Gestire l'accesso client per un dispositivo a blocchi
 
 È possibile gestire l'accesso client per un dispositivo a blocchi esistente in qualsiasi momento creando igroup e aggiungendo o rimuovendo dispositivi a blocchi e iniziatori host.
 
@@ -86,7 +150,7 @@ NOTE: Dopo aver aumentato le dimensioni del dispositivo a blocchi, seguire la pr
 
 
 
-== Archivia i dati di un dispositivo a blocchi inattivo
+=== Archivia i dati di un dispositivo a blocchi inattivo
 
 I dispositivi a blocchi che non sono più mappati a un client o non sono utilizzati per sette giorni consecutivi sono classificati come dispositivi a blocchi inattivi. Puoi archiviare i dati di un dispositivo a blocchi inattivo nel livello capacity pool per recuperare capacità SSD.
 
@@ -102,9 +166,9 @@ I dispositivi a blocchi che non sono più mappati a un client o non sono utilizz
 
 
 
-== Elimina un dispositivo a blocchi
+=== Elimina un dispositivo a blocchi
 
-I dispositivi a blocchi che non sono più mappati su un client o che non vengono utilizzati per sette giorni consecutivi sono classificati come dispositivi a blocchi inattivi. Questa operazione annulla la mappatura ed elimina il dispositivo a blocchi selezionato. Se il volume FlexVol host non contiene dispositivi a blocchi, Workload Factory lo elimina.
+I dispositivi a blocchi che non sono mappati a un client o che non vengono utilizzati per sette giorni sono dispositivi a blocchi inattivi. Questa operazione annulla la mappatura ed elimina il dispositivo a blocchi selezionato. Se il volume FlexVol host non contiene dispositivi a blocchi, Workload Factory lo elimina.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -120,4 +184,6 @@ I dispositivi a blocchi che non sono più mappati su un client o che non vengono
 
 == Informazioni correlate
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Creare un dispositivo a blocchi per un file system FSx per ONTAP"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Creare un igroup per un file system FSx for ONTAP"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Creare un dispositivo a blocchi per un file system FSx per ONTAP"]
+

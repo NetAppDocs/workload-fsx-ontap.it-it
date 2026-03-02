@@ -157,7 +157,7 @@ Completare i seguenti campi per impostare il blocco dell'accesso al volume.
 *** *Utente*: seleziona un utente esistente con accesso al volume oppure crea un nuovo utente.
 *** *Tipo di utente*: selezionare *UNIX* o *Windows* come tipo di utente.
 *** *Configurazione di rete*: seleziona *Internet* o *Virtual private cloud (VPC)*. Il tipo di rete scelto determina se il punto di accesso è accessibile da Internet o limitato a una VPC specifica.
-*** *Abilita metadati*: l'abilitazione dei metadati crea una tabella S3 contenente tutti gli oggetti accessibili dal punto di accesso S3, che puoi utilizzare per auditing, governance, analisi automatica e ottimizzazione. L'abilitazione dei metadati comporta costi AWS aggiuntivi. Consulta link:https://aws.amazon.com/s3/pricing/["Documentazione sui prezzi di Amazon S3"^] per ulteriori informazioni.
+*** *Abilita tabella inventario*: quando si abilita la tabella inventario sul volume, il sistema genera metadati per tutti gli oggetti accessibili al punto di accesso S3 e comporta costi di richiesta AWS S3. Consultare link:https://aws.amazon.com/s3/pricing/["Documentazione sui prezzi di Amazon S3"^] per ulteriori informazioni.
 
 
 .. *Tag del punto di accesso S3*: Facoltativamente, puoi aggiungere fino a 50 tag o rimuovere tag.
