@@ -18,7 +18,7 @@ Gli snapshot sono risorse di volumi e offrono acquisizioni istantanee dei dati c
 FSX per ONTAP Volumes usa il copy-on-write just-in-time in modo che i file non modificati nelle snapshot non consumino la capacità del volume.
 
 
-NOTE: Le snapshot non sono copie dei tuoi dati. Se vuoi creare copie dei tuoi dati, prendi in considerazione l'utilizzo di FSX per ONTAP o delle funzionalità di replica dei volumi.
+NOTE: Gli snapshot non sono copie dei tuoi dati. Se desideri creare copie dei tuoi dati, valuta l'utilizzo delle funzionalità di backup del volume o di replica del volume.
 
 .Prima di iniziare
 Per creare uno snapshot manuale di un volume è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.

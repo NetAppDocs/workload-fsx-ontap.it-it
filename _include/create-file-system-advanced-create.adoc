@@ -97,7 +97,7 @@ Per un nuovo gruppo di protezione, fare riferimento alla <<Dettagli del gruppo d
 
 . In Backup e manutenzione, fornire quanto segue:
 +
-.. *FSX per il backup ONTAP*: I backup automatici giornalieri sono abilitati per impostazione predefinita. Disattivare se desiderato.
+.. *Backup del volume*: I backup automatici giornalieri sono abilitati per impostazione predefinita. Disabilita se desiderato.
 +
 ... *Periodo conservazione backup automatico*: Immettere il numero di giorni per la conservazione dei backup automatici.
 ... *Finestra di backup automatico giornaliero*: Selezionare *Nessuna preferenza* (l'ora di inizio del backup giornaliero è selezionata per l'utente) o *selezionare l'ora di inizio per i backup giornalieri* e specificare l'ora di inizio.

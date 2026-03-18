@@ -172,7 +172,7 @@ sidebar:
           url: "/manage-snapshots.html"
       - title: Backup
         entries:
-        - title: Gestire la pianificazione del backup di FSX per ONTAP
+        - title: Gestisci la pianificazione del backup del volume
           url: "/manage-backup-schedule.html"
       - title: Replica
         entries:

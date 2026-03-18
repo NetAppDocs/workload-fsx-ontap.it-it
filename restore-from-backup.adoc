@@ -22,7 +22,7 @@ Workload Factory determina se si dispone di capacità sufficiente per il riprist
 . Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
 . Dalla scheda *Volumi*, selezionare il menu delle azioni per il volume da ripristinare da un backup.
-. Selezionare *azioni protezione dati*, *FSX per il backup ONTAP*, quindi *Ripristina da un backup*.
+. Seleziona *Data protection actions*, *Volume backups* e quindi *Restore from a backup*.
 . Nella finestra di dialogo Ripristina da un backup, specificare quanto segue:
 +
 .. *File system di destinazione*: Selezionare il file system di destinazione dal menu a discesa.
