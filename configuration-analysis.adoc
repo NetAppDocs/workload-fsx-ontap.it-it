@@ -172,6 +172,10 @@ Dopo che un dispositivo a blocchi non viene utilizzato per sette giorni, Workloa
 +
 Un livello di capacità SSD sottoutilizzato potrebbe comportare costi inutili. Workload Factory consiglia di ridurre la capacità del livello SSD mantenendo un margine di spazio libero del 20% rispetto alla capacità attualmente utilizzata. Un'operazione di riduzione può richiedere da diverse ore a diversi giorni e le altre operazioni sul file system non sono supportate durante questo periodo.
 
+* *Volumi NAS inattivi*
++
+L'analisi della configurazione identifica i volumi NAS non utilizzati attivamente e raccomanda di eliminarli o archiviarli per ridurre i costi.
+
 
 
 .Cosa succederà

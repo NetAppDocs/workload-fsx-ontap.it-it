@@ -36,6 +36,7 @@ La dimensione del blocco deve essere inferiore alla dimensione FlexVol volume di
 *** Seleziona un volume esistente.
 
 
+.. *Nome dell'aggregato*: Selezionare l'aggregato che ospiterà il nuovo volume.
 .. *VM di archiviazione*: seleziona una VM di archiviazione.
 .. *Stile volume*: Lo stile volume predefinito è * FlexVol*.
 .. *Dimensione del volume*: immettere la dimensione del volume e selezionare l'unità. La dimensione massima per FlexVol volume è 100 TiB.

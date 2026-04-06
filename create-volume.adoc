@@ -87,14 +87,16 @@ NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scari
 .. *Storage VM name* (Nome VM di archiviazione): Se si desidera, immettere un nome di VM di archiviazione.
 .. *Stile volume*: Selezionare *FlexVol* o *FlexGroup* volume.
 +
-Per impostazione predefinita è selezionato lo stile del volume FlexVol.
+*** Un _FlexVol volume_ è un tipo di storage logico in ONTAP che consente di gestire i dati. I volumi FlexVol possono essere spostati tra aggregati o nodi all'interno della stessa macchina virtuale di storage (SVM) senza interrompere l'accesso del client. Lo stile di volume FlexVol è selezionato per impostazione predefinita.
+*** Un volume _FlexGroup_ è un container NAS scale-out che fornisce prestazioni elevate insieme alla distribuzione automatica del carico e alla scalabilità. È costituito da diversi volumi membri (costituenti), che sono volumi FlexVol sottostanti che condividono il traffico in modo trasparente.
 
-+
-La dimensione del volume di FlexGroup dipende dal numero di componenti e richiede 100 GiB per componente.
 
 .. *Dimensione volume*: Immettere le dimensioni e l'unità del volume.
 +
 In alternativa, attivare l'espansione automatica del volume. Questa opzione è disponibile quando si seleziona *accesso al file* come tipo di accesso al volume.
+
++
++ FlexGroup volume La dimensione dipende dal numero di componenti, richiedendo 100 GiB per componente.
 
 .. *Aumento automatico del volume*: Facoltativamente, abilita l'aumento automatico del volume per espandere automaticamente la capacità del volume fino al raggiungimento della dimensione massima. Questa funzione si adatta all'aumento dell'utilizzo dei dati, garantendo operazioni senza interruzioni.
 +
@@ -234,9 +236,10 @@ Se la funzionalità non è disponibile, il motivo è uno dei seguenti:
 
 
 
-. In Configurazione avanzata, fornire quanto segue:
+. Nella sezione "Configurazione avanzata", inserire i seguenti dettagli. I campi in questa sezione variano a seconda dello stile di volume selezionato.
 +
 .. *Percorso di giunzione*: Inserire la posizione nello spazio dei nomi della VM di archiviazione in cui viene montato il volume. Il percorso di giunzione predefinito è `/<volume-name>`.
+.. *Nome dell'aggregato*: Solo per volumi FlexVol. Selezionare l'aggregato che ospiterà il nuovo volume.
 .. *Lista aggregati*: Solo per volumi FlexGroup. Aggiunta o rimozione degli aggregati. Il numero minimo di aggregati è uno.
 .. *Numero di componenti*: Solo per volumi FlexGroup. Immettere il numero di componenti per aggregato. 100 GiB è richiesto per ciascun componente.
 

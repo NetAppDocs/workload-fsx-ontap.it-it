@@ -135,7 +135,7 @@ NOTE: Dopo aver aumentato le dimensioni del block device, seguire la procedura f
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare la scheda *Blocca dispositivi*.
 . Passare al menu delle azioni per il dispositivo a blocchi e quindi selezionare *Gestisci accesso client*.
-. Se non esiste alcun igroup, creane uno nuovo selezionando *Crea igroup*, quindi procedi come segue:
+. Se non esiste alcun igroup, creane uno nuovo selezionando *Mappa igroup > Crea igroup* e poi procedi come segue:
 +
 .. *Nome dispositivo a blocchi*: immettere un nome per il dispositivo a blocchi. È possibile selezionare più dispositivi a blocchi da associare all'igroup.
 .. *Tipo di sistema operativo*: seleziona il tipo di sistema operativo.
@@ -145,7 +145,7 @@ NOTE: Dopo aver aumentato le dimensioni del block device, seguire la procedura f
 .. Selezionare *Crea*.
 
 
-. Se esiste già un igroup, selezionare *Modifica accesso client* per aggiungere o rimuovere dispositivi a blocchi e iniziatori host dall'igroup, quindi selezionare *Applica*.
+. Se esiste già un igroup, selezionare *Mappa igroup > Mappa igroup esistente* per aggiungere o rimuovere block device e host initiator dall'igroup e quindi selezionare *Mappa*.
 
 
 

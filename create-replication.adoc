@@ -209,4 +209,7 @@ Rivedi questi requisiti prima di iniziare.
 
 
 .Risultato
-Dopo cutover, i volumi di origine vengono eliminati e i volumi di destinazione diventano di lettura/scrittura. È possibile link:change-tiering-policy.html["modificare la tiering policy"] per i volumi di destinazione dopo cutover.
+Dopo cutover, la macchina virtuale di storage di origine va offline.
+
+.Informazioni correlate
+link:change-tiering-policy.html["Modificare la policy di tiering"] per il/i volume di destinazione dopo cutover.
