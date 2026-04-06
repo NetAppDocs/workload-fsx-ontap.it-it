@@ -4,14 +4,14 @@ permalink: known-limitations.html
 keywords: limitations, fsx, ontap 
 summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. 
 ---
-= Limitazioni note di Amazon FSX per NetApp ONTAP
+= Limitazioni note di Amazon FSx per NetApp ONTAP in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni.
+Le limitazioni note identificano le piattaforme, i dispositivi o le funzioni non supportati da questa versione del prodotto o che non interagiscono correttamente con essa. Le seguenti limitazioni sono specifiche di Amazon FSx for NetApp ONTAP in NetApp Workload Factory. Esaminare attentamente queste limitazioni.
 
 
 
