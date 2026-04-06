@@ -25,6 +25,6 @@ Aggiorna i dettagli del punto di accesso S3 e gestisci i tag per un volume in Ne
 . Dalla schermata *Manage S3 access points*, seleziona il menu azioni e poi seleziona *Edit access point*.
 . Effettua gli aggiornamenti e quindi seleziona *Applica*.
 +
-Per configurare l'infrastruttura per la funzionalità della tabella di registro, è necessario selezionare *Internet* come configurazione di rete per il punto di accesso S3. link:setup-journal-table.adoc["Scopri come configurare l'infrastruttura della tabella Journal per NetApp Workload Factory"].
+Per configurare l'infrastruttura per la funzionalità della tabella di registro, è necessario selezionare *Internet* come configurazione di rete per il punto di accesso S3. link:setup-journal-table.html["Scopri come configurare l'infrastruttura della tabella Journal per NetApp Workload Factory"].
 
 

@@ -35,5 +35,5 @@ I dettagli vengono visualizzati in quattro schede: *Punto di accesso*, *Tabella 
 
 
 .Informazioni correlate
-* link:setup-journal-table.html["Configura l'infrastruttura della tabella di journaling e risolvi i problemi di configurazione relativi alla tabella di journaling in NetApp Workload Factory."]
+* link:setup-journal-table.html["Configurare l'infrastruttura della tabella del giornale"]
 

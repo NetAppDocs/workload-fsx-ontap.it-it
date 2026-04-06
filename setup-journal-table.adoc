@@ -59,7 +59,7 @@ Il {uuid} è un identificatore casuale di 8 caratteri generato al momento della 
 Per abilitare la funzionalità della tabella Journal, segui questi passaggi:
 
 * Disporre di un volume esistente con un punto di accesso S3. link:create-volume.html["Crea un volume con un punto di accesso S3"]
-* Impostare la configurazione di rete su *Internet* per il punto di accesso S3. link:edit-s3-access-point.adoc["Modifica la configurazione di rete per il punto di accesso S3"].
+* Impostare la configurazione di rete su *Internet* per il punto di accesso S3. link:edit-s3-access-points.html["Modifica la configurazione di rete per il punto di accesso S3"].
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Concedi le autorizzazioni per le operazioni e la remediation"^] alle tue credenziali di Workload Factory.
 * Aggiungi le seguenti autorizzazioni della policy IAM all'account AWS che utilizzi per eseguire il deployment di CloudFormation per configurare la tabella Journal.
 +
@@ -201,7 +201,7 @@ Configura l'infrastruttura per acquisire gli eventi del servizio AWS dal punto d
 . Selezionare *Applica*.
 
 
-Se uno qualsiasi di questi passaggi non dovesse funzionare, <<Troubleshoot the infrastructure setup,risolvere i problemi di configurazione dell'infrastruttura per la tabella del registro>> o contatta il supporto NetApp per assistenza.
+Se uno qualsiasi di questi passaggi non dovesse funzionare, <<Risoluzione dei problemi di configurazione dell'infrastruttura per la tabella del journal,risolvere i problemi di configurazione dell'infrastruttura per la tabella del registro>> o contatta il supporto NetApp per assistenza.
 
 
 
