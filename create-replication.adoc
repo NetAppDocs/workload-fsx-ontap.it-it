@@ -11,9 +11,9 @@ summary: Crea una relazione di replica per un file system FSX per ONTAP per evit
 
 
 [role="lead"]
-Crea una relazione di replica per un file system FSx for ONTAP in NetApp Workload Factory per evitare la perdita di dati in caso di un disastro imprevisto. Puoi replicare i dati tra due file system FSx for ONTAP o tra un sistema ONTAP on-premises e un file system FSx for ONTAP.
+Crea una relazione di replica per un file system FSx for ONTAP in NetApp Workload Factory per evitare la perdita di dati in caso di disastro imprevisto. Puoi replicare i dati tra due file system FSx for ONTAP oppure tra un sistema ONTAP locale e un file system FSx for ONTAP.
 
-Per la migrazione della storage VM, è necessario completare l'operazione di cutover subito dopo aver creato una relazione di replica.
+Per la migrazione delle VM di storage, completare l'operazione di cutover immediatamente dopo aver creato una relazione di replica.
 
 
 
@@ -36,16 +36,15 @@ Se si replica un volume sorgente con file immutabili, il volume di destinazione 
 
 === Casi d'uso della migrazione
 
-Quando si seleziona il caso d'uso di migrazione, è possibile scegliere facoltativamente di replicare i dati e le impostazioni di configurazione della storage VM per una singola storage VM. Quando si migrano dati e impostazioni di configurazione simultaneamente, assicurati che l'ultima replica per il volume sia stata completata nelle ultime 24 ore. Tutti i volumi nella stessa VM di storage devono essere selezionati per utilizzare questa funzionalità. La policy di tiering per tutti i volumi predefinita è quella del volume di origine, che è consigliata per i casi d'uso di migrazione.
+Per la migrazione, è possibile scegliere di replicare i dati e le impostazioni di configurazione di una singola storage VM. Se si migrano dati e impostazioni di configurazione insieme, assicurarsi che l'ultima replica del volume sia stata completata nelle ultime 24 ore. È necessario selezionare tutti i volumi nella stessa storage VM per utilizzare questa funzionalità. La policy di tiering per tutti i volumi viene impostata di default sulla policy di tiering del volume di origine, che è consigliata per i casi d'uso di migrazione.
 
-Workload Factory supporta la replica della migrazione tra i seguenti sistemi storage.
+Workload Factory supporta la replica della migrazione per le VM di storage tra i seguenti sistemi di storage.
 
 * Sistemi ONTAP on-premises e file system FSx for ONTAP
 * Cloud Volumes ONTAP e FSx per ONTAP file system
 * FSx per ONTAP e FSx per ONTAP file system
 +
 ** Prima alla prima generazione
-** Dalla prima alla seconda generazione
 ** Seconda alla seconda generazione
 
 
@@ -66,7 +65,7 @@ Replica i dati tra due file system FSx for ONTAP o tra un sistema ONTAP on-premi
 .Prima di iniziare
 Rivedi questi requisiti prima di iniziare.
 
-* È necessario disporre di un FSx for ONTAP file system da utilizzare per il volume di destinazione nella replica dei dati.
+* Assicurarsi che sia disponibile un file system FSx for ONTAP da utilizzare come destinazione nella relazione di replica.
 * Il file system FSx for ONTAP utilizzato per la relazione di replica deve avere un collegamento associato. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo aver associato il collegamento, tornare a questa operazione.
 * Per la replica da un sistema ONTAP on-premises a un file system FSx for ONTAP, assicurati di aver individuato il sistema ONTAP on-premises.
 * La replica non è supportata per i volumi in uno stato diverso da disponibile, creato o configurato in modo errato e quando la versione di ONTAP non è compatibile.
@@ -184,7 +183,21 @@ Se hai creato una relazione di replica per scopi di migrazione, devi eseguire il
 
 == Cut over replication per casi d'uso di migrazione
 
-Dopo aver creato una relazione di replica per un caso d'uso di migrazione, è necessario eseguire il cutover della replica per completare la migrazione dei dati e delle impostazioni di configurazione della VM di storage al file system FSx for ONTAP di destinazione. La replica cutover migra in modo permanente i dati e le impostazioni di configurazione della VM di storage dal file system di origine al file system FSx for ONTAP di destinazione. Durante il cutover, i dati vengono replicati per l'ultima volta. Il sistema elimina il volume o i volumi di origine dopo il completamento del cutover. Questa azione non può essere annullata.
+Dopo aver creato una relazione di replica per un caso d'uso di migrazione, è necessario eseguire il cutover della replica per completare la migrazione dei dati della VM di storage e delle impostazioni di configurazione al file system FSx for ONTAP di destinazione. Il cutover della replica migra in modo permanente i dati e le impostazioni di configurazione della VM di storage dal file system di origine al file system FSx for ONTAP di destinazione. Durante il cutover, i dati vengono replicati per l'ultima volta. La VM di storage di origine va offline all'inizio del cutover.
+
+
+
+=== Pianifica l'operazione di cutover
+
+Considerare quanto segue quando si pianifica l'operazione di cutover per i casi d'uso di migrazione.
+
+* *Impostazioni di configurazione della VM di storage*: l'operazione di cutover non migra tutte le impostazioni di configurazione della VM di storage alla VM di storage di destinazione. Ad esempio, le impostazioni iSCSI, MTU del dominio broadcast e DNS non vengono migrate. Aggiornare manualmente queste impostazioni sulla VM di storage di destinazione dopo il cutover. Per ulteriori dettagli, fare riferimento alla sezione <<Aggiornare le impostazioni di configurazione dopo cutover,Aggiornare le impostazioni di configurazione dopo cutover>>.
+* *Cloni*: I cloni vengono migrati come volumi individuali e, pertanto, occuperanno più spazio sul file system FSx for ONTAP di destinazione. Si consiglia di eliminare i cloni prima del cutover per evitare un aumento della capacità sul sistema di destinazione.
+* *Volumi cache*: Per ONTAP FlexCache 9.17.x o versioni precedenti. Le VM di storage di origine che contengono volumi cache non sono supportate per cutover. Rimuovere la relazione ONTAP FlexCache prima del cutover per evitare errori di migrazione.
+* *Punti di accesso AWS S3*: la replica di cutover per i casi d'uso di migrazione non è supportata per i volumi con punti di accesso S3. Eliminare i punti di accesso S3 dal volume di origine per evitare errori di migrazione.
+* *ONTAP S3 configurations*: La replica di cutover per i casi d'uso di migrazione non è supportata per i vserver con configurazioni ONTAP S3. Rimuovere le configurazioni ONTAP S3, inclusi object-store-server, bucket, utenti, gruppi o policy sul vserver, per evitare errori di migrazione.
+* *Numeri di serie LUN e iSCSI target IQN*: I numeri di serie LUN e l'iSCSI target IQN cambiano durante cutover.
+
 
 .Prima di iniziare
 Rivedi questi requisiti prima di iniziare.
@@ -193,6 +206,10 @@ Rivedi questi requisiti prima di iniziare.
 * Assicurarsi che tutti i volumi di origine non stiano servendo alcun dato prima di eseguire il cutover della replica.
 * Assicurarsi che i dati siano sincronizzati tra i volumi di origine e di destinazione prima di eseguire il cutover della replica.
 * Il file system FSx for ONTAP utilizzato per la relazione di replica deve avere un collegamento associato. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo aver associato il collegamento, tornare a questa operazione.
++
+** Nel gruppo di sicurezza associato al file system FSx for ONTAP, per la connettività del collegamento, devono essere aperte le seguenti porte: porta 443 (HTTPS) e porta 22 (SSH).
+
+
 
 
 .Fasi
@@ -209,7 +226,30 @@ Rivedi questi requisiti prima di iniziare.
 
 
 .Risultato
-Dopo cutover, la macchina virtuale di storage di origine va offline.
+Dopo aver avviato cutover, la macchina virtuale di archiviazione di origine va offline.
 
-.Informazioni correlate
-link:change-tiering-policy.html["Modificare la policy di tiering"] per il/i volume di destinazione dopo cutover.
+
+
+=== Aggiornare le impostazioni di configurazione dopo cutover
+
+Dopo aver eseguito il cutover della replica per i casi d'uso di migrazione, aggiornare le seguenti impostazioni di configurazione della storage VM sulla storage VM di destinazione.
+
+* Per iSCSI:
++
+** Ricrea l'igroup
+** Aggiorna la mappatura LUN
+** Accedere a ciascun client SAN e aggiornare le impostazioni iSCSI/MPIO per il nuovo target e rimuovere i vecchi indirizzi IP del target vserver
+
+
+* Verificare che le impostazioni MTU del dominio broadcast siano conformi alle aspettative
+* Verificare che le impostazioni DNS siano conformi alle aspettative
+* Ricrea le relazioni della cache (relazioni ONTAP FlexCache) se erano presenti volumi di cache nella VM di archiviazione di origine.
+
+
+
+
+== Informazioni correlate
+
+* link:initialize-replication.html["Inizializza la replica"] per una nuova relazione di replica.
+* link:change-tiering-policy.html["Modificare la policy di tiering"] per il/i volume di destinazione dopo cutover.
+

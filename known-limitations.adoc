@@ -119,6 +119,14 @@ AWS Secrets Manager non è supportato quando si utilizza un agente Console.
 
 Il limite per il numero di punti di accesso S3 per ogni VM di storage è 4.000.
 
+
+
+== Limitazioni per la replica della migrazione delle storage VM
+
+* Workload Factory non supporta la replica della migrazione per le VM di storage tra i file system FSx for ONTAP di prima e seconda generazione.
+* La replica con cutover non è supportata per i volumi con punti di accesso S3 o configurazioni ONTAP S3 che includono object-store-server, bucket, utenti, gruppi o policy sul vserver.
+
+
 Nota:
 
 . Si applica ad Amazon FSX per NetApp ONTAP
