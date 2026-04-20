@@ -79,10 +79,8 @@ sidebar:
           url: "/restore-from-backup.html"
       - title: Utilizzare la replicazione
         entries:
-        - title: Creare una relazione di replica
+        - title: Replicare i dati
           url: "/create-replication.html"
-        - title: Inizializzare una relazione di replica
-          url: "/initialize-replication.html"
       - title: Proteggi i dati con la protezione autonoma da ransomware
         url: "/ransomware-protection.html"
       - title: Clonare un volume
