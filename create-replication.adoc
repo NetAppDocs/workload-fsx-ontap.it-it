@@ -11,7 +11,7 @@ summary: Crea una relazione di replica per un file system FSX per ONTAP per evit
 
 
 [role="lead"]
-Crea una relazione di replica per un file system FSx for ONTAP in NetApp Workload Factory per evitare la perdita di dati in caso di disastro imprevisto. Puoi replicare i dati tra due file system FSx for ONTAP oppure tra un sistema ONTAP locale e un file system FSx for ONTAP.
+Replica i dati in NetApp Workload Factory per proteggerti dalla perdita di dati se la regione in cui risiedono i tuoi dati subisce un disastro. La replica dei dati è supportata tra i file system FSx for ONTAP e i sistemi ONTAP on-premises o Cloud Volumes ONTAP.
 
 Quando si replicano i dati e le impostazioni di configurazione di una storage VM, è necessario prima creare e inizializzare la relazione di replica e quindi attendere che i dati vengano sincronizzati almeno una volta prima di completare l'operazione di cutover.
 
@@ -61,7 +61,7 @@ Per migrare i dati e le impostazioni di configurazione delle storage VM, è nece
 
 == Passaggio 1: Creare la relazione di replica
 
-Replica i dati tra due file system FSx for ONTAP o tra un sistema ONTAP on-premises e un file system FSx for ONTAP.
+Replica i dati tra due file system FSx for ONTAP, tra un sistema ONTAP on-premises e un file system FSx for ONTAP, oppure tra Cloud Volumes ONTAP e un file system FSx for ONTAP.
 
 .Prima di iniziare
 Rivedi questi requisiti prima di iniziare.
