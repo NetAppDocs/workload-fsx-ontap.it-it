@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: apply-block-device-tags.html 
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block devices 
+summary: Applica automaticamente i tag a livello ONTAP ai tuoi dispositivi a blocchi per la gestione delle risorse in NetApp Workload Factory. 
+---
+= Applica tag a livello ONTAP ai dispositivi a blocchi in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizza lo script nativo per i dati utente EC2 di NetApp Workload Factory per creare e taggare automaticamente i dispositivi a blocchi durante la distribuzione di un'istanza AWS EC2. Aggiungi lo script per i dati utente EC2 al modello della procedura guidata di avvio dell'istanza quando distribuisci un'istanza EC2 dalla console AWS EC2. Dopo la distribuzione, Workload Factory utilizza i metadati raccolti dallo script per applicare tag a livello ONTAP ai tuoi dispositivi a blocchi. Questi tag ti aiutano a vedere quale host sta utilizzando ciascun dispositivo a blocchi, in modo da poter correlare rapidamente l'utilizzo all'host responsabile durante la risoluzione dei problemi o le verifiche.
+
+.A proposito di questa attività
+Lo script dei dati utente EC2 crea dispositivi a blocchi e applica tag EC2 a livello ONTAP ai dispositivi a blocchi durante la distribuzione delle istanze EC2.
+
+Il tag _EC2_ applicato al dispositivo a blocchi contiene il nome EC2, l'ID EC2 e il percorso di montaggio per il/i dispositivo/i a blocchi all'interno dell'istanza EC2.
+
+.Fasi
+. Segui link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html["Le istruzioni di Amazon Elastic Compute Cloud per avviare un'istanza EC2"] utilizzando la procedura guidata di avvio dell'istanza nella console AWS EC2.
+. Aggiungi lo script dei dati utente EC2 al modello della procedura guidata di avvio dell'istanza per creare e taggare automaticamente i dispositivi a blocchi.
++
+Vai al nostro GitHub repository FSx-ONTAP-sample-scripts per ottenere il link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount["Script dati utente EC2"].
+
+. Avvia l'istanza.
++
+Lo script dei dati utente EC2 applica automaticamente i tag a livello ONTAP ai nuovi dispositivi di storage a blocchi ospitati sull'istanza EC2.
+
+. Per le istanze EC2 esistenti, gli script dei dati utente hanno effetto solo dopo un riavvio.
+
+
+.Risultato
+I tag EC2 compaiono nella tabella dei dispositivi a blocchi all'interno del file system FSx for ONTAP associato.
+
+.Informazioni correlate
+* link:create-igroup.html["Creare gruppi di initiator (igroups) per un file system in NetApp Workload Factory"]
+* link:manage-block-storage.html["Gestire storage a blocchi per un file system in NetApp Workload Factory"]
+
