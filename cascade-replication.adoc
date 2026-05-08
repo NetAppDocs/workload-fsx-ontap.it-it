@@ -26,7 +26,7 @@ Prima di iniziare, prendere in considerazione quanto segue:
 * I volumi che fanno parte di una configurazione a cascata possono richiedere più tempo per la risincronizzazione.
 * Se il volume di origine della relazione è un volume di protezione dei dati ed è una destinazione di un'altra relazione, l'inversione della relazione di replica non è supportata.
 * È supportata una replica di un volume di data Protection (o un secondo hop). Non è considerata la Best practice creare una seconda replica di un volume di protezione dati (o un terzo hop).
-* Assicurati di aprire le porte TCP 11104 e 11105 per consentire il trasferimento e la gestione sicura dei dati tra i sistemi di archiviazione.
+* Aprire le porte TCP 11104 e 11105 per il trasferimento e la gestione sicura dei dati tra i sistemi di archiviazione. ICMP è facoltativo, ma può aiutare con i controlli di rete e la risoluzione dei problemi.
 
 
 .Fasi
