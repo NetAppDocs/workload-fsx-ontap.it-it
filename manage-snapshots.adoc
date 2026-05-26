@@ -76,7 +76,7 @@ Abilita l'accesso alla directory degli snapshot per consentire agli utenti di ac
 
 È possibile ripristinare i dati da uno snapshot su un volume esistente o su un nuovo volume.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["Ripristinare un volume da uno snapshot"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Ripristinare un volume da uno snapshot"]
 
 
 

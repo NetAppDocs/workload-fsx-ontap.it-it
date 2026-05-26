@@ -647,7 +647,7 @@ Ora è possibile creare condivisioni SMB/CIFS che puntano alle directory all'int
 
 Per i volumi di protezione dei dati, il flusso di creazione di una condivisione SMB/CIFS ora include la creazione di un percorso di giunzione al volume per scopi di montaggio.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Creazione di una condivisione CIFS per un volume"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Creazione di una condivisione CIFS per un volume"]
 
 
 

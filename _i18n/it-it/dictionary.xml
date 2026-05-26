@@ -1224,7 +1224,6 @@
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">Il segreto non contiene credenziali ONTAP valide per l'autenticazione del file system.</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">*Risoluzione*: Fornire credenziali in grado di autenticare i file system FSX per ONTAP in Gestione segreti AWS.</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">replica a cascata</block>
-  <block id="cb7048e2d3bbe74eff8dc77537e6b3cb" category="paragraph">Puoi replicare un volume di origine (lettura/scrittura) o un volume di data Protection (DP). La replica a cascata è supportata, ma non è un terzo hop. Ulteriori informazioni su <block ref="70f3f574eb9d2048e3113fc3bf26173a" category="inline-link-macro-rx"></block>.</block>
   <block id="a9349d3c10a82990ac0a1fc539e5f621" category="list-text">Replicare tutti i volumi in un file system o volumi selezionati.</block>
   <block id="ccbd024216a98284de9e40d4f35c7a8e" category="list-text">Per replicare tutti i volumi in un file system: Dalla panoramica del file system, selezionare *Replica dati*.</block>
   <block id="8c2ef6be41e1306ff1553a6b77895cad" category="list-text">Per replicare volumi selezionati: Dalla panoramica del file system, selezionare la scheda *volumi*.</block>
@@ -1535,7 +1534,6 @@
   <block id="743828d5c9c11b38d3dbbf76d787f497" category="section-title">Miglioramenti alla creazione e gestione delle azioni SMB/CIFS</block>
   <block id="421075462886e558113f14b52fe22487" category="paragraph">Ora è possibile creare condivisioni SMB/CIFS che puntano alle directory all'interno di un volume.  All'interno del volume potrai vedere quali condivisioni esistono, dove puntano e le autorizzazioni concesse a utenti e gruppi specifici.</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">Per i volumi di protezione dei dati, il flusso di creazione di una condivisione SMB/CIFS ora include la creazione di un percorso di giunzione al volume per scopi di montaggio.</block>
-  <block id="5f08db4267e771ad7b348d338d92e0e6" category="paragraph"><block ref="5f08db4267e771ad7b348d338d92e0e6" category="inline-link-macro-rx"></block></block>
   <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">Manualmente: crea un collegamento con registrazione manuale utilizzando CloudFormation o Terraform da Codebox.  Il codice persiste, dandoti più tempo per completare l'operazione.  Questa funzionalità è utile quando si lavora con team diversi, come quelli di sicurezza e DevOps, che potrebbero dover prima concedere le autorizzazioni necessarie per completare la creazione del collegamento.</block>
   <block id="d244d1524bd960c99e9fef848ac5ce4a" category="paragraph">È possibile creare un collegamento utilizzando due strumenti Infrastructure-as-Code (IaC) di Codebox: CloudFormation o Terraform.  Con questa opzione, puoi estrarre l'ARN per il collegamento da AWS CloudFormation e segnalarlo qui.  Workload Factory registra manualmente il collegamento per te.</block>
   <block id="272404907923a583d38661d1f77a2a8c" category="list-text">Nella pagina Crea collegamento, seleziona CloudFormation o Terraform dalla casella del codice, quindi fornisci quanto segue:</block>
@@ -1665,7 +1663,6 @@
   <block id="8695344671e89445641e5521e94e092a" category="list-text">Copia il percorso di accesso.</block>
   <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">Ripristinare i dati da uno snapshot</block>
   <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">È possibile ripristinare i dati da uno snapshot su un volume esistente o su un nuovo volume.</block>
-  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">Elimina uno snapshot</block>
   <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">Elimina uno snapshot per liberare spazio.</block>
   <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">Gli snapshot immutabili non possono essere eliminati finché non termina il periodo di conservazione.</block>
@@ -2371,7 +2368,6 @@
   <block id="d9f80ec4d13936fdba78b793f44c184c" category="list-text">*Crea nuovo gruppo di iniziatori*: fornisci il sistema operativo host, il nome del gruppo di iniziatori e aggiungi uno o più iniziatori host con nome qualificato iSCSI (IQN).</block>
   <block id="104d3f014c0f2ca8498a2aa9f78b1864" category="list-text">*Mappa gruppo iniziatori esistente*: seleziona un gruppo iniziatori esistente, fornisci il sistema operativo host e seleziona uno o più iniziatori host con nome qualificato iSCSI (IQN).</block>
   <block id="db784c6694930c54da9655a9d31c365a" category="list-text">In *Efficienza e protezione*, procedi come segue:</block>
-  <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">Di seguito sono riportate le policy predefinite di AWS. Per visualizzare i criteri snapshot esistenti, è necessario <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>.</block>
   <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">_Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando la console Workload Factory. Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento a <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> nella documentazione di AWS FSx per NetApp ONTAP . Si noti che Workload Factory utilizza nomi basati sui casi d'uso nella console di Workload Factory per i criteri di suddivisione in livelli e include i nomi dei criteri di suddivisione in livelli di FSx per ONTAP tra parentesi.</block>
   <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">I volumi con file immutabili e i volumi con protocollo NVMe non sono supportati per ARP/AI.</block>
   <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">Da *FSx for ONTAP*, selezionare il menu azioni del file system e quindi selezionare *Gestisci*.</block>
@@ -3072,6 +3068,7 @@
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*Impostazioni di configurazione della VM di archiviazione*:</block>
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">L'operazione di cutover non migra tutte le impostazioni di configurazione della VM di storage alla VM di storage di destinazione. Ad esempio, le impostazioni iSCSI, MTU del dominio broadcast e DNS non vengono migrate. Aggiorna queste impostazioni manualmente sulla VM di storage di destinazione dopo il cutover. Per ulteriori dettagli, fare riferimento alla sezione <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block>.</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">Se la VM di archiviazione utilizza l'autenticazione tramite tunnel di dominio, configura e abilita un tunnel di dominio sul file system prima di avviare la migrazione.</block>
-  <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">Assicurati di aprire le porte TCP 11104 e 11105 per consentire il trasferimento e la gestione sicura dei dati tra i sistemi di archiviazione.</block>
   <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">Aprire le porte TCP 11104 e 11105 per il trasferimento e la gestione sicura dei dati tra i sistemi di archiviazione. ICMP è facoltativo, ma può aiutare con i controlli di rete e la risoluzione dei problemi.</block>
+  <block id="fa8b213a52b4f0e35de875db4340e809" category="paragraph"><block ref="fa8b213a52b4f0e35de875db4340e809" category="inline-link-macro-rx"></block></block>
+  <block id="e9df00e078102fb55394d13dad9115a4" category="paragraph">È possibile replicare un volume sorgente (read/write) o un volume di protezione dati (DP). La replica a cascata è supportata, ma un terzo hop non lo è. Scopri di più su <block ref="a7ce0f55df6d6b86426266d8a7eeb328" category="inline-link-macro-rx"></block>.</block>
 </blocks>
