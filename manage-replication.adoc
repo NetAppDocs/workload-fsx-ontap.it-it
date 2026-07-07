@@ -1,0 +1,211 @@
+---
+sidebar: sidebar 
+permalink: manage-replication.html 
+keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication 
+summary: Gestisci le relazioni di replica in NetApp Workload Factory. 
+---
+= Gestisci le relazioni di replica in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestisci le tue relazioni di replica in NetApp Workload Factory. Puoi sospendere, riprendere, invertire, arrestare ed eliminare le relazioni di replica tra volumi di origine e di destinazione. Puoi anche modificare la pianificazione della replica del volume di origine e limitare la velocità di trasferimento per le tue relazioni di replica.
+
+
+
+== Consente di modificare la pianificazione della replica di un volume di origine
+
+Modificare la pianificazione della replica del volume di origine in una relazione di replica in NetApp Workload Factory.
+
+Scegli la frequenza con cui le snapshot dal volume di origine vengono trasferite al volume replicato per soddisfare i tuoi RPO (Point Objective) richiesti.
+
+Quando un cluster ONTAP on-premise è la destinazione della relazione di replica, la modifica della pianificazione della replica non è supportata.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replica, selezionare l'azione della pianificazione delle relazioni di replica da modificare.
+. Selezionare *Modifica intervallo di replica*.
+. Nella finestra di dialogo Modifica intervallo di replica, selezionare la frequenza di trasferimento dello snapshot dal volume di origine. È possibile scegliere tra le seguenti frequenze:
++
+** Ogni 5 minuti
+** Ogni ora
+** Ogni 8 ore
+** Ogni giorno
+** Settimanale
+
+
+. Selezionare *Applica*.
+
+
+
+
+== Limitare la velocità di trasferimento massima di una relazione di replica
+
+La limitazione della velocità di trasferimento massima è facoltativa ma consigliata. Senza un limite, le prestazioni della rete e delle applicazioni potrebbero diminuire.
+
+In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+
+.Prima di iniziare
+Considerare la larghezza di banda da allocare per la replica.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replica, selezionare l'azione della relazione di replica per cui limitare la velocità di trasferimento massima.
+. Selezionare *Modifica velocità di trasferimento massima*.
+. Nella finestra di dialogo Modifica velocità di trasferimento massima, selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s.
++
+In alternativa, selezionare *illimitato*.
+
+. Selezionare *Applica*.
+
+
+
+
+== Aggiorna manualmente i dati snapshot in una relazione di replica
+
+Una relazione di replicazione ha una pianificazione di replicazione impostata, ma è possibile aggiornare manualmente i dati snapshot trasferiti tra i volumi di origine e di destinazione in NetApp Workload Factory in qualsiasi momento.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da aggiornare.
+. Seleziona *Aggiorna*.
+. Nella finestra di dialogo Aggiorna, seleziona *Aggiorna*.
+
+
+
+
+== Sospensione di una relazione di replica
+
+Sospendere una relazione di replica per interrompere gli aggiornamenti pianificati delle repliche dal volume di origine al volume di destinazione. Il volume di destinazione passa da sola lettura a lettura/scrittura. Entrambi i volumi continuano a condividere l'ultimo snapshot di replica come nuova base per la risincronizzazione successiva.
+
+.Prima di iniziare
+Se si effettua una pausa quando un trasferimento è in corso, il trasferimento non viene influenzato e la relazione diventa "Esci" fino al completamento del trasferimento. Se il trasferimento corrente viene interrotto, si tratta di un trasferimento futuro e non viene riavviato.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da sospendere.
+. Selezionare *Pausa (Quiesce)*.
+. Nella finestra di dialogo *Quiesce Relationship*, selezionare *Quiesce*.
+
+
+.Risultato
+La relazione viene sospesa e il suo stato viene visualizzato come "in pausa".
+
+
+
+== Riprendere una relazione di replica in pausa
+
+Quando riprendi una relazione di replica, tutte le modifiche apportate al volume di destinazione mentre la replica era interrotta vengono eliminate. Il volume di destinazione passa da lettura/scrittura a sola lettura e riceve di nuovo gli aggiornamenti dal volume di origine all'intervallo di replica pianificato.
+
+
+NOTE: Tutti i dati scritti nel volume di origine tra l'ultima replica dei dati e l'ora in cui il volume di origine è disattivato non vengono conservati.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da riprendere.
+. Selezionare *Riprendi*.
+. Nella finestra di dialogo Riprendi relazione, selezionare *Riprendi*.
+
+
+.Risultato
+La relazione riprende e il suo stato viene visualizzato come "replicato".
+
+
+
+== Invertire una relazione di replica
+
+Invertire una relazione di replica in modo che il volume di destinazione diventi il volume di origine.
+
+Le operazioni inverse sono supportate per:
+
+* Due file system FSX per ONTAP
+* Un file system FSx for ONTAP e un sistema ONTAP locale
+
+
+Una volta interrotta la replica e apportate modifiche al volume di destinazione, è possibile replicare tali modifiche nel volume di origine. Questo processo è comune in uno scenario di disaster recovery in cui si opera sul volume di destinazione per un po' e si desidera cambiare ruolo dei volumi.
+
+Quando si inverte e si riprende una replica, commuta i ruoli di origine e destinazione dei volumi; il volume di destinazione diventa il nuovo volume di origine e il volume di origine diventa il nuovo volume di destinazione. L'operazione inversa sovrascrive anche il contenuto del nuovo volume di destinazione con il contenuto del nuovo volume di origine. Se si inverte una replica due volte, la direzione di replica originale viene ristabilita.
+
+[]
+====
+NOTA:
+
+* Tutti i dati scritti nel volume di origine tra l'ultima replica dei dati e l'ora in cui il volume di origine è disattivato non vengono conservati.
+* La replica inversa non è disponibile quando si replicano i dati e le impostazioni di configurazione della storage VM.
+
+
+====
+.Prima di iniziare
+Assicurarsi di conoscere i ruoli attuali e futuri dei volumi di origine e di destinazione, poiché le modifiche apportate al nuovo volume di destinazione vengono sovrascritte con il nuovo volume di origine. Se utilizzato in modo errato, è possibile che si verifichi una perdita involontaria dei dati.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da invertire.
+. Selezionare *Inverti relazione*.
+. Nella finestra di dialogo relazione inversa, selezionare *Inverti*.
+
+
+
+
+== Interruzione di una relazione di replica
+
+Interrompere una relazione di replica in NetApp Workload Factory.  Quando si interrompe una relazione di replica, gli aggiornamenti di replica pianificati dal volume di origine al volume di destinazione vengono sospesi.  Il volume di destinazione passa da sola lettura a lettura/scrittura.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replicazione, selezionare il menu delle azioni della relazione di replicazione da interrompere.
+. Selezionare *Pausa*.
+. Nella finestra di dialogo Interrompi replica, selezionare *Interrompi*.
+
+
+.Risultato
+Lo stato di replica del volume cambia in *rotto*. Il volume di destinazione diventa scrivibile.
+
+
+
+== Eliminare una relazione di replica
+
+Elimina una relazione di replica in NetApp Workload Factory.  Quando si elimina una relazione di replica, viene rimossa la relazione di replica tra il volume di origine e quello di destinazione.  Dopo l'eliminazione della relazione di replica, entrambi i volumi continuano a esistere in modo indipendente con i dati correnti in essi contenuti.
+
+Quando elimini una relazione di replica, FSX per ONTAP elimina anche gli snapshot di replica comuni del volume di origine e di destinazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Nella scheda Relazioni di replicazione, selezionare il menu azioni della relazione di replicazione da eliminare.
+. Selezionare *Delete* (Elimina).
+. Nella finestra di dialogo Elimina relazione, selezionare *Elimina*.
+

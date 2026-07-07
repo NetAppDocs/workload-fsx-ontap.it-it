@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: track-replication-delays.html 
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
+summary: Abilita il monitoraggio per tenere traccia dei ritardi per tutte le relazioni di replica nel tuo account. 
+---
+= Tieni traccia dei ritardi di replica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Attiva il monitoraggio per tenere sotto controllo i ritardi di replica nel tuo account. Workload Factory ti avvisa quando i ritardi superano una determinata soglia. Per impostazione predefinita, la soglia è pari al 150% dell'intervallo di replica per consentire tempi di trasferimento normali e ridurre i falsi allarmi. Puoi regolare la soglia in base al tuo RPO e ricevere notifiche quando i ritardi la superano. Puoi anche esportare i dati in un file CSV per ulteriori analisi.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci*.
+. Nella panoramica del file system, selezionare la scheda *Relazioni di replica*.
+. Seleziona *Abilita il tracking*.
+. Nella finestra di dialogo Abilita cronologia ritardo replica, seleziona *Abilita*.
+. Tornando al riquadro Cronologia ritardo replica, seleziona *Personalizza soglia* per impostare la soglia che preferisci.
+. Nella finestra di dialogo Personalizza la soglia del tempo di ritardo, inserisci la soglia in ore e minuti.
+. Facoltativamente, seleziona *Abilita notifiche di ritardo* per ricevere notifiche quando la replica supera la soglia di ritardo.
++
+Le notifiche arrivano tramite email e includono:
+
++
+** File system sorgente
+** Volume sorgente
+** File system di destinazione
+** Volume di destinazione
+** Soglia del tempo di ritardo superata
+** Collegamento alla relazione di replica
+
+
+. Selezionare *Applica*.
+
+
+.Informazioni correlate
+link:manage-replication.html["Gestisci le relazioni di replica"^]

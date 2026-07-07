@@ -7,7 +7,13 @@
 ** Intelligenza artificiale (AI) e machine learning (ML): replica i tuoi dati ONTAP on-premises su Amazon FSx for NetApp ONTAP e crea punti di accesso S3 per supportare l’addestramento di AI e ML nel cloud
 ** Migrazione: Trasferimento dei dati nel file system FSX per ONTAP di destinazione
 +
-*Replica configurazione VM di storage*: facoltativamente, seleziona per replicare i dati e le impostazioni di configurazione della VM di storage per una singola VM di storage. Quando si migrano dati e impostazioni di configurazione simultaneamente, assicurati che l'ultima replica per il volume sia stata completata nelle ultime 24 ore. Tutti i volumi nella stessa VM di storage devono essere selezionati per utilizzare questa funzionalità. La policy di tiering per tutti i volumi predefinita è quella del volume di origine, che è consigliata per i casi d'uso di migrazione.
+*Replica la configurazione della VM di archiviazione*: Facoltativamente, seleziona per replicare i dati e le impostazioni di configurazione di una singola VM di archiviazione. Quando migri dati e impostazioni, tutti i volumi devono completare la replica nelle ultime 24 ore e poi effettuare il cutover contemporaneamente.
+
++
+La policy di tiering per tutti i volumi viene impostata di default sulla policy di tiering del volume di origine, che è consigliata per i casi d'uso di migrazione.
+
++
+Durante la migrazione, i client accedono ai dati dal file system ONTAP. Dopo il cutover, i volumi sono disponibili tramite gli indirizzi IP del file system FSx for ONTAP di destinazione. Aggiorna tutti i client o le risorse che utilizzano ancora il vecchio indirizzo IP.
 
 ** Disaster recovery "hot": Garantisce alta disponibilità e rapido disaster recovery per i carichi di lavoro critici
 ** Disaster recovery a freddo o di archivio:
@@ -31,7 +37,10 @@ Per tutti i casi di utilizzo, se si abilitano gli snapshot per la conservazione 
 
 
 . *FSX per il file system ONTAP*: Selezionare credenziali, area e FSX per il nome del file system ONTAP per il file system FSX per ONTAP di destinazione.
-. *Nome VM di archiviazione*: Selezionare la VM di archiviazione dal menu a discesa. La VM di archiviazione selezionata è la destinazione per tutti i volumi selezionati in questa relazione di replica.
+. *Nome della VM di archiviazione*: Seleziona la VM di archiviazione. La VM di archiviazione che selezioni è la destinazione per tutti i volumi selezionati in questa relazione di replica.
++
+Quando i nomi delle storage VM di origine e di destinazione sono identici, creiamo un alias del file system per i nomi delle storage VM di destinazione per evitare conflitti di peering.
+
 . *Volume name*: Il nome del volume di destinazione viene generato automaticamente con il seguente formato `{OriginalVolumeName}_copy`. È possibile utilizzare il nome del volume generato automaticamente o immettere un altro nome di volume.
 . *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume di destinazione. Il criterio di tiering predefinito corrisponde alla policy di tiering consigliata per il caso d'utilizzo selezionato.
 +
@@ -44,6 +53,10 @@ Se hai selezionato il caso d'uso di migrazione, Workload Factory sceglie automat
 +
 Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery. . In Impostazioni di replica, specificare quanto segue:
 
+. *Inizializza la relazione di replica*: scegli se inizializzare la relazione di replica immediatamente dopo averla creata o in un secondo momento. Tieni presente che l'inizializzazione può richiedere tempo e potresti voler eseguire il trasferimento baseline durante le ore di minore affluenza.
++
+Per inizializzare in seguito manualmente, fai riferimento alle istruzioni in <<Passaggio 2: Inizializzare la relazione di replica,Passaggio 2: Inizializzare la relazione di replica>>.
+
 . *Intervallo di replica*: Consente di selezionare la frequenza di trasferimento degli snapshot dal volume di origine al volume di destinazione.
 . *Conservazione a lungo termine*: Facoltativamente, abilitare gli snapshot per la conservazione a lungo termine. La conservazione a lungo termine permette ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria.
 +
@@ -54,10 +67,10 @@ Se si attiva la conservazione a lungo termine, selezionare un criterio esistente
 
 +
 
-NOTE: Per la conservazione a lungo termine sono necessarie etichette di origine e destinazione corrispondenti. Se lo si desidera, workload Factory può creare etichette mancanti.
+NOTE: Per la conservazione a lungo termine sono necessarie etichette corrispondenti tra origine e destinazione. Se vuoi, Workload Factory può creare per te le etichette mancanti.
 
 +
-** *Scegliere un criterio esistente*: Selezionare un criterio esistente dal menu a discesa.
+** *Scegli una policy esistente*: seleziona una policy esistente.
 ** *Crea una nuova policy*: inserisci un *nome policy*.
 
 

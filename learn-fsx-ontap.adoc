@@ -77,7 +77,6 @@ Workload Factory è supportato in tutte le regioni commerciali in cui è support
 Le seguenti regioni AWS non sono supportate:
 
 * regioni della Cina
-* Regioni GovCloud (USA)
 * Nuvola segreta
 * Nuvola top secret
 

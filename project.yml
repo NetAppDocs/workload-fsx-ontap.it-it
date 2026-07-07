@@ -75,10 +75,8 @@ sidebar:
           url: "/create-backup.html"
         - title: Ripristinare un volume da un backup
           url: "/restore-from-backup.html"
-      - title: Utilizzare la replicazione
-        entries:
-        - title: Replicare i dati
-          url: "/create-replication.html"
+      - title: Replicare i dati
+        url: "/create-replication.html"
       - title: Proteggi i dati con la protezione autonoma da ransomware
         url: "/ransomware-protection.html"
       - title: Clonare un volume
@@ -105,6 +103,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Regola la capacità del volume
         url: "/adjust-volume-capacity.html"
+      - title: Imposta le soglie di latenza del volume
+        url: "/set-volume-latency-thresholds.html"
       - title: Riequilibrare la capacità del volume
         url: "/rebalance-volume.html"
       - title: Gestire i file immutabili
@@ -186,22 +186,10 @@ sidebar:
         entries:
         - title: Replica di un volume di data Protection
           url: "/cascade-replication.html"
-        - title: Invertire una relazione di replica
-          url: "/reverse-replication.html"
-        - title: Consente di modificare la pianificazione della replica di un volume
-            di origine
-          url: "/change-replication-schedule.html"
-        - title: Limitare la velocità di trasferimento massima di una relazione di
-            replica
-          url: "/limit-transfer-rate.html"
-        - title: Aggiornamento manuale dei dati snapshot in una relazione di replica
-          url: "/update-snapshot-replication.html"
-        - title: Sospendere e riprendere una relazione di replica
-          url: "/pause-resume-replication.html"
-        - title: Interruzione di una relazione di replica
-          url: "/stop-replication.html"
-        - title: Eliminare una relazione di replica
-          url: "/delete-replication.html"
+        - title: Tieni traccia dei ritardi di replica
+          url: "/track-replication-delays.html"
+        - title: Gestisci le relazioni di replica
+          url: "/manage-replication.html"
     - title: Amministrazione delle prestazioni
       entries:
       - title: Provisioning degli IOPS per un file system

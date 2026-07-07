@@ -11,7 +11,7 @@ summary: 'Crea dispositivi a blocchi per supportare i requisiti delle applicazio
 
 
 [role="lead"]
-Crea dispositivi a blocchi per supportare i requisiti delle applicazioni della tua linea di business (LOB).
+Crea dispositivi a blocchi per supportare i requisiti delle tue applicazioni aziendali (LOB). Puoi creare dispositivi a blocchi in un volume esistente, creare un nuovo volume per il nuovo dispositivo a blocchi oppure creare un nuovo volume da uno snapshot per il nuovo dispositivo a blocchi.
 
 .A proposito di questa attività
 In NetApp Workload Factory sono supportati solo i volumi FlexVol per i dispositivi a blocchi. È possibile creare dispositivi a blocchi utilizzando il protocollo iSCSI.
@@ -34,6 +34,7 @@ La dimensione del blocco deve essere inferiore alla dimensione FlexVol volume di
 +
 *** Crea un nuovo volume e immetti il nome del volume.
 *** Seleziona un volume esistente.
+*** Crea da uno snapshot di volume. Seleziona il nome del volume di origine e il nome dello snapshot. Sono disponibili solo volumi senza dispositivi a blocchi.
 
 
 .. *Nome dell'aggregato*: Selezionare l'aggregato che ospiterà il nuovo volume.

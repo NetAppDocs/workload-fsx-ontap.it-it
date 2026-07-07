@@ -39,6 +39,8 @@ Dopo aver creato un collegamento, è possibile associarlo a uno o più file syst
 
 È possibile autenticare i collegamenti utilizzando le credenziali archiviate nel servizio credenziali Workload Factory oppure con le credenziali archiviate in AWS Secrets Manager.  Workload Factory non supporta la modifica delle modalità di autenticazione.
 
+La connettività dei link per gli account GovCloud è supportata. NetApp Workload Factory utilizza le chiavi di autenticazione GovCloud, consentendo un accesso sicuro e senza agenti a FSx for ONTAP tramite meccanismi approvati GovCloud.
+
 
 
 == Costi
@@ -67,6 +69,7 @@ Le funzioni che richiedono un collegamento includono:
 * Aumento automatico del volume per il ridimensionamento elastico
 * Creazione e gestione di cloni, per la clonazione istantanea dei dati sul posto
 * Visualizzazione di metriche aggiuntive direttamente da ONTAP , come la versione ONTAP
+* Visualizzazione dei dettagli LIF di storage VM e cluster, inclusi ruoli, endpoint, nodi, indirizzi IP e stato
 
 
 Informazioni su link:create-link.html["collegare un collegamento a un file system FSx per ONTAP"].

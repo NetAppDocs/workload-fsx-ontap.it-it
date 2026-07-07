@@ -96,6 +96,10 @@ Le etichette dei criteri di snapshot del volume di origine e le etichette dei cr
 +
 La soglia di capacità dei file dovrebbe essere aumentata per evitare di raggiungere il limite di capacità del volume. Una bassa capacità dei file (inodes) impedisce la scrittura di dati aggiuntivi sul volume. Workload Factory consiglia di mantenere costantemente l'utilizzo della capacità dei file disponibile al di sotto dell'80%. La capacità dei file disponibile è necessaria per creare nuovi file nel volume.
 
+* *Connetti l'host al nodo di failover*
++
+Workload Factory consiglia di connettere gli host al nodo di failover per mantenere la connettività ed evitare interruzioni durante i failover.
+
 
 
 
@@ -175,6 +179,18 @@ Un livello di capacità SSD sottoutilizzato potrebbe comportare costi inutili. W
 * *Volumi NAS inattivi*
 +
 L'analisi della configurazione identifica i volumi NAS non utilizzati attivamente e raccomanda di eliminarli o archiviarli per ridurre i costi.
+
+
+
+
+
+=== Efficienza delle prestazioni
+
+L'efficienza prestazionale si concentra sull'utilizzo efficiente delle risorse IT e di calcolo.
+
+* *Connetti l'host al nodo preferito*
++
+In un modello di implementazione FSx for ONTAP ad alta disponibilità, gli host devono essere connessi direttamente al nodo che gestisce il dispositivo a blocchi per garantire accesso diretto e prestazioni ottimali.
 
 
 

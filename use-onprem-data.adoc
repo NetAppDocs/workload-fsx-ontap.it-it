@@ -59,7 +59,12 @@ image:screenshot-on-prem-connectivity.png["Screenshot che mostra come si deve co
 Se non è stato creato un collegamento, seguire le istruzioni, quindi tornare a questa operazione e selezionare il collegamento.
 
 .. *Indirizzo IP del cluster*: Fornire l'indirizzo IP per il cluster ONTAP locale da replicare.
-.. *Credenziali ONTAP*: Inserisci le credenziali ONTAP per il cluster ONTAP on-premise. Assicurarsi che l'utente disponga delle autorizzazioni necessarie.
+.. *Credenziali ONTAP*: Fornisci quanto segue:
++
+*** GovCloud account: Inserisci l'ARN con le credenziali ONTAP.
+*** Tutti gli altri account: Inserisci le credenziali ONTAP per il cluster ONTAP on-premises. Assicurati che l'utente abbia le autorizzazioni necessarie.
+
+
 
 
 . Selezionare *rilevamento* per avviare il processo di rilevamento.

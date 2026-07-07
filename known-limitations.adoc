@@ -20,7 +20,6 @@ Le limitazioni note identificano le piattaforme, i dispositivi o le funzioni non
 Le seguenti regioni AWS non sono supportate:
 
 * regioni della Cina
-* Regioni GovCloud (USA)
 * Nuvola segreta
 * Nuvola top secret
 
