@@ -15,6 +15,7 @@ Configura l'infrastruttura della tabella Journal per acquisire e archiviare i lo
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 La funzionalità della tabella Journal acquisisce gli eventi del piano dati S3 (PutObject, GetObject, DeleteObject, ecc.) per i punti di accesso S3 di FSx for ONTAP monitorati. Utilizza una catena di servizi AWS distribuiti nel tuo account AWS. Quando configuri correttamente l'infrastruttura, si connette al punto di accesso al volume di FSx for ONTAP e stabilisce la pipeline che acquisisce gli eventi di audit relativi agli accessi degli utenti e alle operazioni sugli oggetti nella tabella Journal.
@@ -54,6 +55,7 @@ Il {uuid} è un identificatore casuale di 8 caratteri generato al momento della 
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 Per abilitare la funzionalità della tabella Journal, segui questi passaggi:
@@ -172,6 +174,7 @@ Per abilitare la funzionalità della tabella Journal, segui questi passaggi:
 
 
 
+[[set-up-the-journal-table-infrastructure]]
 == Configurare l'infrastruttura della tabella del giornale
 
 Configura l'infrastruttura per acquisire gli eventi del servizio AWS dal punto di accesso S3 nella tabella del registro.
@@ -205,6 +208,7 @@ Se uno qualsiasi di questi passaggi non dovesse funzionare, <<Risoluzione dei pr
 
 
 
+[[troubleshoot-the-infrastructure-setup-for-the-journal-table]]
 == Risoluzione dei problemi di configurazione dell'infrastruttura per la tabella del journal
 
 È possibile utilizzare la Console di gestione AWS o l'AWS CLI per risolvere i problemi relativi agli errori durante la distribuzione dello stack CloudFormation e delle risorse che esso crea.
@@ -213,6 +217,7 @@ Dopo aver risolto il problema, inviare nuovamente l'ARN di CloudTrail per riavvi
 
 
 
+[[common-cloudformation-deployment-failures]]
 === Errori comuni durante l'implementazione di CloudFormation
 
 
@@ -278,6 +283,7 @@ aws iam delete-role \
 ----
 
 
+[[failures-after-journal-table-enablement]]
 === Errori successivi all'abilitazione della tabella Journal
 
 Dopo aver inviato l'ARN di CloudTrail, Workload Factory convalida l'intera pipeline delle risorse inviando automaticamente un _seed_, ovvero un evento di prova. In caso di esito positivo, l'evento seed arriva nella tabella S3 Tables. Il test richiede circa 10 minuti.
@@ -348,12 +354,14 @@ Dopo aver risolto il problema, torna alla console di Workload Factory. Riprova <
 
 
 
+[[permissions-reference-for-the-journal-table-setup]]
 == Riferimento alle autorizzazioni per la configurazione della tabella del giornale
 
 Il ruolo IAM che distribuisce lo CloudFormation stack per abilitare la funzionalità della tabella Journal necessita delle seguenti autorizzazioni. Fare riferimento a <<Prima di iniziare,Prima di iniziare>> per una policy JSON copiabile con le autorizzazioni richieste.
 
 
 
+[[stack-operations]]
 === Operazioni sullo stack
 
 [cols="1,1,1"]
@@ -371,6 +379,7 @@ Il ruolo IAM che distribuisce lo CloudFormation stack per abilitare la funzional
 |===
 
 
+[[cloudtrail]]
 === CloudTrail
 
 [cols="1,1,1"]
@@ -394,6 +403,7 @@ Il ruolo IAM che distribuisce lo CloudFormation stack per abilitare la funzional
 |===
 
 
+[[s3]]
 === S3
 
 [cols="1,1,1"]
@@ -411,6 +421,7 @@ Il ruolo IAM che distribuisce lo CloudFormation stack per abilitare la funzional
 |===
 
 
+[[iam]]
 === IAM
 
 [cols="1,1,1"]
@@ -434,6 +445,7 @@ Il ruolo IAM che distribuisce lo CloudFormation stack per abilitare la funzional
 |===
 
 
+[[cloudwatch-logs]]
 === Log di CloudWatch
 
 [cols="1,1,1"]
@@ -463,6 +475,7 @@ Il ruolo IAM che distribuisce lo CloudFormation stack per abilitare la funzional
 |===
 
 
+[[observabilityadmin]]
 === ObservabilityAdmin
 
 [cols="1,1,1"]
@@ -483,6 +496,7 @@ Il ruolo IAM che distribuisce lo CloudFormation stack per abilitare la funzional
 |===
 
 
+[[s3-tables]]
 === Tabelle S3
 
 [cols="1,1,1"]

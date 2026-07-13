@@ -15,6 +15,7 @@ Modifica le impostazioni degli snapshot, abilita l'accesso alla directory ed eli
 
 
 
+[[edit-a-snapshot]]
 == Modifica uno snapshot
 
 Modifica il nome, l'etichetta e il periodo di conservazione di uno snapshot.  Se lo snapshot non è già immutabile, è possibile renderlo immutabile.
@@ -47,6 +48,7 @@ Accettare la dichiarazione relativa agli snapshot immutabili.
 
 
 
+[[access-a-snapshot]]
 == Accedi a uno snapshot
 
 Abilita l'accesso alla directory degli snapshot per consentire agli utenti di accedere agli snapshot in modo autonomo.
@@ -72,6 +74,7 @@ Abilita l'accesso alla directory degli snapshot per consentire agli utenti di ac
 
 
 
+[[restore-data-from-a-snapshot]]
 == Ripristinare i dati da uno snapshot
 
 È possibile ripristinare i dati da uno snapshot su un volume esistente o su un nuovo volume.
@@ -80,6 +83,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 
 
+[[delete-a-snapshot]]
 == Elimina uno snapshot
 
 Elimina uno snapshot per liberare spazio.

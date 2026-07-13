@@ -23,6 +23,7 @@ Verifica del numero supportato di VM storage per file system. Fare riferimento a
 
 
 
+[[create-a-storage-vm]]
 == Creare una VM di storage
 
 È possibile creare una VM di archiviazione dalla console Workload Factory.  Puoi anche utilizzare i seguenti strumenti disponibili in Codebox: REST API, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^] .

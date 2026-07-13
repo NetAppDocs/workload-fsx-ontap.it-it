@@ -4,6 +4,7 @@
 
 
 
+[[tab-views-in-storage-inventory]]
 === Viste a schede nell'inventario dello storage
 
 L'inventario dello storage è stato aggiornato con una vista a due schede:

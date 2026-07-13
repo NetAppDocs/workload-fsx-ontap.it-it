@@ -57,6 +57,7 @@ Configurazioni non supportate:: Le seguenti configurazioni non supportano l'uso 
 
 
 
+[[enable-arpai-for-a-file-system-or-a-volume]]
 == Abilita ARP/AI per un file system o un volume
 
 Attivando ARP/AI per un file system, proteggi automaticamente tutti i volumi NAS attuali e nuovi (NFS/SMB). A partire da ONTAP 9.17.1, supporta anche i volumi SAN (iSCSI). Puoi anche attivare ARP/AI per volumi specifici.
@@ -111,6 +112,7 @@ Per abilitare ARP/AI per un file system o un volume, è necessario associare un 
 ====
 
 
+[[validate-ransomware-attacks]]
 == Convalida degli attacchi ransomware
 
 Determinare se un attacco è un falso allarme o un incidente ransomware autentico.
@@ -129,6 +131,7 @@ Determinare se un attacco è un falso allarme o un incidente ransomware autentic
 
 
 
+[[recover-data-after-a-ransomware-attack]]
 == Recuperare i dati dopo un attacco ransomware
 
 Quando il sistema rileva un possibile attacco, crea e blocca un'istantanea del volume in quel preciso istante.

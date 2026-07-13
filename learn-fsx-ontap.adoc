@@ -19,6 +19,7 @@ FSx per ONTAP è il componente _Storage_ in Workload Factory.
 
 
 
+[[features]]
 == Caratteristiche
 
 FSX per ONTAP offre le seguenti caratteristiche:
@@ -40,6 +41,7 @@ FSX per ONTAP offre le seguenti caratteristiche:
 
 
 
+[[additional-features-in-workload-factory]]
 == Funzionalità aggiuntive in Workload Factory
 
 * *Calcolatore di confronto dei costi di storage*: Confronta i costi di storage di Amazon Elastic Block Store (EBS), Elastic file System (EFS) e FSX per Windows file Server con FSX per ONTAP. Dal calcolatore, puoi visualizzare come le configurazioni storage di FSX per ONTAP offrono potenziali risparmi e pianificare il passaggio allo storage FSX per ONTAP.
@@ -49,6 +51,7 @@ FSX per ONTAP offre le seguenti caratteristiche:
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == Strumenti per utilizzare NetApp Workload Factory
 
 È possibile utilizzare NetApp Workload Factory con i seguenti strumenti:
@@ -64,12 +67,14 @@ FSX per ONTAP offre le seguenti caratteristiche:
 
 
 
+[[cost]]
 == Costo
 
 Il tuo account FSx for ONTAP è gestito da AWS, non da Workload Factory. Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Prezzi di Amazon FSX per NetApp ONTAP"^] .
 
 
 
+[[regions]]
 == Regioni
 
 Workload Factory è supportato in tutte le regioni commerciali in cui è supportato FSx per ONTAP .link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
@@ -83,6 +88,7 @@ Le seguenti regioni AWS non sono supportate:
 
 
 
+[[getting-help]]
 == Assistenza
 
 Amazon FSX per NetApp ONTAP è una soluzione AWS first-party. Per domande o problemi di supporto tecnico associati al file system, all'infrastruttura o alla soluzione FSX per ONTAP che utilizza questo servizio, utilizza il Support Center nella console di gestione AWS per aprire un caso di supporto con AWS. Selezionare il servizio "FSX per ONTAP" e la categoria appropriata. Fornire le informazioni rimanenti necessarie per creare il caso di supporto AWS.

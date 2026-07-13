@@ -23,6 +23,7 @@ Utilizzare la console NetApp Workload Factory per gestire i volumi di cache per 
 
 
 
+[[edit-the-cache-volume-name]]
 == Modifica il nome del volume della cache
 
 È possibile modificare il nome di un volume di cache esistente in qualsiasi momento.
@@ -39,6 +40,7 @@ Utilizzare la console NetApp Workload Factory per gestire i volumi di cache per 
 
 
 
+[[adjust-the-capacity-of-a-cache-volume]]
 == Regola la capacità di un volume di cache
 
 È possibile modificare la capacità di un volume di cache esistente in qualsiasi momento.
@@ -55,6 +57,7 @@ Utilizzare la console NetApp Workload Factory per gestire i volumi di cache per 
 
 
 
+[[edit-the-cache-volume-export-policy]]
 == Modifica la politica di esportazione del volume della cache
 
 Modificare il percorso di montaggio o la policy di esportazione assegnata a un volume di cache esistente.
@@ -72,6 +75,7 @@ Modificare il percorso di montaggio o la policy di esportazione assegnata a un v
 
 
 
+[[change-the-caching-method-for-a-cache-volume]]
 == Modificare il metodo di memorizzazione nella cache per un volume di cache
 
 È possibile modificare il funzionamento della cache per un volume di cache esistente, scegliendo tra write-around o write-back.
@@ -90,6 +94,7 @@ Scopri di più sulink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-fl
 
 
 
+[[prepopulate-a-cache-volume]]
 == Precompilare un volume di cache
 
 Riempi il volume della cache con i dati del volume di origine prima di utilizzarlo per rendere i dati memorizzati nella cache disponibili più rapidamente.
@@ -106,6 +111,7 @@ Riempi il volume della cache con i dati del volume di origine prima di utilizzar
 
 
 
+[[delete-a-cache-volume]]
 == Elimina un volume di cache
 
 Quando si elimina un volume di cache, si rimuove la relativa relazione con la cache.  I dati memorizzati nella cache non sono più disponibili.

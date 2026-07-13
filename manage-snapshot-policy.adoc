@@ -22,6 +22,7 @@ Per impostazione predefinita, ogni volume è associato al criterio di snapshot d
 
 
 
+[[change-a-snapshot-policy]]
 == Modificare una policy di snapshot
 
 È possibile modificare il nome del criterio snapshot, la pianificazione e il numero di copie da conservare e attivare o disattivare gli snapshot immutabili. Non è possibile attivare o disattivare la condivisione dei criteri tra le VM di storage. Questa opzione è disponibile solo durante la creazione dei criteri di snapshot.
@@ -45,6 +46,7 @@ Il criterio snapshot viene aggiornato.
 
 
 
+[[enable-immutable-snapshots]]
 == Attiva gli snapshot immutabili
 
 Bloccare gli snapshot per impedirne l'eliminazione durante il periodo di conservazione.
@@ -74,6 +76,7 @@ Lo snapshot del volume è ora bloccato.
 
 
 
+[[assign-a-snapshot-policy-to-a-volume]]
 == Assegnare un criterio snapshot a un volume
 
 È possibile assegnare una policy di snapshot a un singolo volume per creare snapshot pianificate per il volume.
@@ -100,6 +103,7 @@ Il criterio snapshot viene assegnato al volume.
 
 
 
+[[remove-a-snapshot-policy-from-a-volume]]
 == Rimozione di un criterio di snapshot da un volume
 
 Rimozione di una policy di snapshot da un volume perché non si desidera più creare snapshot del volume o perché si desidera eliminare una policy di snapshot assegnata a più volumi. A <<Eliminazione di una policy di snapshot,eliminazione di una policy di snapshot>> questo viene assegnato più di un volume, è necessario rimuoverlo manualmente da tutti i volumi.
@@ -123,6 +127,7 @@ Il criterio di snapshot viene rimosso dal volume.
 
 
 
+[[delete-a-snapshot-policy]]
 == Eliminazione di una policy di snapshot
 
 Elimina una policy di snapshot quando non è più necessaria.

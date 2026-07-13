@@ -17,6 +17,7 @@ link:links-overview.html["Ulteriori informazioni sui collegamenti"] o link:creat
 
 
 
+[[view-the-links-associated-with-your-account]]
 == Visualizzare i collegamenti associati all'account
 
 È possibile visualizzare i collegamenti attualmente associati al proprio account.
@@ -36,6 +37,7 @@ image:screenshot-view-link-details.png["Una schermata che mostra i file system F
 
 
 
+[[edit-a-link]]
 == Modificare un collegamento
 
 Non è possibile modificare un collegamento dall'interfaccia di Workload Factory.  Se devi apportare una modifica a un collegamento, dovrai creare un nuovo collegamento e quindi associarlo al tuo file system.
@@ -45,6 +47,7 @@ NOTE: È possibile modificare la configurazione di rete Lambda (ad esempio VPC, 
 
 
 
+[[authenticate-a-link]]
 == Autenticare un collegamento
 
 Fornire una password utente amministrativa per le credenziali di Workload Factory o un ARN segreto di AWS Secrets Manager per connettere il collegamento a un file system FSx for ONTAP .
@@ -74,6 +77,7 @@ Il collegamento viene autenticato ed è possibile eseguire operazioni ONTAP avan
 
 
 
+[[update-the-password-for-link-authentication]]
 == Aggiornare la password per l'autenticazione del collegamento
 
 Se la password amministrativa non è valida, aggiornare la password per collegare il collegamento al file system FSX per ONTAP.
@@ -93,6 +97,7 @@ La password viene aggiornata e il collegamento è ora collegato al file system F
 
 
 
+[[remove-a-link]]
 == Rimuovere un tirante
 
 Puoi rimuovere un collegamento che non utilizzi più nel tuo ambiente. Qualsiasi file system FSX per ONTAP o altre risorse che utilizzavano il collegamento non potranno utilizzare determinate funzionalità dopo la rimozione del collegamento.

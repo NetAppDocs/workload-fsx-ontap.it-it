@@ -4,6 +4,7 @@
 
 
 
+[[link-creation-updates]]
 === Aggiornamenti per la creazione del collegamento
 
 * Visualizzatore Codebox: Codebox è ora integrato nel processo di creazione dei link.  È possibile visualizzare e copiare il modello CloudFormation da Codebox in Workload Factory prima di reindirizzare ad AWS per eseguire l'operazione.

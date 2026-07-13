@@ -23,6 +23,7 @@ Se si effettua una pausa quando un trasferimento è in corso, il trasferimento n
 
 
 
+[[pause-a-replication-relationship]]
 == Sospensione di una relazione di replica
 
 .Fasi
@@ -41,6 +42,7 @@ La relazione viene sospesa e il suo stato viene visualizzato come "in pausa".
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Riprendere una relazione di replica in pausa
 
 Quando si riprende una relazione di replica, tutte le modifiche apportate al volume di destinazione durante l'interruzione della replica vengono eliminate.

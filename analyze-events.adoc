@@ -15,6 +15,7 @@ Identifica e risolvi rapidamente i problemi del file system FSx per ONTAP con l'
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 Spesso gli amministratori dello storage rispondono agli eventi FSx for ONTAP solo dopo reclami dei clienti oppure mantenendo script e allarmi personalizzati. Questo approccio reattivo può ridurre l'efficienza, ritardare la risoluzione dei problemi e aumentare i tempi di inattività.
@@ -43,6 +44,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Prezzi di Amazon Bedrock"^]
 
 
 
+[[data-privacy-and-security]]
 === Privacy e sicurezza dei dati
 
 La privacy dei dati e la sicurezza sono protette tramite:
@@ -55,10 +57,12 @@ Per maggiori dettagli, consultare il link:https://docs.aws.amazon.com/bedrock/la
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 
 
+[[view-events]]
 === Visualizza eventi
 
 Per visualizzare gli eventi di latenza, devi link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS.
@@ -67,6 +71,7 @@ Per visualizzare gli eventi EMS, devi anche link:https://docs.netapp.com/us-en/w
 
 
 
+[[analyze-events]]
 === Analizza gli eventi
 
 Per analizzare gli eventi EMS e di latenza e ricevere informazioni e raccomandazioni basate sull'intelligenza artificiale, assicurati di quanto segue:
@@ -116,6 +121,7 @@ Queste autorizzazioni verificano la disponibilità del modello.
 
 
 
+[[view-and-analyze-events-for-fsx-for-ontap]]
 == Visualizza e analizza gli eventi per FSx per ONTAP
 
 Usa la console di NetApp Workload Factory per visualizzare e analizzare gli eventi EMS e di latenza per i file system FSx for ONTAP.

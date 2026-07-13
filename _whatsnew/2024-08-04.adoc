@@ -4,6 +4,7 @@
 
 
 
+[[terraform-support]]
 === Supporto terraforme
 
 Ora puoi utilizzare Terraform di Codebox per implementare file system e macchine virtuali di storage.
@@ -15,6 +16,7 @@ Ora puoi utilizzare Terraform di Codebox per implementare file system e macchine
 
 
 
+[[throughput-and-iops-recommendations-in-the-storage-calculator]]
 === Consigli su throughput e IOPS nel calcolatore dello storage
 
 Il calcolatore dello storage formula raccomandazioni di configurazione del file system FSX per ONTAP per il throughput e gli IOPS sulla base delle Best practice di AWS, il che ti fornisce una guida ottimale per le tue scelte.

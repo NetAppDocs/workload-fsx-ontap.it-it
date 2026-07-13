@@ -15,6 +15,7 @@ Gestisci le tue relazioni di replica in NetApp Workload Factory. Puoi sospendere
 
 
 
+[[change-the-replication-schedule-of-a-source-volume]]
 == Consente di modificare la pianificazione della replica di un volume di origine
 
 Modificare la pianificazione della replica del volume di origine in una relazione di replica in NetApp Workload Factory.
@@ -45,6 +46,7 @@ Quando un cluster ONTAP on-premise è la destinazione della relazione di replica
 
 
 
+[[limit-the-max-transfer-rate-of-a-replication-relationship]]
 == Limitare la velocità di trasferimento massima di una relazione di replica
 
 La limitazione della velocità di trasferimento massima è facoltativa ma consigliata. Senza un limite, le prestazioni della rete e delle applicazioni potrebbero diminuire.
@@ -71,6 +73,7 @@ In alternativa, selezionare *illimitato*.
 
 
 
+[[manually-update-snapshot-data-in-a-replication-relationship]]
 == Aggiorna manualmente i dati snapshot in una relazione di replica
 
 Una relazione di replicazione ha una pianificazione di replicazione impostata, ma è possibile aggiornare manualmente i dati snapshot trasferiti tra i volumi di origine e di destinazione in NetApp Workload Factory in qualsiasi momento.
@@ -88,6 +91,7 @@ Una relazione di replicazione ha una pianificazione di replicazione impostata, m
 
 
 
+[[pause-a-replication-relationship]]
 == Sospensione di una relazione di replica
 
 Sospendere una relazione di replica per interrompere gli aggiornamenti pianificati delle repliche dal volume di origine al volume di destinazione. Il volume di destinazione passa da sola lettura a lettura/scrittura. Entrambi i volumi continuano a condividere l'ultimo snapshot di replica come nuova base per la risincronizzazione successiva.
@@ -111,6 +115,7 @@ La relazione viene sospesa e il suo stato viene visualizzato come "in pausa".
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Riprendere una relazione di replica in pausa
 
 Quando riprendi una relazione di replica, tutte le modifiche apportate al volume di destinazione mentre la replica era interrotta vengono eliminate. Il volume di destinazione passa da lettura/scrittura a sola lettura e riceve di nuovo gli aggiornamenti dal volume di origine all'intervallo di replica pianificato.
@@ -134,6 +139,7 @@ La relazione riprende e il suo stato viene visualizzato come "replicato".
 
 
 
+[[reverse-a-replication-relationship]]
 == Invertire una relazione di replica
 
 Invertire una relazione di replica in modo che il volume di destinazione diventi il volume di origine.
@@ -173,6 +179,7 @@ Assicurarsi di conoscere i ruoli attuali e futuri dei volumi di origine e di des
 
 
 
+[[stop-a-replication-relationship]]
 == Interruzione di una relazione di replica
 
 Interrompere una relazione di replica in NetApp Workload Factory.  Quando si interrompe una relazione di replica, gli aggiornamenti di replica pianificati dal volume di origine al volume di destinazione vengono sospesi.  Il volume di destinazione passa da sola lettura a lettura/scrittura.
@@ -193,6 +200,7 @@ Lo stato di replica del volume cambia in *rotto*. Il volume di destinazione dive
 
 
 
+[[delete-a-replication-relationship]]
 == Eliminare una relazione di replica
 
 Elimina una relazione di replica in NetApp Workload Factory.  Quando si elimina una relazione di replica, viene rimossa la relazione di replica tra il volume di origine e quello di destinazione.  Dopo l'eliminazione della relazione di replica, entrambi i volumi continuano a esistere in modo indipendente con i dati correnti in essi contenuti.

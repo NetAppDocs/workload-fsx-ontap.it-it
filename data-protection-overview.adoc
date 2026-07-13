@@ -15,6 +15,7 @@ FSx per ONTAP supporta snapshot, NetApp Autonomous Ransomware Protection con int
 
 
 
+[[types-of-data-protection]]
 == Tipi di protezione dei dati
 
 La data Protection per i tuoi carichi di lavoro ti aiuta a garantire un ripristino da qualsiasi perdita di dati in qualsiasi momento. Informatevi sui tipi di protezione dei dati prima di selezionare le funzioni da utilizzare.
@@ -39,6 +40,7 @@ image:diagram-fsx-data-protection.png["Screenshot mostra la data Protection per 
 
 
 
+[[best-practices-for-protecting-your-workload-data]]
 == Best practice per la protezione dei dati dei carichi di lavoro
 
 FSX per ONTAP offre diverse opzioni di protezione dei dati, che possono essere combinate insieme per raggiungere i recovery point objective e time objective selezionati. Per una protezione ottimale, si consiglia di utilizzare sia gli snapshot dei volumi che i backup dei volumi.
@@ -47,30 +49,35 @@ Un recovery point objective (RPO) descrive la frequenza di esecuzione delle copi
 
 
 
+[[protect-your-workload-data-with-snapshots]]
 == Proteggi i dati dei carichi di lavoro con le snapshot
 
 Gli Snapshot sono versioni virtuali point-in-time di un volume acquisite su base pianificata. È possibile accedere alle snapshot utilizzando comandi standard del file system. Gli snapshot offrono un RPO di appena un'ora. L'RTO dipende dalla quantità di dati da ripristinare ed è limitato principalmente dal limite di throughput del volume. Le snapshot consentono inoltre agli utenti di ripristinare specifici file e directory, diminuendo ulteriormente l'RTO. Le copie Snapshot consumano ulteriore spazio per i volumi solo in caso di modifiche apportate.
 
 
 
+[[protect-your-workload-data-with-netapp-autonomous-ransomware-protection-with-ai]]
 == Proteggi i dati del tuo carico di lavoro con la protezione autonoma dai ransomware NetApp con intelligenza artificiale
 
 NetApp Autonomous Ransomware Protection with AI (ARP/AI) funge da importante ulteriore livello di difesa se il software antivirus non riesce a rilevare un'intrusione.  L'impostazione di una policy ARP/AI la abilita per tutte le VM di archiviazione e per tutti i volumi esistenti e di nuova creazione.  Una volta abilitato, ARP/AI rileva e protegge tutti i volumi e le VM di archiviazione.  Se un'estensione di file viene contrassegnata come anomala, è necessario valutare l'avviso.
 
 
 
+[[protect-your-workload-data-with-volume-replication]]
 == Proteggi i dati dei tuoi carichi di lavoro con la replica dei volumi
 
 La replica di un volume crea una copia dei dati più recenti di un volume, inclusi tutti i relativi snapshot in un'area diversa. Se non puoi permetterti RTO di più ore di un'operazione di ripristino di un volume completo da un backup di un volume, prendi in considerazione l'esecuzione di una replica di un volume. Mentre la replica del volume garantisce che i dati recenti siano disponibili in un'area diversa, è necessario regolare i client per utilizzare il volume nell'altra area.
 
 
 
+[[protect-your-workload-data-with-backups]]
 == Proteggi i dati dei tuoi carichi di lavoro con i backup
 
 I backup dei volumi offrono copie point-in-time indipendenti del tuo volume. Possono essere utilizzati per archiviare vecchi backup e fornire la seconda copia dei dati necessaria. Le pianificazioni di backup giornaliere, settimanali e mensili consentono RPO a partire da un giorno. I backup di volumi possono essere ripristinati solo nel loro complesso. La creazione di un volume da un backup (RTO) può richiedere da ore a molti giorni, a seconda delle dimensioni del backup.
 
 
 
+[[recommendations-for-protecting-your-workload-data]]
 == Consigli per la protezione dei dati dei carichi di lavoro
 
 Prendi in considerazione i seguenti consigli per proteggere i dati del tuo carico di lavoro.

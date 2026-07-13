@@ -22,6 +22,7 @@ Prima di iniziare, effettuare le seguenti operazioni:
 
 
 
+[[create-an-smbcifs-share-for-a-volume]]
 == Creare una condivisione SMB/CIFS per un volume
 
 Seguire i passaggi per creare una condivisione SMB/CIFS per un volume.
@@ -63,6 +64,7 @@ I percorsi validi per il nome della condivisione, ad esempio "Server", sono i se
 
 
 
+[[change-an-smbcifs-share-for-a-volume]]
 == Modificare una condivisione SMB/CIFS per un volume
 
 Seguire i passaggi per modificare le impostazioni di condivisione SMB/CIFS per un volume.
@@ -84,6 +86,7 @@ Le modifiche potrebbero causare la perdita dell'accesso alla condivisione SMB/CI
 
 
 
+[[delete-an-smbcifs-share-for-a-volume]]
 == Elimina una condivisione SMB/CIFS per un volume
 
 Seguire i passaggi per eliminare una condivisione SMB/CIFS per un volume.

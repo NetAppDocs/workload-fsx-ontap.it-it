@@ -15,6 +15,7 @@ Controllare il bilanciamento della capacità del volume FlexVol o FlexGroup e ri
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 Il ribilanciamento della capacità del volume è supportato per i volumi FlexVol e FlexGroup. Il ribilanciamento di un volume ridistribuisce la capacità quando gli squilibri si sviluppano nel tempo a causa dell'aggiunta di nuovi file e della crescita dei file. Dopo aver avviato manualmente l'operazione di riequilibrio, selezioniamo i file e li spostiamo automaticamente e senza interruzioni. Le operazioni di trasferimento dei volumi consumano risorse del file system.
@@ -40,6 +41,7 @@ NOTE: Il ribilanciamento non è supportato per volumi SAN come iSCSI e NVMe.
 
 
 
+[[check-the-balance-of-your-volumes]]
 == Controlla il saldo dei tuoi volumi
 
 Controllare il saldo dei volumi FlexVol o FlexGroup in un file system FSx for ONTAP.
@@ -69,6 +71,7 @@ Quando un volume è sbilanciato, considera <<Riequilibrare la capacità del volu
 
 
 
+[[rebalance-volume-capacity]]
 == Riequilibrare la capacità del volume
 
 Riequilibrare uno o più volumi non bilanciati.
@@ -158,6 +161,7 @@ Durante il ribilanciamento, i volumi dei membri FlexGroup vengono spostati uno a
 ====
 
 
+[[stop-a-volume-rebalance-operation]]
 == Interrompere un'operazione di ribilanciamento del volume
 
 È possibile interrompere un'operazione di ribilanciamento in qualsiasi momento; non è un'interruzione. L'interruzione dell'operazione annulla gli spostamenti di volume attivi.

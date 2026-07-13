@@ -15,6 +15,7 @@ Le limitazioni note identificano le piattaforme, i dispositivi o le funzioni non
 
 
 
+[[region-support]]
 == Supporto regionale
 
 Le seguenti regioni AWS non sono supportate:
@@ -26,6 +27,7 @@ Le seguenti regioni AWS non sono supportate:
 
 
 
+[[adding-ha-pairs-limitations]]
 == Aggiunta delle limitazioni di coppie ha
 
 * Questa operazione potrebbe richiedere circa 30 minuti.
@@ -34,22 +36,26 @@ Le seguenti regioni AWS non sono supportate:
 
 
 
+[[throughput-capacity-region-support]]
 == Supporto regione di capacità di throughput
 
 
 
+[[scale-up-deployments]]
 === Implementazioni scale-up
 
 Le configurazioni scale-up sono supportate fino a 2 GB/s in tutte le regioni. Le seguenti regioni supportano fino a 4 GB/s di capacità di throughput massima per le implementazioni scale-up: Regione US East (Ohio), regione US East (N. Virginia), regione US West (Oregon) ed Europa (Irlanda).
 
 
 
+[[scale-out-deployments]]
 === Implementazioni con scalabilità orizzontale
 
 Le seguenti regioni supportano una capacità di throughput massima fino a 6 GB/s per distribuzioni scalabili: Stati Uniti orientali (Virginia settentrionale e Ohio), Stati Uniti occidentali (California settentrionale e Oregon), Europa (Francoforte, Irlanda e Stoccolma) e Asia Pacifico (Singapore e Sydney).
 
 
 
+[[capacity-management]]
 == Gestione della capacità
 
 * La funzione di crescita automatica dei volumi non è attualmente supportata per il protocollo iSCSI.
@@ -60,6 +66,7 @@ Le seguenti regioni supportano una capacità di throughput massima fino a 6 GB/s
 
 
 
+[[storage-vms]]
 == VM di storage
 
 Il numero di VM di archiviazione è limitato per SKU.  La creazione di VM di archiviazione oltre la limitazione non è supportata in Workload Factory.^1^
@@ -68,6 +75,7 @@ Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managi
 
 
 
+[[iscsi-protocol-support]]
 == Supporto del protocollo iSCSI
 
 * Il protocollo iSCSI è disponibile solo per i volumi FlexVol. ^1^
@@ -76,6 +84,7 @@ Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managi
 
 
 
+[[data-protection]]
 == Protezione dei dati
 
 * Impossibile eliminare gli snapshot.
@@ -97,6 +106,7 @@ Fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managi
 
 
 
+[[storage-savings-calculator]]
 == Calcolatore del risparmio dello storage
 
 Il calcolatore di risparmio dello storage non calcola il risparmio sui costi per le seguenti configurazioni:
@@ -108,18 +118,21 @@ Il calcolatore di risparmio dello storage non calcola il risparmio sui costi per
 
 
 
+[[aws-secrets-manager-support]]
 == Supporto di AWS Secrets Manager
 
 AWS Secrets Manager non è supportato quando si utilizza un agente Console.
 
 
 
+[[amazon-s3-access-points-limitation]]
 == Limitazione dei punti di accesso Amazon S3
 
 Il limite per il numero di punti di accesso S3 per ogni VM di storage è 4.000.
 
 
 
+[[limitations-for-storage-vm-migration-replication]]
 == Limitazioni per la replica della migrazione delle storage VM
 
 * Workload Factory non supporta la replica della migrazione per le VM di storage tra i file system FSx for ONTAP di prima e seconda generazione.

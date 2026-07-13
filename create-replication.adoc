@@ -17,6 +17,7 @@ Quando si replicano i dati e le impostazioni di configurazione di una storage VM
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 La replica protegge i tuoi dati se un disastro colpisce la tua regione; può anche essere utilizzata per scopi di migrazione.
@@ -34,6 +35,7 @@ Se si replica un volume sorgente con file immutabili, il volume di destinazione 
 ====
 
 
+[[migration-use-cases]]
 === Casi d'uso della migrazione
 
 Per la migrazione, è possibile scegliere di replicare i dati e le impostazioni di configurazione di una singola storage VM. Se si migrano dati e impostazioni di configurazione insieme, assicurarsi che l'ultima replica del volume sia stata completata nelle ultime 24 ore. È necessario selezionare tutti i volumi nella stessa storage VM per utilizzare questa funzionalità. La policy di tiering per tutti i volumi viene impostata di default sulla policy di tiering del volume di origine, che è consigliata per i casi d'uso di migrazione.
@@ -59,6 +61,7 @@ Per migrare i dati e le impostazioni di configurazione delle storage VM, è nece
 
 
 
+[[step-1-create-the-replication-relationship]]
 == Passaggio 1: Creare la relazione di replica
 
 Replica i dati tra due file system FSx for ONTAP, tra un sistema ONTAP on-premises e un file system FSx for ONTAP, oppure tra Cloud Volumes ONTAP e un file system FSx for ONTAP.
@@ -196,6 +199,7 @@ Se hai creato una relazione di replica per scopi di migrazione, devi eseguire il
 
 
 
+[[step-2-initialize-the-replication-relationship]]
 == Passaggio 2: Inizializzare la relazione di replica
 
 Inizializza una relazione di replica tra i volumi di origine e di destinazione per trasferire lo snapshot e tutti i blocchi di dati in NetApp Workload Factory.
@@ -221,12 +225,14 @@ Quando lo stato della replica mostra *Idle*, il trasferimento dei dati è comple
 
 
 
+[[step-3-cut-over-replication-for-migration-use-cases]]
 == Fase 3: Cutover della replica per i casi d'uso di migrazione
 
 Dopo aver creato la relazione di replica per un caso d'uso di migrazione, è necessario eseguire il cutover della replica per completare la migrazione dei dati e delle impostazioni di configurazione della storage VM al file system FSx for ONTAP di destinazione. Il cutover della replica migra in modo permanente i dati e le impostazioni di configurazione della storage VM dal file system di origine al file system FSx for ONTAP di destinazione. Durante il cutover, i dati vengono replicati per l'ultima volta. La storage VM di origine va offline quando inizia il cutover.
 
 
 
+[[plan-for-the-cutover-operation]]
 === Pianifica l'operazione di cutover
 
 Considerare quanto segue quando si pianifica l'operazione di cutover per i casi d'uso di migrazione.
@@ -276,6 +282,7 @@ Dopo aver avviato cutover, la macchina virtuale di archiviazione di origine va o
 
 
 
+[[update-configuration-settings-after-cutover]]
 === Aggiornare le impostazioni di configurazione dopo cutover
 
 Dopo aver eseguito il cutover della replica per i casi d'uso di migrazione, aggiornare le seguenti impostazioni di configurazione della storage VM sulla storage VM di destinazione.
@@ -294,6 +301,7 @@ Dopo aver eseguito il cutover della replica per i casi d'uso di migrazione, aggi
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 link:change-tiering-policy.html["Modificare la policy di tiering"] per il/i volume di destinazione dopo cutover.

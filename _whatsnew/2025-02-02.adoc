@@ -4,6 +4,7 @@
 
 
 
+[[cloudshell-in-bluexp-workload-factory-console]]
 === CloudShell in console per workload factory di BlueXP 
 
 CloudShell è una funzionalità CLI integrata disponibile nella BlueXP workload factory per l'archiviazione.  È possibile utilizzare CloudShell per creare, condividere ed eseguire comandi ONTAP o AWS CLI da più sessioni in un ambiente simile a una shell, direttamente dalla console Workload Factory.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Sco
 
 
 
+[[inventory-data-download]]
 === Download dei dati di inventario
 
 Ora puoi scaricare i dati di inventario di FSX per ONTAP in un file Microsoft Excel o CSV dallo storage in una farm di workload BlueXP .
@@ -20,6 +22,7 @@ image:screenshot-fsx-inventory-download.png["Uno screenshot di Storage nella Blu
 
 
 
+[[fsx-for-ontap-file-system-additional-menu-options]]
 === Opzioni di menu aggiuntive del file system FSX per ONTAP
 
 Abbiamo semplificato le seguenti operazioni per un file system FSX per ONTAP dalla scheda FSX per ONTAP in archiviazione.
@@ -33,6 +36,7 @@ image:screenshot-filesystem-menu-options.png["Uno screenshot della scheda FSX pe
 
 
 
+[[terraform-support-for-creating-volumes]]
 === Supporto terraform per la creazione di volumi
 
 È ora possibile utilizzare Terraform dalla Codebox per creare volumi.
@@ -41,6 +45,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Creare
 
 
 
+[[file-locking-with-the-immutable-files-feature]]
 === Blocco dei file con la funzione file immutabili
 
 Ora puoi bloccare i file usando la funzione file immutabili quando crei un volume per un file system FSX per ONTAP. Il blocco dei file aiuta l'utente e gli altri a prevenire l'eliminazione accidentale o intenzionale dei file per un determinato periodo di tempo.
@@ -49,6 +54,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Creare
 
 
 
+[[tracker-available-for-monitoring-and-tracking-operations]]
 === Tracker disponibile per il monitoraggio e il monitoraggio delle operazioni
 
 Tracker, una nuova funzionalità di monitoring è disponibile nello storage. È possibile utilizzare Tracker per monitorare e monitorare l'avanzamento e lo stato delle credenziali, le operazioni di archiviazione e collegamento, esaminare i dettagli delle attività operative e delle sottoattività, diagnosticare eventuali problemi o errori, modificare i parametri per le operazioni non riuscite e riprovare le operazioni non riuscite.
@@ -57,6 +63,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["S
 
 
 
+[[support-for-second-generation-amazon-fsx-for-netapp-ontap-file-systems]]
 === Supporto di Amazon FSX per i file system NetApp ONTAP di seconda generazione
 
 Ora puoi utilizzare i file system di seconda generazione Amazon FSx for NetApp ONTAP in NetApp Workload Factory.  I file system Single-AZ di seconda generazione di FSx per ONTAP sono alimentati da un massimo di 12 coppie HA, in grado di fornire fino a 72 GBps di capacità di throughput e 2.400.000 IOPS SSD.  I file system Multi-AZ di seconda generazione di FSx for ONTAP sono alimentati da una coppia HA e offrono una capacità di throughput di 6 GBps e 200.000 IOPS SSD.

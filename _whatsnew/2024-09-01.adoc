@@ -4,12 +4,14 @@
 
 
 
+[[read-mode-support-for-storage-management]]
 === Supporto della modalità di lettura per la gestione dello storage
 
 La modalità di lettura è disponibile per la gestione dell'archiviazione in Workload Factory.  La modalità di lettura migliora l'esperienza della modalità di base aggiungendo autorizzazioni di sola lettura, in modo che i modelli Infrastructure-as-Code vengano compilati con le variabili specifiche.  I modelli Infrastructure-as-Code possono essere eseguiti direttamente dal tuo account AWS senza dover fornire autorizzazioni di modifica a Workload Factory.
 
 
 
+[[backup-before-volume-deletion-support]]
 === Backup prima del supporto per l'eliminazione del volume
 
 È ora possibile eseguire il backup di un volume prima di eliminarlo. Il backup rimarrà nel file system fino all'eliminazione.

@@ -4,6 +4,7 @@
 
 
 
+[[volume-autogrow-enhancement]]
 === Miglioramento dell'aumento automatico del volume
 
 Ora puoi impostare l'aumento automatico delle dimensioni dei tuoi volumi in modo che le dimensioni del volume possano aumentare oltre le dimensioni previste in base alle esigenze aziendali e ai requisiti delle applicazioni.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === Aggiornamento dell'analisi ben progettata
 
 Workload Factory ora analizza i file system FSx for ONTAP per verificare se le efficienze di storage, tra cui compattazione dei dati, compressione e deduplicazione, vengono sfruttate. L'efficienza di storage misura l'efficacia con cui i file system utilizzano lo spazio disponibile.
@@ -20,12 +22,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === Miglioramenti della dashboard di archiviazione
 
 A partire da oggi, quando apri il carico di lavoro Storage dalla console Workload Factory, visualizzerai la *Dashboard*.  La dashboard di nuova concezione fornisce una visione olistica dei sistemi FSx for ONTAP , tra cui il numero di file system, la capacità SSD totale, la panoramica dello stato ben strutturato, la panoramica della protezione dei dati e lo stato della relazione di replica.
 
 
 
+[[volumes-tab-enhancements]]
 === Miglioramenti della scheda Volumi
 
 Il carico di lavoro Storage ha apportato miglioramenti alla scheda Volumi all'interno di un file system FSx for ONTAP nella console Workload Factory.  I miglioramenti includono:
@@ -36,6 +40,7 @@ Il carico di lavoro Storage ha apportato miglioramenti alla scheda Volumi all'in
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === Aggiornamento dell'efficienza di archiviazione per la creazione di volumi
 
 Quando si crea un nuovo volume, le efficienze di archiviazione, tra cui la compattazione dei dati, la compressione e la deduplicazione, sono abilitate per impostazione predefinita.
