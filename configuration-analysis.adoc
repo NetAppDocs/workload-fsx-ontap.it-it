@@ -31,7 +31,13 @@ Workload Factory analizza quotidianamente i carichi di lavoro in esecuzione sull
 
 Al termine dell'analisi giornaliera, le configurazioni vengono visualizzate come "ottimizzate" o "non ottimizzate" nella dashboard Well-architected per la distribuzione. Troverai il punteggio di ottimizzazione totale, i problemi di configurazione per categoria e un elenco di problemi di configurazione e raccomandazioni. Puoi esaminare le raccomandazioni relative ai problemi di configurazione. Alcuni problemi possono essere risolti automaticamente da Workload Factory, mentre altri richiedono un intervento manuale. In questo caso, Workload Factory fornisce istruzioni dettagliate per aiutarti a implementare le modifiche consigliate.
 
-È possibile ignorare l'analisi delle configurazioni che non si applicano ai propri ambienti. In questo modo si evitano avvisi non necessari e risultati di ottimizzazione imprecisi. Quando si ignora un'analisi di configurazione specifica, Workload Factory non include la configurazione nel punteggio di ottimizzazione totale.
+Puoi ignorare l'analisi delle configurazioni che non si applicano ai tuoi ambienti. Questo evita avvisi non necessari e risultati di ottimizzazione imprecisi.
+
+Puoi anche creare regole personalizzate in linguaggio naturale per convalidare i tuoi ambienti rispetto agli standard della tua organizzazione e alle best practice di NetApp. Prova le regole con una simulazione, poi pianifica la loro esecuzione su tutti i tuoi ambienti. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Scopri di più sulle regole personalizzate"^].
+
+Puoi anche creare regole personalizzate in linguaggio naturale per convalidare i tuoi ambienti rispetto agli standard della tua organizzazione e alle best practice di NetApp. Prova le regole con una simulazione, poi pianifica la loro esecuzione su tutti i tuoi ambienti.
+
+link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Scopri di più sulle regole personalizzate"^].
 
 
 
@@ -62,7 +68,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sc
 [[best-practices-and-recommendations-for-storage-workloads]]
 == Best practice e raccomandazioni per i carichi di lavoro di storage
 
-Workload Factory valuta le configurazioni dello storage per fornire una panoramica approfondita delle best practice di configurazione ONTAP e della conformità con l'AWS Well-Architected Framework. La valutazione suggerisce anche miglioramenti e correzioni.
+La dashboard ben progettata valuta le configurazioni di storage in base alle best practice di ONTAP e all'AWS Well-Architected Framework. La valutazione suggerisce inoltre miglioramenti e correzioni.
 
 L'analisi ben strutturata classifica le configurazioni nei seguenti pilastri del framework: , , ,  ed .
 
@@ -73,33 +79,33 @@ L'analisi ben strutturata classifica le configurazioni nei seguenti pilastri del
 
 L'affidabilità garantisce che i carichi di lavoro svolgano le funzioni previste in modo corretto e coerente, anche in presenza di interruzioni.
 
-* *Pianifica i backup del volume*
+* *Backup del volume*
 +
 Eseguire il backup dei volumi contribuisce a soddisfare i requisiti di conservazione dei dati e di conformità. Utilizza i backup di volume per configurare backup e conservazione automatizzati per i tuoi dati.
 
-* *Pianifica snapshot locali*
+* *policy di Snapshot*
 +
-Pianifica snapshot locali per un backup efficiente e ripristini rapidi. Gli snapshot sono immagini point-in-time istantanee dei tuoi volumi.
+Pianifica snapshot locali per un backup efficiente e ripristini rapidi. Gli snapshot sono immagini point-in-time istantanee dei tuoi volumi. Questa raccomandazione non si applica agli ambienti database.
+
+* *Snapshot coerenti con l'applicazione*
++
+Per gli ambienti di database, usa snapshot coerenti con l'applicazione con NetApp SnapCenter per creare snapshot accurati e affidabili dei dati del tuo volume in un momento specifico. Questo mantiene le tue app in funzione senza problemi e i tuoi dati al sicuro. SnapCenter rende i backup più semplici e ti aiuta a ripristinare i dati in modo rapido e corretto, riducendo i tempi di inattività e proteggendo i tuoi carichi di lavoro più importanti.
 
 * *Replicazione interregionale*
 +
-La replica interregionale garantisce che i dati vengano replicati in un'altra regione AWS, fornendo una maggiore durabilità e disponibilità dei dati. Workload Factory consiglia di configurare la replica interregionale per facilitare il disaster recovery e la conformità.
+La replica tra regioni garantisce che i tuoi dati vengano replicati in un'altra regione AWS, offrendo maggiore durabilità e disponibilità dei dati. Configura la replica tra regioni per supportare il disaster recovery e la conformità.
 
-* *Configura la replica dei dati*
+* *Margine di capacità SSD*
 +
-Per estendere l'affidabilità dei dati, è possibile replicarli su un file system Amazon FSx for NetApp ONTAP nella stessa regione o in un'altra regione. Configura la replica dei dati per supportare la migrazione, il disaster recovery e la conservazione a lungo termine tra file system.
+La capacità del tier di storage SSD non dovrebbe superare l'80% di utilizzo. Questo potrebbe influire sulle letture e scritture dei dati nel tier di storage della capacity pool e sul throughput del tuo file system. Quando la capacità si esaurisce, i volumi di dati diventano di sola lettura. Anche i servizi che cercano di scrivere nuovi dati non riescono.
 
-* *Aumenta la soglia di capacità SSD*
-+
-La capacità del tier di storage SSD non dovrebbe superare l'80% di utilizzo su base continuativa. Ciò potrebbe influire sulle letture e scritture dei dati nel tier di storage della capacità e influire sulla capacità di throughput del file system. L'esaurimento della capacità potrebbe comportare che i volumi di dati diventino di sola lettura e che i servizi che tentano di scrivere nuovi dati possano fallire.
-
-* *Associa le etichette per garantire l'affidabilità dei dati*
+* *Etichette della policy di replica*
 +
 Le etichette dei criteri di snapshot del volume di origine e le etichette dei criteri di replica devono corrispondere per garantire l'affidabilità dei dati.
 
-* *Aumenta la soglia di capacità del file*
+* *Capacità degli oggetti file*
 +
-La soglia di capacità dei file dovrebbe essere aumentata per evitare di raggiungere il limite di capacità del volume. Una bassa capacità dei file (inodes) impedisce la scrittura di dati aggiuntivi sul volume. Workload Factory consiglia di mantenere costantemente l'utilizzo della capacità dei file disponibile al di sotto dell'80%. La capacità dei file disponibile è necessaria per creare nuovi file nel volume.
+La soglia di capacità dei file dovrebbe essere aumentata per evitare di raggiungere il limite di capacità del volume. Una capacità dei file (inodes) insufficiente impedisce di scrivere dati aggiuntivi sul volume. Workload Factory consiglia di mantenere l'utilizzo della capacità dei file al di sotto dell'80% per permettere la creazione di nuovi file.
 
 
 
@@ -110,13 +116,13 @@ La soglia di capacità dei file dovrebbe essere aumentata per evitare di raggiun
 
 La sicurezza si concentra sulla protezione di dati, sistemi e asset attraverso valutazioni del rischio e strategie di mitigazione.
 
-* *Abilita ARP/AI*
+* *Protezione ransomware (ARP/AI)*
 +
 NetApp Autonomous Ransomware Protection con intelligenza artificiale (ARP/AI) aiuta a proteggere i volumi dalle minacce ransomware. Workload Factory consiglia di abilitare ARP/AI per tutti i volumi.
 
-* *Accesso non autorizzato ai volumi*
+* *Accesso non autorizzato al volume iSCSI*
 +
-I volumi che forniscono dati applicativi tramite iSCSI non devono consentire l'accesso NAS in parallelo. Workload Factory raccomanda che i volumi accessibili tramite il protocollo iSCSI siano limitati a qualsiasi protocollo aggiuntivo.
+I volumi che forniscono dati applicativi tramite iSCSI non devono consentire contemporaneamente l'accesso NAS. Workload Factory consiglia di impedire ai volumi iSCSI di utilizzare qualsiasi altro protocollo.
 
 
 
@@ -127,29 +133,37 @@ I volumi che forniscono dati applicativi tramite iSCSI non devono consentire l'a
 
 L'eccellenza operativa si concentra sulla fornitura dell'architettura più ottimale e del valore di business.
 
-* *Abilita la gestione automatica della capacità*
+* *gestione della capacità automatica*
 +
 È necessario abilitare la gestione automatica della capacità per garantire regolarmente che il tier SSD non superi la soglia.
 
-* *Soglia di utilizzo della capacità del volume*
+* *Capacità residua del volume*
 +
-Workload Factory raccomanda che la capacità del volume non superi l'80% di utilizzo su base continuativa. Ciò potrebbe influire sulle letture e scritture dei dati nella tua applicazione. L'aumento della capacità del volume può essere manuale o automatico utilizzando la funzione di crescita automatica del volume.
+Workload Factory raccomanda che la capacità del volume non superi l'80% di utilizzo. Questo potrebbe influire sulle operazioni di lettura e scrittura dei dati della tua applicazione. L'aumento della capacità del volume può essere manuale o automatico utilizzando la funzione di dimensionamento automatico del volume.
 
-* *Utilizzo del volume quasi pieno*
-+
-Quando un volume si avvicina alla capacità massima, Workload Factory consiglia di intervenire per aumentare la capacità del volume ed evitare potenziali interruzioni dell'applicazione.
-
-* *Modalità di scrittura della cache*
+* *FlexCache modalità di scrittura*
 +
 Per prestazioni ottimali, Workload Factory consiglia la modalità di scrittura della relazione di cache più adatta al tuo carico di lavoro. La modalità write-around offre prestazioni migliori per carichi di lavoro con molte operazioni di lettura e file di piccole dimensioni, mentre la modalità write-back offre prestazioni migliori per carichi di lavoro con molte operazioni di scrittura e file di grandi dimensioni.
 
-* *Ottimizza la dimensione del volume della cache*
+* *FlexCache replica dimensioni*
 +
 Workload Factory consiglia di abilitare il dimensionamento automatico e lo scrubbing sui volumi della cache per mantenere le dimensioni ottimali e concentrare la cache sui dati più importanti con la massima efficienza.
 
-* *Reporting logico della Storage VM*
+* *Segnalazione della capacità visibile all'host*
 +
-Workload Factory consiglia di impostare l'impostazione di reporting predefinita su logica per una storage VM per garantire una migliore visibilità sull'utilizzo dello storage a livello di volume.
+Workload Factory consiglia di abilitare la segnalazione della capacità visibile all'host per offrire una migliore visibilità sull'utilizzo dello storage a livello di volume.
+
+* *Tipo di sistema operativo (OS)*
++
+Workload Factory consiglia di assicurarti che il valore del tipo di sistema operativo (OS) del LUN ONTAP corrisponda allo schema di partizionamento del sistema operativo per ottenere l'allineamento I/O. Una configurazione errata potrebbe ridurre le prestazioni.
+
+* *Gestione dello spazio del block device*
++
+Workload Factory consiglia di configurare le impostazioni dello spazio dei dispositivi a blocchi per le LUN utilizzate dalle istanze host del database per prevenire errori di scrittura e migliorare l'efficienza dello spazio su FSx per ONTAP. Questa configurazione si applica alla combinazione consigliata di impostazioni per i volumi con thin provisioning: space reservation, space allocation e fractional reserve.
+
+* *Thin provisioning*
++
+Workload Factory consiglia di configurare il thin provisioning per i volumi FSx for ONTAP che ospitano istanze di database. Questo approccio consente di archiviare più dati logici rispetto a quelli fisicamente disponibili.
 
 
 
@@ -160,29 +174,50 @@ Workload Factory consiglia di impostare l'impostazione di reporting predefinita 
 
 L'ottimizzazione dei costi ti aiuta a ottenere il massimo valore per la tua attività mantenendo bassi i costi.
 
-* *Ottimizza il TCO spostando i dati a freddo su tier diversi*
+* *Tiering dei dati freddi*
 +
-La gestione a livelli dei dati cold dovrebbe essere abilitata per ridurre l'utilizzo del tier di storage SSD. Si raccomanda di applicare una policy di tiering a ogni volume. FSx for ONTAP esegue la scansione continua dei dati per rilevare i dati cold e spostarli nel tier del pool di storage di capacità senza interruzioni.
+Abilita il tiering dei dati cold per ridurre l'utilizzo del tier di storage SSD. Workload Factory consiglia di applicare una policy di tiering a ogni volume dedicato allo storage di dati generici. Per i volumi di database, ti consigliamo di abilitare il tiering dei dati cold dove appropriato. FSx for ONTAP analizza continuamente i dati per individuare quelli cold e li sposta nel tier del capacity pool senza interruzioni.
 
-* *Abilita le efficienze di storage*
+* *Efficienze dello storage*
 +
-È opportuno abilitare le funzionalità di efficienza dello storage, come compaction, compression e deduplica, per ottimizzare l'utilizzo dello storage e ridurre il costo del tier SSD.
+Abilita le efficienze dello storage — compaction, compressione e deduplica — per ottimizzare l'utilizzo dello storage e ridurre il costo del tier SSD.
 
-* *Eliminazione non necessaria di snapshot e backup*
+* *Scadenza del backup*
 +
-Snapshot e backup non più necessari devono essere eliminati per ridurre i costi.
+Workload Factory consiglia di eliminare tutti i backup creati manualmente per i volumi eliminati e tutti i backup più vecchi di due settimane. Questi backup non scadono automaticamente, possono aumentare i costi e aggiungere complessità se non ti servono più per SLA o ripristino.
+
+* *Scadenza Snapshot*
++
+Workload Factory consiglia di eliminare gli snapshot vecchi o creati manualmente che non ti servono più. Rimuoverli può ridurre i costi e l'ingombro, soprattutto se non sono necessari per il tuo SLA o per le esigenze di ripristino.
 
 * *Dispositivi a blocco inattivi*
 +
 Dopo che un dispositivo a blocchi non viene utilizzato per sette giorni, Workload Factory consiglia di archiviare i dati del dispositivo a blocchi o di eliminare il dispositivo a blocchi non utilizzato per ridurre i costi.
 
-* *Capacità SSD sottoutilizzata*
+* *Capacità SSD sovradimensionata*
 +
-Un livello di capacità SSD sottoutilizzato potrebbe comportare costi inutili. Workload Factory consiglia di ridurre la capacità del livello SSD mantenendo un margine di spazio libero del 20% rispetto alla capacità attualmente utilizzata. Un'operazione di riduzione può richiedere da diverse ore a diversi giorni e le altre operazioni sul file system non sono supportate durante questo periodo.
+Un livello di capacità SSD sovradimensionato comporta costi inutili. Workload Factory consiglia di ridurre la capacità del tier SSD mantenendo un buffer di spazio libero del 20%. Un'operazione di riduzione richiede da diverse ore a diversi giorni e durante questo periodo le altre operazioni sul file system non sono supportate.
 
 * *Volumi NAS inattivi*
 +
 L'analisi della configurazione identifica i volumi NAS non utilizzati attivamente e raccomanda di eliminarli o archiviarli per ridurre i costi.
+
+
+
+
+
+[[performance-efficiency]]
+=== Efficienza delle prestazioni
+
+L'efficienza prestazionale ti aiuta a garantire che le tue risorse di storage vengano utilizzate in modo efficace e che i carichi di lavoro abbiano prestazioni ottimali.
+
+* *FlexGroup riequilibrio dei volumi*
++
+Workload Factory consiglia di ribilanciare i volumi FlexGroup per migliorarne l'efficienza. Dopo l'espansione orizzontale, la capacità e l'attività di carico di lavoro possono risultare disomogenee all'interno del volume.
+
+* *FlexVol riequilibrio dei volumi*
++
+Workload Factory consiglia di ribilanciare i volumi FlexVol per migliorarne l'efficienza. Dopo l'espansione orizzontale, la capacità e l'attività di carico di lavoro possono risultare disomogenee all'interno del volume.
 
 
 

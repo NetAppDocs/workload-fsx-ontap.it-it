@@ -57,7 +57,7 @@ link:https://aws.amazon.com/lambda/pricing/["Scopri di più sui costi legati all
 [[when-a-link-is-required]]
 == Quando è necessario un collegamento
 
-La fabbrica del carico di lavoro necessita di un collegamento per visualizzare alcune informazioni ed eseguire alcune attività.  Se si tenta di eseguire un'operazione che richiede un collegamento e non è stato associato un collegamento al file system FSx for ONTAP , Workload Factory avvisa che l'operazione richiede un collegamento.
+Workload Factory richiede un collegamento per visualizzare alcune informazioni ed eseguire alcune attività. Se provi a eseguire un'operazione che richiede un collegamento e non hai associato un collegamento al file system FSx for ONTAP, Workload Factory ti avvisa che l'operazione richiede un collegamento.
 
 Le funzioni che richiedono un collegamento includono:
 

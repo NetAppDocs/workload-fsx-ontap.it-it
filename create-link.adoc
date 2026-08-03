@@ -137,7 +137,7 @@ Immettere l'ARN del ruolo di esecuzione Lambda nella casella di testo.
 
 .. *Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.
 +
-Workload Factory recupera automaticamente l'account AWS, la posizione e il gruppo di sicurezza in base al file system FSx for ONTAP .
+Workload Factory recupera automaticamente l'account AWS, la posizione e il gruppo di sicurezza in base al file system FSx for ONTAP.
 
 
 
@@ -148,7 +148,7 @@ Viene visualizzata la finestra di dialogo Reindirizza a CloudFormation, in cui v
 . Seleziona *continua* per aprire la console di gestione AWS, quindi accedi all'account AWS per questo file system FSX per ONTAP.
 . Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May create IAM resources* (riconosco che AWS CloudFormation potrebbe creare risorse IAM*).
 +
-Tenere presente che vengono concesse tre autorizzazioni a Lambda quando si avvia il modello CloudFormation. Workload Factory utilizza queste autorizzazioni quando si utilizzano i collegamenti.
+Tieni presente che a Lambda vengono concesse tre autorizzazioni quando avvii il modello CloudFormation. NetApp Workload Factory utilizza queste autorizzazioni quando usi i collegamenti.
 
 +
 [source, json]
@@ -167,7 +167,7 @@ Puoi monitorare lo stato di creazione del collegamento nella pagina Eventi.  L'o
 --
 .Crea manualmente
 --
-È possibile creare un collegamento utilizzando due strumenti Infrastructure-as-Code (IaC) di Codebox: CloudFormation o Terraform.  Con questa opzione, puoi estrarre l'ARN per il collegamento da AWS CloudFormation e segnalarlo qui.  Workload Factory registra manualmente il collegamento per te.
+Puoi creare un collegamento usando due strumenti Infrastructure-as-Code (IaC) di Codebox: CloudFormation o Terraform. Con questa opzione, estrai l'ARN del collegamento da AWS CloudFormation e lo riporti qui. Workload Factory registra manualmente il collegamento per te.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

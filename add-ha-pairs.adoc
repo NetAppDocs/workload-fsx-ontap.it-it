@@ -51,4 +51,4 @@ Prima di aggiungere coppie ha a un file system, esegui le seguenti operazioni:
 
 
 .Risultato
-In fabbrica, viene avviato il processo di aggiunta delle coppie ha al file system. Il file system non è disponibile per altre operazioni, ad esempio la creazione di volumi, finché non vengono aggiunte le coppie ha. È possibile monitorare l'avanzamento dell'operazione nella scheda *Tracker*.
+Workload Factory avvia il processo per aggiungere la/le coppia/e HA al file system. Il file system non è disponibile per altre operazioni come la creazione di volumi finché le coppie HA non vengono aggiunte. Puoi monitorare l'avanzamento dell'operazione nella scheda *Tracker*.

@@ -14,7 +14,7 @@ summary: 'Tieni traccia di FSx per ONTAP, credenziali e operazioni di collegamen
 Monitora e tieni traccia dell'esecuzione di FSx per ONTAP, credenziali e operazioni di collegamento e monitora l'avanzamento delle attività con Tracker in NetApp Workload Factory.
 
 .A proposito di questa attività
-Workload Factory offre Tracker, una funzionalità di monitoraggio che consente di monitorare e monitorare lo stato e l'avanzamento di FSX per ONTAP, le credenziali e le operazioni di collegamento, esaminare i dettagli delle attività operative e delle attività secondarie e diagnosticare eventuali problemi o errori.
+Workload Factory offre Tracker, una funzionalità di monitoraggio che ti permette di monitorare e tenere traccia dell'avanzamento e dello stato di FSx for ONTAP, delle credenziali e delle operazioni di collegamento, di esaminare i dettagli delle attività e delle sottoattività operative e di diagnosticare eventuali problemi o errori.
 
 In Tracker sono disponibili diverse azioni. È possibile filtrare i lavori in base all'intervallo di tempo (ultime 24 ore, 7 giorni, 14 giorni o 30 giorni), al carico di lavoro, allo stato e all'utente, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori come file CSV. Puoi aggiornare il Tracker in qualsiasi momento. È inoltre possibile riprovare a eseguire un'operazione non riuscita o modificare i parametri per un'operazione non riuscita e riprovare.
 

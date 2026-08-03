@@ -13,7 +13,7 @@ summary: Ripristina un volume da un backup in qualsiasi file system FSX per ONTA
 [role="lead"]
 In NetApp Workload Factory, puoi ripristinare un volume da un backup su qualsiasi file system FSx for ONTAP nel tuo account AWS.
 
-Workload Factory determina se si dispone di capacità sufficiente per il ripristino e, in caso contrario, può aggiungere automaticamente capacità del Tier di storage SSD.
+Workload Factory determina se hai abbastanza capacità per il ripristino e può aggiungere automaticamente capacità al tier di storage SSD se non ne hai a sufficienza.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

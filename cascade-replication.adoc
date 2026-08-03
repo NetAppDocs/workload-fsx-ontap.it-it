@@ -79,7 +79,7 @@ Se si attiva la conservazione a lungo termine, selezionare un criterio esistente
 
 +
 
-NOTE: Per la conservazione a lungo termine sono necessarie etichette di origine e destinazione corrispondenti. Se lo si desidera, workload Factory può creare etichette mancanti.
+NOTE: Per la conservazione a lungo termine sono necessarie etichette corrispondenti tra origine e destinazione. Se vuoi, Workload Factory può creare per te le etichette mancanti.
 
 +
 *** *Scegliere un criterio esistente*: Selezionare un criterio esistente dal menu a discesa.
