@@ -3133,7 +3133,6 @@
   <block id="b26629c4d0db7a100913103c2501115d" category="section-title">Etichettatura dei carichi di lavoro e funzionalità di intelligenza artificiale</block>
   <block id="c6e3575ea0e96a40eeea1698ed97e99f" category="paragraph">I carichi di lavoro non vengono etichettati quando un amministratore disabilita le funzionalità di intelligenza artificiale. Se le funzionalità di intelligenza artificiale sono disattivate nelle impostazioni dell'account Workload Factory, il servizio di etichettatura non identificherà né classificherà i carichi di lavoro sulle risorse di storage.</block>
   <block id="9801425a2145ab6ed5aa12b9446c905c" category="inline-link-macro">Scopri come amministrare l'IA</block>
-  <block id="cbbc45b1bedc18c950d2da6ef1fe1f43" category="paragraph"><block ref="40737cbe54dcebc9ef5c68ebf72b8d96" category="inline-link-macro-rx"></block>.</block>
   <block id="39cf1aaf3e84c5c49c930c5bfe27e098" category="section-title">Esplora il miglioramento del calcolo dell'istantanea di risparmio</block>
   <block id="a4f25c93cc96e84a15a9a235f569bbe2" category="paragraph">Explore savings ora utilizza un calcolo coerente della capacità degli snapshot, quindi le stime di risparmio di FSx for ONTAP tengono conto correttamente del requisito aggiuntivo del pool di capacità degli snapshot.</block>
   <block id="e14c4b029cabd340fe3b6c67835e9927" category="inline-link-macro">Scopri le opportunità di risparmio per i tuoi ambienti di storage su Amazon Elastic Block Store, FSx for Windows File Server ed Elastic File System.</block>
@@ -3249,4 +3248,5 @@
   <block id="2f8586eac80bb95b25809876eb97f99a" category="paragraph">Workload Factory determina se hai abbastanza capacità per il ripristino e può aggiungere automaticamente capacità al tier di storage SSD se non ne hai a sufficienza.</block>
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">Attiva il monitoraggio per tenere sotto controllo i ritardi di replica nel tuo account. Workload Factory ti avvisa quando i ritardi superano una determinata soglia. Per impostazione predefinita, la soglia è pari al 150% dell'intervallo di replica per consentire tempi di trasferimento normali e ridurre i falsi allarmi. Puoi regolare la soglia in base al tuo RPO e ricevere notifiche quando i ritardi la superano. Puoi anche esportare i dati in un file CSV per ulteriori analisi.</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">02 agosto 2026</block>
+  <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>.</block>
 </blocks>
