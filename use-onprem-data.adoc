@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: 'Scopri e replica i dati ONTAP on-premise in NetApp Workload Factory in modo che possano essere utilizzati per arricchire le basi di conoscenza dell"intelligenza artificiale.' 
+summary: Individua e replica i dati ONTAP locali in NetApp Workload Factory così puoi usarli come backup nel cloud. 
 ---
 = Utilizzare i dati del cluster ONTAP locale in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,15 +11,14 @@ summary: 'Scopri e replica i dati ONTAP on-premise in NetApp Workload Factory in
 
 
 [role="lead"]
-Scopri e replica i dati ONTAP on-premise in NetApp Workload Factory in modo che possano essere utilizzati per arricchire le basi di conoscenza dell'intelligenza artificiale.
+Individua e replica i dati ONTAP locali in NetApp Workload Factory così puoi usarli come backup nel cloud.
 
 .A proposito di questa attività
 Per utilizzare i dati da un cluster ONTAP on-premise, dovrai prima rilevare il cluster ONTAP on-premise. Dopo aver scoperto un cluster ONTAP on-premise, puoi utilizzare i dati per uno dei seguenti casi di utilizzo.
 
-Casi di utilizzo:: Si noti che il caso di utilizzo principale per il carico di lavoro GenAI è al centro di questa serie di attività.
+Casi di utilizzo::
 +
 --
-* *Workload Genai*: Replica dei dati dei volumi ONTAP on-premise in un file system FSX per ONTAP in modo che i dati possano essere utilizzati in link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Arricchire le knowledge base dell'ai"^].
 * *Backup e migrazione nel cloud*: I dati dei volumi ONTAP on-premise replicati in un file system FSX per ONTAP possono essere utilizzati come backup nel cloud.
 * *Tiering dei dati*: Dopo la replica, è possibile eseguire il tiering dei dati del volume ONTAP on-premise con accesso meno frequente dal Tier di storage SSD al Tier di storage del pool di capacità.
 
