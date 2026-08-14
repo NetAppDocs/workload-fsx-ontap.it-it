@@ -1,0 +1,54 @@
+= Visualizza richiesta API
+:allow-uri-read: 
+
+
+. In Tracker, utilizza i filtri o la funzione di ricerca per restringere i risultati dei job. Puoi anche scaricare un report dei job.
+
+
+
+
+[[view-api-request]]
+== Visualizza richiesta API
+
+Visualizzare la richiesta API nella Codebox per un'attività in Tracker.
+
+.Fasi
+. In Tracker, selezionare un'attività.
+. Selezionare il menu azioni e quindi selezionare *Visualizza richiesta API*.
+
+
+
+
+[[retry-a-failed-operation]]
+== Riprovare un'operazione non riuscita
+
+Riprovare un'operazione non riuscita in Tracker. È anche possibile copiare il messaggio di errore di un'operazione non riuscita.
+
+
+NOTE: Puoi riprovare un'operazione non riuscita fino a 10 volte.
+
+.Fasi
+. In Tracker, selezionare un'operazione non riuscita.
+. Selezionare il menu azioni e quindi selezionare *Riprova*.
+
+
+.Risultato
+L'operazione viene riavviata.
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== Modificare e riprovare un'operazione non riuscita
+
+Modificare i parametri dell'operazione non riuscita e riprovare l'operazione al di fuori del Tracker.
+
+.Fasi
+. In Tracker, selezionare un'operazione non riuscita.
+. Selezionare il menu azioni e quindi selezionare *Modifica e riprova*.
++
+Si viene reindirizzati alla pagina delle operazioni in cui è possibile modificare i parametri e riprovare l'operazione.
+
+
+
+.Risultato
+L'operazione viene riavviata. Andare su Tracker per visualizzare lo stato dell'operazione.
