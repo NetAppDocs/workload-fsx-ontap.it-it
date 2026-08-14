@@ -84,7 +84,7 @@ NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scari
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Dal menu Archiviazione, seleziona *Esplora volumi*.
-. Da *Esplora volumi*, seleziona *Crea volume*.
+. Seleziona *Crea volume*.
 . Nella pagina Create volume (Crea volume), sotto General details (Dettagli generali), fornire i seguenti dettagli:
 +
 .. *Volume name*: Immettere un nome per il volume.

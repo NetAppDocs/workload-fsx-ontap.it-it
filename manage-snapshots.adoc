@@ -23,10 +23,8 @@ Modifica il nome, l'etichetta e il periodo di conservazione di uno snapshot.  Se
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare il menu azioni per il volume con lo snapshot da modificare.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume con l'istantanea da modificare.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
 . Dalla pagina Gestisci snapshot, seleziona il menu delle azioni per lo snapshot da modificare, quindi seleziona *Modifica*.
 . Nella finestra di dialogo Modifica uno snapshot, puoi modificare quanto segue:
@@ -56,10 +54,8 @@ Abilita l'accesso alla directory degli snapshot per consentire agli utenti di ac
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare il menu delle azioni per il volume con lo snapshot a cui accedere.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume con lo snapshot a cui accedere.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
 . Dalla pagina Gestisci snapshot, seleziona il menu delle azioni a cui vuoi che lo snapshot acceda, quindi seleziona *Accesso*.
 . Nella finestra di dialogo Accedi allo snapshot, seleziona *Abilita accesso alla directory snapshot* per accedere a questo snapshot del volume e a tutti gli snapshot del volume.
@@ -93,10 +89,8 @@ Gli snapshot immutabili non possono essere eliminati finché non termina il peri
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare il menu azioni per il volume con lo snapshot da eliminare.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume con lo snapshot da eliminare.
 . Selezionare *Azioni di protezione dei dati* e quindi *Gestisci snapshot*.
 . Dalla pagina Gestisci snapshot, seleziona il menu delle azioni per lo snapshot da eliminare, quindi seleziona *Elimina*.
 . Nella finestra di dialogo Elimina snapshot, digitare "delete".

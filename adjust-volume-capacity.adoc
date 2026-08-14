@@ -38,10 +38,8 @@ Per regolare la capacità del volume, è necessario associare un collegamento. l
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda Volumi, selezionare il menu delle azioni del volume per cui regolare la capacità.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu delle azioni relativo al volume che vuoi modificare.
 . Selezionare *Azioni di base*, quindi *Regola capacità volume*.
 . Nella finestra di dialogo Regola capacità volume, imposta la *Capacità fornita* e l'unità.
 . Selezionare *Regola* per applicare le modifiche.

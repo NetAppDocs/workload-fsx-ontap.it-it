@@ -18,10 +18,8 @@ Aggiorna i dettagli del punto di accesso S3 e gestisci i tag per un volume in Ne
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda Volumi, seleziona il menu Azioni per il volume per il quale desideri modificare i punti di accesso S3, quindi seleziona *Azioni avanzate* e infine *Gestisci punti di accesso S3*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume per cui vuoi modificare i punti di accesso S3, poi seleziona *Azioni avanzate* e quindi *Gestisci punti di accesso S3*.
 . Dalla schermata *Manage S3 access points*, seleziona il menu azioni e poi seleziona *Edit access point*.
 . Effettua gli aggiornamenti e quindi seleziona *Applica*.
 +

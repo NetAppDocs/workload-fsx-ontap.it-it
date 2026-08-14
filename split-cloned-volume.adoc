@@ -36,10 +36,11 @@ Prima di dividere un volume clonato, prendere in considerazione quanto segue:
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, seleziona il menu azioni del file system con il clone del volume da dividere, quindi seleziona *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Nella scheda Volumi, selezionare il menu azioni del volume contenente il volume clonato da dividere.
++
+.. Dal menu Archiviazione, seleziona *Esplora volumi*.
+
+
+. Seleziona il menu Azioni del volume con il volume clonato da suddividere.
 . Selezionare *azioni protezione dati*, quindi *Dividi volume clonato*.
 . Nella finestra di dialogo Dividi volume, selezionare *Elimina*.
 

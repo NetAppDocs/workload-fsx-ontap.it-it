@@ -36,10 +36,8 @@ NOTE: Puoi visualizzare gli eventi di latenza e ricevere avvisi anche senza una 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx per ONTAP*, seleziona il menu delle azioni del file system con il volume da configurare e poi seleziona *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda Volumi, seleziona il menu delle azioni del volume per cui vuoi impostare le soglie di latenza.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu delle azioni del volume per impostare le soglie di latenza.
 . Seleziona *Azioni di avviso*, poi *Imposta soglia di latenza*.
 . Nella finestra di dialogo Imposta soglia di latenza, configura quanto segue:
 +

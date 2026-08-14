@@ -25,10 +25,8 @@ Prima di eliminare un volume, prendere in considerazione quanto segue:
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare l'azione del file system con il volume da eliminare, quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda Volumi, selezionare il menu azioni del volume da eliminare.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni del volume da eliminare.
 . Selezionare *azioni di base*, quindi *Elimina volume*.
 . Nella finestra di dialogo Elimina volume, effettuare le seguenti operazioni:
 +

@@ -30,10 +30,8 @@ Seguire i passaggi per creare una condivisione SMB/CIFS per un volume.
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume da aggiornare, quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda Volumi, selezionare il menu azioni del volume per cui modificare la condivisione SMB.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni del volume per cui vuoi modificare la condivisione SMB.
 . Selezionare *Azioni avanzate*, quindi *Gestisci condivisioni SMB/CIFS*.
 . Nella pagina Gestisci condivisioni SMB/CIFS, seleziona *Crea condivisione SMB/CIFS*.
 . Nella finestra di dialogo Crea condivisione SMB/CIFS, fornisci quanto segue:

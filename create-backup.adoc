@@ -24,10 +24,8 @@ Per eseguire il backup dei volumi, sia il volume che il file system devono dispo
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
-. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
-. Da *FSx for ONTAP*, selezionare il menu azioni del file system con il volume e quindi selezionare *Gestisci*.
-. Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare il menu delle azioni per il volume da sottoporre a backup.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume di cui eseguire il backup.
 . Seleziona *Data protection actions*, *Volume backups* e quindi *Manual backup*.
 . Nella finestra di dialogo Backup manuale, immettere un nome per il backup.
 . Selezionare *Backup*.
