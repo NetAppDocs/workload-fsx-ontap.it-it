@@ -1,0 +1,12 @@
+= Creazione di link disponibile dalla pagina Link
+:allow-uri-read: 
+
+
+
+
+[[link-creation-available-from-links-page]]
+=== Creazione di link disponibile dalla pagina Link
+
+Ora puoi creare collegamenti direttamente dalla pagina Collegamenti nel menu Amministrazione, oltre che dalla pagina Inventario FSx per ONTAP e dalla pagina Panoramica del file system.
+
+link:create-link.html["Scopri di più sulla creazione di link"].

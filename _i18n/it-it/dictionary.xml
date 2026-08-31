@@ -131,10 +131,7 @@
   <block id="8997880c88dd70fe80799ee97bb7ac0c" category="doc">Creare un collegamento</block>
   <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">Ulteriori informazioni sui collegamenti</block>
   <block id="95254aef509d2d84e8ee7dd3052d1b61" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block>.</block>
-  <block id="5c6789e8d71e288316c129b90f0a025e" category="paragraph">I link sfruttano AWS Lambda per eseguire codice in risposta a eventi e gestire automaticamente le risorse di calcolo richieste da tale codice. I link creati fanno parte del tuo account NetApp e sono associati a un account AWS.</block>
   <block id="22cc060f8b88cfca4c298ec0a9aae3fa" category="list-text">Quando si aggiunge un collegamento utilizzando uno stack CloudFormation, è necessario disporre delle seguenti autorizzazioni nell'account AWS:</block>
-  <block id="53bee45613e420a1313f02fc8a36b1b1" category="list-text">Nella finestra di dialogo Associa collegamento, selezionare *Crea un nuovo collegamento* e selezionare *continua*.</block>
-  <block id="b2f3a9c80071ec30919944cb6cd21a42" category="list-text">Nella pagina Crea collegamento, fornire quanto segue:</block>
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">*Nome collegamento*: Immettere il nome che si desidera utilizzare per questo collegamento. Il nome deve essere univoco all'interno dell'account.</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">*Tag*: Se lo si desidera, aggiungere qualsiasi tag che si desidera associare a questo collegamento in modo da poter categorizzare più facilmente le risorse. Ad esempio, è possibile aggiungere un tag che identifica questo collegamento come utilizzato da FSX per i file system ONTAP.</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">Seleziona *continua* per aprire la console di gestione AWS, quindi accedi all'account AWS per questo file system FSX per ONTAP.</block>
@@ -1192,7 +1189,6 @@
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">È possibile creare segreti in allineamento con le autorizzazioni predefinite o assegnare autorizzazioni personalizzate per il criterio di collegamento.</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">*Configurare l'endpoint privato VPC in AWS Secrets Manager* è disattivato per impostazione predefinita. Se si seleziona questa opzione, il segreto viene memorizzato utilizzando l'endpoint privato VPC anziché localmente.</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">Associare un collegamento esistente a un file system FSX per ONTAP</block>
-  <block id="531d680092609d3ec7794cd6dd8c39fe" category="paragraph">Dopo aver creato un collegamento, associarlo a uno o più file system FSX per ONTAP.</block>
   <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">Nella pagina di collegamento Associa, selezionare *Associa un collegamento esistente*, selezionare il collegamento e selezionare *continua*.</block>
   <block id="5b5b11575f2a0c06c832b5cbd1c6dcfe" category="list-text">Selezionare la modalità di autenticazione.</block>
   <block id="219e99148dae7112d47eedc1f49517ae" category="list-text">Workload Factory: Immettere la password due volte.</block>
@@ -1208,7 +1204,6 @@
   <block id="ee67bf640d0b52ba5e821e265b1eacf5" category="paragraph">*Risoluzione*: Fornire l'ARN segreto corretto.</block>
   <block id="0733070c151f197e780e335f701571f1" category="list-text">Il segreto non è nel formato giusto.</block>
   <block id="6ef3be28f69c1735acc5b68f50b352ab" category="paragraph">*Risoluzione*: Vai su AWS Secrets Manager e modifica il formato.</block>
-  <block id="63659b054a6e69260ce9e4a4634e56e0" category="paragraph">Il segreto deve contenere le seguenti coppie di chiavi valide:</block>
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">Il segreto non contiene credenziali ONTAP valide per l'autenticazione del file system.</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">*Risoluzione*: Fornire credenziali in grado di autenticare i file system FSX per ONTAP in Gestione segreti AWS.</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">replica a cascata</block>
@@ -1370,7 +1365,6 @@
   <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*Automatico*: per l'impostazione automatica, per ogni GiB creato vengono aggiunti 3 IOPS.</block>
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*Provisioning da parte dell'utente*: per il provisioning da parte dell'utente, immettere il valore IOPS.</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*Autorizzazioni collegamento*: seleziona una delle seguenti opzioni per le autorizzazioni collegamento:</block>
-  <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*Fornito dall'utente*: selezionare questa opzione per assegnare un ruolo di esecuzione Lambda specificato e le relative policy associate al collegamento Lambda. Le seguenti autorizzazioni sono richieste per la policy di autorizzazione Lambda . <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> l'autorizzazione è richiesta solo se hai abilitato AWS Secrets Manager.</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">Immettere l'ARN del ruolo di esecuzione Lambda nella casella di testo.</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">creare un volume</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">Specificare la dimensione massima di crescita del volume e l'unità di misura. Non è possibile impostare una dimensione di crescita massima inferiore alla dimensione del volume corrente</block>
@@ -1459,11 +1453,8 @@
   <block id="5b4d700431157f8e7dcc17b14d365c7f" category="list-text">\\Server</block>
   <block id="6b8258a2b9dce9918a5b42eb1c2de4c6" category="list-text">\\Server\Progetti</block>
   <block id="710ecb74356fd86fc995d76f7fcb7c5c" category="list-text">\\Server\Progetti\Risorse condivise</block>
-  <block id="272d4b49948c30687aaaffecca19cb82" category="paragraph">È possibile creare un collegamento nel proprio account quando si definisce un file system FSx per ONTAP .  Il collegamento viene utilizzato per quel file system e può essere utilizzato per altri file system FSx per ONTAP .  È anche possibile associare un collegamento a un file system in un secondo momento.</block>
   <block id="049f730a98eb69627912748561a543b8" category="paragraph">Lo stack di distribuzione dei collegamenti aggiunge automaticamente la seguente espressione regolare ARN del gestore dei segreti predefinita alla policy di autorizzazione Lambda:<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block> .</block>
   <block id="bab25954c067653929b889d687bcb718" category="paragraph">Viene visualizzata la finestra di dialogo Reindirizza a CloudFormation, in cui viene spiegato come creare il collegamento dal servizio AWS CloudFormation.</block>
-  <block id="a37cbff3921a52bcde5c7689c912e1f4" category="paragraph">Puoi monitorare lo stato di creazione del collegamento nella pagina Eventi.  L'operazione non dovrebbe richiedere più di 5 minuti.</block>
-  <block id="9a5abe8b855a4f42f1c70c4b367d9bce" category="paragraph">Assicurarsi che l'ARN segreto contenga le seguenti coppie di chiavi valide, sebbene _filesystemID_ sia facoltativo.</block>
   <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">filesystemID = FSx_filesystem_id (facoltativo)</block>
   <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">utente = FSx_user</block>
   <block id="0dcf8b4e3476c0545950d4d61acb625c" category="admonition">L'autenticazione con AWS Secrets Manager richiede un utente, ovvero l'_FSx_user_ fornito oppure un altro utente creato sul file system FSx for ONTAP .  L'utente predefinito è<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> se non fornisci un utente.</block>
@@ -1501,7 +1492,6 @@
   <block id="421075462886e558113f14b52fe22487" category="paragraph">Ora è possibile creare condivisioni SMB/CIFS che puntano alle directory all'interno di un volume.  All'interno del volume potrai vedere quali condivisioni esistono, dove puntano e le autorizzazioni concesse a utenti e gruppi specifici.</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">Per i volumi di protezione dei dati, il flusso di creazione di una condivisione SMB/CIFS ora include la creazione di un percorso di giunzione al volume per scopi di montaggio.</block>
   <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">Manualmente: crea un collegamento con registrazione manuale utilizzando CloudFormation o Terraform da Codebox.  Il codice persiste, dandoti più tempo per completare l'operazione.  Questa funzionalità è utile quando si lavora con team diversi, come quelli di sicurezza e DevOps, che potrebbero dover prima concedere le autorizzazioni necessarie per completare la creazione del collegamento.</block>
-  <block id="272404907923a583d38661d1f77a2a8c" category="list-text">Nella pagina Crea collegamento, seleziona CloudFormation o Terraform dalla casella del codice, quindi fornisci quanto segue:</block>
   <block id="1ca9512c09f6b26312a475fda293b54a" category="list-text">*Registrazione del collegamento*: seleziona CloudFormation o Terraform per le istruzioni su come registrare il collegamento e segui le istruzioni.</block>
   <block id="aeb7b1f8e40a81f588a0d8770c9826d3" category="list-text">SMB/CIFS: protocollo di archiviazione file per sistemi operativi Windows</block>
   <block id="77e7ba17717c79352c95d49bede81697" category="list-text">È necessario configurare l'accesso per il protocollo selezionato: SMB/CIFS, NFS o iSCSI.</block>
@@ -2987,7 +2977,6 @@
   <block id="e97bbb69ec6bcd2c1b3d761224ed4559" category="admonition">La creazione automatica di link non è supportata per gli account AWS GovCloud.</block>
   <block id="d37d952a78337c053485a61317b953df" category="list-text">*AWS Secrets Manager*: Sempre abilitato per gli account GovCloud. Facoltativo per gli altri account. Consente a NetApp Workload Factory di recuperare le credenziali di accesso FSx for ONTAP dal tuo AWS Secrets Manager.</block>
   <block id="f3a06ea1d47de2a4216fe3fd53364d24" category="list-text">*Fornito dall'utente*: Seleziona questa opzione per assegnare un ruolo di esecuzione Lambda specifico e le relative policy al collegamento Lambda. Per la policy di autorizzazione Lambda sono necessarie le seguenti autorizzazioni. L'<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> autorizzazione è richiesta solo quando usi AWS Secrets Manager.</block>
-  <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">Tieni presente che a Lambda vengono concesse tre autorizzazioni quando avvii il modello CloudFormation. NetApp Workload Factory utilizza queste autorizzazioni quando usi i collegamenti.</block>
   <block id="1425c9b22ae63851bbaa938ebc0a967d" category="list-text">Dopo che hai creato correttamente lo stack, incolla l'ARN di Lambda nella casella di testo nella console di Workload Factory. Workload Factory recupera automaticamente l'account AWS, la posizione e il gruppo di sicurezza in base al file system FSx for ONTAP.</block>
   <block id="47dfa5e12270c73140e2f3dc8b32a020" category="paragraph">Workload Factory associa il collegamento al file system FSx for ONTAP. Puoi eseguire operazioni avanzate di ONTAP.</block>
   <block id="eb3eec333eedf15738e12e55e183cdb7" category="paragraph"><block ref="c7c8a4154bf78f63993b7572e6143221" category="inline-link-macro-rx"></block>.</block>
@@ -3246,4 +3235,24 @@
   <block id="12a6e2d4c91a43e9ac81b18d2fd28a4a" category="list-text">Seleziona il menu delle azioni del volume per impostare le soglie di latenza.</block>
   <block id="388a60e15f099855100226e2026dc1cd" category="list-text">Seleziona il menu Azioni del volume con il volume clonato da suddividere.</block>
   <block id="3b4ba83afa209df4541afdb1c96a15f9" category="list-text">Seleziona il menu Azioni del volume per aggiornare l'impostazione di efficienza di archiviazione.</block>
+  <block id="c329a6ebc8c0891e88889203e3e31c39" category="doc">Creazione di link disponibile dalla pagina Link</block>
+  <block id="ef8e743556b96fe2947729361cb5835f" category="paragraph">Ora puoi creare collegamenti direttamente dalla pagina Collegamenti nel menu Amministrazione, oltre che dalla pagina Inventario FSx per ONTAP e dalla pagina Panoramica del file system.</block>
+  <block id="b65fab1584e1a15fb6cd01b1fb573a1f" category="inline-link-macro">Scopri di più sulla creazione di link</block>
+  <block id="2fb8fbf9eac6cb7cdbca3e8cae581dd0" category="paragraph"><block ref="ac8902bc899b18c41d3bea9bfd9e1e86" category="inline-link-macro-rx"></block>.</block>
+  <block id="eb72702456cb13d975ccfacb15b610d0" category="paragraph">I link utilizzano AWS Lambda per eseguire codice in risposta agli eventi e gestiscono automaticamente le risorse di calcolo necessarie a tale codice. I link che crei fanno parte del tuo NetApp account e sono associati a un account AWS.</block>
+  <block id="de753f9064c7210624293a7c1d1e13f9" category="paragraph">Puoi creare un link nel tuo account quando definisci un file system FSx for ONTAP. Usi il link per quel file system e puoi usarlo anche per altri file system FSx for ONTAP. Puoi anche associare un link a un file system in seguito.</block>
+  <block id="36c518eb88267ad8a7105893fd209a46" category="list-text">Dal menu Amministrazione, seleziona *Collegamenti*.</block>
+  <block id="892be23a9211e0d2e6a0d60b06507944" category="list-text">Nella pagina Collegamenti, seleziona *Crea e associa*.</block>
+  <block id="cb045f0740ec2fb29d2864d6c52abff5" category="list-text">Nella finestra di dialogo Associa collegamento, seleziona il file system da associare al collegamento e seleziona *Continua*.</block>
+  <block id="a9dc1217e276dbbc98e08e5bf8b4e0bd" category="list-text">Seleziona *Crea un nuovo link* e poi seleziona *Continua*.</block>
+  <block id="eaa9de7b48a473b999b69f05d59df6c2" category="list-text">Nella pagina Crea collegamento, seleziona *Crea automaticamente* e poi inserisci quanto segue:</block>
+  <block id="0a447482fbe2f57253df6484a37127e2" category="list-text">*Ruolo di esecuzione fornito dall'utente*: Seleziona questa opzione per assegnare un ruolo di esecuzione Lambda specifico e le relative policy al collegamento Lambda. Per la policy di autorizzazione Lambda sono necessarie le seguenti autorizzazioni. L'autorizzazione <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> è richiesta solo se hai abilitato AWS Secrets Manager.</block>
+  <block id="4e4d4587b3d4f525dd0bfabd81edb7d7" category="paragraph">Il modello CloudFormation concede a Lambda tre autorizzazioni quando lo avvii. Workload Factory utilizza queste autorizzazioni quando usi i link.</block>
+  <block id="6f0344b8291b1471c971ba88374dce8a" category="paragraph">Puoi monitorare lo stato di creazione del link nella pagina Eventi. Questo dovrebbe richiedere non più di cinque minuti.</block>
+  <block id="7b8171c19525234afed5066a22d0bdbe" category="list-text">Nella pagina Crea collegamento, seleziona *Crea manualmente* e poi seleziona CloudFormation o Terraform dalla casella di codice.</block>
+  <block id="bf419e3bcb855d67fd85a99f9a55eb97" category="list-text">Nella sezione Dettagli e credenziali, fornisci le seguenti informazioni:</block>
+  <block id="0b1685216b81bbd8b7a0d6bb09435f98" category="paragraph">Dopo aver creato il collegamento, associalo a uno o più file system FSx for ONTAP.</block>
+  <block id="64c7a4783273d9e14ea971d0631f7ac8" category="paragraph">Verifica che l'ARN segreto contenga le seguenti coppie chiave-valore, anche se il parametro _filesystemID_ è facoltativo.</block>
+  <block id="669b6152234fe8c12012646b005a7d2f" category="paragraph">Il segreto deve contenere le seguenti coppie chiave-valore:</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">30 agosto 2026</block>
 </blocks>
