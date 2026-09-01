@@ -4,7 +4,7 @@ permalink: create-cyber-vault.html
 keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
 summary: 'Scopri di più sui cyber vault NetApp e su come implementare l"architettura dei cyber vault per proteggere i tuoi dati da ransomware e minacce informatiche.' 
 ---
-= Proteggi i tuoi dati con un cyber vault
+= Proteggi i tuoi dati FSx for ONTAP con un cyber vault
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

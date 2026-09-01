@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
 summary: Regola manualmente la capacità di archiviazione SSD di un file system FSx for ONTAP per soddisfare le esigenze dei carichi di lavoro basati sui progetti con diversi set di lavoro attivi. 
 ---
-= Regola manualmente la capacità del file system in Workload Factory
+= Regola manualmente la capacità del file system in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

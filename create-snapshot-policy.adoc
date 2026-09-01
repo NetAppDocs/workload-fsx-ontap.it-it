@@ -4,7 +4,7 @@ permalink: create-snapshot-policy.html
 keywords: create 
 summary: Crea un criterio di snapshot personalizzato per una VM di archiviazione in Workload Factory. 
 ---
-= Creare un criterio di snapshot per le VM di archiviazione in Workload Factory
+= Crea una policy di snapshot per le storage VM in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

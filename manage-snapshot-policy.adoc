@@ -4,7 +4,7 @@ permalink: manage-snapshot-policy.html
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
 summary: Gestire i criteri di snapshot per i volumi FSx for ONTAP in Workload Factory.  Un criterio di snapshot definisce il modo in cui il sistema crea snapshot per un volume. 
 ---
-= Gestire le policy delle snapshot
+= Gestisci le policy di snapshot per i volumi in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
