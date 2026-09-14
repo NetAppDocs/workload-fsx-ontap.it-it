@@ -23,7 +23,7 @@ Può esistere una relazione di cache tra volumi su due sistemi ONTAP , ad esempi
 .Prima di iniziare
 Prima di iniziare, tieni presente quanto segue.
 
-* È necessario associare un collegamento per scoprire le relazioni della cache su un file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"] . Dopo aver associato il collegamento, tornare a questa operazione.
+* Devi associare un collegamento per individuare le relazioni della cache su un file system. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che hai associato il collegamento, torna a questa operazione.
 * È necessario che esista una relazione di cache.
 
 

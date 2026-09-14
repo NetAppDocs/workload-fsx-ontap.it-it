@@ -31,7 +31,7 @@ Il monitoraggio della latenza utilizza i seguenti parametri predefiniti:
 Viene generato un avviso quando la soglia di latenza viene superata e la soglia di IOPS viene raggiunta nell'intervallo di tempo specificato.
 
 
-NOTE: Puoi visualizzare gli eventi di latenza e ricevere avvisi anche senza una connessione di collegamento. Tuttavia, per analizzare gli eventi e ricevere approfondimenti e raccomandazioni basati sull'intelligenza artificiale, devi link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["connetti al file system tramite un collegamento"].
+NOTE: Puoi visualizzare gli eventi di latenza e ricevere avvisi anche senza una connessione di collegamento. Tuttavia, per analizzare gli eventi e ricevere approfondimenti e raccomandazioni basati sull'intelligenza artificiale, devi link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["connetti al file system tramite un collegamento"^].
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -53,5 +53,5 @@ Workload Factory monitora il volume e genera avvisi quando la latenza di lettura
 
 .Informazioni correlate
 * link:analyze-events.html["Analizza gli eventi FSx for ONTAP in NetApp Workload Factory"]
-* link:adjust-volume-capacity.html["Regola la capacità del volume in Workload Factory"]
+* link:manage-volume-capacity.html["Regola la capacità del volume in Workload Factory"]
 

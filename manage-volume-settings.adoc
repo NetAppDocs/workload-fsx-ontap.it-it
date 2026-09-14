@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: manage-volume-settings.html 
+keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
+summary: I tag possono aiutarti a categorizzare le risorse. Puoi aggiungere, modificare e rimuovere i tag di volume in qualsiasi momento per FSX per i volumi ONTAP. 
+---
+= Gestisci le impostazioni del volume in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Personalizza le impostazioni dei volumi FSx for ONTAP in NetApp Workload Factory per adattarle alle esigenze della tua organizzazione. Puoi gestire i tag dei volumi per categorizzare le risorse, aggiornare le impostazioni di efficienza dello storage per ottimizzare spazio e risparmio sui costi e gestire le impostazioni dei file immutabili per controllare la conservazione dei dati e proteggerli da modifiche non autorizzate.
+
+
+
+[[manage-volume-tags]]
+== Gestire i tag di volume
+
+I tag possono aiutarti a categorizzare le tue risorse.  È possibile aggiungere, modificare e rimuovere i tag del volume in qualsiasi momento per i volumi FSx for ONTAP in NetApp Workload Factory.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume di cui vuoi modificare i tag.
+. Selezionare *azioni di base*, quindi *Modifica tag volume*.
+. Nella pagina Modifica tag volume, aggiungere, modificare o rimuovere tag.
++
+Il numero massimo di tag che è possibile applicare a un volume è 50.
+
+. Selezionare *Applica*.
+
+
+
+
+[[update-volume-storage-efficiency]]
+== Aggiorna l'efficienza di storage del volume
+
+Aggiorna l'impostazione di efficienza dello storage dopo la creazione del volume.
+
+La funzionalità di efficienza dello storage comprende deduplica, compressione dei dati e data compaction per ottenere risparmi di spazio ottimali su FlexVol volume. La deduplica elimina i blocchi di dati duplicati. La compressione dei dati comprime i blocchi di dati per ridurre la quantità di storage fisico richiesta. La compattazione dei dati memorizza più dati in meno spazio per aumentare l'efficienza dello storage.
+
+Se si è scelto di non abilitare l'efficienza dello storage quando è stato creato un volume, è possibile abilitare l'impostazione per potenziali risparmi di spazio e costi in qualsiasi momento.
+
+I volumi utilizzano il thin provisioning abilitando o disabilitando l'efficienza dello storage.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni del volume per aggiornare l'impostazione di efficienza di archiviazione.
+. Selezionare *azioni avanzate*, quindi *Imposta efficienza di archiviazione*.
+. Consente di attivare o disattivare l'efficienza dello storage di volumi.
+. Selezionare *Applica* per salvare la modifica.
+
+
+
+
+[[manage-immutable-files-for-a-volume-in-netapp-workload-factory]]
+== Gestire i file immutabili per un volume in NetApp Workload Factory
+
+È possibile aggiornare determinate impostazioni di file immutabili per un volume quando la funzionalità è attivata, ad esempio i criteri e i periodi di conservazione, il periodo di autocommit e la modalità di aggiunta del volume.
+
+Si noti che l'abilitazione dei file immutabili è possibile solo durante link:create-volume.html["creazione di volumi"].
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni del volume da aggiornare.
+. Selezionare *azioni protezione dati*, quindi *Gestisci file immutabili*.
+. Nella pagina Gestisci file immutabili, è possibile aggiornare quanto segue:
++
+** *Periodo di conservazione*: Selezionare *non specificato* o *specifica periodo*.
++
+*** *Non specificato*: Il periodo minimo predefinito è "0" anni e il periodo massimo predefinito è "30 anni".
+*** *Specifica periodo*: Opzione per definire il criterio di conservazione, i periodi minimo e massimo, la funzione di autocommit e la modalità di aggiunta del volume. Fornire i seguenti dettagli:
++
+**** *Criterio di conservazione*: Questo periodo deve essere maggiore o uguale al periodo di conservazione minimo e minore o uguale al periodo di conservazione massimo.
+**** *Periodi minimo e massimo*: Impostare i periodi minimo e massimo per assegnare i file in questo volume a uno stato WORM immutabile.
+
+
+
+
+** *Autocommit*: Abilita o disabilita la funzione per assegnare automaticamente i file al WORM che non sono stati modificati durante il periodo di autocommit.
+** *Eliminazione privilegiata*: abilita o disabilita la funzionalità.  L'abilitazione di questa funzionalità consente all'amministratore SnapLock di eliminare un volume WORM non scaduto.  Questa funzionalità è supportata solo nella modalità di conservazione Enterprise.
+** *Modalità di aggiunta volume*: Consente di attivare o disattivare la funzione. Abilitando la modalità di aggiunta di volumi è possibile aggiungere nuovi contenuti ai file WORM.
+
+
+. Fare clic su *Apply* (Applica).
+
+
+
+
+[[related-information]]
+== Informazioni correlate
+
+* link:create-volume.html["Crea un volume in Workload Factory"]
+* link:manage-volume-capacity.html["Gestisci la capacità del volume in Workload Factory"]
+* link:change-tiering-policy.html["Modificare la politica di suddivisione in livelli del volume in Workload Factory"]
+* link:manage-s3-access-points.html["Gestire i punti di accesso S3 in Workload Factory"]
+

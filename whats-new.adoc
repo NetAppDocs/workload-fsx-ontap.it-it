@@ -25,7 +25,7 @@ Scopri le novità di Amazon FSX per NetApp ONTAP.
 
 Ora puoi creare collegamenti direttamente dalla pagina Collegamenti nel menu Amministrazione, oltre che dalla pagina Inventario FSx per ONTAP e dalla pagina Panoramica del file system.
 
-link:create-link.html["Scopri di più sulla creazione di link"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri di più sulla creazione di link"^].
 
 
 
@@ -209,7 +209,7 @@ Workload Factory identifica gli host che utilizzano lo storage e i tipi di caric
 
 Visualizziamo tutti gli endpoint del file system e delle VM di storage direttamente nella scheda Panoramica per un file system. La visibilità diretta degli endpoint all'interno della console di Workload Factory semplifica il monitoraggio dell'accesso alla rete, degli endpoint e dello stato del failover senza utilizzare la CLI o CloudShell. Per visualizzare i dettagli di LIF, inclusi ruoli, endpoint, nodi, indirizzi IP e stato, è necessario associare un collegamento al file system.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento al tuo file system in NetApp Workload Factory"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento al tuo file system in NetApp Workload Factory"^].
 
 
 
@@ -943,7 +943,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Ora puoi utilizzare Terraform da Codebox per creare un collegamento per l'associazione con un file system FSx per ONTAP .  Questa funzionalità è destinata agli utenti che creano i collegamenti manualmente.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connettersi a un file system FSX per ONTAP con un collegamento Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connettersi a un file system FSX per ONTAP con un collegamento Lambda"^]
 
 
 
@@ -1047,7 +1047,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["S
 
 Ora puoi gestire il ruolo di esecuzione IAM e la relativa policy di autorizzazione quando crei un collegamento nella console Workload Factory.  Un collegamento stabilisce la connettività tra il tuo account Workload Factory e uno o più file system FSx for ONTAP .  Sono disponibili due opzioni per assegnare il ruolo di esecuzione IAM e le autorizzazioni di collegamento: automaticamente o fornite dall'utente.  Grazie alla gestione del ruolo di esecuzione e della relativa policy di autorizzazione in Workload Factory, non sarà più necessario utilizzare codice di terze parti.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connettersi a un file system FSX per ONTAP con un collegamento Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connettersi a un file system FSX per ONTAP con un collegamento Lambda"^]
 
 
 
@@ -1086,7 +1086,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Ora puoi impostare l'aumento automatico delle dimensioni dei tuoi volumi in modo che le dimensioni del volume possano aumentare oltre le dimensioni previste in base alle esigenze aziendali e ai requisiti delle applicazioni.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["Attiva la crescita automatica del volume"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["Attiva la crescita automatica del volume"]
 
 
 
@@ -1548,7 +1548,7 @@ L'inventario dello storage è stato aggiornato con una vista a due schede:
 * Supporto per la creazione manuale dei link: Questa funzione consente la creazione standalone in AWS CloudFormation con registrazione manuale del link ARN. È utile quando un team di sicurezza o DevOps assiste nel processo di creazione dei collegamenti.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Creare un collegamento"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Creare un collegamento"^]
 
 
 

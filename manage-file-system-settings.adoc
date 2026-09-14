@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: manage-file-system-settings.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
+summary: Aggiungere, aggiornare o rimuovere i tag del file system FSx for ONTAP per un file system in qualsiasi momento. 
+---
+= Gestisci le impostazioni del file system FSx for ONTAP in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestisci le impostazioni di un file system FSx for ONTAP in NetApp Workload Factory. Puoi gestire i tag del file system, reimpostare la password di fsxadmin quando necessario e aggiornare la capacità di throughput secondo le esigenze.
+
+
+
+[[manage-fsx-for-ontap-file-system-tags]]
+== Gestisci i tag del file system FSx for ONTAP
+
+I tag possono aiutarti a categorizzare le tue risorse.  È possibile aggiungere, modificare e rimuovere i tag per un file system in qualsiasi momento in NetApp Workload Factory.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system da aggiornare, quindi seleziona *Gestisci tag del file system*.
+. Nella finestra di dialogo *Gestisci tag del file system*, aggiungi, modifica o rimuovi i tag in base alle tue esigenze.
++
+Il numero massimo di tag che è possibile applicare a un file system è 50.
+
+. Selezionare *Applica*.
+
+
+
+
+[[reset-the-fsxadmin-password-of-an-fsx-for-ontap-file-system]]
+== Reimposta la password fsxadmin di un file system FSx for ONTAP
+
+Reimpostare la password fsxadmin in NetApp Workload Factory quando necessario.
+
+Se è stato fornito un utente alternativo durante la creazione del file system, è possibile reimpostare la password fsxadmin solo nella console AWS.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu azioni del file system per cui reimpostare la password fsxadmin, quindi seleziona *Gestisci*.
+. Dalla panoramica del file system, selezionare il menu azioni.
++
+image:screenshot-reset-fsxadmin-password.png["Uno screenshot del menu delle azioni nella scheda Panoramica per un file system."]
+
+. Selezionare *Reimposta password fsxadmin*.
+. Nella finestra di dialogo Reimposta password fsxadmin, immettere una nuova password fsxadmin e reimmetterla per confermare.
+. Selezionare *Applica*.
+
+
+
+
+[[update-throughput-capacity-for-an-fsx-for-ontap-file-system]]
+== Aggiorna la capacità di throughput per un file system FSx for ONTAP
+
+Aggiornare la capacità di elaborazione per un file system FSx for ONTAP in NetApp Workload Factory secondo necessità.
+
+Per i limiti di capacità di throughput, fai riferimento alla link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quote"^] documentazione di AWS FSX per NetApp ONTAP.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu delle azioni del file system per cui aggiornare la capacità di throughput, quindi seleziona *Gestisci*.
+. In informazioni, selezionare l'icona a forma di matita accanto a *capacità di trasmissione*. L'icona a forma di matita viene visualizzata accanto alla freccia del menu a discesa quando il mouse passa sopra la riga *capacità di throughput*.
+. Nella finestra di dialogo capacità di throughput, selezionare la capacità di throughput desiderata.
+. Seleziona *Applica* per salvare le modifiche
+

@@ -51,7 +51,11 @@ Se hai selezionato il caso d'uso di migrazione, Workload Factory sceglie automat
 
 . *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MB/s. In alternativa, selezionare *illimitato*.
 +
-Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery. . In Impostazioni di replica, specificare quanto segue:
+Senza limiti, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+
++
+.. In Impostazioni di replica, specificare quanto segue:
+
 
 . *Inizializza la relazione di replica*: scegli se inizializzare la relazione di replica immediatamente dopo averla creata o in un secondo momento. Tieni presente che l'inizializzazione può richiedere tempo e potresti voler eseguire il trasferimento baseline durante le ore di minore affluenza.
 +

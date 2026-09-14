@@ -62,7 +62,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Ora puoi utilizzare Terraform da Codebox per creare un collegamento per l'associazione con un file system FSx per ONTAP .  Questa funzionalità è destinata agli utenti che creano i collegamenti manualmente.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connettersi a un file system FSX per ONTAP con un collegamento Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connettersi a un file system FSX per ONTAP con un collegamento Lambda"^]
 
 
 

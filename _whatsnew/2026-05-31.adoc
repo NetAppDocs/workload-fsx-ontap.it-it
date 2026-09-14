@@ -41,7 +41,7 @@ Workload Factory identifica gli host che utilizzano lo storage e i tipi di caric
 
 Visualizziamo tutti gli endpoint del file system e delle VM di storage direttamente nella scheda Panoramica per un file system. La visibilità diretta degli endpoint all'interno della console di Workload Factory semplifica il monitoraggio dell'accesso alla rete, degli endpoint e dello stato del failover senza utilizzare la CLI o CloudShell. Per visualizzare i dettagli di LIF, inclusi ruoli, endpoint, nodi, indirizzi IP e stato, è necessario associare un collegamento al file system.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento al tuo file system in NetApp Workload Factory"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento al tuo file system in NetApp Workload Factory"^].
 
 
 

@@ -19,20 +19,32 @@ indexpage:
     links:
     - title: Scopri i risparmi
       url: "/explore-savings.html"
-    - title: Tieni traccia dei costi e dell'utilizzo delle risorse FSx per ONTAP
-      url: "/track-costs.html"
     - title: Connettersi a un file system con un collegamento
-      url: "/create-link.html"
-    - title: Proteggi i tuoi dati
-      url: "/data-protection-overview.html"
-  - title: Amministrare e monitorare
+      url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
+    - title: Creare una VM di storage
+      url: "/create-storage-vm.html"
+    - title: Creare un volume
+      url: "/create-volume.html"
+  - title: Proteggi i tuoi dati
     links:
-    - title: Monitoraggio delle operazioni con Tracker
-      url: "/monitor-operations.html"
-    - title: Visualizza lo stato ben progettato dei tuoi file system FSx per ONTAP
+    - title: Scopri la protezione dei dati in Workload Factory
+      url: "/data-protection-overview.html"
+    - title: Usa le snapshot per proteggere i dati
+      url: "/use-snapshots.html"
+    - title: Usa i backup per proteggere i dati
+      url: "/use-backups.html"
+    - title: Usa la replica per proteggere i dati
+      url: "/create-replication.html"
+  - title: Gestisci FSx per ONTAP
+    links:
+    - title: Modifica la policy di tiering di un volume
+      url: "/change-tiering-policy.html"
+    - title: Migliora le configurazioni del file system FSx for ONTAP
       url: "/improve-configurations.html"
-    - title: Analizza FSx per gli eventi ONTAP EMS
-      url: "/analyze-events.html"
+    - title: Gestisci i criteri di snapshot di un volume
+      url: "/manage-snapshot-policy.html"
+    - title: Gestisci la capacità del volume
+      url: "/manage-volume-capacity.html"
   - title: Conoscenza e supporto
     links:
     - title: Registrati per ricevere assistenza

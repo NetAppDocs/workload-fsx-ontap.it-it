@@ -64,7 +64,7 @@ Prima di creare un volume, esaminare i seguenti prerequisiti:
 * Devi avere una macchina virtuale di storage.
 * Per l'accesso al protocollo, completare quanto segue:
 +
-** Per configurare l'accesso al volume, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
+** Per configurare l'accesso al volume, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
 ** È necessario configurare l'accesso per il protocollo selezionato: SMB/CIFS, NFS o iSCSI.
 
 
@@ -177,7 +177,7 @@ ONTAP raggiunge l'efficienza di archiviazione utilizzando funzionalità di dedup
 
 .. *Criterio snapshot*: Selezionare il criterio snapshot per specificare la frequenza e la conservazione degli snapshot.
 +
-Di seguito sono riportate le policy predefinite di AWS. Per visualizzare i criteri snapshot esistenti, è necessario link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associare un collegamento"].
+Di seguito sono riportate le policy predefinite di AWS. Per visualizzare le policy snapshot esistenti, devi link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["associare un collegamento"^].
 
 +
 `default`:: Questo criterio crea automaticamente gli snapshot nella seguente pianificazione, con le copie snapshot più vecchie eliminate per fare spazio alle copie più recenti:
@@ -233,7 +233,7 @@ _Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito 
 Se la funzionalità non è disponibile, il motivo è uno dei seguenti:
 
 +
-*** Nessun collegamento è associato al file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
+*** Il collegamento non è associato al file system. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il collegamento, torna a questa operazione.
 *** I volumi con file immutabili e i volumi con protocollo NVMe non sono supportati per ARP/AI. I volumi iSCSI sono supportati a partire da ONTAP 9.17.1.
 *** Il file system ha già una policy ARP/AI.
 
@@ -252,7 +252,7 @@ Se la funzionalità non è disponibile, il motivo è uno dei seguenti:
 
 
 .Informazioni correlate
-* link:adjust-volume-capacity.html["Regola la capacità del volume in Workload Factory"]
+* link:manage-volume-capacity.html["Regola la capacità del volume in Workload Factory"]
 * link:change-tiering-policy.html["Modificare la politica di suddivisione in livelli del volume in Workload Factory"]
 * link:manage-s3-access-points.html["Gestire i punti di accesso S3 in Workload Factory"]
 

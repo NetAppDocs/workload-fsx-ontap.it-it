@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: learn-about-links.html 
+keywords: links, accounts, lambda 
+summary: Un collegamento Workload Factory crea una relazione di trust e connettività tra un account Workload Factory e uno o più file system FSx for ONTAP . 
+---
+= Scopri i link di NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Direttiva non risolta in <stdin> - include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/links-overview.adoc[]

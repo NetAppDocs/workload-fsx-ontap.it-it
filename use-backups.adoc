@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: use-backups.html 
+keywords: create backup, volume backup, back up a volume, FSx for ONTAP backup, manual backup, restore from a backup, restore volume 
+summary: Proteggi i dati dei tuoi volumi da cancellazioni accidentali, danneggiamenti e altri eventi di perdita di dati creando e ripristinando backup in NetApp Workload Factory. 
+---
+= Utilizza i backup per proteggere i dati in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Proteggi i dati dei tuoi volumi da cancellazioni accidentali, danneggiamenti e altri eventi di perdita di dati creando e ripristinando backup in NetApp Workload Factory. Puoi impostare una pianificazione dei backup, creare un backup su richiesta di un volume al di fuori dei backup programmati regolarmente e ripristinare un volume da un backup esistente su qualsiasi file system FSx for ONTAP nel tuo account AWS.
+
+
+
+[[create-an-on-demand-backup-of-a-volume]]
+== Crea un backup su richiesta di un volume
+
+Creare un backup manuale di un volume al di fuori dei backup pianificati regolarmente in NetApp Workload Factory.
+
+.A proposito di questa attività
+I backup dei volumi vengono eseguiti per singolo volume, quindi ogni backup contiene solo i dati in un particolare volume.
+
+I backup del volume sono incrementali, il che significa che vengono salvati solo i dati sul volume che sono stati modificati dopo il backup più recente. Questo riduce al minimo il tempo necessario per creare il backup e lo spazio di archiviazione richiesto per il backup, con conseguente risparmio sui costi di archiviazione grazie all'assenza di duplicazione dei dati.
+
+.Prima di iniziare
+Per eseguire il backup dei volumi, sia il volume che il file system devono disporre di una capacità di storage SSD sufficiente per archiviare lo snapshot di backup. Quando si crea una snapshot di backup, la capacità di storage aggiuntiva consumata dalla snapshot non può far sì che il volume superi il 98% di utilizzo dello storage SSD. In questo caso, il backup non viene eseguito correttamente.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume di cui eseguire il backup.
+. Seleziona *Data protection actions*, *Volume backups* e quindi *Manual backup*.
+. Nella finestra di dialogo Backup manuale, immettere un nome per il backup.
+. Selezionare *Backup*.
+
+
+
+
+[[restore-a-volume-from-a-backup-in-netapp-workload-factory]]
+== Ripristina un volume da un backup in NetApp Workload Factory
+
+In NetApp Workload Factory, puoi ripristinare un volume da un backup su qualsiasi file system FSx for ONTAP nel tuo account AWS.
+
+Workload Factory determina se hai abbastanza capacità per il ripristino e può aggiungere automaticamente capacità al tier di storage SSD se non ne hai a sufficienza.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume da ripristinare da un backup.
+. Seleziona *Data protection actions*, *Volume backups* e quindi *Restore from a backup*.
+. Nella finestra di dialogo Ripristina da un backup, specificare quanto segue:
++
+.. *File system di destinazione*: Selezionare il file system di destinazione dal menu a discesa.
+.. *VM di archiviazione di destinazione*: Selezionare la VM di archiviazione di destinazione dal menu a discesa.
+.. *Nome backup*: Selezionare il nome del backup dal menu a discesa.
+.. *Nome volume ripristinato*: Immettere il nome del volume ripristinato.
+
+
+. Verificare la capacità del file system per l'operazione di ripristino.
++
+Quando la capacità del file system è limitata, si possono verificare le seguenti condizioni:
+
++
+** Il ripristino può portare la capacità utilizzata oltre la soglia che hai specificato. Puoi completare l'operazione di ripristino. Considera link:adjust-file-system-capacity.html["Aggiunta manuale della capacità del Tier di storage SSD"] o seleziona per Workload Factory l'aggiunta automatica della capacità del tier di storage SSD.
+** Il ripristino richiede capacità SSD aggiuntiva.  Per procedere, è necessario selezionare Workload Factory per aggiungere automaticamente la capacità del livello di archiviazione SSD.
+
+
+. Selezionare *Restore* (Ripristina).
+

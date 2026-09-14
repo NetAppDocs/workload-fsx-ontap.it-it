@@ -65,7 +65,7 @@ Attivando ARP/AI per un file system, proteggi automaticamente tutti i volumi NAS
 Se ARP/AI rileva un attacco reale dopo la sua attivazione, Workload Factory crea automaticamente una snapshot policy. Questa policy può creare fino a sei snapshot ogni quattro ore. Ogni snapshot è bloccato per 2-5 giorni.
 
 .Prima di iniziare
-Per abilitare ARP/AI per un file system o un volume, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"] .  Dopo aver associato il collegamento, tornare a questa operazione.
+Per abilitare ARP/AI per un file system o un volume, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
 
 [role="tabbed-block"]
 ====

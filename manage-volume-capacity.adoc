@@ -1,22 +1,82 @@
 ---
 sidebar: sidebar 
-permalink: rebalance-volume.html 
-keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: Controllare e riequilibrare la capacità del volume per evitare squilibri che si sviluppano nel tempo. 
+permalink: manage-volume-capacity.html 
+keywords: volume size, rebalance volume capacity, adjust volume capacity, volume autogrow, manage volume capacity, FlexVol volume, FlexGroup volume 
+summary: 'Scopri come gestire la capacità dei volumi, inclusa la regolazione manuale delle dimensioni dei volumi e l"utilizzo del dimensionamento automatico dei volumi in Workload Factory.' 
 ---
-= Verifica e ribilancia la capacità del volume in NetApp Workload Factory
+= Gestisci la capacità del volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Controllare il bilanciamento della capacità del volume FlexVol o FlexGroup e ribilanciare la capacità del volume per distribuire i file in modo uniforme su tutti i volumi FlexVol in un nodo o su tutti i componenti, in modo che tutti i nodi partecipino al carico di lavoro di un singolo volume FlexGroup.
+La capacità del volume deve essere regolata in base alle esigenze. Puoi regolare manualmente le dimensioni del volume oppure attivare il dimensionamento automatico del volume per lasciare che Workload Factory gestisca la capacità del volume per te. Controlla il bilanciamento della capacità del volume FlexVol o FlexGroup e riequilibra la capacità del volume per distribuire i file in modo uniforme su tutti i volumi FlexVol di un nodo o su tutti i costituenti, così che tutti i nodi partecipino al carico di lavoro di un singolo volume FlexGroup.
 
 
 
-[[about-this-task]]
-== A proposito di questa attività
+[[edit-volume-autogrow]]
+== Consente di modificare la crescita automatica del volume
+
+Attiva il dimensionamento automatico del volume per consentire a Workload Factory di gestire la capacità del volume al posto tuo. Puoi disattivarlo in qualsiasi momento.
+
+
+NOTE: L'espansione automatica dei volumi non è supportata per i volumi iSCSI.
+
+.Prima di iniziare
+Per abilitare l'espansione automatica del volume, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu delle azioni relativo al volume che vuoi modificare.
+. Selezionare *Azioni di base*, quindi *Imposta aumento automatico volume*.
+. Nella finestra di dialogo Imposta aumento automatico, abilita l'aumento automatico del volume per espandere automaticamente la capacità del volume fino al raggiungimento della dimensione massima. Questa funzione si adatta all'aumento dell'utilizzo dei dati, garantendo operazioni senza interruzioni.
++
+Specificare la dimensione massima di crescita del volume e l'unità di misura. La dimensione massima di crescita non può essere inferiore alla dimensione del volume corrente.
+
+. Selezionare *Applica*.
+
+
+
+
+[[adjust-volume-capacity-manually]]
+== Regola manualmente la capacità del volume
+
+È possibile regolare la capacità del volume aumentando o diminuendo la dimensione di provisioning di un volume.  La tabella seguente mostra le dimensioni minime e massime del volume in base al tipo di volume:
+
+[cols="1,1,1"]
+|===
+| Tipo di volume | Dimensione minima | Dimensione massima 
+
+
+| Volume FlexVol | 20 MB | 300 TiB 
+
+
+| Volume FlexGroup | 800 GB | 2 PiB 
+|===
+Per una LUN iSCSI, aumentando le dimensioni del volume aumentano anche le dimensioni della LUN host.  Dopo aver aumentato la capacità del volume, seguire la procedura fornita dal sistema operativo host per scoprire la nuova dimensione del LUN ed espandere il file system del LUN.
+
+La riduzione delle dimensioni del volume è supportata solo per i volumi NFS e SMB/CIFS.
+
+.Prima di iniziare
+Per regolare la capacità del volume, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu delle azioni relativo al volume che vuoi modificare.
+. Selezionare *Azioni di base*, quindi *Regola capacità volume*.
+. Nella finestra di dialogo Regola capacità volume, imposta la *Capacità fornita* e l'unità.
+. Selezionare *Regola* per applicare le modifiche.
+
+
+
+
+[[rebalance-volume-capacity-for-flexvol-and-flexgroup-volumes]]
+== Ribilancia la capacità del volume per FlexVol e FlexGroup volumi
 
 Il ribilanciamento della capacità del volume è supportato per i volumi FlexVol e FlexGroup. Il ribilanciamento di un volume ridistribuisce la capacità quando gli squilibri si sviluppano nel tempo a causa dell'aggiunta di nuovi file e della crescita dei file. Dopo aver avviato manualmente l'operazione di riequilibrio, selezioniamo i file e li spostiamo automaticamente e senza interruzioni. Le operazioni di trasferimento dei volumi consumano risorse del file system.
 
@@ -42,13 +102,13 @@ NOTE: Il ribilanciamento non è supportato per volumi SAN come iSCSI e NVMe.
 
 
 [[check-the-balance-of-your-volumes]]
-== Controlla il saldo dei tuoi volumi
+=== Controlla il saldo dei tuoi volumi
 
 Controllare il saldo dei volumi FlexVol o FlexGroup in un file system FSx for ONTAP.
 
 .Prima di iniziare
 * Il bilanciamento del volume di FlexGroup è disponibile solo per i file system FSX per ONTAP utilizzando un'implementazione scale-out con almeno due coppie ha.
-* Per verificare il saldo di un volume, è necessario link:manage-links.html["associare un collegamento"] . Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per controllare il saldo di un volume, devi link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["crea e associa un collegamento o associa un collegamento esistente al file system"^]. Dopo che il collegamento si è associato, torna a questa operazione.
 
 
 .Fasi
@@ -72,7 +132,7 @@ Quando un volume è sbilanciato, considera <<Riequilibrare la capacità del volu
 
 
 [[rebalance-volume-capacity]]
-== Riequilibrare la capacità del volume
+=== Riequilibrare la capacità del volume
 
 Riequilibrare uno o più volumi non bilanciati.
 
@@ -81,7 +141,7 @@ NOTE: Un amministratore di Workload Factory può<<Interrompere un'operazione di 
 
 .Prima di iniziare
 * <<Controlla il saldo dei tuoi volumi,Controllare il saldo di un volume>> prima di ribilanciare i volumi.
-* Per riequilibrare un volume, è necessario link:manage-links.html["associare un collegamento"]. Se non si dispone di un collegamento esistente, link:create-link.html["creare un collegamento"]. Per associare un collegamento nel file system, selezionare *Associa collegamento* in *Nome account*. Dopo l'associazione del collegamento, tornare a questa operazione.
+* Per ribilanciare un volume, devi link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["crea e associa un collegamento o associa un collegamento esistente al file system"^]. Dopo che il collegamento si è associato, torna a questa operazione.
 * Gli snapshot esistenti sui volumi ribilanciati diventano parziali e non possono essere utilizzati per ripristinare i dati dei volumi, ma è possibile utilizzare i nuovi snapshot acquisiti dopo il ribilanciamento per ripristinare i dati dei volumi.
 * Si consiglia di ribilanciare i volumi FlexVol in modo uniforme per bilanciare tutte le risorse del volume. I volumi deselezionati non partecipano attivamente alla procedura di bilanciamento.
 
@@ -162,7 +222,7 @@ Durante il ribilanciamento, i volumi dei membri FlexGroup vengono spostati uno a
 
 
 [[stop-a-volume-rebalance-operation]]
-== Interrompere un'operazione di ribilanciamento del volume
+=== Interrompere un'operazione di ribilanciamento del volume
 
 È possibile interrompere un'operazione di ribilanciamento in qualsiasi momento; non è un'interruzione. L'interruzione dell'operazione annulla gli spostamenti di volume attivi.
 

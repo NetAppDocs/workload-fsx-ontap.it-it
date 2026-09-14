@@ -14,7 +14,7 @@ summary: La replica di una VM di storage su un altro file system FSX per ONTAP f
 La replica di una VM di storage su un altro file system FSx for ONTAP in NetApp Workload Factory fornisce un livello protettivo di accesso ai dati in caso di perdita di dati.  Questa operazione replica tutti i volumi in una VM di archiviazione su un altro file system FSx for ONTAP .
 
 .Prima di iniziare
-Per replicare una VM di archiviazione su un altro file system FSx for ONTAP, è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo l'associazione del collegamento, tornare a questa operazione.
+Per replicare una storage VM su un altro file system FSx for ONTAP, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
