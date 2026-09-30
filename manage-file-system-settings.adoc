@@ -11,7 +11,9 @@ summary: Aggiungere, aggiornare o rimuovere i tag del file system FSx for ONTAP 
 
 
 [role="lead"]
-Gestisci le impostazioni di un file system FSx for ONTAP in NetApp Workload Factory. Puoi gestire i tag del file system, reimpostare la password di fsxadmin quando necessario e aggiornare la capacità di throughput secondo le esigenze.
+Gestisci le impostazioni di un file system FSx for ONTAP in NetApp Workload Factory per mantenere il tuo file system organizzato, sicuro e dimensionato in modo appropriato per il tuo carico di lavoro. Puoi aggiungere o modificare tag, gestire le credenziali ONTAP, reimpostare la password di fsxadmin e aggiornare la capacità di throughput in qualsiasi momento.
+
+La panoramica del file system mostra le tendenze di utilizzo della capacità SSD e del throughput, riepiloghi dei principali carichi di lavoro generati dall'intelligenza artificiale e dettagli espandibili della configurazione del file system.
 
 
 
@@ -29,6 +31,44 @@ I tag possono aiutarti a categorizzare le tue risorse.  È possibile aggiungere,
 +
 Il numero massimo di tag che è possibile applicare a un file system è 50.
 
+. Selezionare *Applica*.
+
+
+
+
+[[manage-ontap-credentials]]
+== Gestisci le credenziali ONTAP
+
+Gestisci le credenziali ONTAP per un file system FSx for ONTAP in NetApp Workload Factory. Workload Factory ha due tipi di credenziali: primarie e con restrizioni. Per impostazione predefinita, il file system utilizza le credenziali ONTAP primarie. Le credenziali con restrizioni vengono utilizzate solo per le operazioni di AI (AIOps) come Ask Me, costruttore di regole e dashboard personalizzate. Puoi aggiungere facoltativamente un set di credenziali con restrizioni e aggiornare uno dei due set di credenziali in qualsiasi momento.
+
+Puoi eseguire le seguenti attività:
+
+* Scegli di aggiungere un set di credenziali con restrizioni, usando un nome utente e una password oppure un ARN segreto.
+* Modifica le credenziali esistenti, inclusi il nome utente e la password, solo la password o il secret ARN.
+
+
+Workload Factory supporta la transizione tra il servizio credenziali di Workload Factory (nome utente e password) e AWS Secrets Manager.
+
+Workload Factory gestisce le credenziali limitate come segue:
+
+* Se non hai fornito credenziali con restrizioni per un file system e poi crei regole o dashboard personalizzate o fai domande con "Ask Me", Workload Factory crea credenziali ONTAP di sola lettura da usare come set di credenziali con restrizioni.
+* Se hai già fornito credenziali con restrizioni per un file system, tali credenziali vengono utilizzate per AIOps.
+
+
+.Prima di iniziare
+Devi associare un collegamento per gestire le credenziali ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il collegamento, torna a questa procedura.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, selezionare *FSx per ONTAP*.
+. Da *FSx for ONTAP*, seleziona il menu azioni del file system per cui reimpostare la password fsxadmin, quindi seleziona *Gestisci*.
+. Dalla panoramica del file system, selezionare il menu azioni.
++
+image:screenshot-manage-ontap-credentials.png["Uno screenshot del menu delle azioni nella scheda Panoramica per un file system."]
+
+. Seleziona *Gestisci credenziali ONTAP*.
+. Aggiorna le credenziali ONTAP primarie o con restrizioni.
 . Selezionare *Applica*.
 
 

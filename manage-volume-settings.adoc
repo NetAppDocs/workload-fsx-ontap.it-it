@@ -11,7 +11,24 @@ summary: I tag possono aiutarti a categorizzare le risorse. Puoi aggiungere, mod
 
 
 [role="lead"]
-Personalizza le impostazioni dei volumi FSx for ONTAP in NetApp Workload Factory per adattarle alle esigenze della tua organizzazione. Puoi gestire i tag dei volumi per categorizzare le risorse, aggiornare le impostazioni di efficienza dello storage per ottimizzare spazio e risparmio sui costi e gestire le impostazioni dei file immutabili per controllare la conservazione dei dati e proteggerli da modifiche non autorizzate.
+Personalizza le impostazioni dei volumi FSx for ONTAP in NetApp Workload Factory per adattarle alle esigenze della tua organizzazione. Puoi gestire i tag dei volumi per categorizzare le risorse, ad esempio impostando i carichi di lavoro dei volumi, aggiornare le impostazioni di efficienza dello storage per ottimizzare lo spazio e il risparmio sui costi e gestire le impostazioni dei file immutabili per controllare la conservazione dei dati e proteggerli da modifiche non autorizzate.
+
+
+
+[[change-volume-workload]]
+== Modifica il volume del carico di lavoro
+
+Aggiorna i carichi di lavoro di un volume in modo che corrispondano ai casi d'uso previsti.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Archiviazione, seleziona *Esplora volumi*.
+. Seleziona il menu Azioni per il volume per il quale desideri aggiornare il carico di lavoro.
+. Seleziona *Azioni avanzate*, quindi *Modifica workload*.
+. Nella finestra di dialogo Modifica carichi di lavoro, seleziona i carichi di lavoro corretti per il volume.
+. Selezionare *Applica* per salvare le modifiche.
+
 
 
 
