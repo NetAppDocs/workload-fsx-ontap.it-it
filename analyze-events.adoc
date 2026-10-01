@@ -90,7 +90,7 @@ Modello consigliato: `anthropic.claude-sonnet-4-20250514-v1:0`. Fornire l'ARN de
 Crea e associa un collegamento a un file system FSx for ONTAP per abilitare l'analisi degli eventi basata sull'intelligenza artificiale. Un collegamento stabilisce una relazione di trust tra Workload Factory e uno o più file system FSx for ONTAP e sfrutta AWS Lambda.
 
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"]. Dopo aver stabilito l'associazione, torna a questa operazione.
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il collegamento, torna a questa procedura.
 
 * *Autorizzazioni AWS IAM*
 +

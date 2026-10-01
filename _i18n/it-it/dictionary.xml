@@ -1884,7 +1884,6 @@
   <block id="5b58af6390ae44b5a39c726b4820fffb" category="section-title">Gestire i tag FSx per un file system in NetApp Workload Factory</block>
   <block id="543e684a4a914d6bef4f91873d32e315" category="paragraph">Gestisci facilmente i tag FSx per un file system direttamente dalla console NetApp Workload Factory .  Questa funzionalità consente di aggiungere, modificare o rimuovere tag, consentendo una migliore organizzazione e categorizzazione dei file system FSx per ONTAP .</block>
   <block id="8945587d036e5b09c39322767239857a" category="inline-link-macro">Gestisci i tag FSx in Workload Factory</block>
-  <block id="3c57420160e53dc4967d9ca75a5d5d06" category="paragraph"><block ref="3c57420160e53dc4967d9ca75a5d5d06" category="inline-link-macro-rx"></block></block>
   <block id="1b931c0909a42d2dd6b1b28eeb36252c" category="section-title">Regola la capacità della cache per FSx per i file system ONTAP</block>
   <block id="aed1296ef373ba8df468af355d85d3ce" category="paragraph">È possibile aumentare e diminuire la capacità dei volumi di cache dalla console Workload Factory.</block>
   <block id="012110073acf8459d2a77ef54f547130" category="inline-link-macro">Gestire i volumi di cache in Workload Factory</block>
@@ -2945,7 +2944,6 @@
   <block id="ea05a1e5432074a56846a3cb823f80f2" category="inline-link-macro">Connettiti al file system tramite un collegamento</block>
   <block id="4cef7c6d6a0dbf34de8eba95d0e16b67" category="list-text"><block ref="7e93da5b3f54c52f1a6c0b519dbe8002" category="inline-link-macro-rx"></block>.</block>
   <block id="83726c1191ab868f046fb1270a7954b5" category="list-text">Hai <block ref="4c631e4853ec617b9b81a0579deada8a" category="inline-link-macro-rx"></block>.</block>
-  <block id="8261903e070030df643604429f468749" category="paragraph"><block ref="b7a77703e091475e5a757f20e1f86c42" category="inline-link-macro-rx"></block>. Dopo aver stabilito l'associazione, torna a questa operazione.</block>
   <block id="8feb6c8d13e912657481adbe0cafebb3" category="paragraph">Workload Factory applica le best practice agli ambienti di storage, database e VMware di grandi dimensioni, combinando valutazioni continue con suggerimenti e interventi correttivi. Le correzioni automatizzate riducono gli errori umani, garantiscono una gestione uniforme e preservano prestazioni e affidabilità in tutte le tue infrastrutture di workload.</block>
   <block id="fb7e951a08ddce4b83498e18f05a36da" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>.</block>
   <block id="72a389467e8e4db775c5a741c5559e79" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>.</block>
@@ -3134,7 +3132,6 @@
   <block id="b5033aab245daac51a144f2bf76d1491" category="section-title">Miglioramento della modalità di scrittura di FlexCache</block>
   <block id="988626e00644e40216e6917f272294d3" category="paragraph">Workload Factory ora riconosce la modalità di scrittura preferita di FlexCache per i volumi e consiglia di modificarla, se necessario, per ottimizzare le prestazioni.</block>
   <block id="7add6c128bfc87116bba8dfec617987f" category="section-title">Supporto alla documentazione dei collegamenti</block>
-  <block id="41d8c250ba5deffd33a0d05e7f94eaf4" category="paragraph">Tutta la documentazione relativa ai collegamenti è ora inclusa nella documentazione di configurazione e amministrazione di Workload Factory. Puoi comunque fare riferimento alla <block ref="25b81a757714a127c9c382013e960ce5" category="inline-link-macro-rx"></block>documentazione di Workload Factory FSx for ONTAP e trovare i collegamenti alle pagine pertinenti nella documentazione di configurazione e amministrazione.</block>
   <block id="ab868acd52ff4eb0e8c4b7bedf975941" category="inline-link-macro">Scopri di più sulla configurazione dei collegamenti nella console di Workload Factory.</block>
   <block id="3d5d598217b93a807560cdae92940fdc" category="paragraph"><block ref="3d5d598217b93a807560cdae92940fdc" category="inline-link-macro-rx"></block></block>
   <block id="433dd4f7423c50024b8b40531d2cdae6" category="section-title">Individuazione della relazione host-storage tra regioni diverse</block>
@@ -3186,4 +3183,7 @@
   <block id="53c306e93da69caff455d3eaa34a6b5c" category="list-text">Per filtrare in base ai tag di allocazione AWS, verifica che ai tuoi file system FSx for ONTAP siano stati assegnati dei tag.</block>
   <block id="22818134e299296b864b78dc4cca4c88" category="paragraph">Viene generato un report in formato CSV che puoi scaricare.</block>
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">30 settembre 2026</block>
+  <block id="cdda19a64421ad2d94977547c50a1983" category="paragraph"><block ref="cdda19a64421ad2d94977547c50a1983" category="inline-link-macro-rx"></block></block>
+  <block id="56643767ee547abedda1d643567a4c85" category="paragraph">Tutta la documentazione relativa ai collegamenti è ora inclusa nella documentazione di configurazione e amministrazione di Workload Factory. Puoi comunque fare riferimento alla <block ref="08c564abbdedd12846cfb2f0de43f628" category="inline-link-macro-rx"></block>documentazione di Workload Factory FSx for ONTAP e trovare i collegamenti alle pagine pertinenti nella documentazione di configurazione e amministrazione.</block>
+  <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, torna a questa procedura.</block>
 </blocks>
