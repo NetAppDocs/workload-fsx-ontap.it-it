@@ -245,7 +245,7 @@ Considerare quanto segue quando si pianifica l'operazione di cutover per i casi 
 
 
 * *Cloni*: I cloni vengono migrati come volumi individuali e, pertanto, occuperanno più spazio sul file system FSx for ONTAP di destinazione. Si consiglia di eliminare i cloni prima del cutover per evitare un aumento della capacità sul sistema di destinazione.
-* *Volumi cache*: Per ONTAP FlexCache 9.17.x o versioni precedenti. Le VM di storage di origine che contengono volumi cache non sono supportate per cutover. Rimuovere la relazione ONTAP FlexCache prima del cutover per evitare errori di migrazione.
+* *Volumi cache*: le VM di storage di origine che contengono volumi cache non sono supportate per il cutover. Rimuovi la relazione ONTAP FlexCache prima del cutover per evitare errori di migrazione.
 * *Punti di accesso AWS S3*: la replica di cutover per i casi d'uso di migrazione non è supportata per i volumi con punti di accesso S3. Eliminare i punti di accesso S3 dal volume di origine per evitare errori di migrazione.
 * *ONTAP S3 configurations*: La replica di cutover per i casi d'uso di migrazione non è supportata per i vserver con configurazioni ONTAP S3. Rimuovere le configurazioni ONTAP S3, inclusi object-store-server, bucket, utenti, gruppi o policy sul vserver, per evitare errori di migrazione.
 * *Numeri di serie LUN e iSCSI target IQN*: I numeri di serie LUN e l'iSCSI target IQN cambiano durante cutover.
