@@ -2957,7 +2957,6 @@
   <block id="6dbb8a49c1538ebdedcc12468334fb46" category="paragraph">Elimina tutti i backup creati manualmente per i volumi che hai eliminato e tutti i backup più vecchi di due settimane. Questi backup non scadono automaticamente, possono aumentare i costi e aggiungere complessità se non ti servono più per SLA o ripristino.</block>
   <block id="b5ad1c06d1e3c827001a5d86081f1bdb" category="paragraph">Elimina gli snapshot vecchi o creati manualmente che non ti servono più. La loro rimozione può ridurre i costi e l'ingombro, soprattutto se non sono necessari per il tuo SLA o per le esigenze di ripristino.</block>
   <block id="0be251ac51e901583999154779926c3b" category="paragraph">Dopo che un dispositivo a blocchi non viene utilizzato per sette giorni, archivia i dati del dispositivo a blocchi o elimina il dispositivo a blocchi non utilizzato per ridurre i costi.</block>
-  <block id="72d8d7f27cf31b02bb7df1a01b23ab49" category="paragraph">L'analisi della configurazione identifica i volumi NAS che non vengono utilizzati attivamente e suggerisce di eliminarli o archiviarli per ridurre i costi.</block>
   <block id="058f4c97fb457003efd47bf8dac18f8b" category="paragraph">Ribilancia i volumi FlexGroup per migliorare l'efficienza. Dopo l'espansione orizzontale, la capacità e l'attività del carico di lavoro possono risultare disomogenee all'interno del volume.</block>
   <block id="98ee4192cbfc73d968e2c1f61cbdb3dc" category="paragraph">Ribilancia i volumi FlexVol per migliorare l'efficienza. Dopo l'espansione orizzontale, la capacità e l'attività del carico di lavoro possono risultare disomogenee all'interno del volume.</block>
   <block id="c2a622b55f06f11550a3499362e678c9" category="list-text">Devi associare un collegamento per creare dispositivi a blocchi. <block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Dopo che hai associato il collegamento, torna a questa operazione.</block>
@@ -3187,4 +3186,5 @@
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Dopo aver associato il collegamento, torna a questa procedura.</block>
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">Scomposizione dei componenti per gli eventi di latenza</block>
   <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*Volumi cache*: le VM di storage di origine che contengono volumi cache non sono supportate per il cutover. Rimuovi la relazione ONTAP FlexCache prima del cutover per evitare errori di migrazione.</block>
+  <block id="084b022f1511ba8dda542f70832d22e4" category="paragraph">Dopo 31 giorni di inutilizzo di un volume NAS, archivialo o eliminalo per ridurre i costi.</block>
 </blocks>

@@ -203,7 +203,7 @@ Una capacità SSD eccessiva comporta costi superflui. Riduci il tier SSD mantene
 
 * *Volumi NAS inattivi*
 +
-L'analisi della configurazione identifica i volumi NAS che non vengono utilizzati attivamente e suggerisce di eliminarli o archiviarli per ridurre i costi.
+Dopo 31 giorni di inutilizzo di un volume NAS, archivialo o eliminalo per ridurre i costi.
 
 
 
