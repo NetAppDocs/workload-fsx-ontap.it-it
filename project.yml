@@ -155,6 +155,8 @@ sidebar:
       url: "/performance-reference.html"
     - title: Sicurezza per FSX per ONTAP
       url: "/security-reference.html"
+  - title: Domande frequenti
+    url: "/faq-fsx-ontap.html"
   - title: Conoscenza e supporto
     entries:
     - title: Registrati per ricevere assistenza
