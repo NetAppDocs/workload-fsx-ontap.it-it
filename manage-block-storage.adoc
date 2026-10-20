@@ -192,6 +192,12 @@ NOTE: Dopo aver aumentato le dimensioni del block device, seguire la procedura f
 
 I dispositivi a blocchi che non sono più mappati a un client o non sono utilizzati per sette giorni consecutivi sono classificati come dispositivi a blocchi inattivi. Puoi archiviare i dati di un dispositivo a blocchi inattivo nel livello capacity pool per recuperare capacità SSD.
 
+
+NOTE: Non puoi eliminare un volume con cloni figlio finché tutti i cloni figlio non sono stati eliminati o separati in volumi indipendenti.
+
+.Prima di iniziare
+Assicurati che tutti i dispositivi a blocchi (LUN) siano inattivi sullo stesso volume prima di archiviare i dati.
+
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
@@ -215,7 +221,7 @@ I dispositivi a blocchi che non sono mappati a un client o che non vengono utili
 . Dal menu Archiviazione, selezionare *FSx per ONTAP*.
 . Da *FSx for ONTAP*, selezionare la scheda *Blocca dispositivi*.
 . In Dispositivi orfani, seleziona *Visualizza e recupera capacità*.
-. Nella schermata Recupera spazio per dispositivi a blocchi inutilizzati, seleziona uno o più dispositivi a blocchi per archiviare i dati e recuperare la capacità.
+. Nella schermata Recupera spazio per dispositivi a blocchi non utilizzati, seleziona uno o più dispositivi a blocchi per recuperare la capacità.
 . Selezionare *Delete* (Elimina).
 
 
