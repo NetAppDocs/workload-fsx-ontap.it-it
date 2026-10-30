@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: edit-s3-access-points.html 
 keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
-summary: Modifica i punti di accesso S3 per un volume in NetApp Workload Factory. 
+summary: Aggiorna i dettagli del punto di accesso S3, gestisci i tag e abilita o disabilita la tabella di inventario per un volume in FSx for ONTAP. 
 ---
 = Modifica i punti di accesso S3 per un volume in NetApp Workload Factory
 :allow-uri-read: 

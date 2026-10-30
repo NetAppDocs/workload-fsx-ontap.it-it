@@ -23,7 +23,7 @@ Creare un backup manuale di un volume al di fuori dei backup pianificati regolar
 .A proposito di questa attività
 I backup dei volumi vengono eseguiti per singolo volume, quindi ogni backup contiene solo i dati in un particolare volume.
 
-I backup del volume sono incrementali, il che significa che vengono salvati solo i dati sul volume che sono stati modificati dopo il backup più recente. Questo riduce al minimo il tempo necessario per creare il backup e lo spazio di archiviazione richiesto per il backup, con conseguente risparmio sui costi di archiviazione grazie all'assenza di duplicazione dei dati.
+I backup del volume sono incrementali, il che significa che vengono salvati solo i dati sul volume che sono stati modificati dopo l'ultimo backup. Questo riduce al minimo il tempo necessario per creare il backup e lo spazio di archiviazione richiesto, con conseguente risparmio sui costi di archiviazione grazie all'assenza di duplicazione dei dati.
 
 .Prima di iniziare
 Per eseguire il backup dei volumi, sia il volume che il file system devono disporre di una capacità di storage SSD sufficiente per archiviare lo snapshot di backup. Quando si crea una snapshot di backup, la capacità di storage aggiuntiva consumata dalla snapshot non può far sì che il volume superi il 98% di utilizzo dello storage SSD. In questo caso, il backup non viene eseguito correttamente.

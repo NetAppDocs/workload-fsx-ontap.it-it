@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: support-registration.html 
 keywords: support registration, register for support, support, nss account, add nss account 
-summary: Prima di poter aprire un caso di supporto con il supporto tecnico NetApp , è necessario aggiungere un account NetApp Support Site a Workload Factory e quindi registrarsi per ricevere supporto. 
+summary: Aggiungi un account NetApp Support Site a Workload Factory e registralo per il supporto, così potrai aprire casi di supporto con il supporto tecnico NetApp. 
 ---
 = Registra il tuo account Workload Factory per il supporto NetApp
 :allow-uri-read: 

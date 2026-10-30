@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: explore-savings.html 
 keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP 
-summary: 'Esplora i risparmi per i carichi di lavoro di storage nello storage di Amazon Elastic Block Store (EBS), Elastic file System (EFS) ed FSX per Windows file Server su AWS FSX per NetApp ONTAP.' 
+summary: 'Scopri i risparmi per i tuoi workload di storage in Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSx for Windows File Server rispetto ad Amazon FSx for NetApp ONTAP.' 
 ---
 = Scopri i risparmi con FSx per ONTAP in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Esplora i risparmi per i carichi di lavoro di storage nello storage di
 
 
 [role="lead"]
-Esplora i risparmi per i workload di storage che utilizzano Amazon Elastic Block Store (EBS), Elastic file System (EFS) ed FSX per Windows file Server rispetto ad FSX per NetApp ONTAP.
+Scopri i risparmi per i tuoi workload di storage che utilizzano Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSx for Windows File Server confrontandoli con FSx for ONTAP.
 
 NetApp Workload Factory include un calcolatore di risparmio di storage per confrontare gli ambienti di storage Amazon con FSx per ONTAP.  Puoi scoprire i risparmi fornendo o meno le tue credenziali AWS e personalizzare le impostazioni di configurazione per il tuo ambiente di archiviazione.  Quando fornisci le credenziali AWS, puoi selezionare una o più istanze di Amazon Elastic Block Store, ad esempio, e lasciare che Workload Factory esegua automaticamente il confronto.  Sia manualmente che automaticamente, il calcolatore determina quale servizio di archiviazione offre il costo più basso per le tue esigenze di archiviazione.
 
@@ -22,7 +22,7 @@ Se il calcolatore di storage determina che lo storage più conveniente è FSx fo
 [[calculator-options]]
 == Opzioni della calcolatrice
 
-Sono disponibili due opzioni di calcolatore per effettuare il confronto tra i costi dei tuoi sistemi e FSX per ONTAP -- personalizzazione e rilevamento automatico per i tuoi ambienti di storage Amazon.
+Utilizza una delle due opzioni di calcolo per confrontare il costo dei tuoi sistemi con FSx for ONTAP: personalizzazione o rilevamento automatico per i tuoi ambienti di storage Amazon.
 
 Esplorazione dei risparmi tramite personalizzazione: Sono state fornite le impostazioni di configurazione per un ambiente di storage che includono caso di utilizzo, regione, numero di volumi o file system, quantità di storage, frequenza di Snapshot, quantità modificata per snapshot, IOPS sottoposti a provisioning, throughput e altro ancora.
 

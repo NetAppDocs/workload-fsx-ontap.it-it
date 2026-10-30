@@ -11,7 +11,7 @@ summary: Scopri e visualizza i volumi di cache associati alle relazioni di cache
 
 
 [role="lead"]
-Scopri e visualizza i volumi _cache_ associati alle relazioni di cache senza uscire dalla console NetApp Workload Factory.  Le relazioni della cache sono anche note come relazioni ONTAP FlexCache .  Workload Factory rileva le relazioni di cache esistenti utilizzando la tecnologia FlexCache , ovvero la funzionalità di caching remoto di NetApp ONTAP che accelera l'accesso ai dati, riduce la latenza WAN, la larghezza di banda e i costi per carichi di lavoro ad alta intensità di lettura, in particolare quando i client devono accedere ripetutamente agli stessi dati.
+Scopri e visualizza i volumi di cache associati alle relazioni di cache senza uscire dalla console di NetApp Workload Factory. Le relazioni di cache sono note anche come relazioni ONTAP FlexCache. Workload Factory rileva le relazioni di cache esistenti utilizzando la tecnologia FlexCache, che è la funzionalità di caching remoto di NetApp ONTAP che accelera l'accesso ai dati e riduce la latenza WAN, la larghezza di banda e i costi per i carichi di lavoro a elevata intensità di lettura, soprattutto quando i client devono accedere ripetutamente agli stessi dati.
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["Scopri di più sulla replica dei dati con FlexCache."^]
 

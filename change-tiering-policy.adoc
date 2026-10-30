@@ -31,11 +31,11 @@ Prima di modificare la policy di tiering, rivedere le policy disponibili.
 
 * *Balanced (Auto)*: Criterio di tiering predefinito quando si crea un volume utilizzando l'interfaccia utente. Mantiene i dati ad accesso frequente nel Tier di storage SSD ed esegue il tiering di dati e Snapshot con accesso meno frequente al Tier di storage del pool di capacità dopo il periodo di raffreddamento. Consigliato per carichi di lavoro primari generali.
 * *Ottimizzazione dei costi (tutto)*: Esegue il tiering di tutti gli snapshot e i dati nel Tier di storage del pool di capacità. Consigliato per obiettivi secondari.
-* *Performance Optimized (solo Snapshot)*: Esegue il tiering solo dei dati snapshot nel Tier di storage del pool di capacità. Consigliato per carichi di lavoro a bassa latenza come database mission-critical.
+* *Ottimizzato per le prestazioni (solo Snapshot)*: i tier trasferiscono solo i dati snapshot nel tier di storage del capacity pool. Consigliato per carichi di lavoro a bassa latenza come i database mission-critical.
 * *Nessuno*: Mantiene i dati del volume nel Tier di storage SSD, impedendone lo spostamento nel Tier di storage del pool di capacità.
 
 
-Tenere presente che alcune policy di tiering dispongono di un periodo di raffreddamento minimo associato che imposta il tempo, o _giorni di raffreddamento_, che i dati dell'utente in un volume devono rimanere inattivi per essere considerati "cold" e spostati nel Tier di storage del pool di capacità. Il periodo di raffreddamento inizia quando i dati vengono scritti sul disco.
+Alcune politiche di tiering prevedono un periodo di raffreddamento minimo che definisce il tempo, o _giorni di raffreddamento_, durante il quale i dati utente in un volume devono rimanere inattivi affinché siano considerati "freddi" e spostati nel tier di storage del pool di capacità. Il periodo di raffreddamento inizia quando i dati vengono scritti sul disco.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

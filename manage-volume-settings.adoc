@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-settings.html 
 keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
-summary: I tag possono aiutarti a categorizzare le risorse. Puoi aggiungere, modificare e rimuovere i tag di volume in qualsiasi momento per FSX per i volumi ONTAP. 
+summary: 'In NetApp Workload Factory, puoi modificare i carichi di lavoro dei volumi, modificare i tag dei volumi, aggiornare l"efficienza dello storage e gestire le impostazioni dei file immutabili per i volumi FSx for ONTAP.' 
 ---
 = Gestisci le impostazioni del volume in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: I tag possono aiutarti a categorizzare le risorse. Puoi aggiungere, mod
 
 
 [role="lead"]
-Personalizza le impostazioni dei volumi FSx for ONTAP in NetApp Workload Factory per adattarle alle esigenze della tua organizzazione. Puoi gestire i tag dei volumi per categorizzare le risorse, ad esempio impostando i carichi di lavoro dei volumi, aggiornare le impostazioni di efficienza dello storage per ottimizzare lo spazio e il risparmio sui costi e gestire le impostazioni dei file immutabili per controllare la conservazione dei dati e proteggerli da modifiche non autorizzate.
+Personalizza le impostazioni dei volumi FSx for ONTAP in NetApp Workload Factory per adattarle alle esigenze della tua organizzazione. Puoi impostare i carichi di lavoro e i tag dei volumi per categorizzare le risorse, aggiornare le impostazioni di efficienza dello storage per ottimizzare lo spazio e ridurre i costi e gestire le impostazioni dei file immutabili per controllare la conservazione dei dati e proteggerli da modifiche non autorizzate.
 
 
 
@@ -80,7 +80,7 @@ I volumi utilizzano il thin provisioning abilitando o disabilitando l'efficienza
 
 È possibile aggiornare determinate impostazioni di file immutabili per un volume quando la funzionalità è attivata, ad esempio i criteri e i periodi di conservazione, il periodo di autocommit e la modalità di aggiunta del volume.
 
-Si noti che l'abilitazione dei file immutabili è possibile solo durante link:create-volume.html["creazione di volumi"].
+Puoi abilitare i file immutabili solo durante link:create-volume.html["creazione di volumi"].
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -92,7 +92,7 @@ Si noti che l'abilitazione dei file immutabili è possibile solo durante link:cr
 +
 ** *Periodo di conservazione*: Selezionare *non specificato* o *specifica periodo*.
 +
-*** *Non specificato*: Il periodo minimo predefinito è "0" anni e il periodo massimo predefinito è "30 anni".
+*** *Non specificato*: Il periodo minimo predefinito è di 0 anni e il periodo massimo predefinito è di 30 anni.
 *** *Specifica periodo*: Opzione per definire il criterio di conservazione, i periodi minimo e massimo, la funzione di autocommit e la modalità di aggiunta del volume. Fornire i seguenti dettagli:
 +
 **** *Criterio di conservazione*: Questo periodo deve essere maggiore o uguale al periodo di conservazione minimo e minore o uguale al periodo di conservazione massimo.
@@ -103,10 +103,10 @@ Si noti che l'abilitazione dei file immutabili è possibile solo durante link:cr
 
 ** *Autocommit*: Abilita o disabilita la funzione per assegnare automaticamente i file al WORM che non sono stati modificati durante il periodo di autocommit.
 ** *Eliminazione privilegiata*: abilita o disabilita la funzionalità.  L'abilitazione di questa funzionalità consente all'amministratore SnapLock di eliminare un volume WORM non scaduto.  Questa funzionalità è supportata solo nella modalità di conservazione Enterprise.
-** *Modalità di aggiunta volume*: Consente di attivare o disattivare la funzione. Abilitando la modalità di aggiunta di volumi è possibile aggiungere nuovi contenuti ai file WORM.
+** *Modalità di aggiunta del volume*: abilita o disabilita la funzione. Attivando la modalità di aggiunta del volume, puoi aggiungere nuovi contenuti ai file WORM.
 
 
-. Fare clic su *Apply* (Applica).
+. Selezionare *Applica*.
 
 
 

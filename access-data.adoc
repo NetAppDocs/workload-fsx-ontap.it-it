@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: access-data.html 
 keywords: access data, mount point, mount volumes, mount clients, on-premises 
-summary: Puoi accedere ai file system FSX per ONTAP da on-premise montando i volumi per i client NAS e montando le LUN iSCSI per i client SAN. 
+summary: Ottieni il punto di montaggio per i volumi FSx for ONTAP in Workload Factory e trova i link per montare volumi e LUN iSCSI su client NAS e SAN. 
 ---
 = Accedi ai dati del file system FSX per ONTAP
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary: Puoi accedere ai file system FSX per ONTAP da on-premise montando i vol
 [role="lead"]
 Puoi accedere ai file system FSX per ONTAP da on-premise montando i volumi per i client NAS e montando le LUN iSCSI per i client SAN.
 
-link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Accesso ai dati"^] Nella documentazione di Amazon FSX per NetApp ONTAP vengono forniti argomenti su come accedere ai dati per riferimento.
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Accesso ai dati"^] nella documentazione di Amazon FSx for NetApp ONTAP trovi informazioni su come accedere ai dati.
 
 È anche possibile ottenere il punto di montaggio per i volumi in NetApp Workload Factory.
 
@@ -22,7 +22,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 [[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == Ottieni il punto di montaggio per i volumi in NetApp Workload Factory
 
-Ottenere il punto di montaggio per un volume per montare una condivisione su un client CIFS share o NFS.
+Ottieni il punto di montaggio per un volume per montarlo come CIFS share o su un client NFS.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-block-device.html 
 keywords: create block device, create lun, iscsi protocol 
-summary: 'Crea dispositivi a blocchi per supportare i requisiti delle applicazioni della tua linea di business (LOB).' 
+summary: 'Crea dispositivi a blocchi iSCSI in un volume esistente o nuovo, configura l"accesso del gruppo initiator e imposta le opzioni di efficienza e protezione dello storage per FSx for ONTAP.' 
 ---
 = Creare un dispositivo a blocchi per un file system in NetApp Workload Factory
 :allow-uri-read: 
@@ -91,7 +91,7 @@ NOTE: Gli orari degli snapshot si basano sul fuso orario del file system, che pe
 
 .. *Criterio di tiering*: Selezionare il criterio di tiering per i dati memorizzati nel volume.
 +
-_Bilanciato (Automatico)_ è il criterio di suddivisione in livelli predefinito quando si crea un volume utilizzando la console Workload Factory. Per ulteriori informazioni sulle politiche di suddivisione in livelli del volume, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx per NetApp ONTAP . Si noti che Workload Factory utilizza nomi basati sui casi d'uso nella console di Workload Factory per i criteri di suddivisione in livelli e include i nomi dei criteri di suddivisione in livelli di FSx per ONTAP tra parentesi.
+_Balanced (Auto)_ è il criterio di tiering predefinito quando crei un volume usando la console di Workload Factory. Per ulteriori informazioni sui criteri di tiering dei volumi, consulta link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx for NetApp ONTAP. Workload Factory usa nella console di Workload Factory nomi basati sui casi d'uso per i criteri di tiering e include tra parentesi i nomi dei criteri di tiering di FSx for ONTAP.
 
 .. *ARP/AI*: NetApp Autonomous Ransomware Protection with AI (ARP/AI) è abilitato per impostazione predefinita quando un collegamento è associato al file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Scopri di più su ARP/AI"]. Accettare la dichiarazione per procedere.
 +

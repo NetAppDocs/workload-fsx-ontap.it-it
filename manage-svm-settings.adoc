@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-svm-settings.html 
 keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
-summary: Aggiunta, aggiornamento o rimozione dei tag delle macchine virtuali di storage per una macchina virtuale di storage in qualsiasi momento. 
+summary: Configurare Active Directory, gestire i tag e reimpostare la password per una VM di storage in un file system FSx for ONTAP. 
 ---
 = Gestisci le impostazioni delle VM di storage in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Aggiunta, aggiornamento o rimozione dei tag delle macchine virtuali di 
 
 
 [role="lead"]
-Gestisci le impostazioni di una VM di storage in NetApp Workload Factory. Configura e aggiorna Active Directory per una VM di storage, puoi aggiornare la password della VM di storage e gestire i tag per la VM di storage.
+Gestisci le impostazioni di una VM di storage in NetApp Workload Factory. Puoi configurare e aggiornare Active Directory, reimpostare la password della VM di storage e gestire i tag della VM di storage.
 
 
 
@@ -33,13 +33,13 @@ La stessa procedura si applica alla configurazione e all'aggiornamento di Active
 +
 .. *Dominio Active Directory a cui collegarsi*: Immettere il nome di dominio completo (FQDN) di Active Directory.
 .. *Indirizzi IP DNS*: Immettere un massimo di tre indirizzi IP separati da virgole.
-.. *SMB server NetBIOS name*: Immettere il nome NetBIOS del server SMB dell'oggetto computer Active Directory da creare per la macchina virtuale di storage. Nome della SVM in Active Directory.
+.. *Nome NetBIOS del server SMB*: immetti il nome NetBIOS del server SMB dell'oggetto computer di Active Directory da creare per la tua storage VM. Questo è il nome della storage VM in Active Directory.
 .. *Nome utente*: Immettere il nome utente dell'account del servizio nell'Active Directory esistente.
 +
 Non includere un prefisso o un suffisso di dominio. Per `EXAMPLE\ADMIN`, utilizzare `ADMIN`.
 
 .. *Password*: Immettere la password per l'account del servizio.
-.. *Unità organizzativa (OU)*: Immettere l'unità organizzativa.
+.. *Unità organizzativa (OU)*: Inserisci l'unità organizzativa.
 +
 L'unità organizzativa è il nome del percorso distinto dell'unità organizzativa a cui si desidera unire il file system.
 

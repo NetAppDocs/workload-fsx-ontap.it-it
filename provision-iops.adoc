@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: provision-iops.html 
 keywords: iops, SSD, provision, allocate 
-summary: Esegui il provisioning automatico o manuale degli IOPS SSD per un file system FSX per ONTAP. 
+summary: Abilita il provisioning automatico degli IOPS SSD oppure imposta un valore IOPS personalizzato per un file system FSx for ONTAP in Workload Factory. 
 ---
 = Esegui il provisioning di IOPS SSD per un file system FSX per ONTAP
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Esegui il provisioning automatico o manuale degli IOPS SSD per un file 
 
 
 [role="lead"]
-Esegui il provisioning automatico o manuale di IOPS SSD per un file system FSx for ONTAP in NetApp Workload Factory.
+Esegui automaticamente o manualmente il provisioning degli IOPS SSD per un file system FSx for ONTAP in NetApp Workload Factory per controllare le prestazioni disponibili per i tuoi carichi di lavoro.
 
 .A proposito di questa attività
-Puoi abilitare il provisioning IOPS automatico per un file system FSX oppure eseguire il provisioning manuale degli IOPS.
+Puoi abilitare il provisioning automatico degli IOPS SSD per un file system FSx for ONTAP oppure eseguire il provisioning manuale degli IOPS.
 
 Gli IOPS con provisioning automatico vengono calcolati come tre IOPS per GiB.
 

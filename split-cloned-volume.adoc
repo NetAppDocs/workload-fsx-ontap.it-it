@@ -18,17 +18,17 @@ I dati sono accessibili sul clone e sull'immagine principale durante la division
 .A proposito di questa attività
 L'operazione di suddivisione dei cloni comporta quanto segue:
 
-* Non è possibile creare nuove copie Snapshot del volume FlexClone durante l'operazione di divisione.
-* Un volume FlexClone non può essere diviso dal volume principale se appartiene a una relazione di protezione dei dati.
-* Se si porta il volume FlexClone offline mentre è in corso la suddivisione, l'operazione di suddivisione viene sospesa; quando si riporta in linea il volume FlexClone, l'operazione di suddivisione riprende.
+* Non puoi creare nuove copie Snapshot del volume FlexClone durante l'operazione di suddivisione.
+* Non puoi separare un volume FlexClone dal suo volume d'origine se appartiene a una relazione di protezione dei dati.
+* Se porti offline il volume FlexClone durante la divisione, l'operazione di divisione viene sospesa. Quando riporti online il volume FlexClone, l'operazione di divisione riprende.
 * Dopo la divisione, sia il volume FlexVol superiore che il clone richiedono l'allocazione dello spazio completo determinata dalle rispettive garanzie del volume.
-* Dopo la divisione di un volume FlexClone dall'immagine principale, non è possibile unire nuovamente i due volumi.
+* Dopo aver separato un volume FlexClone dal suo volume d'origine, non puoi più riunirli.
 
 
 .Prima di iniziare
 Prima di dividere un volume clonato, prendere in considerazione quanto segue:
 
-* Per dividere un volume clonato, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
+* Per dividere un volume clonato, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il link, torna a questa operazione.
 * Il volume FlexClone deve essere online all'inizio dell'operazione di divisione.
 * Il volume principale deve essere online perché la divisione abbia successo.
 

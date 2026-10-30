@@ -23,7 +23,7 @@ Attiva il monitoraggio per tenere sotto controllo i ritardi di replica nel tuo a
 . Nella finestra di dialogo Abilita cronologia ritardo replica, seleziona *Abilita*.
 . Tornando al riquadro Cronologia ritardo replica, seleziona *Personalizza soglia* per impostare la soglia che preferisci.
 . Nella finestra di dialogo Personalizza la soglia del tempo di ritardo, inserisci la soglia in ore e minuti.
-. Facoltativamente, seleziona *Abilita notifiche di ritardo* per ricevere notifiche quando la replica supera la soglia di ritardo.
+. Facoltativamente, seleziona *Abilita notifiche di ritardo* per ricevere notifiche quando il ritardo di replica supera la soglia.
 +
 Le notifiche arrivano tramite email e includono:
 

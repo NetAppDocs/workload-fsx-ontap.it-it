@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: Individua e replica i dati ONTAP locali in NetApp Workload Factory così puoi usarli come backup nel cloud. 
+summary: Individua, replica e rimuovi i cluster ONTAP on-premise in NetApp Workload Factory per eseguire il backup dei dati dei volumi nei file system FSx for ONTAP nel cloud. 
 ---
 = Utilizzare i dati del cluster ONTAP locale in NetApp Workload Factory
 :allow-uri-read: 
@@ -34,12 +34,12 @@ Casi di utilizzo::
 Scopri un cluster ONTAP locale in NetApp Workload Factory in modo da poter replicare i dati su un file system Amazon FSx for NetApp ONTAP .
 
 .Prima di iniziare
-Prima di iniziare, assicurarsi di disporre dei seguenti elementi:
+Assicurati di avere a disposizione quanto segue:
 
 * Un file system FSX per ONTAP per la replica.
 * Un collegamento connesso da associare al cluster on-premises rilevato. Se non hai un collegamento, dovrai link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["creane uno"^].
 * Credenziali utente ONTAP con autorizzazioni richieste.
-* ONTAP on-premise versione 9,8 e successive.
+* Versione di ONTAP on-premises 9.8 o successiva.
 * Connettività come mostrato nello schema seguente.
 +
 image:screenshot-on-prem-connectivity.png["Screenshot che mostra come si deve connettere un cluster ONTAP on-premise per il percorso di gestione e il percorso dei dati ad Amazon Web Services Cloud"]
@@ -85,7 +85,7 @@ Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX
 .Prima di iniziare
 * Devi rilevare un cluster ONTAP on-premise per replicare i dati dei suoi volumi.
 * È necessario disporre di un file system FSX disponibile per ONTAP come destinazione della replica.
-* Sia il cluster ONTAP on-premises che il file system FSx for ONTAP che usi per la relazione di replica devono avere un collegamento associato. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
+* Sia il cluster ONTAP on-premises che il file system FSx for ONTAP che usi per la relazione di replica devono avere un collegamento associato. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il link, torna a questa operazione.
 
 
 .Fasi
@@ -109,13 +109,13 @@ Replica dei dati del volume da un cluster ONTAP on-premise in un file system FSX
 Tenere presente che alcune policy di tiering dispongono di un periodo di raffreddamento minimo associato che imposta il tempo, o _giorni di raffreddamento_, che i dati dell'utente in un volume devono rimanere inattivi per essere considerati "cold" e spostati nel Tier di storage del pool di capacità. Il periodo di raffreddamento inizia quando i dati vengono scritti sul disco.
 
 +
-Per ulteriori informazioni sulle policy di tiering dei volumi, fare riferimento a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^]nella documentazione di AWS FSX per NetApp ONTAP.
+Per ulteriori informazioni sui criteri di tiering dei volumi, consulta link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacità di storage dei volumi"^] nella documentazione di AWS FSx for NetApp ONTAP.
 
 
 
 .. *Velocità di trasferimento massima*: Selezionare *limitata* e immettere il limite massimo di trasferimento in MIB/s. In alternativa, selezionare *illimitato*.
 +
-Senza un limite, le prestazioni della rete e delle applicazioni potrebbero diminuire. In alternativa, consigliamo una velocità di trasferimento illimitata per i file system FSX per ONTAP per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
+Senza un limite, le prestazioni di rete e delle applicazioni potrebbero diminuire. Tuttavia, per i file system FSx for ONTAP, ti consigliamo una velocità di trasferimento illimitata per i carichi di lavoro critici, ad esempio quelli utilizzati principalmente per il disaster recovery.
 
 
 
@@ -124,7 +124,7 @@ Senza un limite, le prestazioni della rete e delle applicazioni potrebbero dimin
 .. *Intervallo di replica*: Consente di selezionare la frequenza di trasferimento degli snapshot dal volume di origine al volume di destinazione.
 .. *Conservazione a lungo termine*: Facoltativamente, abilitare gli snapshot per la conservazione a lungo termine.
 +
-Se si attiva la conservazione a lungo termine, selezionare un criterio esistente o creare un nuovo criterio per definire gli snapshot da replicare e il numero da conservare.
+Se abiliti la conservazione a lungo termine, seleziona un criterio esistente o creane uno nuovo per definire gli snapshot da replicare e il numero da conservare.
 
 +
 *** Per un criterio esistente, selezionare *Scegli un criterio esistente*, quindi selezionare il criterio esistente dal menu a discesa.

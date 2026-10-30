@@ -14,31 +14,31 @@ summary: Aggiungere coppie ad alta disponibilità a un file system in NetApp Wor
 Aggiungere coppie ad alta disponibilità (HA) per scalare un file system Single-AZ di seconda generazione FSx for ONTAP in NetApp Workload Factory per aumentare prestazioni e capacità.  Questa espansione offre maggiore scalabilità delle prestazioni e flessibilità rispetto ai file system di prima generazione.
 
 .A proposito di questa attività
-Le nuove coppie ha vengono aggiunte utilizzando la stessa SKU e la stessa capacità per coppia ha.
+Le nuove coppie HA utilizzano lo stesso SKU e la stessa capacità per ciascuna coppia HA.
 
 L'aggiunta di coppie ha non è supportata per quanto segue:
 
 * Implementazioni ha Multi-AZ o file system FSX per ONTAP di prima generazione
-* FSX per i file system ONTAP con oltre 5 macchine virtuali storage
+* file system FSx for ONTAP con più di cinque macchine virtuali di storage
 * File system FSX per ONTAP con LUN iSCSI
-* Configurazioni con capacità massima o vicina al massimo degli SSD o che hanno raggiunto i limiti di allocazione io
+* Configurazioni che hanno la capacità SSD massima o prossima alla massima oppure che hanno raggiunto i limiti di allocazione IO
 
 
 Prendi in considerazione quanto segue per l'aggiunta di coppie ha:
 
-* Rimozione coppia HA: Le coppie HA non possono essere rimosse una volta aggiunte al file system.
-* Tempo operativo e limitazioni: L'aggiunta di coppie ha può richiedere circa 30 minuti. Considerare l'aggiunta di coppie ha durante una finestra di manutenzione o durante i periodi di bassa attività. Inoltre, l'aggiunta di coppie ha limita altre operazioni come l'aggiunta di coppie ha, il provisioning degli IOPS, l'aumento della capacità SSD e l'aggiornamento della capacità del throughput.
-* Allocazione io: L'allocazione io automatica dipende dalla capacità di storage totale. L'allocazione i/o configurata dall'utente viene moltiplicata per il numero di coppie ha aggiunte.
-* Cache NVMe: Quando si aggiungono coppie ha, la cache NVME è abilitata per impostazione predefinita. Consigliamo di disattivare la cache NVMe per i carichi di lavoro pesanti.
+* Rimozione della coppia HA: non puoi rimuovere le coppie HA dopo averle aggiunte al file system.
+* Tempo di esecuzione e limitazioni: l'aggiunta di coppie HA potrebbe richiedere circa 30 minuti. Valuta di aggiungere le coppie HA durante una finestra di manutenzione o durante periodi di bassa attività. Inoltre, l'aggiunta di coppie HA limita altre operazioni, come l'aggiunta di altre coppie HA, il provisioning di IOPS, l'aumento della capacità SSD e l'aggiornamento della capacità di throughput.
+* Allocazione I/O: l'allocazione I/O automatica dipende dalla capacità di storage totale. L'allocazione I/O configurata dall'utente viene moltiplicata per il numero di coppie HA aggiunte.
+* Cache NVMe: quando aggiungi coppie HA, la cache NVMe è abilitata per impostazione predefinita. Ti consigliamo di disattivare la cache NVMe per carichi di lavoro intensi.
 * Numero di coppie ha: Consigliamo di espandere il file system fino a un numero pari di coppie ha per una distribuzione di dati bilanciata nelle coppie ha.
-* Creazione di LUN: La creazione di LUN è possibile su un file system di seconda generazione Single-AZ solo se i LUN non sono già presenti nel file system quando si aggiungono coppie ha. La creazione di LUN è supportata solo in un file system con 6 coppie ha o meno.
+* Creazione di LUN: la creazione di LUN è possibile su un file system Single-AZ di seconda generazione solo se non esistono già LUN sul file system quando aggiungi coppie HA. La creazione di LUN è supportata solo su un file system con sei coppie HA o meno.
 
 
 .Prima di iniziare
 Prima di aggiungere coppie ha a un file system, esegui le seguenti operazioni:
 
 * Rimuovi tutte le LUN iSCSI per fare scale-out del file system.
-* Verifica che il file system non contenga più di 5 macchine virtuali di storage.
+* Assicurati che il file system non abbia più di cinque VM di storage.
 
 
 .Fasi

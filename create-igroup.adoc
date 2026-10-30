@@ -16,7 +16,7 @@ Utilizzare NetApp Workload Factory per creare gruppi di initiator e gestire l'ac
 .A proposito di questa attività
 I gruppi di initiator, o igroups, collegano i dispositivi a blocchi (LUN) alle risorse di elaborazione autorizzate ad accedervi. A differenza di NFS o CIFS, in cui un volume è ampiamente accessibile e le autorizzazioni utente controllano l'accesso, le autorizzazioni dello storage a blocchi operano a livello di macchina. In genere, solo un sistema può accedere a un dispositivo a blocchi alla volta.
 
-Un igroup funge da livello di autorizzazione per lo storage a blocchi. Quando un server si connette al sistema storage, si identifica utilizzando il suo initiator host iSCSI qualificato (IQN). Se tale IQN appartiene a uno o più igroup, il server ottiene l'accesso a tutte le LUN associate a tali igroup. Sono necessari sia un igroup che una connessione host iSCSI affinché iSCSI funzioni correttamente.
+Un igroup funge da livello di autorizzazione per lo storage a blocchi. Quando un server si connette al sistema storage, si identifica utilizzando il proprio host initiator iSCSI qualified name (IQN). Se tale IQN appartiene a uno o più igroup, il server ottiene l'accesso a tutte le LUN associate a tali igroup. Perché iSCSI funzioni correttamente, sono necessari sia un igroup sia una connessione host iSCSI.
 
 .Prima di iniziare
 Per creare igroups è necessario associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il collegamento, tornare a questa operazione.
@@ -34,7 +34,7 @@ Per creare igroups è necessario associare un collegamento. link:https://docs.ne
 ** *Nome VM di archiviazione*: seleziona la VM di archiviazione per il gruppo di initiator.
 ** *Nome dispositivo a blocchi*: selezionare uno o più dispositivi a blocchi da associare al gruppo di initiator. I dispositivi a blocchi elencati sono quelli che non sono ancora stati mappati a un initiator host.
 ** *Tipo di sistema operativo*: seleziona Linux, VMware o Windows per il tipo di sistema operativo.
-** *Iniziatori host*: aggiungi uno o più initiator host qualificati iSCSI (IQN) al gruppo di iniziatori.
+** *Iniziatori host*: Aggiungi uno o più initiator host con nome qualificato iSCSI (IQN) al gruppo initiator.
 
 
 . Selezionare *Crea*.

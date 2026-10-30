@@ -11,7 +11,7 @@ summary: Gestire la policy di esportazione NFS per un volume che utilizza i tipi
 
 
 [role="lead"]
-Gestire la policy di esportazione NFS per un volume che utilizza i tipi di protocollo NFSv3 o NFSv4.1 in NetApp Workload Factory.
+Gestisci la policy di esportazione NFS per un volume che utilizza i protocolli NFSv3 o NFSv4.1 in NetApp Workload Factory per controllare quali client possono accedere al volume e quale accesso hanno.
 
 .A proposito di questa attività
 La gestione della policy di esportazione di un volume comporta l'aggiunta di regole di policy di esportazione che descrivono in dettaglio le specifiche dei client, il controllo dell'accesso, l'accesso dei super utenti e la versione NFS. È possibile aggiungere più criteri di esportazione e assegnarne la priorità.

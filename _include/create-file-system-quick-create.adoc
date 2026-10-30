@@ -23,7 +23,7 @@ Questa configurazione con coppia HA singola è consigliata per carichi di lavoro
 
 
 
-.. *Tags*: Opzionalmente, è possibile aggiungere fino a 50 tag.
+.. *Tag*: Facoltativamente, puoi aggiungere fino a 50 tag.
 
 
 . In *Dettagli file system*, specificare quanto segue:
@@ -45,7 +45,7 @@ Se l'utente fornito non è l'utente fsxadmin, e in seguito è necessario reimpos
 ... *SMB server NetBIOS name*: Immettere il nome NetBIOS del server SMB dell'oggetto computer Active Directory da creare per la macchina virtuale di storage. Nome della VM di storage in Active Directory.
 ... *Nome utente*: Immettere il nome utente dell'account del servizio nell'Active Directory esistente.
 +
-Non includere un prefisso o un suffisso di dominio. Per `EXAMPLE\ADMIN`, utilizzare `ADMIN`.
+Non includere un prefisso o un suffisso di dominio. Per `EXAMPLE\ADMIN`, usa `ADMIN`.
 
 ... *Password*: Immettere la password per l'account del servizio.
 ... *Unità organizzativa*: Se si desidera, immettere il nome dell'unità organizzativa in cui si intende creare l'account del computer per FSX per ONTAP. L'unità organizzativa è il nome del percorso distinto dell'unità organizzativa a cui si desidera unire il file system.

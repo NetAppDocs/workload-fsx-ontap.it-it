@@ -11,7 +11,7 @@ summary: Crea punti di accesso S3 per un volume in NetApp Workload Factory.
 
 
 [role="lead"]
-Crea e collega i punti di accesso S3 per un volume in NetApp Workload Factory.
+Crea e collega punti di accesso S3 a un volume FSx for ONTAP in NetApp Workload Factory in modo che i servizi AWS possano accedere ai file del volume come se si trovassero in un bucket S3.
 
 .A proposito di questa attività
 Amazon FSx for NetApp ONTAP consente ai file system NFS e SMB di accedere ai dati S3 e di connettersi a servizi AWS come Amazon Bedrock, SageMaker, Athena, AWS Glue e altri. Puoi connettere i servizi AWS a tutti i tuoi dati di storage a oggetti.
@@ -41,7 +41,7 @@ Completa i seguenti requisiti prima di iniziare.
 ** *Utente*: seleziona un utente esistente con accesso al volume oppure crea un nuovo utente.
 ** *Tipo di utente*: selezionare *UNIX* o *Windows* come tipo di utente.
 ** *Configurazione di rete*: Selezionare *Internet* o *Virtual private cloud (VPC)*. Il tipo di rete scelto determina se il punto di accesso è accessibile da Internet o limitato a una specifica VPC. Per utilizzare la funzionalità Journal table, è necessario selezionare *Internet* come configurazione di rete.
-** *Tabella di inventario*: facoltativa. Richiede l `getObject`autorizzazione. Abilita la tabella di inventario sul volume per generare metadati per tutti gli oggetti accessibili al punto di accesso S3 e comporta costi di richiesta AWS S3. Consulta link:https://aws.amazon.com/s3/pricing/["Documentazione sui prezzi di Amazon S3"^] per ulteriori informazioni. La tabella viene aggiornata ogni 24 ore.
+** *Tabella di inventario*: facoltativa. Richiede l' `getObject` autorizzazione. Abilita la tabella di inventario sul volume per generare metadati per tutti gli oggetti accessibili al punto di accesso S3 e comporta costi di richiesta AWS S3. Consulta link:https://aws.amazon.com/s3/pricing/["Documentazione sui prezzi di Amazon S3"^] per ulteriori informazioni. La tabella viene aggiornata ogni 24 ore.
 ** *Tag del punto di accesso S3*: Facoltativamente, puoi aggiungere fino a 50 tag o rimuovere tag.
 
 

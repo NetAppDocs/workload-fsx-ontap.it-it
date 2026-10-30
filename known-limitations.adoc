@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: known-limitations.html 
 keywords: limitations, fsx, ontap 
-summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. 
+summary: Esamina le limitazioni note di Amazon FSx for NetApp ONTAP in Workload Factory, tra cui il supporto regionale, la gestione della capacità, iSCSI, la protezione dei dati e la migrazione delle storage VM. 
 ---
 = Limitazioni note di FSx per ONTAP in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni no
 
 
 [role="lead"]
-Le limitazioni note identificano le piattaforme, i dispositivi o le funzioni non supportati da questa versione del prodotto o che non interagiscono correttamente con essa. Le seguenti limitazioni sono specifiche di Amazon FSx for NetApp ONTAP in NetApp Workload Factory. Esaminare attentamente queste limitazioni.
+Le limitazioni note identificano le piattaforme, i dispositivi o le funzioni che questa versione di Amazon FSx for NetApp ONTAP in NetApp Workload Factory non supporta o che non interoperano correttamente con essa. Esamina attentamente queste limitazioni.
 
 
 

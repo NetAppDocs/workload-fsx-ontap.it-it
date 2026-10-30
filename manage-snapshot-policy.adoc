@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, assign snapshot policy, remove snapshot policy, snapshot policies, snapshot schedule, update, snapshot long-term retention, enable long-term retention 
-summary: Gestire i criteri di snapshot per i volumi FSx for ONTAP in Workload Factory.  Un criterio di snapshot definisce il modo in cui il sistema crea snapshot per un volume. 
+summary: Assegna, modifica, rimuovi ed elimina le policy di snapshot e abilita snapshot immutabili e la conservazione a lungo termine per i volumi FSx for ONTAP in Workload Factory. 
 ---
 = Gestisci le policy di snapshot per i volumi in NetApp Workload Factory
 :allow-uri-read: 
@@ -27,7 +27,7 @@ Per impostazione predefinita, ogni volume è associato al criterio di snapshot d
 È possibile assegnare una policy di snapshot a un singolo volume per creare snapshot pianificate per il volume.
 
 .Prima di iniziare
-Devi associare un collegamento per assegnare una policy di snapshot. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
+Devi associare un collegamento per assegnare una policy di snapshot. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il link, torna a questa operazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -38,7 +38,7 @@ Devi associare un collegamento per assegnare una policy di snapshot. link:https:
 . Nella pagina di gestione dei criteri di snapshot, selezionare il menu delle azioni del criterio di snapshot, quindi selezionare *Assegna criterio al volume*.
 . Nella finestra di dialogo Assegna criterio snapshot, selezionare un criterio snapshot da assegnare al volume ed esaminare la pianificazione dei criteri.
 +
-Se il criterio contiene istantanee immutabili e si desidera utilizzarlo, accettare l'istruzione.
+Se la policy contiene snapshot immutabili e vuoi usarla, accetta la dichiarazione.
 
 . Selezionare *Assegna*.
 
@@ -51,10 +51,10 @@ Il criterio snapshot viene assegnato al volume.
 [[change-a-snapshot-policy]]
 == Modificare una policy di snapshot
 
-È possibile modificare il nome del criterio snapshot, la pianificazione e il numero di copie da conservare e attivare o disattivare gli snapshot immutabili. Non è possibile attivare o disattivare la condivisione dei criteri tra le VM di storage. Questa opzione è disponibile solo durante la creazione dei criteri di snapshot.
+Puoi modificare il nome del criterio di snapshot, la pianificazione e il numero di copie da conservare, nonché abilitare o disabilitare gli snapshot immutabili. Non puoi abilitare o disabilitare la condivisione del criterio tra VM di storage. Puoi impostare questa opzione solo quando crei un criterio di snapshot.
 
 .Prima di iniziare
-Per visualizzare i criteri snapshot esistenti, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
+Per visualizzare i criteri snapshot esistenti, devi associare un collegamento. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il link, torna a questa operazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -78,14 +78,14 @@ Il criterio snapshot viene aggiornato.
 Bloccare gli snapshot per impedirne l'eliminazione durante il periodo di conservazione.
 
 .Prima di iniziare
-Devi associare un collegamento per abilitare gli snapshot immutabili. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che il collegamento è stato associato, torna a questa operazione.
+Devi associare un collegamento per abilitare gli snapshot immutabili. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il link, torna a questa operazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
 . Nella scheda *FSx per ONTAP*, selezionare il menu azioni del file system che contiene il volume per cui bloccare gli snapshot, quindi selezionare *Gestisci*.
 . Nella panoramica del file system, selezionare la scheda *volumi*.
-. Dalla scheda *Volumi*, selezionare l'azione relativa al volume da proteggere.
+. Dalla scheda *Volumi*, seleziona il menu delle azioni per il volume da proteggere.
 . Selezionare *azioni protezione dati*, *istantanee*, quindi *Rendi immutabile uno snapshot*.
 . Nella finestra di dialogo Rendi un'istantanea immutabile, effettuare le seguenti operazioni:
 +
@@ -149,7 +149,7 @@ NOTE: La modifica della conservazione a lungo termine non è disponibile quando 
 Rimozione di una policy di snapshot da un volume perché non si desidera più creare snapshot del volume o perché si desidera eliminare una policy di snapshot assegnata a più volumi. A <<Eliminazione di una policy di snapshot,eliminazione di una policy di snapshot>> questo viene assegnato più di un volume, è necessario rimuoverlo manualmente da tutti i volumi.
 
 .Prima di iniziare
-Devi associare un collegamento per rimuovere una policy snapshot. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo che hai associato il collegamento, torna a questa operazione.
+Devi associare un collegamento per rimuovere una policy snapshot. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Scopri come associare un collegamento esistente o come creare e associare un nuovo collegamento"^]. Dopo aver associato il link, torna a questa operazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

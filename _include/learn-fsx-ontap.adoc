@@ -15,7 +15,7 @@ FSx per ONTAP è il componente _Storage_ in Workload Factory.
 
 FSX per ONTAP offre le seguenti caratteristiche:
 
-* *Servizio completamente gestito*: fornisce un servizio completamente gestito integrato con la console Workload Factory.
+* *Servizio gestito completo*: fornisce un servizio gestito completamente integrato con la console di Workload Factory.
 * *Alta disponibilità*: Offre un'elevata disponibilità per ogni file system FSX per ONTAP, supportando implementazioni di zone di disponibilità singole e multiple.
 * *Istantanee automatizzate*: Protegge i dati con istantanee efficienti e automatizzate, ovvero copie di sola lettura point-in-time, quasi istantanee ed efficienti in termini di spazio, del file system o dei volumi.
 * *Volume Replication*: Offre funzioni di disaster recovery con replica tra più aree su Amazon Web Services.
@@ -26,7 +26,7 @@ FSX per ONTAP offre le seguenti caratteristiche:
 * *Cache in memoria e cache NVMe*: Includono una cache in-memory univoca e una cache NVMe, che migliorano le performance dei dati ad accesso frequente.
 * *Centinaia di migliaia di IOPS*: Fornisce centinaia di migliaia di IOPS con dischi SSD, garantendo che storage e carichi di lavoro ricevano risultati tempestivi.
 * *Thin Provisioning*: Consente il provisioning della capacità in anticipo, risparmiando sui costi fino a quando non è necessaria una maggiore capacità.
-* *Deduplicazione e compressione dei dati*: Rimuove i dati duplicati e comprime i dati per ridurre la quantità di storage fisico necessaria per FSX per i file system ONTAP, con conseguenti risparmi sui costi.
+* *Deduplicazione e compressione*: rimuove i dati duplicati e comprime i dati per ridurre la quantità di storage fisico necessaria per i file system FSx for ONTAP, con conseguente risparmio sui costi.
 * *Data tiering*: Consente di ridurre i costi di storage spostando i dati a cui si accede meno frequentemente dal livello di storage SSD primario e ad alte prestazioni al livello di storage del pool di capacità secondario.
 
 
@@ -68,7 +68,7 @@ Il tuo account FSx for ONTAP è gestito da AWS, non da Workload Factory. Fare ri
 [[regions]]
 == Regioni
 
-Workload Factory è supportato in tutte le regioni commerciali in cui è supportato FSx per ONTAP .link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
+Workload Factory è supportato in tutte le regioni commerciali in cui è supportato FSx for ONTAP. link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
 
 Le seguenti regioni AWS non sono supportate:
 

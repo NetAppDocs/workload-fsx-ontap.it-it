@@ -11,14 +11,14 @@ summary: 'Scopri di più sui cyber vault NetApp e su come implementare l"archite
 
 
 [role="lead"]
-Un volume di cyber vault è un luogo di archiviazione isolato e sicuro utilizzato per archiviare copie di backup dei dati, proteggendoli da attacchi ransomware e altre minacce informatiche.  Come parte della creazione del vault, creerai un volume del cyber vault, disabiliterai tutti i protocolli client e configurerai una relazione di replica tra il volume di origine e il volume del cyber vault, quindi creerai snapshot immutabili sul volume del cyber vault.
+Un volume di cyber vault è una posizione di storage isolata e sicura che memorizza copie di backup dei tuoi dati e li protegge da attacchi ransomware e altre minacce informatiche. Per creare un vault, crea un volume di cyber vault, disabilita tutti i protocolli client, imposta una relazione di replica tra il volume di origine e il volume di cyber vault e crea snapshot immutabili sul volume di cyber vault.
 
 .Cos'è un cyber vault?
 Un cyber vault è una tecnica specifica di protezione dei dati che prevede l'archiviazione di dati critici in un ambiente isolato, separato dall'infrastruttura IT primaria.
 
 Il cyber vault è un archivio dati "air-gapped", immutabile e indelebile, immune alle minacce che colpiscono la rete principale, come malware, ransomware o persino minacce interne.  È possibile realizzare un caveau informatico con snapshot immutabili e indelebili.
 
-I backup air-gapping che utilizzano metodi tradizionali comportano la creazione di spazio e la separazione fisica del supporto primario e secondario. Spostando i media fuori sede e/o interrompendo la connettività, i malintenzionati non hanno accesso ai dati. Ciò protegge i dati ma può comportare tempi di ripristino più lenti.
+I backup con isolamento fisico (air-gapping) che utilizzano metodi tradizionali prevedono la creazione di spazio e la separazione fisica dei supporti primario e secondario. Spostando i supporti in una sede esterna o interrompendo la connettività, i malintenzionati non hanno accesso ai dati. Questo protegge i dati, ma può comportare tempi di ripristino più lunghi.
 
 .FSx per i cyber vault ONTAP
 Amazon FSx for NetApp ONTAP è supportato come origine e destinazione del cyber vault.
