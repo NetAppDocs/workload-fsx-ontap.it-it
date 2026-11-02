@@ -32,7 +32,7 @@ Un collegamento stabilisce una relazione di fiducia tra Workload Factory e uno o
 * Gestione delle credenziali ONTAP
 
 
-link:learn-about-links.html["Scopri di più sui link"].
+link:links-overview.html["Scopri di più sui link"].
 
 .Cosa succede se non associo un collegamento al mio file system?
 Le funzionalità che dipendono da un link potrebbero non essere disponibili. Ad esempio, ARP/AI non è disponibile senza un link, non puoi visualizzare le policy Snapshot esistenti quando crei un volume e non puoi individuare le relazioni della cache. Senza un link, l'analisi della configurazione non può analizzare le impostazioni di protezione dei dati e delle prestazioni, quindi l'analisi è incompleta. Puoi comunque visualizzare gli eventi di latenza senza un link, ma ti serve un link per visualizzare e analizzare gli eventi EMS e per analizzare gli eventi di latenza.

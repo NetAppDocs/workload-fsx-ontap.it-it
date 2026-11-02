@@ -30,7 +30,7 @@ Se si replica un volume sorgente con file immutabili, il volume di destinazione 
 
 [NOTE]
 ====
-È possibile replicare un volume sorgente (read/write) o un volume di protezione dati (DP). La replica a cascata è supportata, ma un terzo hop non lo è. Scopri di più su link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["replica a cascata"].
+È possibile replicare un volume sorgente (read/write) o un volume di protezione dati (DP). La replica a cascata è supportata, ma un terzo hop non lo è. Scopri di più su <<cascade-replication,replica a cascata>>.
 
 ====
 
@@ -54,14 +54,15 @@ Workload Factory supporta la replica della migrazione per le VM di storage tra i
 
 Per migrare i dati e le impostazioni di configurazione delle storage VM, è necessario completare tre operazioni.
 
-. <<Passaggio 1: Creare la relazione di replica,Creare la relazione di replica>>, seleziona *Migration* come caso d'uso e seleziona *Replicate storage VM configuration*.
-. <<Passaggio 2: Inizializzare la relazione di replica,Inizializza la relazione di replica>> per trasferire i dati dal sistema di origine al sistema storage di destinazione.
-. <<Fase 3: Cutover della replica per i casi d'uso di migrazione,Cut over replication per casi d'uso di migrazione>> per migrare in modo permanente dati e impostazioni di configurazione dal file system di origine al file system FSx for ONTAP di destinazione.
+. <<step-1-create-replication-relationship,Passaggio 1: Creare la relazione di replica>>, seleziona *Migration* come caso d'uso e seleziona *Replicate storage VM configuration*.
+. <<step-2-initialize-replication-relationship,Passaggio 2: Inizializzare la relazione di replica>> per trasferire i dati dal sistema di origine al sistema storage di destinazione.
+. <<step-3-cutover-replication,Fase 3: Cutover della replica per i casi d'uso di migrazione>> per testare la migrazione e quindi migrare in modo permanente i dati e le impostazioni di configurazione dal file system di origine al file system FSx for ONTAP di destinazione.
 
 
 
 
 [[step-1-create-the-replication-relationship]]
+[[step-1-create-replication-relationship]]
 == Passaggio 1: Creare la relazione di replica
 
 Replica i dati tra due file system FSx for ONTAP, tra un sistema ONTAP on-premises e un file system FSx for ONTAP, oppure tra Cloud Volumes ONTAP e un file system FSx for ONTAP.
@@ -200,6 +201,7 @@ Se hai creato una relazione di replica per scopi di migrazione, devi eseguire il
 
 
 [[step-2-initialize-the-replication-relationship]]
+[[step-2-initialize-replication-relationship]]
 == Passaggio 2: Inizializzare la relazione di replica
 
 Inizializza una relazione di replica tra i volumi di origine e di destinazione per trasferire lo snapshot e tutti i blocchi di dati in NetApp Workload Factory.
@@ -226,6 +228,7 @@ Quando lo stato della replica mostra *Idle*, il trasferimento dei dati è comple
 
 
 [[step-3-cut-over-replication-for-migration-use-cases]]
+[[step-3-cutover-replication]]
 == Fase 3: Cutover della replica per i casi d'uso di migrazione
 
 Dopo aver creato la relazione di replica per un caso d'uso di migrazione, devi eseguire il cutover della replica per completare la migrazione dei dati della VM di storage e delle impostazioni di configurazione al file system FSx for ONTAP di destinazione. Il cutover della replica migra in modo permanente i dati e le impostazioni di configurazione della VM di storage dal file system di origine al file system FSx for ONTAP di destinazione. Durante il cutover, Workload Factory replica i dati un'ultima volta. La VM di storage di origine passa offline quando inizia il cutover.
@@ -235,25 +238,26 @@ Dopo aver creato la relazione di replica per un caso d'uso di migrazione, devi e
 [[plan-for-the-cutover-operation]]
 === Pianifica l'operazione di cutover
 
-Considerare quanto segue quando si pianifica l'operazione di cutover per i casi d'uso di migrazione.
+Prima di eseguire i test e il cutover, tieni presente quanto segue.
 
 * *Supporto della versione di replica*: i sistemi storage di origine e di destinazione devono avere la stessa versione principale di ONTAP. Ad esempio, se il sistema di origine esegue ONTAP versione 9.18.1, anche il sistema di destinazione deve eseguire ONTAP versione 9.18.1.
 * *Impostazioni di configurazione della VM di archiviazione*:
 +
-** L'operazione di cutover non migra tutte le impostazioni di configurazione della VM di storage alla VM di storage di destinazione. Ad esempio, le impostazioni iSCSI, MTU del dominio broadcast e DNS non vengono migrate. Aggiorna queste impostazioni manualmente sulla VM di storage di destinazione dopo il cutover. Per ulteriori dettagli, fare riferimento alla sezione <<Aggiornare le impostazioni di configurazione dopo cutover,Aggiornare le impostazioni di configurazione dopo cutover>>.
+** L'operazione di cutover non migra tutte le impostazioni di configurazione della VM di storage nella VM di storage di destinazione. Ad esempio, le impostazioni iSCSI, DNS e MTU del broadcast-domain non vengono migrate. <<update-configuration-settings-after-cutover,Aggiorna manualmente queste impostazioni>> sulla VM di storage di destinazione dopo il cutover.
 ** Se la VM di archiviazione utilizza l'autenticazione tramite tunnel di dominio, configura e abilita un tunnel di dominio sul file system prima di avviare la migrazione.
 
 
 * *Cloni*: l'operazione di cutover migra i cloni come volumi singoli, che consumano più spazio nel file system FSx for ONTAP di destinazione. Considera di eliminare i cloni prima del cutover per evitare un aumento della capacità nella destinazione.
 * *Volumi cache*: le VM di storage di origine che contengono volumi cache non sono supportate per il cutover. Rimuovi la relazione ONTAP FlexCache prima del cutover per evitare errori di migrazione.
 * *Punti di accesso AWS S3*: la replica di cutover per i casi d'uso di migrazione non è supportata per i volumi con punti di accesso S3. Eliminare i punti di accesso S3 dal volume di origine per evitare errori di migrazione.
-* *ONTAP S3 configurations*: La replica di cutover per i casi d'uso di migrazione non è supportata per i vserver con configurazioni ONTAP S3. Rimuovere le configurazioni ONTAP S3, inclusi object-store-server, bucket, utenti, gruppi o policy sul vserver, per evitare errori di migrazione.
+* *Configurazioni ONTAP S3*: La replica di cutover per i casi d'uso di migrazione non è supportata per le VM di storage con configurazioni ONTAP S3. Rimuovi le configurazioni ONTAP S3, inclusi object-store-server, bucket, utenti, gruppi o policy sulla VM di storage, per evitare errori di migrazione.
 * *Numeri di serie LUN e iSCSI target IQN*: I numeri di serie LUN e l'iSCSI target IQN cambiano durante cutover.
 
 
 .Prima di iniziare
 Rivedi questi requisiti prima di iniziare.
 
+* Verifica che lo *stato di migrazione SVM* sia *Abilitato | Pronto per testare il cutover* nella tabella delle relazioni di replica all'interno del file system in Workload Factory.
 * Interrompere l'accesso dei client alla storage VM prima di eseguire il cutover della replica.
 * Prima di eseguire il cutover della replica, verifica che nessun volume di origine stia fornendo dati.
 * Verifica che i dati siano sincronizzati tra i volumi di origine e di destinazione prima di eseguire il cutover della replica.
@@ -264,6 +268,17 @@ Rivedi questi requisiti prima di iniziare.
 
 
 
+
+
+[[cut-over-replication]]
+=== Cutover della replica
+
+Workload Factory ti aiuta a gestire il processo di cutover per la replica nei casi d'uso di migrazione. Innanzitutto, testa il tuo ambiente per confermare che il cutover possa procedere senza problemi. In secondo luogo, esegue il cutover effettivo nel file system di destinazione.
+
+Prima di completare il test di migrazione, assicurati di poter accedere a tutti i dati sulla VM di storage di destinazione.
+
+Segui le istruzioni per eseguire il cutover della replica per i casi d'uso di migrazione. L'interfaccia utente ti guida passo dopo passo nel processo di cutover.
+
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
@@ -271,7 +286,11 @@ Rivedi questi requisiti prima di iniziare.
 . Da *FSx for ONTAP*, seleziona il file system che contiene il volume o i volumi da replicare.
 . Seleziona la scheda *Replication relationships*.
 . Nella tabella Relazioni di replicazione, seleziona la relazione di replicazione su cui eseguire il cutover, quindi seleziona *Cut over replication*.
-. Rivedere le informazioni nella finestra di dialogo Cut over replication e quindi digitare _cut over_ per confermare.
+. Completa i passaggi per testare il cutover e poi esegui il cutover.
++
+Se chiudi la finestra di dialogo durante il processo, puoi controllare lo *stato della migrazione SVM* dalla scheda *relazioni di replica* e continuare l'operazione di cutover quando sei pronto.
+
+. Esamina le informazioni nella finestra di dialogo Cut over replication, quindi digita _cut over_ per completare il processo.
 
 
 . Seleziona *cutover*.
@@ -291,7 +310,7 @@ Dopo aver eseguito il cutover della replica per i casi d'uso di migrazione, aggi
 +
 ** Ricrea l'igroup
 ** Aggiorna la mappatura LUN
-** Accedere a ciascun client SAN e aggiornare le impostazioni iSCSI/MPIO per il nuovo target e rimuovere i vecchi indirizzi IP del target vserver
+** Accedi a ciascun client SAN e aggiorna le impostazioni iSCSI/MPIO per il nuovo target e rimuovi i vecchi IP di destinazione della VM di storage
 
 
 * Verificare che le impostazioni MTU del dominio broadcast siano conformi alle aspettative
@@ -304,6 +323,7 @@ Se necessario, link:change-tiering-policy.html["modificare la tiering policy"] p
 
 
 [[cascade-replication-for-data-protection-volumes]]
+[[cascade-replication]]
 == Replica a cascata per volumi di protezione dati
 
 NetApp Workload Factory supporta la replica dei volumi di protezione dei dati, denominati anche _distribuzioni a cascata_.  Una _distribuzione a cascata_ è costituita da una catena di relazioni in cui un volume sorgente viene rispecchiato su un volume secondario (primo salto) e il volume secondario viene rispecchiato su un volume terziario (secondo salto).  Se il volume secondario non è più disponibile, è possibile sincronizzare la relazione tra il volume primario e quello terziario senza eseguire un nuovo trasferimento di base.

@@ -6,5 +6,9 @@
 . Da *FSx for ONTAP*, seleziona il file system che contiene il volume o i volumi da replicare.
 . Seleziona la scheda *Replication relationships*.
 . Nella tabella Relazioni di replicazione, seleziona la relazione di replicazione su cui eseguire il cutover, quindi seleziona *Cut over replication*.
-. Rivedere le informazioni nella finestra di dialogo Cut over replication e quindi digitare _cut over_ per confermare.
+. Completa i passaggi per testare il cutover e poi esegui il cutover.
++
+Se chiudi la finestra di dialogo durante il processo, puoi controllare lo *stato della migrazione SVM* dalla scheda *relazioni di replica* e continuare l'operazione di cutover quando sei pronto.
+
+. Esamina le informazioni nella finestra di dialogo Cut over replication, quindi digita _cut over_ per completare il processo.
 
