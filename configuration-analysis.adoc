@@ -106,6 +106,22 @@ Le etichette dei criteri di snapshot del volume di origine e le etichette dei cr
 +
 Aumenta la soglia di capacità dei file per evitare di raggiungere il limite di capacità del volume. Una capacità dei file (inode) insufficiente impedisce la scrittura di dati aggiuntivi sul volume. Workload Factory consiglia di mantenere l'utilizzo della capacità dei file al di sotto dell'80% per consentire la creazione di nuovi file.
 
+* *Connetti l'host al nodo di failover*
++
+Workload Factory consiglia di connettere gli host al nodo di failover per mantenere la connettività ed evitare interruzioni durante i failover.
+
+* *Policy di Snapshot SAP HANA*
++
+Imposta la policy di Snapshot su "None" per i volumi SAP HANA per ridurre i costi di storage e migliorare le prestazioni dei dati del database attivo.
+
+* *Politica di Snapshot di MySQL*
++
+Imposta la policy di snapshot su "None" per i volumi MySQL per ridurre i costi di storage e migliorare le prestazioni dei dati attivi del database.
+
+* *Politica di snapshot di PostgreSQL*
++
+Imposta la policy di snapshot su "None" per i volumi PostgreSQL per ridurre i costi di storage e migliorare le prestazioni dei dati del database attivo.
+
 
 
 
@@ -122,6 +138,18 @@ NetApp Autonomous Ransomware Protection con intelligenza artificiale (ARP/AI) ai
 * *Accesso non autorizzato al volume iSCSI*
 +
 I volumi che forniscono dati applicativi tramite iSCSI non devono consentire contemporaneamente l'accesso NAS. Workload Factory consiglia di impedire ai volumi iSCSI di utilizzare qualsiasi altro protocollo.
+
+* *Lacuna nel rilevamento multi-dispositivo ARP/AI*
++
+ARP/AI offre una protezione completa quando a un volume è collegato un solo dispositivo a blocchi. Se a un volume sono collegati più dispositivi a blocchi, Workload Factory li sposta su nuovi volumi in modo che ciascun volume abbia un solo dispositivo a blocchi.
+
+* *CHAP bidirezionale per i backend iSCSI di Kubernetes*
++
+Usa l'autenticazione CHAP bidirezionale per i backend iSCSI di Trident per garantire che iSCSI initiator e il target iSCSI si autentichino reciprocamente. Questo impedisce agli host non autorizzati di stabilire sessioni iSCSI con la VM di storage.
+
+* *Disabilita `showmount` sulla VM di storage dell'applicazione*
++
+Disabilita `showmount` sulla macchina virtuale di storage dell'applicazione per impedire ai client di elencare le esportazioni a cui non possono accedere.
 
 
 
@@ -168,6 +196,14 @@ Configura il thin provisioning per i volumi FSx for ONTAP che ospitano istanze d
 +
 Configura i file system FSx for ONTAP con la connettività AWS Transform MGN (MGN) richiesta e le impostazioni di autenticazione API prima di usarli con AWS MGN.
 
+* *Macchina virtuale dedicata per lo storage Kubernetes*
++
+Utilizza una macchina virtuale di storage dedicata per i carichi di lavoro di Kubernetes. Mantenere separato lo storage di Kubernetes ne semplifica la gestione, la configurazione delle policy e contribuisce a garantire impostazioni di storage coerenti.
+
+* *Abbina l'OS di igroup all'host*
++
+Fai corrispondere il sistema operativo dell'initiator group (igroup) al sistema operativo dell'host per evitare problemi di I/O o prestazioni.
+
 
 
 
@@ -204,6 +240,10 @@ Una capacità SSD eccessiva comporta costi superflui. Riduci il tier SSD mantene
 * *Volumi NAS inattivi*
 +
 Dopo 31 giorni di inutilizzo di un volume NAS, archivialo o eliminalo per ridurre i costi.
+
+* *Pulizia del clone*
++
+Elimina tutti i cloni di volume più vecchi di 30 giorni per ottimizzare l'utilizzo dello storage e ridurre i costi.
 
 
 
