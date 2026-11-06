@@ -26,7 +26,7 @@ Amazon FSx for NetApp ONTAP è supportato come origine e destinazione del cyber 
 .Implementazione
 Workload Factory fornisce assistenza nella creazione di un'architettura di cyber vault.  Dopo aver contattato NetApp per esprimere il tuo interesse nell'implementazione di un cyber vault, uno specialista NetApp ti contatterà per discutere le tue esigenze.
 
-Per iniziare, invia un'e-mail a ng-FSx-CyberVault@netapp.com.
+Per iniziare, invia un'e-mail a ng-CyberVault@netapp.com.
 
 .Informazioni correlate
 Per ulteriori informazioni sui cyber vault e su come impostare questa architettura, fare riferimento a link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentazione del cyber vault ONTAP"^].
