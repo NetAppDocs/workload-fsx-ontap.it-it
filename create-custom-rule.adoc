@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: create-custom-rule.html 
+keywords: create custom rule, byor, custom rules, fsx, ontap, well architected, rule builder 
+summary: Crea una regola architetturale personalizzata utilizzando il linguaggio naturale per applicare gli standard organizzativi per FSx for ONTAP in NetApp Workload Factory. 
+---
+= Crea una regola personalizzata in NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crea regole personalizzate per verificare le tue risorse FSx for ONTAP in Workload Factory rispetto agli standard della tua organizzazione. Descrivi ogni regola in modo semplice e il costruttore di regole AI trasformerà la tua richiesta in una regola convalidata.
+
+.A proposito di questa attività
+Il processo di configurazione delle regole ti guida attraverso ogni fase: creazione della regola, verifica di come l'IA l'ha interpretata e controllo dei risultati prima di programmare le revisioni periodiche. Mantieni il controllo durante tutto il processo. Il sistema suggerisce una regola in base alla tua richiesta, ma non succede nulla finché non la approvi.
+
+
+NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, visualizzerai un messaggio e non potrai creare o modificare regole personalizzate. Contatta il tuo amministratore o link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Scopri come amministrare l'AI"^].
+
+.Prima di iniziare
+* Hai configurato le credenziali AWS con accesso di sola lettura.
+* Hai le credenziali ONTAP con permessi di visualizzazione.
+* Hai un collegamento o un agente configurato per la connettività FSx for ONTAP.
+* Comprendi che la creazione di regole personalizzate utilizza il servizio Bedrock AI di NetApp.
+
+
+
+
+[[create-a-rule]]
+== Crea una regola
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e poi seleziona *Well-architected* > *Costruttore di regole*.
++
+Quando apri il costruttore di regole, vengono visualizzati dei prompt di esempio per aiutarti a scrivere la tua regola personalizzata. Puoi selezionare *Copia prompt* per copiare un prompt di esempio nella casella di testo della finestra di dialogo AI.
+
+. Nel campo *Crea una regola*, inserisci la descrizione della regola in linguaggio naturale. Sii il più preciso possibile riguardo a:
++
+** Quale tipo di risorsa stai controllando (file system, volume o cache).
+** Quale condizione stai convalidando.
+** Quale soglia definisce la conformità.
+** Perché questa regola è importante (facoltativa ma consigliata).
+
+
+. Seleziona image:arrow.png["L'icona del menu viene utilizzata per iniziare a generare le regole., width=18"].
++
+L'IA analizza il tuo prompt e genera una definizione di regola.
+
+
+
+
+
+[[review-the-ai-interpretation]]
+== Rivedi l'interpretazione dell'IA
+
+Il costruttore di regole visualizza:
+
+Interpretazione analizzata:: Come l'IA ha interpretato il tuo prompt in linguaggio semplice.
+Definizione della regola:: La regola strutturata che include il tipo di risorsa, la logica delle condizioni e i criteri di valutazione.
+Ragionamento:: Perché l'IA ha interpretato il tuo prompt in questo modo.
+Indicatore di attendibilità:: Quanto il sistema sia sicuro dell'interpretazione.
+
+
+.Fasi
+. Rivedi l'interpretazione per assicurarti che corrisponda a ciò che intendevi.
+. Verifica che la definizione della regola sia corretta. Se l'interpretazione non è chiara o è errata, il sistema potrebbe porre domande come:
++
+** Quale risorsa devi controllare?
+** Quale valore o limite definisce la conformità?
+** Con quale frequenza vuoi eseguire la regola?
+
+
+. Rispondi alle domande di chiarimento dell'IA.
++
+L'IA potrebbe chiederti di scegliere tra diverse opzioni per comprendere meglio le tue esigenze. Rispondi a ogni domanda e seleziona *Continua* oppure seleziona *Salta* per passare oltre le domande facoltative.
+
+. Dopo aver risposto a tutte le domande, seleziona *Continua* per creare la tua regola.
+
+
+
+
+[[test-the-rule]]
+== Metti alla prova la regola
+
+Prima di salvare o pianificare la regola, esegui un test per vedere quali risorse interessa.
+
+.Fasi
+. Seleziona *Validate rule*.
++
+Il sistema valuta tutte le risorse nell'ambito rispetto alla tua logica delle regole.
+
+. Esamina i risultati della convalida:
++
+** Risorse valutate: Numero totale di risorse controllate
+** Conforme: risorse che soddisfano i criteri della regola
+** Non conforme: Risorse che non soddisfano i criteri
+** Valutazioni non riuscite: Risorse che non è stato possibile valutare (con dettagli sull'errore)
+
+
+
+
+
+
+[[save-or-schedule-the-rule]]
+== Salva o pianifica la regola
+
+Dopo aver convalidato la regola, puoi salvarla come bozza o impostarla per l'esecuzione periodica.
+
+.Fasi
+. Esegui una delle seguenti operazioni:
++
+** Per programmare una valutazione periodica, imposta la frequenza di valutazione e seleziona *Pianifica*. La regola è abilitata e viene eseguita in base alla pianificazione definita.
+** Per salvare dopo la convalida senza pianificare, seleziona *Salva come bozza*. La regola viene salvata ma non viene valutata finché non la pianifichi.
+** Per eliminare la regola, seleziona *Elimina*.
+
+
+
+
+.Risultato
+La tua regola personalizzata viene creata e visualizzata nel catalogo delle regole. Se imposti una pianificazione, la regola controlla le tue risorse FSx for ONTAP con la frequenza specificata. Se in seguito modifichi la regola, il sistema ti guida attraverso gli stessi passaggi — chat, revisione, approvazione e convalida — prima di salvare la versione aggiornata.
+
+
+
+[[whats-next]]
+== Cosa succederà
+
+link:manage-custom-rules.html["Gestisci le regole personalizzate"]

@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: manage-custom-rules.html 
+keywords: manage rules, edit rules, disable rules, delete rules, rule catalog, byor 
+summary: Visualizza, modifica, metti in pausa, riprendi, testa ed elimina le regole architetturali personalizzate dal catalogo delle regole in NetApp Workload Factory. 
+---
+= Gestisci le regole personalizzate in NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il catalogo delle regole in NetApp Workload Factory ti offre un unico punto di gestione per tutte le tue regole architetturali personalizzate. Puoi rivedere i dettagli e i risultati delle regole, modificare le regole, eseguire test rapidi, sospendere o riprendere le valutazioni pianificate ed eliminare le regole che non ti servono più.
+
+
+
+[[view-the-rules-catalog]]
+== Visualizza il catalogo delle regole
+
+Il catalogo delle regole mostra tutte le regole che hai creato, il loro stato, la pianificazione e i risultati più recenti.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e poi seleziona *Well-architected* > *Costruttore di regole*.
+. Seleziona *Visualizza le tue regole* per aprire il catalogo delle regole.
+
+
+
+
+[[view-rule-results]]
+== Visualizza i risultati della regola
+
+I risultati mostrano quali risorse seguono la tua regola e quali no.
+
+.Fasi
+. Nel catalogo delle regole, seleziona la regola che vuoi esaminare.
+. Seleziona la scheda *All runs results*.
+. Seleziona **Visualizza dettagli** per vedere i risultati di ogni esecuzione.
+
+
+Se il controllo non è andato a buon fine per alcuni elementi, leggi il messaggio di errore per scoprirne il motivo. Le cause più comuni sono problemi di connessione, autorizzazioni mancanti o un collegamento non configurato.
+
+
+
+[[edit-a-custom-rule]]
+== Modifica una regola personalizzata
+
+Puoi rinominare una regola in qualsiasi momento. Puoi anche modificare la descrizione, il tipo di risorsa, la pianificazione, la gravità, la logica delle condizioni, l'ambito di valutazione e le linee guida per la risoluzione di una regola.
+
+Puoi rinominare una regola dal catalogo delle regole o dalla scheda dei dettagli della regola. Per modificare qualsiasi altra impostazione di una regola, inizia dal catalogo delle regole.
+
+.Fasi
+. Nel catalogo delle regole, seleziona la regola che vuoi modificare.
+. Esegui una delle seguenti operazioni:
++
+** Per rinominare la regola, aggiorna il nome della regola dal catalogo o dalla scheda dei dettagli della regola.
+** Per modificare altre impostazioni della regola, seleziona *Modifica*.
++
+La regola si apre in modalità chat con la sua cronologia completa.
+
+
+
+. Richiedi le modifiche che desideri apportare o aggiorna la richiesta in chat.
++
+Se la creazione della regola non è andata a buon fine in precedenza, puoi riprendere da quella regola e aggiornare la tua richiesta nella chat.
+
+. Esamina la spiegazione e il riepilogo aggiornati delle modifiche.
++
+Il sistema mostra cosa è cambiato rispetto alla regola corrente prima di salvarla.
+
+. Se la regola è in modalità bozza, seleziona *Convalida regola* per testare la logica aggiornata.
+. Esegui una delle seguenti operazioni:
++
+** Per salvare le modifiche, seleziona *Salva* per sostituire la regola corrente. Se hai modificato la pianificazione, salva la pianificazione aggiornata. Se non hai modificato la pianificazione, rimane invariata.
+** Per annullare le modifiche, seleziona *Annulla modifiche*. La regola torna alla versione precedente ed esce dalla modalità di modifica.
+
+
+
+
+Mentre modifichi una regola, la regola appare come *In modifica* per te. Gli altri utenti continuano a vedere la regola pianificata corrente e le esecuzioni pianificate proseguono normalmente finché non salvi le modifiche.
+
+
+
+[[pause-a-rule]]
+== Metti in pausa una regola
+
+Metti in pausa una regola per interrompere le valutazioni senza eliminarla. Le regole in pausa restano nel catalogo e puoi riattivarle in qualsiasi momento.
+
+.Fasi
+. Nel catalogo delle regole, seleziona la regola che vuoi mettere in pausa.
+. Esegui una delle seguenti operazioni:
++
+** Per sospendere una regola pianificata, seleziona *Sospendi*, quindi conferma. La regola smette di essere eseguita in base alla pianificazione.
+** Per riprendere una regola sospesa, seleziona *Riprendi*, quindi conferma. La regola riprende le valutazioni regolari.
+
+
+
+
+
+
+[[delete-a-custom-rule]]
+== Elimina una regola personalizzata
+
+Elimina una regola in modo permanente quando non ti serve più. Questa operazione non può essere annullata.
+
+.Fasi
+. Nel catalogo delle regole, seleziona la regola che vuoi eliminare.
+. Selezionare *Delete* (Elimina).
+. Conferma che vuoi eliminare definitivamente la regola.
+
+
+.Risultato
+La regola viene rimossa dal catalogo. Tutta la cronologia delle valutazioni viene eliminata.
+
+
+
+[[run-a-quick-test]]
+== Esegui un test rapido
+
+Esegui un test rapido in qualsiasi momento per verificare la conformità corrente senza aspettare la prossima esecuzione programmata.
+
+.Fasi
+. Nel catalogo delle regole, seleziona la regola che vuoi valutare.
+. Seleziona *Convalida*.
++
+Il sistema valuta tutte le risorse nell'ambito rispetto alla logica della regola.
+
+. Esamina i risultati per vedere lo stato di conformità attuale.
+
+
+I test vengono verificati e compaiono nella cronologia di valutazione della regola.
+
+
+
+[[related-information]]
+== Informazioni correlate
+
+link:learn-custom-rules.html["Scopri di più sulle regole personalizzate"]

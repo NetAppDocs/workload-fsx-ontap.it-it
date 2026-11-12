@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: learn-custom-rules.html 
+keywords: custom rules, byor, bring your own rules, fsx, ontap, well architected, organizational standards 
+summary: Scopri come definire e gestire le tue regole architetturali per applicare gli standard organizzativi insieme alle best practice di NetApp in NetApp Workload Factory. 
+---
+= Scopri le regole personalizzate in NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le regole personalizzate ti consentono di impostare, verificare e applicare i tuoi standard architetturali, insieme alle best practice di NetApp, nel catalogo delle regole di NetApp Workload Factory.
+
+
+
+[[overview]]
+== Panoramica
+
+Il costruttore di regole ti consente di creare regole personalizzate utilizzando un linguaggio semplice. Queste regole vengono verificate in tutte le tue risorse. Le regole personalizzate ti aiutano a far rispettare gli standard, i limiti di rischio e i requisiti operativi della tua organizzazione che le regole predefinite potrebbero non coprire.
+
+
+NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità basate sull'intelligenza artificiale, non puoi creare nuove regole né modificare quelle esistenti. Le regole già programmate continuano a essere eseguite. link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"^].
+
+
+
+[[how-custom-rules-work]]
+== Come funzionano le regole personalizzate
+
+Le regole personalizzate utilizzano l'intelligenza artificiale per trasformare le istruzioni in linguaggio naturale in regole chiare e strutturate. L'IA traduce la tua richiesta, suggerisce una regola, spiega come ha interpretato le tue istruzioni e chiede la tua approvazione prima di salvare o programmare la regola. Questo processo contribuisce a garantire che:
+
+* La regola è definita chiaramente e controllata per individuare eventuali errori
+* Non viene eseguito alcun codice personalizzato
+* Puoi rivedere nel dettaglio cosa verrà valutato prima di approvare la regola
+* Ogni regola personalizzata include il tipo di risorsa da valutare, la logica della condizione, la gravità, la pianificazione della valutazione e le linee guida per la risoluzione del problema.
+
+
+
+
+[[before-you-begin]]
+== Prima di iniziare
+
+Prima di poter creare ed eseguire regole personalizzate, assicurati di avere quanto segue:
+
+Credenziali AWS:: Accesso in sola lettura al tuo ambiente AWS. Le regole personalizzate richiedono autorizzazioni di sola lettura come limite di sicurezza. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aggiungi le credenziali AWS a Workload Factory"].
+Credenziali ONTAP:: Utente visualizzatore di FSx con permessi di sola lettura. Workload Factory crea un utente di sola lettura su ogni FSx for ONTAP file system, se non ne esiste già uno, in modo che Workload Factory possa eseguire le valutazioni.
+Collegamento o agente:: Necessario solo per le regole che devono connettersi direttamente a ONTAP per verificare le impostazioni a cui le API AWS non possono accedere. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connettiti a un file system FSx for ONTAP tramite un collegamento"^].
+
+
+
+
+[[limitations]]
+== Limitazioni
+
+* Le regole non possono risolvere i problemi automaticamente. Devi correggere tu stesso le risorse non conformi seguendo le indicazioni fornite.
+* Ogni regola controlla un solo tipo di risorsa, ma può essere applicata a un'ampia gamma di risorse. Ad esempio, una regola può valutare i volumi in più regioni, in tutte le regioni o in più account. Per valutare diversi tipi di risorse, crea regole separate.
+* Le regole vengono eseguite al massimo una volta all'ora per evitare scansioni eccessive.
+* Le regole possono solo leggere il tuo ambiente e non possono apportare modifiche.
+* Puoi aggiornare queste impostazioni in seguito dal catalogo delle regole.
+
+
+
+
+[[rule-lifecycle]]
+== Ciclo di vita della regola
+
+Le regole personalizzate passano attraverso i seguenti stati:
+
+In corso:: Crea o verifica le regole.
+Impossibile creare:: Impossibile creare la regola. Puoi riaprire la regola e continuare a modificarla nella chat.
+Bozza:: Salvato ma non ancora pianificato.
+Bozza convalidata:: La convalida è stata superata e puoi salvare o pianificare l'operazione.
+Modifica:: Aggiornamento di una bozza di una regola esistente. La regola pianificata corrente continua a essere eseguita finché non salvi le modifiche.
+In programma:: Attivo e viene eseguito secondo la pianificazione definita.
+Disattivato:: In pausa ma non eliminato. Puoi riattivarlo.
+Eliminato:: Rimosso definitivamente.
+
+
+
+
+[[custom-rule-examples]]
+== Esempi di regole personalizzate
+
+Protezione del volume di produzione:: "Tutti i volumi con tag 'Prod' devono avere una snapshot policy installata"
++
+--
+Questa regola verifica che i volumi di produzione abbiano una policy di snapshot per proteggerli in base ai requisiti aziendali.
+
+--
+Tiering del volume di archivio:: "Tutti i volumi con il tag 'Archive' devono avere una policy di tiering impostata su 'All'"
++
+--
+Questa regola riduce i costi spostando automaticamente i dati archiviati su storage più economico.
+
+--
+Standard di denominazione dei file system:: "Tutti i file system devono seguire la convenzione di naming 'fsx-{environment}-{application}'"
++
+--
+Questa regola convalida che i file system rispettino le convenzioni di naming organizzative per una gestione più semplice e un'allocazione dei costi più semplice.
+
+--
+
+
+
+
+[[what-to-do-next]]
+== Cosa fare dopo
+
+link:create-custom-rule.html["Crea una regola personalizzata"] link:manage-custom-rules.html["Gestisci le regole personalizzate"]
